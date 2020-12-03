@@ -1,0 +1,131 @@
+class
+ refid "com.electrotank.electroserver4.transaction:LeaveRoomEventTransaction"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "LeaveRoomEventTransaction")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "TransactionImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.transaction:LeaveRoomEventTransaction")
+  iinit
+   refid "com.electrotank.electroserver4.transaction:LeaveRoomEventTransaction/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.transaction:LeaveRoomEventTransaction/instance/execute"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    param QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "LeaveRoomEvent")
+      getlocal1
+      callproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "LeaveRoomEvent"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "LeaveRoomEvent")
+      setlocal3
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getZoneManager"), 0
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callproperty        QName(PackageNamespace(""), "getZoneById"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      dup
+      setlocal            4
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getRoomId"), 0
+      callproperty        QName(PackageNamespace(""), "getRoomById"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.room"), "Room")
+      dup
+      setlocal            5
+
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "setIsJoined"), 1
+
+      getlocal            4
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "removeJoinedRoom"), 1
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getUserManager"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.user"), "UserManager")
+      setlocal            6
+
+      pushbyte            0
+      convert_d
+      setlocal            7
+
+      jump                L45
+
+L34:
+      label
+      getlocal            6
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "getUsers"), 0
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.transaction:LeaveRoomEventTransaction/instance/execute#0"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.zone"), PackageNamespace("com.electrotank.electroserver4.user"), PrivateNamespace(null, "com.electrotank.electroserver4.transaction:LeaveRoomEventTransaction/instance/execute#1"), PackageNamespace("com.electrotank.electroserver4.transaction"), PackageInternalNs("com.electrotank.electroserver4.transaction"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.transaction:LeaveRoomEventTransaction"), StaticProtectedNs("com.electrotank.electroserver4.transaction:LeaveRoomEventTransaction"), StaticProtectedNs("com.electrotank.electroserver4.transaction:TransactionImpl"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "removeReference"), 1
+
+      getlocal            7
+      increment
+      convert_d
+      setlocal            7
+
+L45:
+      getlocal            7
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "getUsers"), 0
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L34
+
+      getlocal3
+      getlocal            5
+      setproperty         QName(PackageNamespace(""), "room")
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.transaction:LeaveRoomEventTransaction/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

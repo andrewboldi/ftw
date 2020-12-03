@@ -1,0 +1,450 @@
+class
+ refid "com.jumpeye.flashEff2.text:FeTable"
+ instance QName(PackageNamespace("com.jumpeye.flashEff2.text"), "FeTable")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable")
+  iinit
+   refid "com.jumpeye.flashEff2.text:FeTable/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), "init")
+     callpropvoid        QName(PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), "init"), 0
+
+     findproperty        QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+     newarray            0
+     initproperty        QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "cleanMe")
+   method
+    refid "com.jumpeye.flashEff2.text:FeTable/instance/cleanMe"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      pushbyte            0
+      coerce_a
+      setlocal1
+
+      jump                L34
+
+L9:
+      label
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal2
+
+      getlocal2
+      getproperty         Multiname("type", [PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "FeChar"
+      ifeq                L22
+
+      getlocal2
+      callpropvoid        Multiname("cleanMe", [PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+
+L22:
+      getlocal2
+      getproperty         Multiname("numChildren", [PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            0
+      ifne                L30
+
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "removeChildAtIndex"), 1
+
+      jump                L34
+
+L30:
+      getlocal1
+      increment
+      coerce_a
+      setlocal1
+
+L34:
+      getlocal1
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L9
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "pushChild")
+   method
+    refid "com.jumpeye.flashEff2.text:FeTable/instance/pushChild"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Object")
+    flag NEED_ACTIVATION
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 15
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             3
+
+      getscopeobject      1
+      pushundefined
+      coerce_a
+      setslot             4
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      getproperty         Multiname("type", [PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setslot             2
+
+L23:
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getDefinitionByName")
+      pushstring          "com.jumpeye.flashEff2.text."
+      getscopeobject      1
+      getslot             2
+      add
+      callproperty        QName(PackageNamespace("flash.utils"), "getDefinitionByName"), 1
+      getlex              QName(PackageNamespace(""), "Class")
+      astypelate
+      coerce              QName(PackageNamespace(""), "Class")
+      setslot             3
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             1
+      getproperty         Multiname("x", [PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getscopeobject      1
+      getslot             1
+      getproperty         Multiname("y", [PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getscopeobject      1
+      getslot             1
+      construct           3
+      coerce_a
+      setslot             4
+
+      getlocal0
+      getscopeobject      1
+      getslot             4
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+      getscopeobject      1
+      getslot             4
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L57:
+      jump                L75
+
+L58:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getscopeobject      2
+      getslot             1
+      throw
+
+      ; 0x1D
+      ; 0x08
+      ; 0x03
+L75:
+      getscopeobject      1
+      getslot             4
+      returnvalue
+     end ; code
+     try from L23 to L57 target L58 type null name QName(PackageNamespace(""), "e") end
+     trait slot QName(PackageInternalNs("com.jumpeye.flashEff2.text"), "className") slotid 2 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("com.jumpeye.flashEff2.text"), "classInstance") slotid 3 type QName(PackageNamespace(""), "Class") end
+     trait slot QName(PackageInternalNs("com.jumpeye.flashEff2.text"), "child") slotid 4 end
+     trait slot QName(PackageInternalNs("com.jumpeye.flashEff2.text"), "arg") slotid 1 type QName(PackageNamespace(""), "Object") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeChildAtIndex")
+   method
+    refid "com.jumpeye.flashEff2.text:FeTable/instance/removeChildAtIndex"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "removeChildAt"), 1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+      getlocal1
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), "tempChar") type QName(PackageNamespace("com.jumpeye.flashEff2.text"), "FeChar") end
+  trait slot QName(PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), "tempGroup") type QName(PackageNamespace("com.jumpeye.flashEff2.text"), "FeGroup") end
+  trait setter QName(PackageNamespace(""), "childs")
+   method
+    refid "com.jumpeye.flashEff2.text:FeTable/instance/childs/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal2
+
+      getlocal0
+      newarray            0
+      setproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L23
+
+L13:
+      label
+      getlocal0
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "pushChild"), 1
+
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L23:
+      getlocal3
+      getlocal2
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), "init")
+   method
+    refid "com.jumpeye.flashEff2.text:FeTable/instance/com.jumpeye.flashEff2.text:FeTable/instance/init"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "childs")
+   method
+    refid "com.jumpeye.flashEff2.text:FeTable/instance/childs/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), "_type") type QName(PackageNamespace(""), "String") value Utf8("FeTable") end
+  trait getter QName(PackageNamespace(""), "type")
+   method
+    refid "com.jumpeye.flashEff2.text:FeTable/instance/type/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), "_type")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeChilds")
+   method
+    refid "com.jumpeye.flashEff2.text:FeTable/instance/removeChilds"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_u
+      setlocal1
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L34
+
+L11:
+      label
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("type", [PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "FeGroup"
+      ifne                L24
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("removeChilds", [PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+
+L24:
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#0"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), PrivateNamespace(null, "com.jumpeye.flashEff2.text:FeTable/instance#1"), PackageNamespace("com.jumpeye.flashEff2.text"), PackageInternalNs("com.jumpeye.flashEff2.text"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("com.jumpeye.flashEff2.text:FeTable"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L34:
+      getlocal2
+      getlocal1
+      iflt                L11
+
+      getlocal0
+      newarray            0
+      setproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("com.jumpeye.flashEff2.text:FeTable"), "_childs") type QName(PackageNamespace(""), "Array") end
+ end ; instance
+ cinit
+  refid "com.jumpeye.flashEff2.text:FeTable/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

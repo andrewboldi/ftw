@@ -1,0 +1,17 @@
+method
+ refid "Scene:LoadAndLogin/instance/loadConfiguration/inline_method"
+ param QName(PackageNamespace("flash.events"), "Event")
+ body
+  maxstack 2
+  localcount 2
+  initscopedepth 10
+  maxscopedepth 10
+  code
+   findproperty        QName(PackageNamespace(""), "text")
+   pushstring          "<b>Error loading configuration. Try refresh (F5).</b>"
+   initproperty        QName(PackageNamespace(""), "text")
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

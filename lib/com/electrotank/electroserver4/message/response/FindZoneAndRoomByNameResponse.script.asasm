@@ -1,0 +1,37 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.message.response:FindZoneAndRoomByNameResponse/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("FindZoneAndRoomByNameResponse", [PackageNamespace("com.electrotank.electroserver4.message.response")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageImpl")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "ResponseImpl")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "ResponseImpl")
+    newclass            "com.electrotank.electroserver4.message.response:FindZoneAndRoomByNameResponse"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "FindZoneAndRoomByNameResponse")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "FindZoneAndRoomByNameResponse")
+  #include "FindZoneAndRoomByNameResponse.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,214 @@
+class
+ refid "com.electrotank.electroserver4.entities:ServerGame"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.entities"), "ServerGame")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.entities:ServerGame")
+  iinit
+   refid "com.electrotank.electroserver4.entities:ServerGame/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "passwordProtected") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "gameDetails") type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "locked") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "gameId") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "setPasswordProtected")
+   method
+    refid "com.electrotank.electroserver4.entities:ServerGame/instance/setPasswordProtected"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "passwordProtected")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getPasswordProtected")
+   method
+    refid "com.electrotank.electroserver4.entities:ServerGame/instance/getPasswordProtected"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "passwordProtected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setGameDetails")
+   method
+    refid "com.electrotank.electroserver4.entities:ServerGame/instance/setGameDetails"
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "gameDetails")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getGameDetails")
+   method
+    refid "com.electrotank.electroserver4.entities:ServerGame/instance/getGameDetails"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "gameDetails")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setLocked")
+   method
+    refid "com.electrotank.electroserver4.entities:ServerGame/instance/setLocked"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "locked")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getLocked")
+   method
+    refid "com.electrotank.electroserver4.entities:ServerGame/instance/getLocked"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "locked")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setGameId")
+   method
+    refid "com.electrotank.electroserver4.entities:ServerGame/instance/setGameId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "gameId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getGameId")
+   method
+    refid "com.electrotank.electroserver4.entities:ServerGame/instance/getGameId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.entities:ServerGame/instance"), "gameId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.entities:ServerGame/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

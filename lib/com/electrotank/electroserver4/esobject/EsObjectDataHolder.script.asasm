@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("EsObjectDataHolder", [PackageNamespace("com.electrotank.electroserver4.esobject")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.electrotank.electroserver4.esobject:EsObjectDataHolder"
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObjectDataHolder")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObjectDataHolder")
+  #include "EsObjectDataHolder.class.asasm"
+ end ; trait
+end ; script

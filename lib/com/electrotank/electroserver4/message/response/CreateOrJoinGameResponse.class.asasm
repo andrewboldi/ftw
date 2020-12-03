@@ -1,0 +1,305 @@
+class
+ refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "CreateOrJoinGameResponse")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "ResponseImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse")
+  iinit
+   refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "CreateOrJoinGameResponse")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "successful") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "zoneId") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "roomId") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "esError") type QName(PackageNamespace("com.electrotank.electroserver4.errors"), "EsError") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "gameDetails") type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "gameId") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "setGameId")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/setGameId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "gameId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getGameId")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/getGameId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "gameId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setGameDetails")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/setGameDetails"
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "gameDetails")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getGameDetails")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/getGameDetails"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "gameDetails")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setSuccessful")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/setSuccessful"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "successful")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getSuccessful")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/getSuccessful"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "successful")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setZoneId")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/setZoneId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "zoneId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getZoneId")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/getZoneId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "zoneId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRoomId")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/setRoomId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "roomId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRoomId")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/getRoomId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "roomId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setEsError")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/setEsError"
+    param QName(PackageNamespace("com.electrotank.electroserver4.errors"), "EsError")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "esError")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getEsError")
+   method
+    refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance/getEsError"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.errors"), "EsError")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/instance"), "esError")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.response:CreateOrJoinGameResponse/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

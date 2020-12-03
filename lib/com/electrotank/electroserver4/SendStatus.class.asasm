@@ -1,0 +1,182 @@
+class
+ refid "com.electrotank.electroserver4:SendStatus"
+ instance QName(PackageNamespace("com.electrotank.electroserver4"), "SendStatus")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4:SendStatus")
+  iinit
+   refid "com.electrotank.electroserver4:SendStatus/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4:SendStatus/instance"), "isSent") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4:SendStatus/instance"), "reason") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4:SendStatus/instance"), "validationResponse") type QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse") end
+  trait method QName(PackageNamespace(""), "setValidationResponse")
+   method
+    refid "com.electrotank.electroserver4:SendStatus/instance/setValidationResponse"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4:SendStatus/instance"), "validationResponse")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getValidationResponse")
+   method
+    refid "com.electrotank.electroserver4:SendStatus/instance/getValidationResponse"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4:SendStatus/instance"), "validationResponse")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsSent")
+   method
+    refid "com.electrotank.electroserver4:SendStatus/instance/setIsSent"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4:SendStatus/instance"), "isSent")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsSent")
+   method
+    refid "com.electrotank.electroserver4:SendStatus/instance/getIsSent"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4:SendStatus/instance"), "isSent")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setReason")
+   method
+    refid "com.electrotank.electroserver4:SendStatus/instance/setReason"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4:SendStatus/instance"), "reason")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getReason")
+   method
+    refid "com.electrotank.electroserver4:SendStatus/instance/getReason"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4:SendStatus/instance"), "reason")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4:SendStatus/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "NOT_CONNECTED")
+    pushstring          "not_connected"
+    setproperty         QName(PackageNamespace(""), "NOT_CONNECTED")
+
+    findproperty        QName(PackageNamespace(""), "VALIDATION_FAILED")
+    pushstring          "validation_failed"
+    setproperty         QName(PackageNamespace(""), "VALIDATION_FAILED")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "NOT_CONNECTED") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("not_connected") end
+ trait slot QName(PackageNamespace(""), "VALIDATION_FAILED") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("validation_failed") end
+end ; class

@@ -1,0 +1,306 @@
+class
+ refid "com.electrotank.electroserver4.zone:ZoneManager"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.zone"), "ZoneManager")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.zone:ZoneManager")
+  iinit
+   refid "com.electrotank.electroserver4.zone:ZoneManager/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zones")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zones")
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesById")
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesById")
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesByName")
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesByName")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zones") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesById") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesByName") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PackageNamespace(""), "getZones")
+   method
+    refid "com.electrotank.electroserver4.zone:ZoneManager/instance/getZones"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zones")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeZone")
+   method
+    refid "com.electrotank.electroserver4.zone:ZoneManager/instance/removeZone"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace(""), "getZoneById")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneById"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifeq                L53
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesById")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      pushnull
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.zone"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#1"), PackageInternalNs("com.electrotank.electroserver4.zone"), ProtectedNamespace("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("Object")])
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesByName")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getZoneName"), 0
+      pushnull
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.zone"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#1"), PackageInternalNs("com.electrotank.electroserver4.zone"), ProtectedNamespace("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("Object")])
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L48
+
+L29:
+      label
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zones")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.zone"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#1"), PackageInternalNs("com.electrotank.electroserver4.zone"), ProtectedNamespace("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      dup
+      setlocal            4
+
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      getlocal1
+      ifne                L44
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zones")
+      getlocal3
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      jump                L52
+
+L44:
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L48:
+      getlocal3
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zones")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L29
+
+L52:
+      jump                L56
+
+L53:
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Error: Tried removing zone that wasn't being managed by the ZoneManager."
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L56:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addZone")
+   method
+    refid "com.electrotank.electroserver4.zone:ZoneManager/instance/addZone"
+    param QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesById")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.zone"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#1"), PackageInternalNs("com.electrotank.electroserver4.zone"), ProtectedNamespace("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("Object")])
+      pushnull
+      ifne                L25
+
+      findpropstrict      QName(PackageNamespace(""), "getZones")
+      callproperty        QName(PackageNamespace(""), "getZones"), 0
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesByName")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneName"), 0
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.zone"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#1"), PackageInternalNs("com.electrotank.electroserver4.zone"), ProtectedNamespace("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("Object")])
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesById")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.zone"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#1"), PackageInternalNs("com.electrotank.electroserver4.zone"), ProtectedNamespace("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("Object")])
+
+      jump                L32
+
+L25:
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Error: this zone has already been added. zoneId: "
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L32:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getZoneById")
+   method
+    refid "com.electrotank.electroserver4.zone:ZoneManager/instance/getZoneById"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesById")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.zone"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#1"), PackageInternalNs("com.electrotank.electroserver4.zone"), ProtectedNamespace("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifne                L16
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Error: getZoneById() could not find a zone with this id: "
+      getlocal1
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L16:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getZoneByName")
+   method
+    refid "com.electrotank.electroserver4.zone:ZoneManager/instance/getZoneByName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), "zonesByName")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.zone"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.zone:ZoneManager/instance#1"), PackageInternalNs("com.electrotank.electroserver4.zone"), ProtectedNamespace("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("com.electrotank.electroserver4.zone:ZoneManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifne                L15
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Error: getZoneByName() could not find a zone with this name: "
+      getlocal1
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L15:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.zone:ZoneManager/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

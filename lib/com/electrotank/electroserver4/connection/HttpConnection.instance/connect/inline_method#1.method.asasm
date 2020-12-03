@@ -1,0 +1,17 @@
+method
+ refid "com.electrotank.electroserver4.connection:HttpConnection/instance/connect/inline_method#1"
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 2
+  localcount 1
+  initscopedepth 7
+  maxscopedepth 7
+  code
+   findpropstrict      QName(PackageNamespace(""), "onPreConnect")
+   pushfalse
+   callpropvoid        QName(PackageNamespace(""), "onPreConnect"), 1
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

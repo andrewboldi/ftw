@@ -1,0 +1,70 @@
+class
+ refid "fl.data:SimpleCollectionItem"
+ instance QName(PackageNamespace("fl.data"), "SimpleCollectionItem")
+  extends QName(PackageNamespace(""), "Object")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.data:SimpleCollectionItem")
+  iinit
+   refid "fl.data:SimpleCollectionItem/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "label") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "data") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "fl.data:SimpleCollectionItem/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "[SimpleCollectionItem: "
+      getlex              QName(PackageNamespace(""), "label")
+      add
+      pushstring          ","
+      add
+      getlex              QName(PackageNamespace(""), "data")
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.data:SimpleCollectionItem/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

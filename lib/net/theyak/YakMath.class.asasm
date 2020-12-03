@@ -1,0 +1,170 @@
+class
+ refid "net.theyak:YakMath"
+ instance QName(PackageNamespace("net.theyak"), "YakMath")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("net.theyak:YakMath")
+  iinit
+   refid "net.theyak:YakMath/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "net.theyak:YakMath/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "randomRange") flag FINAL dispid 3
+  method
+   refid "net.theyak:YakMath/class/randomRange"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "Math")
+     callproperty        QName(PackageNamespace(""), "random"), 0
+     getlocal2
+     getlocal1
+     subtract
+     multiply
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     getlocal1
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "round_string") flag FINAL dispid 4
+  method
+   refid "net.theyak:YakMath/class/round_string"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            4
+
+     pushnan
+     setlocal            5
+
+     getlocal1
+     pushnull
+     ifne                L11
+
+     pushstring          ""
+     returnvalue
+
+L11:
+     getlex              QName(PackageNamespace(""), "RegExp")
+     pushstring          "^[0-9.]+$"
+     construct           1
+     coerce              QName(PackageNamespace(""), "RegExp")
+     setlocal3
+
+     getlocal1
+     getlocal3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "match"), 1
+     iffalse             L61
+
+     getlocal2
+     pushbyte            0
+     ifne                L31
+
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlex              QName(PackageNamespace(""), "Math")
+     findpropstrict      QName(PackageNamespace(""), "Number")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "Number"), 1
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     returnvalue
+
+L31:
+     findpropstrict      QName(PackageNamespace(""), "Number")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "Number"), 1
+     convert_d
+     setlocal            4
+
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            10
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "pow"), 2
+     convert_d
+     setlocal            5
+
+     getlocal            4
+     getlocal            5
+     multiply
+     convert_d
+     setlocal            4
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     convert_d
+     dup
+     setlocal            4
+
+     getlocal            5
+     divide
+     convert_d
+     setlocal            4
+
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     returnvalue
+
+L61:
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

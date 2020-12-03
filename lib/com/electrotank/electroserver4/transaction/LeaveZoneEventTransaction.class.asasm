@@ -1,0 +1,90 @@
+class
+ refid "com.electrotank.electroserver4.transaction:LeaveZoneEventTransaction"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "LeaveZoneEventTransaction")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "TransactionImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.transaction:LeaveZoneEventTransaction")
+  iinit
+   refid "com.electrotank.electroserver4.transaction:LeaveZoneEventTransaction/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.transaction:LeaveZoneEventTransaction/instance/execute"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    param QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "LeaveZoneEvent")
+      getlocal1
+      callproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "LeaveZoneEvent"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "LeaveZoneEvent")
+      setlocal3
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getZoneManager"), 0
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callproperty        QName(PackageNamespace(""), "getZoneById"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      setlocal            4
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getZoneManager"), 0
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callpropvoid        QName(PackageNamespace(""), "removeZone"), 1
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "zone")
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.transaction:LeaveZoneEventTransaction/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

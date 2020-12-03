@@ -1,0 +1,2183 @@
+class
+ refid "Game:FTWBase"
+ instance QName(PackageNamespace("Game"), "FTWBase")
+  extends QName(PackageNamespace("Scene"), "BaseChat")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Game:FTWBase")
+  iinit
+   refid "Game:FTWBase/instance/init"
+   body
+    maxstack 4
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace(""), "button_leave")
+     getproperty         QName(PackageNamespace(""), "text")
+     pushstring          "Leave"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PackageNamespace(""), "button_start")
+     getproperty         QName(PackageNamespace(""), "text")
+     pushstring          "Start"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PackageNamespace(""), "text_header_left")
+     pushstring          ""
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PackageNamespace(""), "text_header_right")
+     pushstring          ""
+     setproperty         QName(PackageNamespace(""), "text")
+
+     findproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+     findpropstrict      QName(PackageNamespace("Game"), "ProblemPanel")
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "game")
+     getproperty         QName(PackageNamespace(""), "playerType")
+     pushbyte            9
+     equals
+     constructprop       QName(PackageNamespace("Game"), "ProblemPanel"), 1
+     initproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+     pushbyte            53
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+     getlex              QName(PackageNamespace("Game"), "ProblemAnswerEvent")
+     getproperty         QName(PackageNamespace(""), "ANSWER")
+     getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "got_answer")
+     callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+     findproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_spectator")
+     findpropstrict      QName(PackageNamespace("Game"), "SpectatorPanel")
+     constructprop       QName(PackageNamespace("Game"), "SpectatorPanel"), 0
+     initproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_spectator")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_spectator")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_spectator")
+     pushbyte            53
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+     findpropstrict      QName(PackageNamespace("Game"), "TimerPanel")
+     constructprop       QName(PackageNamespace("Game"), "TimerPanel"), 0
+     initproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+     pushbyte            53
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+     findpropstrict      QName(PackageNamespace("Game"), "InformationPanel")
+     constructprop       QName(PackageNamespace("Game"), "InformationPanel"), 0
+     initproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+     pushbyte            53
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+     findpropstrict      QName(PackageNamespace("Game"), "ScoreboardPanel")
+     constructprop       QName(PackageNamespace("Game"), "ScoreboardPanel"), 0
+     initproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+     pushbyte            53
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_final_scoreboard")
+     findpropstrict      QName(PackageNamespace("Game"), "FinalScoreboardPanel")
+     constructprop       QName(PackageNamespace("Game"), "FinalScoreboardPanel"), 0
+     initproperty        QName(ProtectedNamespace("Game:FTWBase"), "panel_final_scoreboard")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_final_scoreboard")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_final_scoreboard")
+     pushbyte            53
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PackageNamespace(""), "text_game_id")
+     pushstring          "Game# "
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "game")
+     getproperty         QName(PackageNamespace(""), "id")
+     add
+     setproperty         QName(PackageNamespace(""), "text")
+
+     findproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+     pushnull
+     initproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "button_leave") type QName(PackageNamespace(""), "FTWButton") end
+  trait slot QName(PackageNamespace(""), "button_start") type QName(PackageNamespace(""), "FTWButton") end
+  trait slot QName(PackageNamespace(""), "text_game_id") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "text_header_left") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "text_header_right") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(ProtectedNamespace("Game:FTWBase"), "panel_problem") type QName(PackageNamespace("Game"), "ProblemPanel") end
+  trait slot QName(ProtectedNamespace("Game:FTWBase"), "panel_spectator") type QName(PackageNamespace("Game"), "SpectatorPanel") end
+  trait slot QName(ProtectedNamespace("Game:FTWBase"), "panel_timer") type QName(PackageNamespace("Game"), "TimerPanel") end
+  trait slot QName(ProtectedNamespace("Game:FTWBase"), "panel_information") type QName(PackageNamespace("Game"), "InformationPanel") end
+  trait slot QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard") type QName(PackageNamespace("Game"), "ScoreboardPanel") end
+  trait slot QName(ProtectedNamespace("Game:FTWBase"), "panel_final_scoreboard") type QName(PackageNamespace("Game"), "FinalScoreboardPanel") end
+  trait slot QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_start_time") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_time_remaining") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "start_enabled") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "leave_button_interval") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "responded") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels")
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase/instance/hide_panels"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_final_scoreboard")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_spectator")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer")
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase/instance/stop_problem_timer"
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+      pushnull
+      ifeq                L17
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+      pushstring          "timer"
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_countdown")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+      callpropvoid        QName(PackageNamespace(""), "reset"), 0
+
+      findproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+      pushnull
+      initproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+
+L17:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_leave_game")
+   method
+    refid "Game:FTWBase/instance/on_leave_game"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "button_start")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PackageNamespace(""), "on_start_game")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "button_leave")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PackageNamespace(""), "on_leave_game")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      getproperty         QName(PackageNamespace(""), "TIMER_COMPLETE")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "on_start_game_timer")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "start_enabled")
+      iffalse             L38
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      getlex              QName(PackageNamespace(""), "enable_start")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      findproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "start_enabled")
+      pushfalse
+      initproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "start_enabled")
+
+L38:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "pluginMessage"
+      pushstring          "on_plugin_message"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer"), 0
+
+      pushbyte            0
+      setlocal3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      coerce_a
+      setlocal            4
+
+      jump                L66
+
+L54:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_s
+      setlocal2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("cleanup", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+
+L66:
+      hasnext2            4, 3
+      iftrue              L54
+
+      kill                4
+      kill                3
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "zone_name")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "room_name")
+      callpropvoid        QName(PackageNamespace(""), "leaveRoom"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "leaveRoom"
+      pushstring          "on_leave_room_event"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_leave_room_event")
+   method
+    refid "Game:FTWBase/instance/on_leave_room_event"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "leaveRoom"
+      pushstring          "on_leave_room_event"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      pushstring          "Lobby"
+      setproperty         QName(PackageNamespace(""), "activeRoomName")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      pushstring          "FTW"
+      setproperty         QName(PackageNamespace(""), "activeZoneName")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      callpropvoid        QName(PackageNamespace(""), "lobby"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_start_game")
+   method
+    refid "Game:FTWBase/instance/on_start_game"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "button_start")
+      getproperty         Multiname("enabled", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      convert_b
+      dup
+      iffalse             L13
+
+      pop
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "start_enabled")
+      convert_b
+L13:
+      iffalse             L33
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal2
+      pushstring          "id"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "id")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "manager")
+      pushstring          "start_game"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "esServerPlugin"), 3
+
+      findpropstrict      QName(PackageNamespace(""), "disable_start")
+      callpropvoid        QName(PackageNamespace(""), "disable_start"), 0
+
+L33:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game:FTWBase"), "on_start_game_timer")
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase:on_start_game_timer"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      getproperty         QName(PackageNamespace(""), "TIMER_COMPLETE")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "on_start_game_timer")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      findpropstrict      QName(ProtectedNamespace("Game:FTWBase"), "begin_problem")
+      pushbyte            1
+      callpropvoid        QName(ProtectedNamespace("Game:FTWBase"), "begin_problem"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game:FTWBase"), "begin_problem")
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase:begin_problem"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            1
+      equals
+      dup
+      iffalse             L14
+
+      pop
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problemNumber")
+      pushbyte            1
+      equals
+      not
+L14:
+      iffalse             L41
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "problemNumber")
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+      pushstring          "Game will begin in..."
+      setproperty         QName(PackageNamespace(""), "message")
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+      callpropvoid        QName(PackageNamespace(""), "show"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+      pushbyte            3
+      callpropvoid        QName(PackageNamespace(""), "start"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "setTimeout")
+      getlex              QName(PackageNamespace(""), "loadProblem")
+      pushshort           2000
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace("flash.utils"), "setTimeout"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      getproperty         QName(PackageNamespace(""), "TIMER_COMPLETE")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "on_start_game_timer")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      returnvoid
+
+L41:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal1
+      lessthan
+      dup
+      iftrue              L58
+
+      pop
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      equals
+L58:
+      iffalse             L64
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      pushstring          "\n\nPlease wait for next problem.\n\n"
+      setproperty         QName(PackageNamespace(""), "large")
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      callpropvoid        QName(PackageNamespace(""), "show"), 0
+
+L64:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "displayChat")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "problemNumber")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "last_problem_number_displayed")
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer"), 0
+
+      findproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+      pushshort           1000
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "time_per_problem")
+      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+      initproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+      pushstring          "timer"
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_countdown")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_interval")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+      findproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_time_remaining")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "time_per_problem")
+      initproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_time_remaining")
+
+      getlex              QName(PackageNamespace(""), "text_header_right")
+      pushstring          "Time remaining: "
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_time_remaining")
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_start_time")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_start_time")
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels"), 0
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("loaded", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L146
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "player_type")
+      getlex              QName(PackageNamespace("Type"), "FTW")
+      getproperty         QName(PackageNamespace(""), "SPECTATOR")
+      ifeq                L132
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "attach"), 1
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+      callpropvoid        QName(PackageNamespace(""), "show"), 0
+
+      jump                L145
+
+L132:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      pushstring          "Showing Panel Spectator"
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_spectator")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "attach"), 1
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_spectator")
+      callpropvoid        QName(PackageNamespace(""), "show"), 0
+
+L145:
+      jump                L151
+
+L146:
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      pushstring          "\n\nUnable to load problem.\n\n"
+      setproperty         QName(PackageNamespace(""), "large")
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      callpropvoid        QName(PackageNamespace(""), "show"), 0
+
+L151:
+      getlocal0
+      pushfalse
+      setproperty         QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "responded")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs("Game"), "check_answer")
+   method
+    refid "Game:FTWBase/instance/Game:check_answer"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "clean_answer"), 1
+      coerce_s
+      setlocal1
+
+      pushbyte            0
+      setlocal3
+
+      jump                L24
+
+L10:
+      label
+      getlocal1
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("answers", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      ifne                L23
+
+      pushtrue
+      returnvalue
+
+L23:
+      inclocal_i          3
+L24:
+      getlocal3
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("answers", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iflt                L10
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "got_answer")
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase/instance/got_answer"
+    param QName(PackageNamespace("Game"), "ProblemAnswerEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "answer")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      greaterthan
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "responded")
+      pushfalse
+      equals
+L19:
+      iffalse             L123
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "answer")
+      callproperty        QName(PackageNamespace(""), "checkLanguage"), 1
+      iffalse             L29
+
+      getlocal1
+      pushstring          "Censored"
+      setproperty         QName(PackageNamespace(""), "answer")
+
+L29:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "displayChat")
+
+      getlocal0
+      pushtrue
+      setproperty         QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "responded")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "problem_number")
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "answer")
+      setproperty         Multiname("user_answer", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_start_time")
+      subtract
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      pushshort           1000
+      divide
+      convert_d
+      setlocal2
+
+      getlocal2
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "time_per_problem")
+      ifngt               L67
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "time_per_problem")
+      convert_d
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer"), 0
+
+L67:
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal3
+
+      getlocal3
+      pushstring          "id"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "id")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlocal3
+      pushstring          "r"
+      findpropstrict      QName(PackageInternalNs("Game"), "check_answer")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "answer")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "problem_number")
+      callproperty        QName(PackageInternalNs("Game"), "check_answer"), 2
+      iffalse             L89
+
+      pushbyte            1
+      convert_d
+      jump                L91
+
+L89:
+      pushbyte            0
+      convert_d
+L91:
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlocal3
+      pushstring          "t"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setDouble"), 2
+
+      getlocal3
+      pushstring          "answer"
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "answer")
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "plugin")
+      pushstring          "response"
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "plugin"), 2
+
+      findpropstrict      QName(ProtectedNamespace("Game:FTWBase"), "on_got_answer")
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("Game:FTWBase"), "on_got_answer"), 1
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "muted")
+      not
+      dup
+      iffalse             L119
+
+      pop
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "gameChat")
+      convert_b
+L119:
+      iffalse             L123
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+L123:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game:FTWBase"), "on_got_answer")
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase:on_got_answer"
+    param QName(PackageNamespace("Game"), "ProblemAnswerEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "loadProblem")
+   method
+    refid "Game:FTWBase/instance/loadProblem"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      strictequals
+      dup
+      iftrue              L19
+
+      pop
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("loaded", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      not
+L19:
+      iffalse             L28
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      findpropstrict      QName(PackageNamespace("Game"), "Problem")
+      getlocal1
+      constructprop       QName(PackageNamespace("Game"), "Problem"), 1
+      setproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game:FTWBase"), "end_problem")
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase:end_problem"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "last_problem_number_displayed")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problem_count")
+      ifnlt               L18
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "setTimeout")
+      getlex              QName(PackageNamespace(""), "loadProblem")
+      pushshort           5000
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "last_problem_number_displayed")
+      pushbyte            1
+      add
+      callpropvoid        QName(PackageNamespace("flash.utils"), "setTimeout"), 3
+
+L18:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "displayChat")
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+      getproperty         QName(PackageNamespace(""), "visible")
+      pushfalse
+      ifne                L30
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+      callpropvoid        QName(PackageNamespace(""), "show"), 0
+
+L30:
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "text_header_right")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "countdown"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game:FTWBase"), "end_game")
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase:end_game"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "displayChat")
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer"), 0
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_final_scoreboard")
+      callpropvoid        QName(PackageNamespace(""), "show"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_final_scoreboard")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "board"), 1
+
+      getlex              QName(PackageNamespace(""), "text_header_right")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "ended")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "timeout")
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase/instance/timeout"
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "responded")
+      pushfalse
+      ifne                L40
+
+      getlocal0
+      pushtrue
+      setproperty         QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "responded")
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal1
+
+      getlocal1
+      pushstring          "id"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "id")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlocal1
+      pushstring          "r"
+      pushbyte            4
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlocal1
+      pushstring          "t"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "time_per_problem")
+      callpropvoid        QName(PackageNamespace(""), "setDouble"), 2
+
+      getlocal1
+      pushstring          "answer"
+      pushstring          "time"
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "plugin")
+      pushstring          "response"
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "plugin"), 2
+
+L40:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_countdown")
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase/instance/problem_countdown"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_time_remaining")
+      dup
+      setlocal2
+
+      getproperty         QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_time_remaining")
+      decrement
+      setlocal3
+
+      getlocal2
+      getlocal3
+      setproperty         QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_time_remaining")
+
+      kill                3
+      kill                2
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_time_remaining")
+      pushbyte            0
+      ifngt               L23
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "text_header_right")
+      pushstring          "Time remaining: "
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "problem_time_remaining")
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L31
+
+L23:
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "timeout")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "timeout"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "text_header_right")
+      pushstring          "Time's up"
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "stop_problem_timer"), 0
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "enable_start")
+   method
+    refid "Game:FTWBase/instance/enable_start"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "start_enabled")
+      pushtrue
+      initproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "start_enabled")
+
+      getlex              QName(PackageNamespace(""), "button_start")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PackageNamespace(""), "button_start")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      getlex              QName(PackageNamespace(""), "button_start")
+      pushtrue
+      setproperty         Multiname("enabled", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "button_start")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PackageNamespace(""), "on_start_game")
+      pushstring          "FTWBase.button_start"
+      callpropvoid        QName(PackageNamespace(""), "add"), 4
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      pushstring          "\n\nClick the Start button\nto begin game."
+      setproperty         QName(PackageNamespace(""), "large")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "disable_start")
+   method
+    refid "Game:FTWBase/instance/disable_start"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "button_start")
+      pushdouble          0.4
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      getlex              QName(PackageNamespace(""), "button_start")
+      pushfalse
+      setproperty         Multiname("enabled", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "button_start")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PackageNamespace(""), "on_start_game")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      findproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "start_enabled")
+      pushfalse
+      initproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "start_enabled")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_leave_button_interval")
+   method
+    refid "Game:FTWBase/instance/on_leave_button_interval"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "button_leave")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "button_leave")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PackageNamespace(""), "on_leave_game")
+      pushstring          "FTWBase.button_leave"
+      callpropvoid        QName(PackageNamespace(""), "add"), 4
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "clearInterval")
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "leave_button_interval")
+      callpropvoid        QName(PackageNamespace("flash.utils"), "clearInterval"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_plugin_message") flag OVERRIDE
+   method
+    refid "Game:FTWBase/instance/on_plugin_message"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      jump                L287
+
+L6:
+      label
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("number", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            1
+      greaterthan
+      dup
+      iffalse             L19
+
+      pop
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      getproperty         QName(PackageNamespace(""), "visible")
+      pushtrue
+      equals
+L19:
+      iffalse             L23
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      pushstring          "\n\nPlease wait for next problem to start..."
+      setproperty         QName(PackageNamespace(""), "large")
+
+L23:
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("number", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            1
+      ifngt               L35
+
+      findpropstrict      QName(PackageNamespace(""), "loadProblem")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("number", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            1
+      add
+      callpropvoid        QName(PackageNamespace(""), "loadProblem"), 1
+
+L35:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "can_start_game")
+      convert_b
+      dup
+      iffalse             L47
+
+      pop
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("number", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L47:
+      iffalse             L52
+
+      findpropstrict      QName(PackageNamespace(""), "enable_start")
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "enable_start"), 1
+
+      jump                L54
+
+L52:
+      findpropstrict      QName(PackageNamespace(""), "disable_start")
+      callpropvoid        QName(PackageNamespace(""), "disable_start"), 0
+
+L54:
+      jump                L351
+
+L55:
+      label
+      findpropstrict      QName(PackageNamespace(""), "disable_start")
+      callpropvoid        QName(PackageNamespace(""), "disable_start"), 0
+
+      findpropstrict      QName(ProtectedNamespace("Game:FTWBase"), "end_problem")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("interval", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(ProtectedNamespace("Game:FTWBase"), "end_problem"), 1
+
+      jump                L351
+
+L64:
+      label
+      findpropstrict      QName(PackageNamespace(""), "disable_start")
+      callpropvoid        QName(PackageNamespace(""), "disable_start"), 0
+
+      findpropstrict      QName(ProtectedNamespace("Game:FTWBase"), "end_game")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("scoreboard", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(ProtectedNamespace("Game:FTWBase"), "end_game"), 1
+
+      jump                L351
+
+L73:
+      label
+      findpropstrict      QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels")
+      callpropvoid        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "hide_panels"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+      callpropvoid        QName(PackageNamespace(""), "show"), 0
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("scoreboard", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "board"), 1
+
+      jump                L351
+
+L84:
+      label
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("user", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("resp", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("time", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      jump                L351
+
+L101:
+      label
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L187
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L172
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Game"), "Problem")
+      istypelate
+      iffalse             L157
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("loaded", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L156
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal2
+      pushstring          "n"
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlocal2
+      pushstring          "id"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "id")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "plugin")
+      pushstring          "ready"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "plugin"), 2
+
+L156:
+      jump                L171
+
+L157:
+      findpropstrict      QName(PackageNamespace(""), "server_log")
+      pushstring          "on_ready: g.game.problems["
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      add
+      pushstring          "] is not of type Problem. Attempting reload"
+      add
+      callpropvoid        QName(PackageNamespace(""), "server_log"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "loadProblem")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "loadProblem"), 1
+
+L171:
+      jump                L186
+
+L172:
+      findpropstrict      QName(PackageNamespace(""), "server_log")
+      pushstring          "on_ready: g.game.problems["
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      add
+      pushstring          "] is undefined. Trying to reload problem."
+      add
+      callpropvoid        QName(PackageNamespace(""), "server_log"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "loadProblem")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "loadProblem"), 1
+
+L186:
+      jump                L195
+
+L187:
+      findpropstrict      QName(PackageNamespace(""), "server_log")
+      pushstring          "on_ready: g.game.problems.length <= 0. Trying to reload problem."
+      callpropvoid        QName(PackageNamespace(""), "server_log"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "loadProblem")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "loadProblem"), 1
+
+L195:
+      jump                L351
+
+L196:
+      label
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L239
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L239
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Game"), "Problem")
+      istypelate
+      dup
+      iffalse             L233
+
+      pop
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("loaded", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      convert_b
+L233:
+      iffalse             L239
+
+      findpropstrict      QName(ProtectedNamespace("Game:FTWBase"), "begin_problem")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(ProtectedNamespace("Game:FTWBase"), "begin_problem"), 1
+
+L239:
+      jump                L351
+
+L240:
+      label
+      findpropstrict      QName(PackageNamespace(""), "enable_start")
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "enable_start"), 1
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      pushstring          "\n\nGame creator left\n\nYou now can start the game."
+      setproperty         QName(PackageNamespace(""), "large")
+
+      jump                L351
+
+L248:
+      label
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("type", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "spectator"
+      ifne                L260
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PackageNamespace("Type"), "FTW")
+      getproperty         QName(PackageNamespace(""), "SPECTATOR")
+      setproperty         QName(PackageNamespace(""), "player_type")
+
+      jump                L265
+
+L260:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PackageNamespace("Type"), "FTW")
+      getproperty         QName(PackageNamespace(""), "PLAYER")
+      setproperty         QName(PackageNamespace(""), "player_type")
+
+L265:
+      jump                L351
+
+L266:
+      label
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            1
+      ifngt               L277
+
+      findpropstrict      QName(PackageNamespace(""), "loadProblem")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("problem", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "loadProblem"), 1
+
+L277:
+      jump                L351
+
+L278:
+      label
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "on_plugin_message"), 1
+      jump                L351
+
+      ; 0x10
+      ; 0xC8
+      ; 0x00
+      ; 0x00
+L287:
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("Action", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setlocal3
+
+      pushstring          "problem_number"
+      getlocal3
+      ifstrictne          L296
+
+      pushbyte            0
+      jump                L349
+
+L296:
+      pushstring          "end_problem"
+      getlocal3
+      ifstrictne          L301
+
+      pushbyte            1
+      jump                L349
+
+L301:
+      pushstring          "end_game"
+      getlocal3
+      ifstrictne          L306
+
+      pushbyte            2
+      jump                L349
+
+L306:
+      pushstring          "scoreboard"
+      getlocal3
+      ifstrictne          L311
+
+      pushbyte            3
+      jump                L349
+
+L311:
+      pushstring          "scoreboard_update"
+      getlocal3
+      ifstrictne          L316
+
+      pushbyte            4
+      jump                L349
+
+L316:
+      pushstring          "ready"
+      getlocal3
+      ifstrictne          L321
+
+      pushbyte            5
+      jump                L349
+
+L321:
+      pushstring          "go"
+      getlocal3
+      ifstrictne          L326
+
+      pushbyte            6
+      jump                L349
+
+L326:
+      pushstring          "GMLeft"
+      getlocal3
+      ifstrictne          L331
+
+      pushbyte            7
+      jump                L349
+
+L331:
+      pushstring          "player_type"
+      getlocal3
+      ifstrictne          L336
+
+      pushbyte            8
+      jump                L349
+
+L336:
+      pushstring          "load_problem"
+      getlocal3
+      ifstrictne          L341
+
+      pushbyte            9
+      jump                L349
+
+L341:
+      jump                L348
+
+      ; 0x24
+      ; 0x0A
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L348:
+      pushbyte            10
+L349:
+      kill                3
+      lookupswitch        L278, [L6, L55, L64, L73, L84, L101, L196, L240, L248, L266, L278]
+
+L351:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game:FTWBase"), "on_added") flag OVERRIDE
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase:on_added"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("Scene:BaseChat"), "on_added"), 1
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game:FTWBase"), "on_added_to_stage") flag OVERRIDE
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase:on_added_to_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("Scene:BaseChat"), "on_added_to_stage"), 1
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_spectator")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_spectator")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      callpropvoid        QName(PackageNamespace(""), "show"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_timer")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_scoreboard")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_final_scoreboard")
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_final_scoreboard")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal2
+      pushstring          "user_id"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "id")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlocal2
+      pushstring          "game_id"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "id")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlocal2
+      pushstring          "user_ip"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "ip")
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      getlocal2
+      pushstring          "rating"
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "current_rating")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      getlocal2
+      pushstring          "player_type"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "player_type")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlocal2
+      pushstring          "version"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "version")
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "manager")
+      pushstring          "enter_game"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "esServerPlugin"), 3
+
+      getlex              QName(PackageNamespace(""), "button_leave")
+      pushdouble          0.5
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      findproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "leave_button_interval")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "setInterval")
+      getlex              QName(PackageNamespace(""), "on_leave_button_interval")
+      pushshort           1000
+      callproperty        QName(PackageNamespace("flash.utils"), "setInterval"), 2
+      initproperty        QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "leave_button_interval")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "can_start_game")
+      iffalse             L106
+
+      getlex              QName(PackageNamespace(""), "button_start")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PackageNamespace(""), "button_start")
+      pushdouble          0.5
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      pushstring          "\n\nPreparing game..."
+      setproperty         QName(PackageNamespace(""), "large")
+
+      jump                L112
+
+L106:
+      getlex              QName(PackageNamespace(""), "button_start")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_information")
+      pushstring          "\n\nPlease wait for game to begin..."
+      setproperty         QName(PackageNamespace(""), "large")
+
+L112:
+      getlex              QName(PackageNamespace(""), "button_start")
+      pushfalse
+      setproperty         Multiname("enabled", [PrivateNamespace(null, "Game:FTWBase/instance#0"), PackageNamespace(""), ProtectedNamespace("Game:FTWBase"), PackageNamespace("Game"), PackageNamespace("flash.events"), PrivateNamespace(null, "Game:FTWBase/instance#1"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.esobject"), StaticProtectedNs("Game:FTWBase"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game:FTWBase"), "on_removed_from_stage") flag OVERRIDE
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase:on_removed_from_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+      getlex              QName(PackageNamespace("Game"), "ProblemAnswerEvent")
+      getproperty         QName(PackageNamespace(""), "ANSWER")
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "got_answer")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("Scene:BaseChat"), "on_removed_from_stage"), 1
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game:FTWBase"), "on_removed") flag OVERRIDE
+   method
+    refid "Game:FTWBase/instance/Game:FTWBase:on_removed"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(ProtectedNamespace("Game:FTWBase"), "panel_problem")
+      getlex              QName(PackageNamespace("Game"), "ProblemAnswerEvent")
+      getproperty         QName(PackageNamespace(""), "ANSWER")
+      getlex              QName(PrivateNamespace(null, "Game:FTWBase/instance#0"), "got_answer")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("Scene:BaseChat"), "on_removed"), 1
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "plugin")
+   method
+    refid "Game:FTWBase/instance/plugin"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "Game"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "zone_name")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "room_name")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "esRoomPlugin"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "server_log")
+   method
+    refid "Game:FTWBase/instance/server_log"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal2
+      pushstring          "message"
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "plugin")
+      pushstring          "log"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "plugin"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Game:FTWBase/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

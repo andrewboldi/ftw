@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.jumpeye.transitions.easing:Linear/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Linear", [PackageNamespace("com.jumpeye.transitions.easing")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.jumpeye.transitions.easing:Linear"
+    popscope
+    initproperty        QName(PackageNamespace("com.jumpeye.transitions.easing"), "Linear")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.jumpeye.transitions.easing"), "Linear")
+  #include "Linear.class.asasm"
+ end ; trait
+end ; script

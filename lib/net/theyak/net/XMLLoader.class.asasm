@@ -1,0 +1,273 @@
+class
+ refid "net.theyak.net:XMLLoader"
+ instance QName(PackageNamespace("net.theyak.net"), "XMLLoader")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("net.theyak.net:XMLLoader")
+  iinit
+   refid "net.theyak.net:XMLLoader/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Object")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "file")
+
+     getlocal3
+     pushnull
+     ifne                L14
+
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal3
+
+L14:
+     getlocal3
+     getlocal2
+     setproperty         Multiname("success", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")])
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options")
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "xmlLoader")
+     findpropstrict      QName(PackageNamespace("flash.net"), "URLLoader")
+     constructprop       QName(PackageNamespace("flash.net"), "URLLoader"), 0
+     initproperty        QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "xmlLoader")
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "xmlLoader")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "COMPLETE")
+     getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "onComplete")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "xmlLoader")
+     getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
+     getproperty         QName(PackageNamespace(""), "IO_ERROR")
+     getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "ioError")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "xmlLoader")
+     getlex              QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+     getproperty         QName(PackageNamespace(""), "SECURITY_ERROR")
+     getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "securityError")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "xmlLoader")
+     findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+     getlocal1
+     constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+     callpropvoid        QName(PackageNamespace(""), "load"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "file") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "xmlLoader") type QName(PackageNamespace("flash.net"), "URLLoader") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "onComplete")
+   method
+    refid "net.theyak.net:XMLLoader/instance/net.theyak.net:XMLLoader/instance/onComplete"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "removeListeners")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "removeListeners"), 0
+
+      getlex              QName(PackageNamespace(""), "XML")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "ignoreWhitespace")
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options")
+      findpropstrict      QName(PackageNamespace(""), "XML")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("data", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")])
+      constructprop       QName(PackageNamespace(""), "XML"), 1
+      callpropvoid        Multiname("success", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "ioError")
+   method
+    refid "net.theyak.net:XMLLoader/instance/net.theyak.net:XMLLoader/instance/ioError"
+    param QName(PackageNamespace("flash.events"), "IOErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "removeListeners")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "removeListeners"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Error loading XML file. "
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options")
+      getproperty         Multiname("ioError", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      equals
+      not
+      dup
+      iffalse             L22
+
+      pop
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options")
+      getproperty         Multiname("ioError", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "Function")
+      istypelate
+L22:
+      iffalse             L26
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options")
+      getlocal1
+      callpropvoid        Multiname("ioError", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")]), 1
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "securityError")
+   method
+    refid "net.theyak.net:XMLLoader/instance/net.theyak.net:XMLLoader/instance/securityError"
+    param QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "removeListeners")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "removeListeners"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Security error loading XML file. "
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options")
+      getproperty         Multiname("securityError", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      equals
+      not
+      dup
+      iffalse             L22
+
+      pop
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options")
+      getproperty         Multiname("securityError", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "Function")
+      istypelate
+L22:
+      iffalse             L26
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options")
+      getlocal1
+      callpropvoid        Multiname("securityError", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")]), 1
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "removeListeners")
+   method
+    refid "net.theyak.net:XMLLoader/instance/net.theyak.net:XMLLoader/instance/removeListeners"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "xmlLoader")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "onComplete")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "xmlLoader")
+      getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
+      getproperty         QName(PackageNamespace(""), "IO_ERROR")
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options")
+      getproperty         Multiname("ioError", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "xmlLoader")
+      getlex              QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+      getproperty         QName(PackageNamespace(""), "SECURITY_ERROR")
+      getlex              QName(PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), "options")
+      getproperty         Multiname("securityError", [PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#0"), PackageNamespace(""), PrivateNamespace(null, "net.theyak.net:XMLLoader/instance#1"), PackageNamespace("net.theyak.net"), PackageInternalNs("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("net.theyak.net:XMLLoader"), StaticProtectedNs("net.theyak.net:XMLLoader"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "net.theyak.net:XMLLoader/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

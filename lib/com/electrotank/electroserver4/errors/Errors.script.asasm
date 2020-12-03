@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.errors:Errors/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Errors", [PackageNamespace("com.electrotank.electroserver4.errors")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.electrotank.electroserver4.errors:Errors"
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.errors"), "Errors")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.errors"), "Errors")
+  #include "Errors.class.asasm"
+ end ; trait
+end ; script

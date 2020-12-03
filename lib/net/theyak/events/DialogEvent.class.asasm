@@ -1,0 +1,56 @@
+class
+ refid "net.theyak.events:DialogEvent"
+ instance QName(PackageNamespace("net.theyak.events"), "DialogEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("net.theyak.events:DialogEvent")
+  iinit
+   refid "net.theyak.events:DialogEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional False()
+   optional False()
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushstring          "DialogEvent"
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "action")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "action") type QName(PackageNamespace(""), "String") value Utf8("") end
+ end ; instance
+ cinit
+  refid "net.theyak.events:DialogEvent/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.message.event:EventImpl/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("EventImpl", [PackageNamespace("com.electrotank.electroserver4.message.event")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageImpl")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageImpl")
+    newclass            "com.electrotank.electroserver4.message.event:EventImpl"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "EventImpl")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "EventImpl")
+  #include "EventImpl.class.asasm"
+ end ; trait
+end ; script

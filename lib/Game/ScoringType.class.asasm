@@ -1,0 +1,132 @@
+class
+ refid "Game:ScoringType"
+ instance QName(PackageNamespace("Game"), "ScoringType")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Game:ScoringType")
+  iinit
+   refid "Game:ScoringType/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "Game:ScoringType/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "RANK")
+    pushbyte            1
+    setproperty         QName(PackageNamespace(""), "RANK")
+
+    findproperty        QName(PackageNamespace(""), "TIME")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "TIME")
+
+    findproperty        QName(PackageNamespace(""), "CORRECT")
+    pushbyte            3
+    setproperty         QName(PackageNamespace(""), "CORRECT")
+
+    findproperty        QName(PackageNamespace(""), "COMPOSITE")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "COMPOSITE")
+
+    findproperty        QName(PackageNamespace(""), "COUNTDOWN")
+    pushbyte            5
+    setproperty         QName(PackageNamespace(""), "COUNTDOWN")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "RANK") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(1) end
+ trait slot QName(PackageNamespace(""), "TIME") slotid 2 type QName(PackageNamespace(""), "uint") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "CORRECT") slotid 3 type QName(PackageNamespace(""), "uint") value Integer(3) end
+ trait slot QName(PackageNamespace(""), "COMPOSITE") slotid 4 type QName(PackageNamespace(""), "uint") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "COUNTDOWN") slotid 5 type QName(PackageNamespace(""), "uint") value Integer(5) end
+ trait method QName(PackageNamespace(""), "toString") flag FINAL dispid 3
+  method
+   refid "Game:ScoringType/class/toString"
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getlex              QName(PackageNamespace("Game"), "ScoringType")
+     getproperty         QName(PackageNamespace(""), "RANK")
+     ifne                L8
+
+     pushstring          "Ranking"
+     returnvalue
+
+L8:
+     getlocal1
+     getlex              QName(PackageNamespace("Game"), "ScoringType")
+     getproperty         QName(PackageNamespace(""), "TIME")
+     ifne                L14
+
+     pushstring          "Time"
+     returnvalue
+
+L14:
+     getlocal1
+     getlex              QName(PackageNamespace("Game"), "ScoringType")
+     getproperty         QName(PackageNamespace(""), "CORRECT")
+     ifne                L20
+
+     pushstring          "Responses"
+     returnvalue
+
+L20:
+     getlocal1
+     getlex              QName(PackageNamespace("Game"), "ScoringType")
+     getproperty         QName(PackageNamespace(""), "COMPOSITE")
+     ifne                L26
+
+     pushstring          "Composite"
+     returnvalue
+
+L26:
+     getlocal1
+     getlex              QName(PackageNamespace("Game"), "ScoringType")
+     getproperty         QName(PackageNamespace(""), "COUNTDOWN")
+     ifne                L32
+
+     pushstring          "Countdown"
+     returnvalue
+
+L32:
+     pushstring          "Unknown"
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

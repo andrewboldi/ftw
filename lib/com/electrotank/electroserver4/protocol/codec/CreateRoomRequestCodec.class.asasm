@@ -1,0 +1,454 @@
+class
+ refid "com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "CreateRoomRequestCodec")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "encode") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/instance/encode"
+    param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageWriter")
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "CreateRoomRequest")
+      getlocal2
+      callproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "CreateRoomRequest"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "CreateRoomRequest")
+      setlocal3
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      pushbyte            -1
+      ifne                L21
+
+      getlocal1
+      pushfalse
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getZoneName"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ZONE_NAME_PREFIX_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writePrefixedString"), 2
+
+      jump                L30
+
+L21:
+      getlocal1
+      pushtrue
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ZONE_ID_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 2
+
+L30:
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getRoomName"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_NAME_PREFIX_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writePrefixedString"), 2
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getRoomDescription"), 0
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L50
+
+      pop
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getRoomDescription"), 0
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      equals
+      not
+L50:
+      iffalse             L61
+
+      getlocal1
+      pushtrue
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getRoomDescription"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_DESCRIPTION_PREFIX_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writePrefixedString"), 2
+
+      jump                L64
+
+L61:
+      getlocal1
+      pushfalse
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+L64:
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getPassword"), 0
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L78
+
+      pop
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getPassword"), 0
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      equals
+      not
+L78:
+      iffalse             L89
+
+      getlocal1
+      pushtrue
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getPassword"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_PASSWORD_PREFIX_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writePrefixedString"), 2
+
+      jump                L92
+
+L89:
+      getlocal1
+      pushfalse
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+L92:
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getCapacity"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_CAPACITY_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsPersistent"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsHidden"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsReceivingRoomListUpdates"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsReceivingRoomDetailUpdates"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsReceivingUserListUpdates"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsReceivingRoomVariableUpdates"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsReceivingUserVariableUpdates"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsReceivingVideoEvents"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsNonOperatorUpdateAllowed"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsNonOperatorVariableUpdateAllowed"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsCreateOrJoinRoom"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "RoomVariableCodec")
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getRoomVariables"), 0
+      callpropvoid        QName(PackageNamespace(""), "encode"), 2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/instance"), "encodePlugins")
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getPlugins"), 0
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/instance"), "encodePlugins"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsUsingLanguageFilter"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsUsingLanguageFilter"), 0
+      iffalse             L198
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsLanguageFilterSpecified"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsLanguageFilterSpecified"), 0
+      iffalse             L198
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getLanguageFilterName"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "FILTER_NAME_PREFIX_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writePrefixedString"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsDeliverMessageOnFailure"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getFailuresBeforeKick"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "FILTER_FAILURES_BEFORE_KICK_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getKicksBeforeBan"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "FILTER_KICKS_BEFORE_BAN_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getBanDuration"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_BAN_DURATION_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsResetAfterKick"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+L198:
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsUsingFloodingFilter"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsUsingFloodingFilter"), 0
+      iffalse             L240
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsFloodingFilterSpecified"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsFloodingFilterSpecified"), 0
+      iffalse             L240
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getFloodingFilterName"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "FILTER_NAME_PREFIX_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writePrefixedString"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getFloodingFilterFailuresBeforeKick"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "FILTER_FAILURES_BEFORE_KICK_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getFloodingFilterKicksBeforeBan"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "FILTER_KICKS_BEFORE_BAN_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getFloodingFilterBanDuration"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_BAN_DURATION_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getIsFloodingFilterResetAfterKick"), 0
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+L240:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/instance"), "encodePlugins")
+   method
+    refid "com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/instance/com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/instance/encodePlugins"
+    param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageWriter")
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.plugin"), "Plugin")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal            5
+
+      getlocal1
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "PLUGIN_COUNT_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L54
+
+L18:
+      label
+      getlocal2
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/instance"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.protocol.codec"), PackageNamespace("com.electrotank.electroserver4.protocol"), PackageNamespace("com.electrotank.electroserver4.plugin"), PackageNamespace("com.electrotank.electroserver4.esobject"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/instance/com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/instance/encodePlugins"), PackageInternalNs("com.electrotank.electroserver4.protocol.codec"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.entities"), ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:MessageCodecImpl"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.plugin"), "Plugin")
+      setlocal            4
+
+      getlocal1
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "getExtensionName"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "EXTENSION_NAME_PREFIX_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writePrefixedString"), 2
+
+      getlocal1
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "getPluginHandle"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "PLUGIN_HANDLE_PREFIX_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writePrefixedString"), 2
+
+      getlocal1
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "getPluginName"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "PLUGIN_NAME_PREFIX_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writePrefixedString"), 2
+
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "getData"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal            5
+
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "EsObjectCodec")
+      getlocal1
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "encode"), 2
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L54:
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L18
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.codec:CreateRoomRequestCodec/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,463 @@
+class
+ refid "com.electrotank.electroserver4.connection:AbstractConnection"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.connection"), "AbstractConnection")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.utils"), "Observable")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.connection:AbstractConnection")
+  iinit
+   refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "ip")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "port")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "protocol")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "ip") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "port") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "id") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "outboundId") type QName(PackageNamespace(""), "Number") value Integer(-1) end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "expectedInboundId") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "isConnected") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "protocol") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "onConnect") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PackageNamespace(""), "onClose") type QName(PackageNamespace(""), "Function") end
+  trait method QName(PackageNamespace(""), "getIp")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/getIp"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "ip")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getPort")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/getPort"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "port")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setId")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/setId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "id")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getId")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/getId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "id")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getProtocol")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/getProtocol"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "protocol")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setExpectedInboundId")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/setExpectedInboundId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "expectedInboundId")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "expectedInboundId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getExpectedInboundId")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/getExpectedInboundId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "expectedInboundId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getNextOutboundId")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/getNextOutboundId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "outboundId")
+      dup
+      setlocal1
+
+      getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "outboundId")
+      increment
+      setlocal2
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "outboundId")
+
+      kill                2
+      kill                1
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "outboundId")
+      pushshort           10000
+      ifne                L19
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "outboundId")
+      pushbyte            0
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "outboundId")
+
+L19:
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "outboundId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsConnected")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/getIsConnected"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "isConnected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "send")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/send"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getProtocol")
+      callproperty        QName(PackageNamespace(""), "getProtocol"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "Protocol")
+      getproperty         QName(PackageNamespace(""), "TEXT")
+      ifne                L11
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Must implement for text protocol"
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+
+L11:
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Use sendBinary for binary connections"
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sendBinary")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/sendBinary"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getProtocol")
+      callproperty        QName(PackageNamespace(""), "getProtocol"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "Protocol")
+      getproperty         QName(PackageNamespace(""), "BINARY")
+      ifne                L11
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Must implement for binary protocol"
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+
+L11:
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Use send for text connections"
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "close") flag FINAL
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/close"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.electrotank.electroserver4.connection:AbstractConnection"), "doClose")
+      callpropvoid        QName(ProtectedNamespace("com.electrotank.electroserver4.connection:AbstractConnection"), "doClose"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "onPreClose")
+      callpropvoid        QName(PackageNamespace(""), "onPreClose"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.electrotank.electroserver4.connection:AbstractConnection"), "doClose")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/com.electrotank.electroserver4.connection:AbstractConnection:doClose"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Must implement close"
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onPreConnect")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/onPreConnect"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "isConnected")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "isConnected")
+
+      findpropstrict      QName(PackageNamespace(""), "notifyListeners")
+      pushstring          "onConnect"
+      pushstring          "target"
+      getlocal0
+      pushstring          "success"
+      getlocal1
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "notifyListeners"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "connect")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/connect"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Must implement connect"
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onPreClose")
+   method
+    refid "com.electrotank.electroserver4.connection:AbstractConnection/instance/onPreClose"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "isConnected")
+      pushfalse
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:AbstractConnection/instance"), "isConnected")
+
+      findpropstrict      QName(PackageNamespace(""), "notifyListeners")
+      pushstring          "onClose"
+      pushstring          "target"
+      getlocal0
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "notifyListeners"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.connection:AbstractConnection/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

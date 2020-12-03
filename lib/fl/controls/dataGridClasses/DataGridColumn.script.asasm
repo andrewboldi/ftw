@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "fl.controls.dataGridClasses:DataGridColumn/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("DataGridColumn", [PackageNamespace("fl.controls.dataGridClasses")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "fl.controls.dataGridClasses:DataGridColumn"
+    popscope
+    initproperty        QName(PackageNamespace("fl.controls.dataGridClasses"), "DataGridColumn")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.controls.dataGridClasses"), "DataGridColumn")
+  #include "DataGridColumn.class.asasm"
+ end ; trait
+end ; script

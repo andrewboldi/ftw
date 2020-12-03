@@ -1,0 +1,124 @@
+class
+ refid "com.jumpeye.transitions.plugins:GlowFilterPlugin"
+ instance QName(PackageNamespace("com.jumpeye.transitions.plugins"), "GlowFilterPlugin")
+  extends QName(PackageNamespace("com.jumpeye.transitions.plugins"), "FilterPlugin")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.transitions.plugins:GlowFilterPlugin")
+  iinit
+   refid "com.jumpeye.transitions.plugins:GlowFilterPlugin/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     pushstring          "glowFilter"
+     initproperty        QName(PackageNamespace(""), "propName")
+
+     getlocal0
+     pushstring          "glowFilter"
+     newarray            1
+     initproperty        QName(PackageNamespace(""), "overwriteProps")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "onInitTween") flag OVERRIDE
+   method
+    refid "com.jumpeye.transitions.plugins:GlowFilterPlugin/instance/onInitTween"
+    param QName(PackageNamespace(""), "Object")
+    param null
+    param QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 11
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "_target")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "_target")
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "_type")
+      getlex              QName(PackageNamespace("flash.filters"), "GlowFilter")
+      initproperty        QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "_type")
+
+      findpropstrict      QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "initFilter")
+      getlocal2
+      findpropstrict      QName(PackageNamespace("flash.filters"), "GlowFilter")
+      pushint             16777215
+      pushbyte            0
+      dup
+      dup
+      getlocal2
+      getproperty         Multiname("strength", [PrivateNamespace(null, "com.jumpeye.transitions.plugins:GlowFilterPlugin/instance/onInitTween#0"), PackageNamespace(""), PackageNamespace("flash.filters"), PrivateNamespace(null, "com.jumpeye.transitions.plugins:GlowFilterPlugin/instance/onInitTween#1"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageInternalNs("com.jumpeye.transitions.plugins"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions.plugins:GlowFilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:GlowFilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:FilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:TweenPlugin"), StaticProtectedNs("Object")])
+      convert_d
+      dup
+      iftrue              L23
+
+      pop
+      pushbyte            1
+      convert_d
+L23:
+      getlocal2
+      getproperty         Multiname("quality", [PrivateNamespace(null, "com.jumpeye.transitions.plugins:GlowFilterPlugin/instance/onInitTween#0"), PackageNamespace(""), PackageNamespace("flash.filters"), PrivateNamespace(null, "com.jumpeye.transitions.plugins:GlowFilterPlugin/instance/onInitTween#1"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageInternalNs("com.jumpeye.transitions.plugins"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions.plugins:GlowFilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:GlowFilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:FilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:TweenPlugin"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      iftrue              L30
+
+      pop
+      pushbyte            2
+L30:
+      getlocal2
+      getproperty         Multiname("inner", [PrivateNamespace(null, "com.jumpeye.transitions.plugins:GlowFilterPlugin/instance/onInitTween#0"), PackageNamespace(""), PackageNamespace("flash.filters"), PrivateNamespace(null, "com.jumpeye.transitions.plugins:GlowFilterPlugin/instance/onInitTween#1"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageInternalNs("com.jumpeye.transitions.plugins"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions.plugins:GlowFilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:GlowFilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:FilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:TweenPlugin"), StaticProtectedNs("Object")])
+      getlocal2
+      getproperty         Multiname("knockout", [PrivateNamespace(null, "com.jumpeye.transitions.plugins:GlowFilterPlugin/instance/onInitTween#0"), PackageNamespace(""), PackageNamespace("flash.filters"), PrivateNamespace(null, "com.jumpeye.transitions.plugins:GlowFilterPlugin/instance/onInitTween#1"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageInternalNs("com.jumpeye.transitions.plugins"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions.plugins:GlowFilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:GlowFilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:FilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:TweenPlugin"), StaticProtectedNs("Object")])
+      constructprop       QName(PackageNamespace("flash.filters"), "GlowFilter"), 8
+      callpropvoid        QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "initFilter"), 2
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.jumpeye.transitions.plugins:GlowFilterPlugin/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "VERSION")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "VERSION")
+
+    findproperty        QName(PackageNamespace(""), "API")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "API")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "VERSION") slotid 1 type QName(PackageNamespace(""), "Number") value Double(1) end
+ trait const QName(PackageNamespace(""), "API") slotid 2 type QName(PackageNamespace(""), "Number") value Double(1) end
+end ; class

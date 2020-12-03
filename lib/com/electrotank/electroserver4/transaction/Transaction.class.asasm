@@ -1,0 +1,30 @@
+class
+ refid "com.electrotank.electroserver4.transaction:Transaction"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "Transaction")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   refid "com.electrotank.electroserver4.transaction:Transaction/instance/init"
+  end ; method
+  trait method QName(Namespace("com.electrotank.electroserver4.transaction:Transaction"), "execute")
+   method
+    refid "com.electrotank.electroserver4.transaction:Transaction/instance/com.electrotank.electroserver4.transaction:Transaction:execute"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    param QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.transaction:Transaction/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

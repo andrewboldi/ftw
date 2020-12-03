@@ -1,0 +1,1757 @@
+class
+ refid "fl.containers:BaseScrollPane"
+ instance QName(PackageNamespace("fl.containers"), "BaseScrollPane")
+  extends QName(PackageNamespace("fl.core"), "UIComponent")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.containers:BaseScrollPane")
+  iinit
+   refid "fl.containers:BaseScrollPane/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentWidth")
+     pushbyte            0
+     initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentWidth")
+
+     findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight")
+     pushbyte            0
+     initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight")
+
+     findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding")
+     pushbyte            0
+     initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding")
+
+     findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vOffset")
+     pushbyte            0
+     initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vOffset")
+
+     findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_maxHorizontalScrollPosition")
+     pushbyte            0
+     initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_maxHorizontalScrollPosition")
+
+     findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalPageScrollSize")
+     pushbyte            0
+     initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalPageScrollSize")
+
+     findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalPageScrollSize")
+     pushbyte            0
+     initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalPageScrollSize")
+
+     findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "defaultLineScrollSize")
+     pushbyte            4
+     initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "defaultLineScrollSize")
+
+     findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "useFixedHorizontalScrolling")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "useFixedHorizontalScrolling")
+
+     findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_useBitmpScrolling")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_useBitmpScrolling")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "handleWheel")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:handleWheel"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "enabled")
+      not
+      dup
+      iftrue              L10
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getproperty         QName(PackageNamespace(""), "visible")
+      not
+L10:
+      dup
+      iftrue              L16
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      lessequals
+L16:
+      iffalse             L18
+
+      returnvoid
+
+L18:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getproperty         QName(PackageNamespace(""), "scrollPosition")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "delta")
+      getlex              QName(PackageNamespace(""), "verticalLineScrollSize")
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "scrollPosition")
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setVerticalScrollPosition")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getproperty         QName(PackageNamespace(""), "scrollPosition")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setVerticalScrollPosition"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ScrollEvent")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollBarDirection")
+      getproperty         QName(PackageNamespace(""), "VERTICAL")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "delta")
+      getlex              QName(PackageNamespace(""), "horizontalScrollPosition")
+      constructprop       QName(PackageNamespace("fl.events"), "ScrollEvent"), 3
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "defaultLineScrollSize") type QName(PackageNamespace(""), "Number") value Integer(4) end
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_maxHorizontalScrollPosition") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait getter QName(PackageNamespace(""), "verticalScrollPosition")
+   method
+    refid "fl.containers:BaseScrollPane/instance/verticalScrollPosition/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getproperty         QName(PackageNamespace(""), "scrollPosition")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vScrollBar") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay") type QName(PackageNamespace("flash.display"), "Shape") end
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawDisabledOverlay")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:drawDisabledOverlay"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "enabled")
+      iffalse             L12
+
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      iffalse             L11
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L11:
+      jump                L37
+
+L12:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding")
+      dup
+      setlocal1
+
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal1
+      kill                1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "getStyleValue")
+      pushstring          "disabledAlpha"
+      callproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace(""), "Number")
+      astypelate
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L37:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "verticalScrollPosition")
+   method
+    refid "fl.containers:BaseScrollPane/instance/verticalScrollPosition/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "drawNow")
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "scrollPosition")
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setVerticalScrollPosition")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getproperty         QName(PackageNamespace(""), "scrollPosition")
+      pushfalse
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setVerticalScrollPosition"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setContentSize")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:setContentSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentWidth")
+      getlocal1
+      equals
+      dup
+      iftrue              L10
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "useFixedHorizontalScrolling")
+      convert_b
+L10:
+      dup
+      iffalse             L16
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight")
+      getlocal2
+      equals
+L16:
+      iffalse             L18
+
+      returnvoid
+
+L18:
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentWidth")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentWidth")
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight")
+      getlocal2
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "horizontalScrollPosition")
+   method
+    refid "fl.containers:BaseScrollPane/instance/horizontalScrollPosition/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getproperty         QName(PackageNamespace(""), "scrollPosition")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "horizontalScrollBar")
+   method
+    refid "fl.containers:BaseScrollPane/instance/horizontalScrollBar/getter"
+    returns QName(PackageNamespace("fl.controls"), "ScrollBar")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "hScrollBar") type QName(PackageNamespace(""), "Boolean") end
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    refid "fl.containers:BaseScrollPane/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "enabled")
+      getlocal1
+      ifne                L6
+
+      returnvoid
+
+L6:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "verticalLineScrollSize")
+   method
+    refid "fl.containers:BaseScrollPane/instance/verticalLineScrollSize/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getproperty         QName(PackageNamespace(""), "lineScrollSize")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalPageScrollSize") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait getter QName(PackageNamespace(""), "horizontalScrollPolicy")
+   method
+    refid "fl.containers:BaseScrollPane/instance/horizontalScrollPolicy/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollPolicy")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vOffset") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "calculateAvailableSize")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:calculateAvailableSize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 7
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal1
+
+      pushnan
+      setlocal2
+
+      pushnan
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollBar")
+      getproperty         QName(PackageNamespace(""), "WIDTH")
+      convert_d
+      setlocal1
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "getStyleValue")
+      pushstring          "contentPadding"
+      callproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      dup
+      setlocal            6
+
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding")
+
+      getlocal            6
+      kill                6
+      convert_d
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "height")
+      pushbyte            2
+      getlocal2
+      multiply
+      subtract
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vOffset")
+      subtract
+      convert_d
+      setlocal3
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollPolicy")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollPolicy")
+      getproperty         QName(PackageNamespace(""), "ON")
+      equals
+      dup
+      iftrue              L56
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollPolicy")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollPolicy")
+      getproperty         QName(PackageNamespace(""), "AUTO")
+      equals
+      dup
+      iffalse             L56
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight")
+      getlocal3
+      greaterthan
+L56:
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vScrollBar")
+
+      getlex              QName(PackageNamespace(""), "width")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vScrollBar")
+      iffalse             L63
+
+      getlocal1
+      coerce_a
+      jump                L65
+
+L63:
+      pushbyte            0
+      coerce_a
+L65:
+      subtract
+      pushbyte            2
+      getlocal2
+      multiply
+      subtract
+      convert_d
+      setlocal            4
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "useFixedHorizontalScrolling")
+      iffalse             L77
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_maxHorizontalScrollPosition")
+      convert_d
+      jump                L81
+
+L77:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentWidth")
+      getlocal            4
+      subtract
+      convert_d
+L81:
+      convert_d
+      setlocal            5
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "hScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollPolicy")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollPolicy")
+      getproperty         QName(PackageNamespace(""), "ON")
+      equals
+      dup
+      iftrue              L101
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollPolicy")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollPolicy")
+      getproperty         QName(PackageNamespace(""), "AUTO")
+      equals
+      dup
+      iffalse             L101
+
+      pop
+      getlocal            5
+      pushbyte            0
+      greaterthan
+L101:
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "hScrollBar")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "hScrollBar")
+      iffalse             L109
+
+      getlocal3
+      getlocal1
+      subtract
+      convert_d
+      setlocal3
+
+L109:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "hScrollBar")
+      convert_b
+      dup
+      iffalse             L116
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vScrollBar")
+      not
+L116:
+      dup
+      iffalse             L123
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollPolicy")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollPolicy")
+      getproperty         QName(PackageNamespace(""), "AUTO")
+      equals
+L123:
+      dup
+      iffalse             L129
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight")
+      getlocal3
+      greaterthan
+L129:
+      iffalse             L138
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vScrollBar")
+      pushtrue
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vScrollBar")
+
+      getlocal            4
+      getlocal1
+      subtract
+      convert_d
+      setlocal            4
+
+L138:
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      getlocal3
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vOffset")
+      add
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+      getlocal            4
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "maxVerticalScrollPosition")
+   method
+    refid "fl.containers:BaseScrollPane/instance/maxVerticalScrollPosition/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "drawNow")
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      subtract
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar") type QName(PackageNamespace("fl.controls"), "ScrollBar") end
+  trait setter QName(PackageNamespace(""), "horizontalScrollPosition")
+   method
+    refid "fl.containers:BaseScrollPane/instance/horizontalScrollPosition/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "drawNow")
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "scrollPosition")
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setHorizontalScrollPosition")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getproperty         QName(PackageNamespace(""), "scrollPosition")
+      pushfalse
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setHorizontalScrollPosition"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "useFixedHorizontalScrolling") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait getter QName(PackageNamespace(""), "horizontalLineScrollSize")
+   method
+    refid "fl.containers:BaseScrollPane/instance/horizontalLineScrollSize/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getproperty         QName(PackageNamespace(""), "lineScrollSize")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentWidth") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait setter QName(PackageNamespace(""), "verticalPageScrollSize")
+   method
+    refid "fl.containers:BaseScrollPane/instance/verticalPageScrollSize/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalPageScrollSize")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalPageScrollSize")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "verticalScrollPolicy")
+   method
+    refid "fl.containers:BaseScrollPane/instance/verticalScrollPolicy/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollPolicy")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setHorizontalScrollPosition")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:setHorizontalScrollPosition"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 1
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "useBitmapScrolling")
+   method
+    refid "fl.containers:BaseScrollPane/instance/useBitmapScrolling/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_useBitmpScrolling")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "handleScroll")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:handleScroll"
+    param QName(PackageNamespace("fl.events"), "ScrollEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      ifne                L11
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setVerticalScrollPosition")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setVerticalScrollPosition"), 1
+
+      jump                L15
+
+L11:
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setHorizontalScrollPosition")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setHorizontalScrollPosition"), 1
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalPageScrollSize") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait setter QName(PackageNamespace(""), "verticalLineScrollSize")
+   method
+    refid "fl.containers:BaseScrollPane/instance/verticalLineScrollSize/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "lineScrollSize")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "background") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait getter QName(PackageNamespace(""), "verticalScrollBar")
+   method
+    refid "fl.containers:BaseScrollPane/instance/verticalScrollBar/getter"
+    returns QName(PackageNamespace("fl.controls"), "ScrollBar")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setVerticalScrollPosition")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:setVerticalScrollPosition"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 1
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "horizontalPageScrollSize")
+   method
+    refid "fl.containers:BaseScrollPane/instance/horizontalPageScrollSize/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalPageScrollSize")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalPageScrollSize")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_useBitmpScrolling") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "draw") flag OVERRIDE
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "isInvalid"), 1
+      iffalse             L21
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setStyles")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setStyles"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawBackground")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawBackground"), 0
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding")
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "getStyleValue")
+      pushstring          "contentPadding"
+      callproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "getStyleValue"), 1
+      ifeq                L21
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 2
+
+L21:
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "isInvalid"), 2
+      iffalse             L30
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawLayout")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawLayout"), 0
+
+L30:
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "updateChildren")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "updateChildren"), 0
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "draw"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "horizontalScrollPolicy")
+   method
+    refid "fl.containers:BaseScrollPane/instance/horizontalScrollPolicy/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollPolicy")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollPolicy")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "configUI") flag OVERRIDE
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:configUI"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "Graphics")
+      setlocal1
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "configUI"), 0
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentScrollRect")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+      pushbyte            0
+      dup
+      pushbyte            85
+      dup
+      constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentScrollRect")
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      findpropstrict      QName(PackageNamespace("fl.controls"), "ScrollBar")
+      constructprop       QName(PackageNamespace("fl.controls"), "ScrollBar"), 0
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlex              QName(PackageNamespace("fl.events"), "ScrollEvent")
+      getproperty         QName(PackageNamespace(""), "SCROLL")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "handleScroll")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "defaultLineScrollSize")
+      setproperty         QName(PackageNamespace(""), "lineScrollSize")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "copyStylesToChild")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlex              QName(StaticProtectedNs("fl.containers:BaseScrollPane"), "SCROLL_BAR_STYLES")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "copyStylesToChild"), 2
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      findpropstrict      QName(PackageNamespace("fl.controls"), "ScrollBar")
+      constructprop       QName(PackageNamespace("fl.controls"), "ScrollBar"), 0
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollBarDirection")
+      getproperty         QName(PackageNamespace(""), "HORIZONTAL")
+      setproperty         QName(PackageNamespace(""), "direction")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlex              QName(PackageNamespace("fl.events"), "ScrollEvent")
+      getproperty         QName(PackageNamespace(""), "SCROLL")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "handleScroll")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "defaultLineScrollSize")
+      setproperty         QName(PackageNamespace(""), "lineScrollSize")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "copyStylesToChild")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlex              QName(StaticProtectedNs("fl.containers:BaseScrollPane"), "SCROLL_BAR_STYLES")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "copyStylesToChild"), 2
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+      findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+      constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "disabledOverlay")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      coerce              QName(PackageNamespace("flash.display"), "Graphics")
+      setlocal1
+
+      getlocal1
+      pushint             16777215
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlocal1
+      pushbyte            0
+      dup
+      getlex              QName(PackageNamespace(""), "width")
+      getlex              QName(PackageNamespace(""), "height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_WHEEL")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "handleWheel")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "calculateContentWidth")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:calculateContentWidth"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight") type QName(PackageNamespace(""), "Number") end
+  trait getter QName(PackageNamespace(""), "verticalPageScrollSize")
+   method
+    refid "fl.containers:BaseScrollPane/instance/verticalPageScrollSize/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace(""), "drawNow")
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+L8:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalPageScrollSize")
+      pushbyte            0
+      equals
+      dup
+      iffalse             L18
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      not
+L18:
+      iffalse             L22
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      convert_d
+      jump                L24
+
+L22:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalPageScrollSize")
+      convert_d
+L24:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar") type QName(PackageNamespace("fl.controls"), "ScrollBar") end
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawLayout")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:drawLayout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "calculateAvailableSize")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "calculateAvailableSize"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "calculateContentWidth")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "calculateContentWidth"), 0
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "background")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "background")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "vScrollBar")
+      iffalse             L32
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlex              QName(PackageNamespace(""), "width")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollBar")
+      getproperty         QName(PackageNamespace(""), "WIDTH")
+      subtract
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding")
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      jump                L35
+
+L32:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L35:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentHeight")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableHeight")
+      subtract
+      getlex              QName(PackageNamespace(""), "verticalPageScrollSize")
+      callpropvoid        QName(PackageNamespace(""), "setScrollProperties"), 4
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setVerticalScrollPosition")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getproperty         QName(PackageNamespace(""), "scrollPosition")
+      pushfalse
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setVerticalScrollPosition"), 2
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "hScrollBar")
+      iffalse             L68
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding")
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlex              QName(PackageNamespace(""), "height")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollBar")
+      getproperty         QName(PackageNamespace(""), "WIDTH")
+      subtract
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentPadding")
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      jump                L71
+
+L68:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L71:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "useFixedHorizontalScrolling")
+      iffalse             L79
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_maxHorizontalScrollPosition")
+      convert_d
+      jump                L83
+
+L79:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentWidth")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+      subtract
+      convert_d
+L83:
+      getlex              QName(PackageNamespace(""), "horizontalPageScrollSize")
+      callpropvoid        QName(PackageNamespace(""), "setScrollProperties"), 4
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setHorizontalScrollPosition")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getproperty         QName(PackageNamespace(""), "scrollPosition")
+      pushfalse
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setHorizontalScrollPosition"), 2
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawDisabledOverlay")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawDisabledOverlay"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawBackground")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:drawBackground"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "background")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "background")
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "getDisplayObjectInstance")
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "getStyleValue")
+      pushstring          "skin"
+      callproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "getStyleValue"), 1
+      callproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "background")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "background")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "background")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "background")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      getlocal1
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L36
+
+      pop
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "background")
+      equals
+      not
+L36:
+      iffalse             L40
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L40:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "horizontalLineScrollSize")
+   method
+    refid "fl.containers:BaseScrollPane/instance/horizontalLineScrollSize/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "lineScrollSize")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "horizontalPageScrollSize")
+   method
+    refid "fl.containers:BaseScrollPane/instance/horizontalPageScrollSize/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace(""), "drawNow")
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+L8:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalPageScrollSize")
+      pushbyte            0
+      equals
+      dup
+      iffalse             L18
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      not
+L18:
+      iffalse             L22
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+      convert_d
+      jump                L24
+
+L22:
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalPageScrollSize")
+      convert_d
+L24:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentScrollRect") type QName(PackageNamespace("flash.geom"), "Rectangle") end
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollPolicy") type QName(PackageNamespace(""), "String") end
+  trait slot QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollPolicy") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "maxHorizontalScrollPosition")
+   method
+    refid "fl.containers:BaseScrollPane/instance/maxHorizontalScrollPosition/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "drawNow")
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "contentWidth")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "availableWidth")
+      subtract
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "setStyles")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:setStyles"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "copyStylesToChild")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlex              QName(StaticProtectedNs("fl.containers:BaseScrollPane"), "SCROLL_BAR_STYLES")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "copyStylesToChild"), 2
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "copyStylesToChild")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlex              QName(StaticProtectedNs("fl.containers:BaseScrollPane"), "SCROLL_BAR_STYLES")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "copyStylesToChild"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "updateChildren")
+   method
+    refid "fl.containers:BaseScrollPane/instance/fl.containers:BaseScrollPane:updateChildren"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      getlex              QName(PackageNamespace(""), "enabled")
+      dup
+      setlocal1
+
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlocal1
+      kill                1
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollBar")
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+      getlex              QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_horizontalScrollBar")
+      callpropvoid        QName(PackageNamespace(""), "drawNow"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "verticalScrollPolicy")
+   method
+    refid "fl.containers:BaseScrollPane/instance/verticalScrollPolicy/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollPolicy")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_verticalScrollPolicy")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "useBitmapScrolling")
+   method
+    refid "fl.containers:BaseScrollPane/instance/useBitmapScrolling/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_useBitmpScrolling")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "_useBitmpScrolling")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.containers:BaseScrollPane/class/init"
+  body
+   maxstack 39
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "fl.containers:BaseScrollPane/class"), "defaultStyles")
+    pushstring          "repeatDelay"
+    pushshort           500
+    pushstring          "repeatInterval"
+    pushbyte            35
+    pushstring          "skin"
+    pushstring          "ScrollPane_upSkin"
+    pushstring          "contentPadding"
+    pushbyte            0
+    pushstring          "disabledAlpha"
+    pushdouble          0.5
+    newobject           5
+    setproperty         QName(PrivateNamespace(null, "fl.containers:BaseScrollPane/class"), "defaultStyles")
+
+    findproperty        QName(StaticProtectedNs("fl.containers:BaseScrollPane"), "SCROLL_BAR_STYLES")
+    pushstring          "upArrowDisabledSkin"
+    pushstring          "upArrowDisabledSkin"
+    pushstring          "upArrowDownSkin"
+    pushstring          "upArrowDownSkin"
+    pushstring          "upArrowOverSkin"
+    pushstring          "upArrowOverSkin"
+    pushstring          "upArrowUpSkin"
+    pushstring          "upArrowUpSkin"
+    pushstring          "downArrowDisabledSkin"
+    pushstring          "downArrowDisabledSkin"
+    pushstring          "downArrowDownSkin"
+    pushstring          "downArrowDownSkin"
+    pushstring          "downArrowOverSkin"
+    pushstring          "downArrowOverSkin"
+    pushstring          "downArrowUpSkin"
+    pushstring          "downArrowUpSkin"
+    pushstring          "thumbDisabledSkin"
+    pushstring          "thumbDisabledSkin"
+    pushstring          "thumbDownSkin"
+    pushstring          "thumbDownSkin"
+    pushstring          "thumbOverSkin"
+    pushstring          "thumbOverSkin"
+    pushstring          "thumbUpSkin"
+    pushstring          "thumbUpSkin"
+    pushstring          "thumbIcon"
+    pushstring          "thumbIcon"
+    pushstring          "trackDisabledSkin"
+    pushstring          "trackDisabledSkin"
+    pushstring          "trackDownSkin"
+    pushstring          "trackDownSkin"
+    pushstring          "trackOverSkin"
+    pushstring          "trackOverSkin"
+    pushstring          "trackUpSkin"
+    pushstring          "trackUpSkin"
+    pushstring          "repeatDelay"
+    pushstring          "repeatDelay"
+    pushstring          "repeatInterval"
+    pushstring          "repeatInterval"
+    newobject           19
+    initproperty        QName(StaticProtectedNs("fl.containers:BaseScrollPane"), "SCROLL_BAR_STYLES")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(StaticProtectedNs("fl.containers:BaseScrollPane"), "SCROLL_BAR_STYLES") slotid 2 type QName(PackageNamespace(""), "Object") end
+ trait slot QName(PrivateNamespace(null, "fl.containers:BaseScrollPane/class"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   refid "fl.containers:BaseScrollPane/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "mergeStyles")
+     getlex              QName(PrivateNamespace(null, "fl.containers:BaseScrollPane/class"), "defaultStyles")
+     getlex              QName(PackageNamespace("fl.controls"), "ScrollBar")
+     callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+     callproperty        QName(PackageNamespace(""), "mergeStyles"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

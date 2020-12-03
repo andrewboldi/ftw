@@ -1,0 +1,1605 @@
+class
+ refid "fl.containers:ScrollPane"
+ instance QName(PackageNamespace("fl.containers"), "ScrollPane")
+  extends QName(PackageNamespace("fl.containers"), "BaseScrollPane")
+  implements Multiname("IFocusManagerComponent", [PackageNamespace("fl.managers")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.containers:ScrollPane")
+  iinit
+   refid "fl.containers:ScrollPane/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+     pushstring          ""
+     initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+
+     findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_scrollDrag")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_scrollDrag")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("fl.containers:ScrollPane"), "scrollDragHPos") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader") type QName(PackageNamespace("flash.display"), "Loader") end
+  trait getter QName(PackageNamespace(""), "source")
+   method
+    refid "fl.containers:ScrollPane/instance/source/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "source")
+   method
+    refid "fl.containers:ScrollPane/instance/source/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "clearContent")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "clearContent"), 0
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "isLivePreview")
+      iffalse             L10
+
+      returnvoid
+
+L10:
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+      pushstring          ""
+      equals
+      dup
+      iftrue              L22
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+      pushnull
+      equals
+L22:
+      iffalse             L24
+
+      returnvoid
+
+L24:
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "currentContent")
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "getDisplayObjectInstance")
+      getlocal1
+      callproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "currentContent")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "currentContent")
+      pushnull
+      ifeq                L48
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "currentContent")
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      callproperty        QName(PackageNamespace(""), "addChild"), 1
+      coerce_a
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "INIT")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "update")
+      callpropvoid        QName(PackageNamespace(""), "update"), 0
+
+      jump                L54
+
+L48:
+      findpropstrict      QName(PackageNamespace(""), "load")
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+      callproperty        Multiname("toString", [PrivateNamespace(null, "fl.containers:ScrollPane"), PackageNamespace(""), PackageNamespace("fl.containers"), ProtectedNamespace("fl.containers:ScrollPane"), PrivateNamespace(null, "fl.containers:ScrollPane/instance"), PackageInternalNs("fl.containers"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.containers:ScrollPane"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      callpropvoid        QName(PackageNamespace(""), "load"), 1
+
+L54:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "bytesLoaded")
+   method
+    refid "fl.containers:ScrollPane/instance/bytesLoaded/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      pushnull
+      equals
+      dup
+      iftrue              L12
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      pushnull
+      equals
+L12:
+      iffalse             L16
+
+      pushbyte            0
+      convert_d
+      jump                L20
+
+L16:
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getproperty         QName(PackageNamespace(""), "bytesLoaded")
+      convert_d
+L20:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "doDrag")
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:doDrag"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      pushundefined
+      coerce_a
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "scrollDragVPos")
+      getlex              QName(PackageNamespace(""), "mouseY")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "yOffset")
+      subtract
+      subtract
+      coerce_a
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_verticalScrollBar")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setScrollPosition"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "setVerticalScrollPosition")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_verticalScrollBar")
+      getproperty         QName(PackageNamespace(""), "scrollPosition")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "setVerticalScrollPosition"), 2
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "scrollDragHPos")
+      getlex              QName(PackageNamespace(""), "mouseX")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "xOffset")
+      subtract
+      subtract
+      coerce_a
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_horizontalScrollBar")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "setScrollPosition"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "setHorizontalScrollPosition")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_horizontalScrollBar")
+      getproperty         QName(PackageNamespace(""), "scrollPosition")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "setHorizontalScrollPosition"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "keyDownHandler") flag OVERRIDE
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:keyDownHandler"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "calculateAvailableHeight")
+      callproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "calculateAvailableHeight"), 0
+      convert_i
+      setlocal2
+
+      jump                L87
+
+L9:
+      label
+      findpropstrict      QName(PackageNamespace(""), "verticalScrollPosition")
+      dup
+      setlocal3
+
+      getproperty         QName(PackageNamespace(""), "verticalScrollPosition")
+      increment
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "verticalScrollPosition")
+
+      kill                4
+      kill                3
+      jump                L148
+
+L22:
+      label
+      findpropstrict      QName(PackageNamespace(""), "verticalScrollPosition")
+      dup
+      setlocal3
+
+      getproperty         QName(PackageNamespace(""), "verticalScrollPosition")
+      decrement
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "verticalScrollPosition")
+
+      kill                4
+      kill                3
+      jump                L148
+
+L35:
+      label
+      findpropstrict      QName(PackageNamespace(""), "horizontalScrollPosition")
+      dup
+      setlocal3
+
+      getproperty         QName(PackageNamespace(""), "horizontalScrollPosition")
+      increment
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "horizontalScrollPosition")
+
+      kill                4
+      kill                3
+      jump                L148
+
+L48:
+      label
+      findpropstrict      QName(PackageNamespace(""), "horizontalScrollPosition")
+      dup
+      setlocal3
+
+      getproperty         QName(PackageNamespace(""), "horizontalScrollPosition")
+      decrement
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "horizontalScrollPosition")
+
+      kill                4
+      kill                3
+      jump                L148
+
+L61:
+      label
+      findproperty        QName(PackageNamespace(""), "verticalScrollPosition")
+      getlex              QName(PackageNamespace(""), "maxVerticalScrollPosition")
+      initproperty        QName(PackageNamespace(""), "verticalScrollPosition")
+
+      jump                L148
+
+L66:
+      label
+      findproperty        QName(PackageNamespace(""), "verticalScrollPosition")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "verticalScrollPosition")
+
+      jump                L148
+
+L71:
+      label
+      findproperty        QName(PackageNamespace(""), "verticalScrollPosition")
+      getlex              QName(PackageNamespace(""), "verticalScrollPosition")
+      getlocal2
+      subtract
+      initproperty        QName(PackageNamespace(""), "verticalScrollPosition")
+
+      jump                L148
+
+L78:
+      label
+      findproperty        QName(PackageNamespace(""), "verticalScrollPosition")
+      getlex              QName(PackageNamespace(""), "verticalScrollPosition")
+      getlocal2
+      add
+      initproperty        QName(PackageNamespace(""), "verticalScrollPosition")
+
+      jump                L148
+
+L85:
+      label
+      jump                L148
+
+L87:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      setlocal3
+
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "DOWN")
+      getlocal3
+      ifstrictne          L96
+
+      pushbyte            0
+      jump                L146
+
+L96:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "UP")
+      getlocal3
+      ifstrictne          L102
+
+      pushbyte            1
+      jump                L146
+
+L102:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "RIGHT")
+      getlocal3
+      ifstrictne          L108
+
+      pushbyte            2
+      jump                L146
+
+L108:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "LEFT")
+      getlocal3
+      ifstrictne          L114
+
+      pushbyte            3
+      jump                L146
+
+L114:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "END")
+      getlocal3
+      ifstrictne          L120
+
+      pushbyte            4
+      jump                L146
+
+L120:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "HOME")
+      getlocal3
+      ifstrictne          L126
+
+      pushbyte            5
+      jump                L146
+
+L126:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "PAGE_UP")
+      getlocal3
+      ifstrictne          L132
+
+      pushbyte            6
+      jump                L146
+
+L132:
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "PAGE_DOWN")
+      getlocal3
+      ifstrictne          L138
+
+      pushbyte            7
+      jump                L146
+
+L138:
+      jump                L145
+
+      ; 0x24
+      ; 0x08
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L145:
+      pushbyte            8
+L146:
+      kill                3
+      lookupswitch        L85, [L9, L22, L35, L48, L61, L66, L71, L78, L85]
+
+L148:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "doStartDrag")
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:doStartDrag"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "enabled")
+      iftrue              L5
+
+      returnvoid
+
+L5:
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "xOffset")
+      getlex              QName(PackageNamespace(""), "mouseX")
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "xOffset")
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "yOffset")
+      getlex              QName(PackageNamespace(""), "mouseY")
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "yOffset")
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "scrollDragHPos")
+      getlex              QName(PackageNamespace(""), "horizontalScrollPosition")
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "scrollDragHPos")
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "scrollDragVPos")
+      getlex              QName(PackageNamespace(""), "verticalScrollPosition")
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "scrollDragVPos")
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_MOVE")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "doDrag")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:ScrollPane"), "yOffset") type QName(PackageNamespace(""), "Number") end
+  trait getter QName(PackageNamespace(""), "content")
+   method
+    refid "fl.containers:ScrollPane/instance/content/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "currentContent")
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.net"), "URLRequest")
+      istypelate
+      iffalse             L16
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      getproperty         QName(PackageNamespace(""), "content")
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+L16:
+      getlocal1
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+      astypelate
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "percentLoaded")
+   method
+    refid "fl.containers:ScrollPane/instance/percentLoaded/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      pushnull
+      ifeq                L13
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace(""), "bytesLoaded")
+      getlex              QName(PackageNamespace(""), "bytesTotal")
+      divide
+      pushbyte            100
+      multiply
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      returnvalue
+
+L13:
+      pushbyte            0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "endDrag")
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:endDrag"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_MOVE")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "doDrag")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "update")
+   method
+    refid "fl.containers:ScrollPane/instance/update"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "setContentSize")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "height")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "setContentSize"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:ScrollPane"), "currentContent") type QName(PackageNamespace(""), "Object") end
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "setHorizontalScrollPosition") flag OVERRIDE
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:setHorizontalScrollPosition"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getproperty         QName(PackageNamespace(""), "scrollRect")
+      coerce_a
+      setlocal3
+
+      getlocal3
+      getlocal1
+      setproperty         Multiname("x", [PrivateNamespace(null, "fl.containers:ScrollPane"), PackageNamespace(""), PackageNamespace("fl.containers"), ProtectedNamespace("fl.containers:ScrollPane"), PrivateNamespace(null, "fl.containers:ScrollPane/instance"), PackageInternalNs("fl.containers"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.containers:ScrollPane"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "scrollRect")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "refreshPane")
+   method
+    refid "fl.containers:ScrollPane/instance/refreshPane"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+      getlex              QName(PackageNamespace("flash.net"), "URLRequest")
+      istypelate
+      iffalse             L10
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+      getproperty         Multiname("url", [PrivateNamespace(null, "fl.containers:ScrollPane"), PackageNamespace(""), PackageNamespace("fl.containers"), ProtectedNamespace("fl.containers:ScrollPane"), PrivateNamespace(null, "fl.containers:ScrollPane/instance"), PackageInternalNs("fl.containers"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.containers:ScrollPane"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+
+L10:
+      findproperty        QName(PackageNamespace(""), "source")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+      initproperty        QName(PackageNamespace(""), "source")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "passEvent")
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:passEvent"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "calculateAvailableHeight")
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:calculateAvailableHeight"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "getStyleValue")
+      pushstring          "contentPadding"
+      callproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "height")
+      getlocal1
+      pushbyte            2
+      multiply
+      subtract
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_horizontalScrollPolicy")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollPolicy")
+      getproperty         QName(PackageNamespace(""), "ON")
+      equals
+      dup
+      iftrue              L33
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_horizontalScrollPolicy")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollPolicy")
+      getproperty         QName(PackageNamespace(""), "AUTO")
+      equals
+      dup
+      iffalse             L33
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_maxHorizontalScrollPosition")
+      pushbyte            0
+      greaterthan
+L33:
+      iffalse             L37
+
+      pushbyte            15
+      coerce_a
+      jump                L39
+
+L37:
+      pushbyte            0
+      coerce_a
+L39:
+      subtract
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "load")
+   method
+    refid "fl.containers:ScrollPane/instance/load"
+    param QName(PackageNamespace("flash.net"), "URLRequest")
+    param QName(PackageNamespace("flash.system"), "LoaderContext")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushnull
+      ifne                L12
+
+      findpropstrict      QName(PackageNamespace("flash.system"), "LoaderContext")
+      pushfalse
+      getlex              QName(PackageNamespace("flash.system"), "ApplicationDomain")
+      getproperty         QName(PackageNamespace(""), "currentDomain")
+      constructprop       QName(PackageNamespace("flash.system"), "LoaderContext"), 2
+      coerce              QName(PackageNamespace("flash.system"), "LoaderContext")
+      setlocal2
+
+L12:
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "clearContent")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "clearContent"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "initLoader")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "initLoader"), 0
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "currentContent")
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+      getlocal1
+      dup
+      setlocal3
+
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source")
+
+      getlocal3
+      kill                3
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "currentContent")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "load"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "handleScroll") flag OVERRIDE
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:handleScroll"
+    param QName(PackageNamespace("fl.events"), "ScrollEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "passEvent")
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "passEvent"), 1
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "handleScroll"), 1
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:ScrollPane"), "xOffset") type QName(PackageNamespace(""), "Number") end
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "setVerticalScrollPosition") flag OVERRIDE
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:setVerticalScrollPosition"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getproperty         QName(PackageNamespace(""), "scrollRect")
+      coerce_a
+      setlocal3
+
+      getlocal3
+      getlocal1
+      setproperty         Multiname("y", [PrivateNamespace(null, "fl.containers:ScrollPane"), PackageNamespace(""), PackageNamespace("fl.containers"), ProtectedNamespace("fl.containers:ScrollPane"), PrivateNamespace(null, "fl.containers:ScrollPane/instance"), PackageInternalNs("fl.containers"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.containers:ScrollPane"), StaticProtectedNs("fl.containers:BaseScrollPane"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "scrollRect")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:ScrollPane"), "_source") type QName(PackageNamespace(""), "Object") value Utf8("") end
+  trait slot QName(ProtectedNamespace("fl.containers:ScrollPane"), "scrollDragVPos") type QName(PackageNamespace(""), "Number") end
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "initLoader")
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:initLoader"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      findpropstrict      QName(PackageNamespace("flash.display"), "Loader")
+      constructprop       QName(PackageNamespace("flash.display"), "Loader"), 0
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+      getproperty         QName(PackageNamespace(""), "PROGRESS")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "passEvent")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "onContentLoad")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "INIT")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "passEvent")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "draw") flag OVERRIDE
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "isInvalid"), 1
+      iffalse             L9
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "drawBackground")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "drawBackground"), 0
+
+L9:
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "isInvalid"), 1
+      iffalse             L16
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "setScrollDrag")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "setScrollDrag"), 0
+
+L16:
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "draw"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:ScrollPane"), "_scrollDrag") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "configUI") flag OVERRIDE
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:configUI"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "configUI"), 0
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentScrollRect")
+      setproperty         QName(PackageNamespace(""), "scrollRect")
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_horizontalScrollPolicy")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollPolicy")
+      getproperty         QName(PackageNamespace(""), "AUTO")
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_horizontalScrollPolicy")
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_verticalScrollPolicy")
+      getlex              QName(PackageNamespace("fl.controls"), "ScrollPolicy")
+      getproperty         QName(PackageNamespace(""), "AUTO")
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_verticalScrollPolicy")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait setter QName(PackageNamespace(""), "scrollDrag")
+   method
+    refid "fl.containers:ScrollPane/instance/scrollDrag/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_scrollDrag")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "_scrollDrag")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "clearContent")
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:clearContent"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 12
+     maxscopedepth 19
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getproperty         QName(PackageNamespace(""), "numChildren")
+      pushbyte            0
+      ifne                L11
+
+      returnvoid
+
+L11:
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "removeChildAt"), 1
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "currentContent")
+      pushnull
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "currentContent")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      pushnull
+      ifeq                L55
+
+L20:
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+L22:
+      jump                L36
+
+L23:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L36:
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      callpropvoid        QName(PackageNamespace(""), "unload"), 0
+
+L38:
+      jump                L52
+
+L39:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L52:
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      pushnull
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+
+L55:
+      returnvoid
+     end ; code
+     try from L20 to L22 target L23 type null name QName(PackageNamespace(""), "e") end
+     try from L36 to L38 target L39 type null name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "drawLayout") flag OVERRIDE
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:drawLayout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.containers:BaseScrollPane"), "drawLayout"), 0
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentScrollRect")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getproperty         QName(PackageNamespace(""), "scrollRect")
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentScrollRect")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentScrollRect")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "availableWidth")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentScrollRect")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "availableHeight")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlex              QName(PackageNamespace(""), "useBitmapScrolling")
+      setproperty         QName(PackageNamespace(""), "cacheAsBitmap")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentScrollRect")
+      setproperty         QName(PackageNamespace(""), "scrollRect")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentPadding")
+      dup
+      setlocal1
+
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal1
+      kill                1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "drawBackground") flag OVERRIDE
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:drawBackground"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "background")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      findproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "background")
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "getDisplayObjectInstance")
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "getStyleValue")
+      getlex              QName(PackageNamespace(""), "enabled")
+      iffalse             L15
+
+      pushstring          "upSkin"
+      jump                L16
+
+L15:
+      pushstring          "disabledSkin"
+L16:
+      callproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "getStyleValue"), 1
+      callproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "background")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "background")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "background")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "background")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      getlocal1
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L40
+
+      pop
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "background")
+      equals
+      not
+L40:
+      iffalse             L44
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L44:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "bytesTotal")
+   method
+    refid "fl.containers:ScrollPane/instance/bytesTotal/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      pushnull
+      equals
+      dup
+      iftrue              L12
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      pushnull
+      equals
+L12:
+      iffalse             L16
+
+      pushbyte            0
+      convert_d
+      jump                L20
+
+L16:
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "loader")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getproperty         QName(PackageNamespace(""), "bytesTotal")
+      convert_d
+L20:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "onContentLoad")
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:onContentLoad"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "update")
+      callpropvoid        QName(PackageNamespace(""), "update"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "calculateAvailableHeight")
+      callproperty        QName(ProtectedNamespace("fl.containers:ScrollPane"), "calculateAvailableHeight"), 0
+      coerce_a
+      setlocal2
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "calculateAvailableSize")
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "calculateAvailableSize"), 0
+
+      getlex              QName(PackageNamespace(""), "horizontalScrollBar")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "availableWidth")
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "useFixedHorizontalScrolling")
+      iffalse             L21
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_maxHorizontalScrollPosition")
+      convert_d
+      jump                L25
+
+L21:
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentWidth")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "availableWidth")
+      subtract
+      convert_d
+L25:
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "availableWidth")
+      callpropvoid        QName(PackageNamespace(""), "setScrollProperties"), 4
+
+      getlex              QName(PackageNamespace(""), "verticalScrollBar")
+      getlocal2
+      pushbyte            0
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentHeight")
+      getlocal2
+      subtract
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setScrollProperties"), 4
+
+      findpropstrict      QName(ProtectedNamespace("fl.containers:ScrollPane"), "passEvent")
+      getlocal1
+      callpropvoid        QName(ProtectedNamespace("fl.containers:ScrollPane"), "passEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "scrollDrag")
+   method
+    refid "fl.containers:ScrollPane/instance/scrollDrag/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_scrollDrag")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.containers:ScrollPane"), "setScrollDrag")
+   method
+    refid "fl.containers:ScrollPane/instance/fl.containers:ScrollPane:setScrollDrag"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_scrollDrag")
+      iffalse             L21
+
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "doStartDrag")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_UP")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "endDrag")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      jump                L36
+
+L21:
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "doStartDrag")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_UP")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "endDrag")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_MOVE")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "doDrag")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+L36:
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "contentClip")
+      getlex              QName(ProtectedNamespace("fl.containers:ScrollPane"), "_scrollDrag")
+      setproperty         QName(PackageNamespace(""), "buttonMode")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.containers:ScrollPane/class/init"
+  body
+   maxstack 11
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "fl.containers:ScrollPane"), "defaultStyles")
+    pushstring          "upSkin"
+    pushstring          "ScrollPane_upSkin"
+    pushstring          "disabledSkin"
+    pushstring          "ScrollPane_disabledSkin"
+    pushstring          "focusRectSkin"
+    pushnull
+    pushstring          "focusRectPadding"
+    pushnull
+    pushstring          "contentPadding"
+    pushbyte            0
+    newobject           5
+    setproperty         QName(PrivateNamespace(null, "fl.containers:ScrollPane"), "defaultStyles")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "fl.containers:ScrollPane"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   refid "fl.containers:ScrollPane/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "mergeStyles")
+     getlex              QName(PrivateNamespace(null, "fl.containers:ScrollPane"), "defaultStyles")
+     getlex              QName(PackageNamespace("fl.containers"), "BaseScrollPane")
+     callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+     callproperty        QName(PackageNamespace(""), "mergeStyles"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

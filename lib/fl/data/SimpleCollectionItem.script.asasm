@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "fl.data:SimpleCollectionItem/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("SimpleCollectionItem", [PackageNamespace("fl.data")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "fl.data:SimpleCollectionItem"
+    popscope
+    initproperty        QName(PackageNamespace("fl.data"), "SimpleCollectionItem")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.data"), "SimpleCollectionItem")
+  #include "SimpleCollectionItem.class.asasm"
+ end ; trait
+end ; script

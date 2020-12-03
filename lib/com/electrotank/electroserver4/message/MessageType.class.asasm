@@ -1,0 +1,1053 @@
+class
+ refid "com.electrotank.electroserver4.message:MessageType"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message:MessageType")
+  iinit
+   refid "com.electrotank.electroserver4.message:MessageType/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 2
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setIsRequest")
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "setIsRequest"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsResponse")
+     getlocal            4
+     callpropvoid        QName(PackageNamespace(""), "setIsResponse"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsEvent")
+     getlocal            4
+     callpropvoid        QName(PackageNamespace(""), "setIsEvent"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageTypeId")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "setMessageTypeId"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageTypeName")
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "setMessageTypeName"), 1
+
+     findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "register")
+     getlocal0
+     callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "register"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypeId") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypeName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isRequest") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isResponse") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isEvent") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "setIsRequest")
+   method
+    refid "com.electrotank.electroserver4.message:MessageType/instance/setIsRequest"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isRequest")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isRequest")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsRequest")
+   method
+    refid "com.electrotank.electroserver4.message:MessageType/instance/getIsRequest"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isRequest")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsResponse")
+   method
+    refid "com.electrotank.electroserver4.message:MessageType/instance/setIsResponse"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isResponse")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isResponse")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsResponse")
+   method
+    refid "com.electrotank.electroserver4.message:MessageType/instance/getIsResponse"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isResponse")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsEvent")
+   method
+    refid "com.electrotank.electroserver4.message:MessageType/instance/setIsEvent"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isEvent")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isEvent")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsEvent")
+   method
+    refid "com.electrotank.electroserver4.message:MessageType/instance/getIsEvent"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "isEvent")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setMessageTypeName")
+   method
+    refid "com.electrotank.electroserver4.message:MessageType/instance/setMessageTypeName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypeName")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypeName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getMessageTypeName")
+   method
+    refid "com.electrotank.electroserver4.message:MessageType/instance/getMessageTypeName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypeName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getMessageTypeId")
+   method
+    refid "com.electrotank.electroserver4.message:MessageType/instance/getMessageTypeId"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypeId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setMessageTypeId")
+   method
+    refid "com.electrotank.electroserver4.message:MessageType/instance/setMessageTypeId"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypeId")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypeId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message:MessageType/class/init"
+  body
+   maxstack 7
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypes")
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    constructprop       QName(PackageNamespace(""), "Array"), 0
+    setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypes")
+
+    findproperty        QName(PackageNamespace(""), "LoginRequest")
+    getlocal0
+    pushstring          "L"
+    pushstring          "LoginRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "LoginRequest")
+
+    findproperty        QName(PackageNamespace(""), "AdditionalLoginRequest")
+    getlocal0
+    pushstring          "$"
+    pushstring          "LoginRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "AdditionalLoginRequest")
+
+    findproperty        QName(PackageNamespace(""), "LogoutRequest")
+    getlocal0
+    pushstring          "l"
+    pushstring          "LogoutRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "LogoutRequest")
+
+    findproperty        QName(PackageNamespace(""), "GetUsersInRoomRequest")
+    getlocal0
+    pushstring          "k"
+    pushstring          "GetUsersInRoomRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GetUsersInRoomRequest")
+
+    findproperty        QName(PackageNamespace(""), "PluginRequest")
+    getlocal0
+    pushstring          "C"
+    pushstring          "PluginRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "PluginRequest")
+
+    findproperty        QName(PackageNamespace(""), "ValidateAdditionalLoginRequest")
+    getlocal0
+    pushstring          "%"
+    pushstring          "ValidateAdditionalLoginRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "ValidateAdditionalLoginRequest")
+
+    findproperty        QName(PackageNamespace(""), "FindZoneAndRoomByNameRequest")
+    getlocal0
+    pushstring          "D"
+    pushstring          "FindZoneAndRoomByNameRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "FindZoneAndRoomByNameRequest")
+
+    findproperty        QName(PackageNamespace(""), "UpdateRoomDetailsRequest")
+    getlocal0
+    pushstring          "h"
+    pushstring          "UpdateRoomDetailsRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "UpdateRoomDetailsRequest")
+
+    findproperty        QName(PackageNamespace(""), "EvictUserFromRoomRequest")
+    getlocal0
+    pushstring          "S"
+    pushstring          "EvictUserFromRoomRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "EvictUserFromRoomRequest")
+
+    findproperty        QName(PackageNamespace(""), "AddRoomOperatorRequest")
+    getlocal0
+    pushstring          "A"
+    pushstring          "AddRoomOperatorRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "AddRoomOperatorRequest")
+
+    findproperty        QName(PackageNamespace(""), "RemoveRoomOperatorRequest")
+    getlocal0
+    pushstring          "B"
+    pushstring          "RemoveRoomOperatorRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "RemoveRoomOperatorRequest")
+
+    findproperty        QName(PackageNamespace(""), "AddBuddyRequest")
+    getlocal0
+    pushstring          "K"
+    pushstring          "AddBuddyRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "AddBuddyRequest")
+
+    findproperty        QName(PackageNamespace(""), "RemoveBuddyRequest")
+    getlocal0
+    pushstring          "M"
+    pushstring          "RemoveBuddyRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "RemoveBuddyRequest")
+
+    findproperty        QName(PackageNamespace(""), "GetUserCountRequest")
+    getlocal0
+    pushstring          "0"
+    pushstring          "GetUserCountRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GetUserCountRequest")
+
+    findproperty        QName(PackageNamespace(""), "DeleteUserVariableRequest")
+    getlocal0
+    pushstring          "H"
+    pushstring          "DeleteUserVariableRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "DeleteUserVariableRequest")
+
+    findproperty        QName(PackageNamespace(""), "UpdateRoomVariableRequest")
+    getlocal0
+    pushstring          "o"
+    pushstring          "UpdateRoomVariableRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "UpdateRoomVariableRequest")
+
+    findproperty        QName(PackageNamespace(""), "UpdateUserVariableRequest")
+    getlocal0
+    pushstring          "I"
+    pushstring          "UpdateUserVariableRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "UpdateUserVariableRequest")
+
+    findproperty        QName(PackageNamespace(""), "DeleteRoomVariableRequest")
+    getlocal0
+    pushstring          "N"
+    pushstring          "DeleteRoomVariableRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "DeleteRoomVariableRequest")
+
+    findproperty        QName(PackageNamespace(""), "CreateRoomVariableRequest")
+    getlocal0
+    pushstring          "n"
+    pushstring          "CreateRoomVariableRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "CreateRoomVariableRequest")
+
+    findproperty        QName(PackageNamespace(""), "LeaveRoomRequest")
+    getlocal0
+    pushstring          "v"
+    pushstring          "LeaveRoomRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "LeaveRoomRequest")
+
+    findproperty        QName(PackageNamespace(""), "CreateRoomRequest")
+    getlocal0
+    pushstring          "Q"
+    pushstring          "CreateRoomRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "CreateRoomRequest")
+
+    findproperty        QName(PackageNamespace(""), "PublicMessageRequest")
+    getlocal0
+    pushstring          "P"
+    pushstring          "PublicMessageRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "PublicMessageRequest")
+
+    findproperty        QName(PackageNamespace(""), "PrivateMessageRequest")
+    getlocal0
+    pushstring          "p"
+    pushstring          "PrivateMessageRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "PrivateMessageRequest")
+
+    findproperty        QName(PackageNamespace(""), "GetRoomsInZoneRequest")
+    getlocal0
+    pushstring          "t"
+    pushstring          "GetRoomsInZoneRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GetRoomsInZoneRequest")
+
+    findproperty        QName(PackageNamespace(""), "JoinRoomRequest")
+    getlocal0
+    pushstring          "J"
+    pushstring          "JoinRoomRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "JoinRoomRequest")
+
+    findproperty        QName(PackageNamespace(""), "GetZonesRequest")
+    getlocal0
+    pushstring          "s"
+    pushstring          "GetZonesRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GetZonesRequest")
+
+    findproperty        QName(PackageNamespace(""), "CreateOrJoinGameRequest")
+    getlocal0
+    pushstring          "("
+    pushstring          "CreateOrJoinGameRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "CreateOrJoinGameRequest")
+
+    findproperty        QName(PackageNamespace(""), "FindGamesRequest")
+    getlocal0
+    pushstring          "*"
+    pushstring          "FindGamesRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "FindGamesRequest")
+
+    findproperty        QName(PackageNamespace(""), "GetUserVariablesRequest")
+    getlocal0
+    pushstring          "+"
+    pushstring          "GetUserVariablesRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GetUserVariablesRequest")
+
+    findproperty        QName(PackageNamespace(""), "GateWayKickUserRequest")
+    getlocal0
+    pushstring          "^"
+    pushstring          "GateWayKickUserRequest"
+    pushtrue
+    pushfalse
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GateWayKickUserRequest")
+
+    findproperty        QName(PackageNamespace(""), "LoginResponse")
+    getlocal0
+    pushstring          "m"
+    pushstring          "LoginResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "LoginResponse")
+
+    findproperty        QName(PackageNamespace(""), "GetUsersInRoomResponse")
+    getlocal0
+    pushstring          "F"
+    pushstring          "GetUsersInRoomResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GetUsersInRoomResponse")
+
+    findproperty        QName(PackageNamespace(""), "GetUserCountResponse")
+    getlocal0
+    pushstring          "1"
+    pushstring          "GetUserCountResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GetUserCountResponse")
+
+    findproperty        QName(PackageNamespace(""), "GetZonesResponse")
+    getlocal0
+    pushstring          "b"
+    pushstring          "GetZonesResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GetZonesResponse")
+
+    findproperty        QName(PackageNamespace(""), "GetRoomsInZoneResponse")
+    getlocal0
+    pushstring          "d"
+    pushstring          "GetRoomsInZoneResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GetRoomsInZoneResponse")
+
+    findproperty        QName(PackageNamespace(""), "GenericErrorResponse")
+    getlocal0
+    pushstring          "e"
+    pushstring          "GenericErrorResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GenericErrorResponse")
+
+    findproperty        QName(PackageNamespace(""), "FindZoneAndRoomByNameResponse")
+    getlocal0
+    pushstring          "g"
+    pushstring          "FindZoneAndRoomByNameResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "FindZoneAndRoomByNameResponse")
+
+    findproperty        QName(PackageNamespace(""), "ValidateAdditionalLoginResponse")
+    getlocal0
+    pushstring          "&"
+    pushstring          "ValidateAdditionalLoginResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "ValidateAdditionalLoginResponse")
+
+    findproperty        QName(PackageNamespace(""), "CreateOrJoinGameResponse")
+    getlocal0
+    pushstring          "_"
+    pushstring          "CreateOrJoinGameResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "CreateOrJoinGameResponse")
+
+    findproperty        QName(PackageNamespace(""), "FindGamesResponse")
+    getlocal0
+    pushstring          ")"
+    pushstring          "FindGamesResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "FindGamesResponse")
+
+    findproperty        QName(PackageNamespace(""), "GetUserVariablesResponse")
+    getlocal0
+    pushstring          "="
+    pushstring          "GetUserVariablesResponse"
+    pushfalse
+    pushtrue
+    pushfalse
+    construct           5
+    setproperty         QName(PackageNamespace(""), "GetUserVariablesResponse")
+
+    findproperty        QName(PackageNamespace(""), "ConnectionEvent")
+    getlocal0
+    pushstring          "c"
+    pushstring          "ConnectionEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "ConnectionEvent")
+
+    findproperty        QName(PackageNamespace(""), "ClientIdleEvent")
+    getlocal0
+    pushstring          "i"
+    pushstring          "ClientIdleEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "ClientIdleEvent")
+
+    findproperty        QName(PackageNamespace(""), "JoinRoomEvent")
+    getlocal0
+    pushstring          "R"
+    pushstring          "JoinRoomEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "JoinRoomEvent")
+
+    findproperty        QName(PackageNamespace(""), "JoinZoneEvent")
+    getlocal0
+    pushstring          "Z"
+    pushstring          "JoinZoneEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "JoinZoneEvent")
+
+    findproperty        QName(PackageNamespace(""), "PublicMessageEvent")
+    getlocal0
+    pushstring          "a"
+    pushstring          "PublicMessagEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "PublicMessageEvent")
+
+    findproperty        QName(PackageNamespace(""), "PrivateMessageEvent")
+    getlocal0
+    pushstring          "r"
+    pushstring          "PrivateMessagEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "PrivateMessageEvent")
+
+    findproperty        QName(PackageNamespace(""), "ZoneUpdateEvent")
+    getlocal0
+    pushstring          "V"
+    pushstring          "ZoneUpdateEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "ZoneUpdateEvent")
+
+    findproperty        QName(PackageNamespace(""), "LeaveRoomEvent")
+    getlocal0
+    pushstring          "W"
+    pushstring          "LeaveRoomEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "LeaveRoomEvent")
+
+    findproperty        QName(PackageNamespace(""), "LeaveZoneEvent")
+    getlocal0
+    pushstring          "X"
+    pushstring          "LeaveZoneEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "LeaveZoneEvent")
+
+    findproperty        QName(PackageNamespace(""), "UserListUpdateEvent")
+    getlocal0
+    pushstring          "U"
+    pushstring          "UserListUpdateEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "UserListUpdateEvent")
+
+    findproperty        QName(PackageNamespace(""), "RoomVariableUpdateEvent")
+    getlocal0
+    pushstring          "q"
+    pushstring          "RoomVariableUpdateEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "RoomVariableUpdateEvent")
+
+    findproperty        QName(PackageNamespace(""), "UserVariableUpdateEvent")
+    getlocal0
+    pushstring          "Y"
+    pushstring          "UserVariableUpdateEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "UserVariableUpdateEvent")
+
+    findproperty        QName(PackageNamespace(""), "BuddyStatusUpdatedEvent")
+    getlocal0
+    pushstring          "O"
+    pushstring          "BuddyStatusUpdatedEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "BuddyStatusUpdatedEvent")
+
+    findproperty        QName(PackageNamespace(""), "UserEvictedFromRoomEvent")
+    getlocal0
+    pushstring          "T"
+    pushstring          "UserEvictedFromRoomEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "UserEvictedFromRoomEvent")
+
+    findproperty        QName(PackageNamespace(""), "UpdateRoomDetailsEvent")
+    getlocal0
+    pushstring          "E"
+    pushstring          "UpdateRoomDetailsEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "UpdateRoomDetailsEvent")
+
+    findproperty        QName(PackageNamespace(""), "PluginMessageEvent")
+    getlocal0
+    pushstring          "f"
+    pushstring          "PluginMessageEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "PluginMessageEvent")
+
+    findproperty        QName(PackageNamespace(""), "CompositePluginMessageEvent")
+    getlocal0
+    pushstring          "G"
+    pushstring          "CompositePluginMessageEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "CompositePluginMessageEvent")
+
+    findproperty        QName(PackageNamespace(""), "ConnectionClosedEvent")
+    getlocal0
+    pushstring          "|ConnectionClosedEvent"
+    pushstring          "ConnectionClosedEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "ConnectionClosedEvent")
+
+    findproperty        QName(PackageNamespace(""), "RtmpConnectionEvent")
+    getlocal0
+    pushstring          "|RtmpConnectionEvent"
+    pushstring          "RtmpConnectionEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "RtmpConnectionEvent")
+
+    findproperty        QName(PackageNamespace(""), "RtmpConnectionClosedEvent")
+    getlocal0
+    pushstring          "|RtmpConnectionClosedEvent"
+    pushstring          "RtmpConnectionClosedEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "RtmpConnectionClosedEvent")
+
+    findproperty        QName(PackageNamespace(""), "RtmpOnStatusEvent")
+    getlocal0
+    pushstring          "|RtmpOnStatusEvent"
+    pushstring          "RtmpOnStatusEvent"
+    pushfalse
+    pushfalse
+    pushtrue
+    construct           5
+    setproperty         QName(PackageNamespace(""), "RtmpOnStatusEvent")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypes") slotid 1 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PackageNamespace(""), "LoginRequest") slotid 2 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "AdditionalLoginRequest") slotid 3 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "LogoutRequest") slotid 4 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GetUsersInRoomRequest") slotid 5 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "PluginRequest") slotid 6 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "ValidateAdditionalLoginRequest") slotid 7 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "FindZoneAndRoomByNameRequest") slotid 8 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "UpdateRoomDetailsRequest") slotid 9 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "EvictUserFromRoomRequest") slotid 10 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "AddRoomOperatorRequest") slotid 11 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "RemoveRoomOperatorRequest") slotid 12 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "AddBuddyRequest") slotid 13 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "RemoveBuddyRequest") slotid 14 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GetUserCountRequest") slotid 15 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "DeleteUserVariableRequest") slotid 16 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "UpdateRoomVariableRequest") slotid 17 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "UpdateUserVariableRequest") slotid 18 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "DeleteRoomVariableRequest") slotid 19 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "CreateRoomVariableRequest") slotid 20 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "LeaveRoomRequest") slotid 21 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "CreateRoomRequest") slotid 22 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "PublicMessageRequest") slotid 23 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "PrivateMessageRequest") slotid 24 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GetRoomsInZoneRequest") slotid 25 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "JoinRoomRequest") slotid 26 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GetZonesRequest") slotid 27 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "CreateOrJoinGameRequest") slotid 28 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "FindGamesRequest") slotid 29 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GetUserVariablesRequest") slotid 30 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GateWayKickUserRequest") slotid 31 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "LoginResponse") slotid 32 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GetUsersInRoomResponse") slotid 33 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GetUserCountResponse") slotid 34 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GetZonesResponse") slotid 35 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GetRoomsInZoneResponse") slotid 36 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GenericErrorResponse") slotid 37 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "FindZoneAndRoomByNameResponse") slotid 38 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "ValidateAdditionalLoginResponse") slotid 39 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "CreateOrJoinGameResponse") slotid 40 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "FindGamesResponse") slotid 41 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "GetUserVariablesResponse") slotid 42 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "ConnectionEvent") slotid 43 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "ClientIdleEvent") slotid 44 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "JoinRoomEvent") slotid 45 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "JoinZoneEvent") slotid 46 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "PublicMessageEvent") slotid 47 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "PrivateMessageEvent") slotid 48 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "ZoneUpdateEvent") slotid 49 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "LeaveRoomEvent") slotid 50 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "LeaveZoneEvent") slotid 51 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "UserListUpdateEvent") slotid 52 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "RoomVariableUpdateEvent") slotid 53 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "UserVariableUpdateEvent") slotid 54 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "BuddyStatusUpdatedEvent") slotid 55 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "UserEvictedFromRoomEvent") slotid 56 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "UpdateRoomDetailsEvent") slotid 57 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "PluginMessageEvent") slotid 58 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "CompositePluginMessageEvent") slotid 59 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "ConnectionClosedEvent") slotid 60 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "RtmpConnectionEvent") slotid 61 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "RtmpConnectionClosedEvent") slotid 62 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait slot QName(PackageNamespace(""), "RtmpOnStatusEvent") slotid 63 type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+ trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "register") flag FINAL dispid 3
+  method
+   refid "com.electrotank.electroserver4.message:MessageType/class/com.electrotank.electroserver4.message:MessageType/register"
+   param QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "getMessageTypeId"), 0
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_d
+     setlocal2
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypes")
+     getlocal2
+     getlocal1
+     setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType/class"), PackageNamespace("com.electrotank.electroserver4.message"), PackageInternalNs("com.electrotank.electroserver4.message"), ProtectedNamespace("com.electrotank.electroserver4.message:MessageType"), StaticProtectedNs("com.electrotank.electroserver4.message:MessageType"), StaticProtectedNs("Object")])
+
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "getMessageTypeId"), 0
+     coerce_s
+     setlocal3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "findTypeById") flag FINAL dispid 4
+  method
+   refid "com.electrotank.electroserver4.message:MessageType/class/findTypeById"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_d
+     setlocal2
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), "messageTypes")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.message:MessageType/class"), PackageNamespace("com.electrotank.electroserver4.message"), PackageInternalNs("com.electrotank.electroserver4.message"), ProtectedNamespace("com.electrotank.electroserver4.message:MessageType"), StaticProtectedNs("com.electrotank.electroserver4.message:MessageType"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     setlocal3
+
+     getlocal3
+     pushnull
+     ifne                L20
+
+     findpropstrict      QName(PackageNamespace(""), "trace")
+     pushstring          "Error: MessageType class. Message type not found with id: "
+     getlocal1
+     add
+     callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L20:
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

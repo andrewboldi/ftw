@@ -1,0 +1,57 @@
+script
+ sinit
+  refid "fl.controls:UIScrollBar/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("UIScrollBar", [PackageNamespace("fl.controls")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+    pushscope
+
+    getlex              QName(PackageNamespace("fl.controls"), "ScrollBar")
+    pushscope
+
+    getlex              QName(PackageNamespace("fl.controls"), "ScrollBar")
+    newclass            "fl.controls:UIScrollBar"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("fl.controls"), "UIScrollBar")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.controls"), "UIScrollBar")
+  #include "UIScrollBar.class.asasm"
+ end ; trait
+end ; script

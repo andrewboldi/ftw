@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "net.theyak.server:ElectroServer4/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ElectroServer4", [PackageNamespace("net.theyak.server")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("net.theyak.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("net.theyak.events"), "EventDispatcher")
+    newclass            "net.theyak.server:ElectroServer4"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("net.theyak.server"), "ElectroServer4")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("net.theyak.server"), "ElectroServer4")
+  #include "ElectroServer4.class.asasm"
+ end ; trait
+end ; script

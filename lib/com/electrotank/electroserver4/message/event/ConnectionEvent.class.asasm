@@ -1,0 +1,313 @@
+class
+ refid "com.electrotank.electroserver4.message.event:ConnectionEvent"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "ConnectionEvent")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "EventImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.event:ConnectionEvent")
+  iinit
+   refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "ConnectionEvent")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "accepted") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "esError") type QName(PackageNamespace("com.electrotank.electroserver4.errors"), "EsError") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "hashId") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "prime") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "base") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "setHashId")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/setHashId"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "hashId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getHashId")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/getHashId"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "hashId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setEsError")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/setEsError"
+    param QName(PackageNamespace("com.electrotank.electroserver4.errors"), "EsError")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "esError")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getEsError")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/getEsError"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.errors"), "EsError")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "esError")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setPrime")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/setPrime"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "prime")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getPrime")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/getPrime"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "prime")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setBase")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/setBase"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "base")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getBase")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/getBase"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "base")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "success")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/success/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getAccepted")
+      callproperty        QName(PackageNamespace(""), "getAccepted"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setAccepted")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/setAccepted"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "accepted")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "accepted")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getAccepted")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/getAccepted"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "accepted")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionEvent/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "ConnectionEvent[id: "
+      findpropstrict      QName(PackageNamespace(""), "getHashId")
+      callproperty        QName(PackageNamespace(""), "getHashId"), 0
+      add
+      pushstring          ", accepted: "
+      add
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionEvent/instance"), "accepted")
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.event:ConnectionEvent/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

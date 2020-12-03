@@ -1,0 +1,1117 @@
+class
+ refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObjectDataHolder")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.esobject:EsObjectDataHolder")
+  iinit
+   refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "name") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "dataType") type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "rawValue") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "intValue") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "stringValue") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "doubleValue") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "floatValue") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "booleanValue") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "byteValue") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "charValue") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "longValue") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "shortValue") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "intArrayValue") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "stringArrayValue") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "doubleArrayValue") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "floatArrayValue") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "booleanArrayValue") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "byteArrayValue") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "charArrayValue") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "longArrayValue") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "shortArrayValue") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "esObjectValue") type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "esObjectArrayValue") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "numberValue") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "numberArrayValue") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "setName")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "name")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getName")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "name")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setDataType")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setDataType"
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "dataType")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "dataType")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getDataType")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getDataType"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "dataType")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRawValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setRawValue"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "rawValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "rawValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRawValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getRawValue"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "rawValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIntValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setIntValue"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "intValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "intValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIntValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getIntValue"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "intValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setStringValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setStringValue"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "stringValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "stringValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getStringValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getStringValue"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "stringValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setDoubleValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setDoubleValue"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "doubleValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "doubleValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getDoubleValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getDoubleValue"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "doubleValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFloatValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setFloatValue"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "floatValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "floatValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getFloatValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getFloatValue"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "floatValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setBooleanValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setBooleanValue"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "booleanValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "booleanValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getBooleanValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getBooleanValue"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "booleanValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setByteValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setByteValue"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "byteValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "byteValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getByteValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getByteValue"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "byteValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setCharValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setCharValue"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "charValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "charValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getCharValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getCharValue"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "charValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setLongValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setLongValue"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "longValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "longValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getLongValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getLongValue"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "longValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setShortValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setShortValue"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "shortValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "shortValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getShortValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getShortValue"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "shortValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIntArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setIntArrayValue"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "intArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "intArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIntArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getIntArrayValue"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "intArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setStringArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setStringArrayValue"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "stringArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "stringArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getStringArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getStringArrayValue"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "stringArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setDoubleArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setDoubleArrayValue"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "doubleArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "doubleArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getDoubleArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getDoubleArrayValue"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "doubleArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFloatArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setFloatArrayValue"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "floatArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "floatArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getFloatArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getFloatArrayValue"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "floatArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setBooleanArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setBooleanArrayValue"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "booleanArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "booleanArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getBooleanArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getBooleanArrayValue"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "booleanArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setByteArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setByteArrayValue"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "byteArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "byteArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getByteArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getByteArrayValue"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "byteArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setCharArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setCharArrayValue"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "charArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "charArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getCharArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getCharArrayValue"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "charArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setLongArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setLongArrayValue"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "longArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "longArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getLongArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getLongArrayValue"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "longArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setShortArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setShortArrayValue"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "shortArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "shortArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getShortArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getShortArrayValue"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "shortArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setEsObjectValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setEsObjectValue"
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "esObjectValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "esObjectValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getEsObjectValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getEsObjectValue"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "esObjectValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setEsObjectArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setEsObjectArrayValue"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "esObjectArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "esObjectArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getEsObjectArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getEsObjectArrayValue"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "esObjectArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setNumberValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setNumberValue"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "numberValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "numberValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getNumberValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getNumberValue"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "numberValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setNumberArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/setNumberArrayValue"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "numberArrayValue")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "numberArrayValue")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getNumberArrayValue")
+   method
+    refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance/getNumberArrayValue"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:EsObjectDataHolder/instance"), "numberArrayValue")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.esobject:EsObjectDataHolder/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

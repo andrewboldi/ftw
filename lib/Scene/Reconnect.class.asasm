@@ -1,0 +1,197 @@
+class
+ refid "Scene:Reconnect"
+ instance QName(PackageNamespace("Scene"), "Reconnect")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Scene:Reconnect")
+  iinit
+   refid "Scene:Reconnect/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace(""), "_bReconnect")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlex              QName(PrivateNamespace(null, "Scene:Reconnect/instance"), "attemptConnection")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     findpropstrict      QName(PackageInternalNs("Scene"), "__setProp__bReconnect_Reconnect_Layer1_0")
+     callpropvoid        QName(PackageInternalNs("Scene"), "__setProp__bReconnect_Reconnect_Layer1_0"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_bReconnect") type QName(PackageNamespace("fl.controls"), "Button") end
+  trait method QName(PrivateNamespace(null, "Scene:Reconnect/instance"), "attemptConnection")
+   method
+    refid "Scene:Reconnect/instance/Scene:Reconnect/instance/attemptConnection"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_bReconnect")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PrivateNamespace(null, "Scene:Reconnect/instance"), "attemptConnection")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      callpropvoid        QName(PackageNamespace(""), "reset"), 0
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      callpropvoid        QName(PackageNamespace(""), "connect"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs("Scene"), "__setProp__bReconnect_Reconnect_Layer1_0")
+   method
+    refid "Scene:Reconnect/instance/Scene:__setProp__bReconnect_Reconnect_Layer1_0"
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 17
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+L6:
+      getlex              QName(PackageNamespace(""), "_bReconnect")
+      pushstring          "componentInspectorSetting"
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "Scene:Reconnect/instance"), PackageNamespace(""), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:Reconnect/instance/Scene:__setProp__bReconnect_Reconnect_Layer1_0"), PackageNamespace("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Scene:Reconnect"), StaticProtectedNs("Scene:Reconnect"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L10:
+      jump                L24
+
+L11:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L24:
+      getlex              QName(PackageNamespace(""), "_bReconnect")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "emphasized")
+
+      getlex              QName(PackageNamespace(""), "_bReconnect")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(PackageNamespace(""), "_bReconnect")
+      pushstring          "Try to Reconnect"
+      setproperty         QName(PackageNamespace(""), "label")
+
+      getlex              QName(PackageNamespace(""), "_bReconnect")
+      pushstring          "right"
+      setproperty         QName(PackageNamespace(""), "labelPlacement")
+
+      getlex              QName(PackageNamespace(""), "_bReconnect")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "selected")
+
+      getlex              QName(PackageNamespace(""), "_bReconnect")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "toggle")
+
+      getlex              QName(PackageNamespace(""), "_bReconnect")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L45:
+      getlex              QName(PackageNamespace(""), "_bReconnect")
+      pushstring          "componentInspectorSetting"
+      pushfalse
+      setproperty         MultinameL([PrivateNamespace(null, "Scene:Reconnect/instance"), PackageNamespace(""), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:Reconnect/instance/Scene:__setProp__bReconnect_Reconnect_Layer1_0"), PackageNamespace("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Scene:Reconnect"), StaticProtectedNs("Scene:Reconnect"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L49:
+      jump                L63
+
+L50:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L63:
+      returnvoid
+     end ; code
+     try from L6 to L10 target L11 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L45 to L49 target L50 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Scene:Reconnect/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

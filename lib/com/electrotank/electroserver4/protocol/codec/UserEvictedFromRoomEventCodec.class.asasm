@@ -1,0 +1,112 @@
+class
+ refid "com.electrotank.electroserver4.protocol.codec:UserEvictedFromRoomEventCodec"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "UserEvictedFromRoomEventCodec")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:UserEvictedFromRoomEventCodec")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.codec:UserEvictedFromRoomEventCodec/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "decode") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.protocol.codec:UserEvictedFromRoomEventCodec/instance/decode"
+    param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageReader")
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserEvictedFromRoomEvent")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserEvictedFromRoomEvent"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserEvictedFromRoomEvent")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ZONE_ID_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      callpropvoid        QName(PackageNamespace(""), "setZoneId"), 1
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_ID_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      callpropvoid        QName(PackageNamespace(""), "setRoomId"), 1
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "USER_ID_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextLong"), 1
+      callpropvoid        QName(PackageNamespace(""), "setUserId"), 1
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_EVICTION_REASON_PREFIX_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextPrefixedString"), 1
+      callpropvoid        QName(PackageNamespace(""), "setReason"), 1
+
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean"), 0
+      callpropvoid        QName(PackageNamespace(""), "setBan"), 1
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "isBan"), 0
+      iffalse             L43
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_BAN_DURATION_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      callpropvoid        QName(PackageNamespace(""), "setDuration"), 1
+
+L43:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.codec:UserEvictedFromRoomEventCodec/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

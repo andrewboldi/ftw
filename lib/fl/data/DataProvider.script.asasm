@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "fl.data:DataProvider/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("DataProvider", [PackageNamespace("fl.data")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "fl.data:DataProvider"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("fl.data"), "DataProvider")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.data"), "DataProvider")
+  #include "DataProvider.class.asasm"
+ end ; trait
+end ; script

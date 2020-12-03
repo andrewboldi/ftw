@@ -1,0 +1,24 @@
+method
+ refid "com.jumpeye.flashEff2.presets:JFETP3D6/class/fep/inline_method"
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ returns QName(PackageNamespace(""), "Number")
+ flag HAS_OPTIONAL
+ optional Integer(0)
+ optional Integer(0)
+ optional Integer(0)
+ body
+  maxstack 1
+  localcount 6
+  initscopedepth 9
+  maxscopedepth 9
+  code
+   getlocal1
+   negate
+   returnvalue
+  end ; code
+ end ; body
+end ; method

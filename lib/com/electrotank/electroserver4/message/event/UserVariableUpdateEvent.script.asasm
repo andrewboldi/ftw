@@ -1,0 +1,37 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.message.event:UserVariableUpdateEvent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("UserVariableUpdateEvent", [PackageNamespace("com.electrotank.electroserver4.message.event")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageImpl")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "EventImpl")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "EventImpl")
+    newclass            "com.electrotank.electroserver4.message.event:UserVariableUpdateEvent"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserVariableUpdateEvent")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserVariableUpdateEvent")
+  #include "UserVariableUpdateEvent.class.asasm"
+ end ; trait
+end ; script

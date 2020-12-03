@@ -1,0 +1,133 @@
+class
+ refid "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "FindZoneAndRoomByNameRequest")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "RequestImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest")
+  iinit
+   refid "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "FindZoneAndRoomByNameRequest")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance"), "zoneName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance"), "roomName") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "setZoneName")
+   method
+    refid "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance/setZoneName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance"), "zoneName")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance"), "zoneName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getZoneName")
+   method
+    refid "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance/getZoneName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance"), "zoneName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRoomName")
+   method
+    refid "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance/setRoomName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance"), "roomName")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance"), "roomName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRoomName")
+   method
+    refid "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance/getRoomName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/instance"), "roomName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.request:FindZoneAndRoomByNameRequest/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,357 @@
+class
+ refid "com.electrotank.electroserver4.utils:Dispatcher"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.utils"), "Dispatcher")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher")
+  iinit
+   refid "com.electrotank.electroserver4.utils:Dispatcher/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "listeners")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "listeners")
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "listeners") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PackageNamespace(""), "dispatchEvent")
+   method
+    refid "com.electrotank.electroserver4.utils:Dispatcher/instance/dispatchEvent"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            5
+
+      pushnull
+      coerce_s
+      setlocal            6
+
+      getlocal1
+      getlocal0
+      setproperty         Multiname("target", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifeq                L60
+
+      pushbyte            0
+      convert_d
+      setlocal            4
+
+      jump                L56
+
+L29:
+      label
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("scope", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            5
+
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("funcName", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            6
+
+      getlocal            5
+      dup
+      setlocal            7
+
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getlocal            7
+      getlocal1
+      call                1
+      pop
+      kill                7
+      getlocal            4
+      increment
+      convert_d
+      setlocal            4
+
+L56:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L29
+
+L60:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addEventListener")
+   method
+    refid "com.electrotank.electroserver4.utils:Dispatcher/instance/addEventListener"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      pushnull
+      ifne                L12
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+
+L12:
+      pushfalse
+      setlocal            4
+
+      pushbyte            0
+      convert_d
+      setlocal            5
+
+      jump                L46
+
+L18:
+      label
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("scope", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getlocal3
+      equals
+      dup
+      iffalse             L38
+
+      pop
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("funcName", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      equals
+L38:
+      iffalse             L42
+
+      pushtrue
+      setlocal            4
+
+      jump                L52
+
+L42:
+      getlocal            5
+      increment
+      convert_d
+      setlocal            5
+
+L46:
+      getlocal            5
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      iflt                L18
+
+L52:
+      getlocal            4
+      iftrue              L63
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      pushstring          "scope"
+      getlocal3
+      pushstring          "funcName"
+      getlocal2
+      newobject           2
+      callpropvoid        Multiname("push", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")]), 1
+
+L63:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeEventListener")
+   method
+    refid "com.electrotank.electroserver4.utils:Dispatcher/instance/removeEventListener"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_d
+      setlocal            4
+
+      jump                L38
+
+L6:
+      label
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("scope", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getlocal3
+      equals
+      dup
+      iffalse             L26
+
+      pop
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("funcName", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      equals
+L26:
+      iffalse             L34
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getlocal            4
+      pushbyte            1
+      callpropvoid        Multiname("splice", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")]), 2
+
+      jump                L44
+
+L34:
+      getlocal            4
+      increment
+      convert_d
+      setlocal            4
+
+L38:
+      getlocal            4
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      iflt                L6
+
+L44:
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      pushbyte            0
+      ifne                L54
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "events")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#1"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+      pop
+L54:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "getListeners")
+   method
+    refid "com.electrotank.electroserver4.utils:Dispatcher/instance/com.electrotank.electroserver4.utils:Dispatcher/instance/getListeners"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Dispatcher/instance#0"), "listeners")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.utils:Dispatcher/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

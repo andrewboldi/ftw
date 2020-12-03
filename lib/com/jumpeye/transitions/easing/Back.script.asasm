@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.jumpeye.transitions.easing:Back/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Back", [PackageNamespace("com.jumpeye.transitions.easing")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.jumpeye.transitions.easing:Back"
+    popscope
+    initproperty        QName(PackageNamespace("com.jumpeye.transitions.easing"), "Back")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.jumpeye.transitions.easing"), "Back")
+  #include "Back.class.asasm"
+ end ; trait
+end ; script

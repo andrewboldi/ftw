@@ -1,0 +1,1806 @@
+class
+ refid "Misc:Chat"
+ instance QName(PackageNamespace("Misc"), "Chat")
+  extends QName(PackageNamespace("net.theyak.chat"), "Chat")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Misc:Chat")
+  iinit
+   refid "Misc:Chat/instance/init"
+   body
+    maxstack 4
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "version"
+     pushstring          "version"
+     pushstring          "Display game and Flash version information"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "credits"
+     pushstring          "credits"
+     pushstring          "hidden"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "latency"
+     pushstring          "latency"
+     pushstring          "Show round trip time of message from you to server"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "away"
+     pushstring          "away"
+     pushstring          "Toggle your away status. Users marked away show up in grey in the userlist"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "whisper"
+     pushstring          "whisper"
+     pushstring          "hidden"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "msg"
+     pushstring          "whisper"
+     pushstring          "hidden"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "w"
+     pushstring          "whisper"
+     pushstring          "hidden"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "logout"
+     pushstring          "logout"
+     pushstring          "hidden"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "stats"
+     pushstring          "whois"
+     pushstring          "<username> Display information about user - same as double click on username"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "whois"
+     pushstring          "whois"
+     pushstring          "hidden"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "uwho"
+     pushstring          "whois"
+     pushstring          "hidden"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "debug"
+     pushstring          "debug"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "lastgame"
+     pushstring          "lastGame"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "displayevents"
+     pushstring          "display_events"
+     pushstring          "Debugging tool. Copy output to forum message"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "ping"
+     pushstring          "user_ping"
+     pushstring          "<username> Calculate time it takes a message to reach a user and back"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "history"
+     pushstring          "history"
+     pushstring          "Display information about previous games"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "replay"
+     pushstring          "replay"
+     pushstring          "Replay the same type of game as you last created this session. "
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "user")
+     getproperty         QName(PackageNamespace(""), "access")
+     pushshort           255
+     ifnge               L157
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "listrooms"
+     pushstring          "listRooms"
+     pushstring          "List all rooms you are in"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "listzones"
+     pushstring          "listZones"
+     pushstring          "List all zones on server"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "listroomsinzone"
+     pushstring          "listRoomsInZone"
+     pushstring          "[zonename] List all rooms in zone"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "kick"
+     pushstring          "kick"
+     pushstring          "Kick user - no real point in this since they can just refresh"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "broadcast"
+     pushstring          "broadcast"
+     pushstring          "Sends a message to all users on server in chat"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "system"
+     pushstring          "system"
+     pushstring          "Sends a message to all users on server with an alert window"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "alert"
+     pushstring          "alert"
+     pushstring          "Sends a message to the alert window"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "palert"
+     pushstring          "palert"
+     pushstring          "<username> <message> Send alert to user"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "nogames"
+     pushstring          "nogames"
+     pushstring          "Toggle ability for users to create games"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "serverstats"
+     pushstring          "server_stats"
+     pushstring          "Show zones, rooms, and users in rooms on server"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "gamestats"
+     pushstring          "game_stats"
+     pushstring          "Show game statistics"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "userinfo"
+     pushstring          "user_info"
+     pushstring          "Show information of remote user"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "emptygame"
+     pushstring          "empty_game"
+     pushstring          "Empty and destroy a game"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+L157:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "floodCount") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "languageCount") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "flood_mute") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait method QName(PackageNamespace(""), "display_events")
+   method
+    refid "Misc:Chat/instance/display_events"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "version")
+   method
+    refid "Misc:Chat/instance/version"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "FTW Version: "
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "version")
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Flash Version: "
+      getlex              QName(PackageNamespace("flash.system"), "Capabilities")
+      getproperty         QName(PackageNamespace(""), "version")
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "access")
+      pushshort           255
+      ifnge               L33
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Memory usage: "
+      getlex              QName(PackageNamespace("flash.system"), "System")
+      getproperty         QName(PackageNamespace(""), "totalMemory")
+      add
+      pushstring          " Difference from start: "
+      add
+      getlex              QName(PackageNamespace("flash.system"), "System")
+      getproperty         QName(PackageNamespace(""), "totalMemory")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "initialMemoryUsage")
+      subtract
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+L33:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "replay")
+   method
+    refid "Misc:Chat/instance/replay"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      getproperty         QName(PackageNamespace(""), "activeScene")
+      pushstring          "Lobby"
+      ifeq                L16
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "/"
+      getlocal1
+      getproperty         Multiname("command", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      pushstring          " only available in lobby."
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L16:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "replay")
+      iffalse             L28
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "replay")
+      callproperty        QName(PackageNamespace(""), "clone"), 0
+      setproperty         QName(PackageNamespace(""), "game")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      callpropvoid        QName(PackageNamespace(""), "create"), 0
+
+      jump                L31
+
+L28:
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "*** You have not created any games. You must create a game before replaying a game."
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "credits")
+   method
+    refid "Misc:Chat/instance/credits"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Original Concept: levans and Richard Rusczyk"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Flash 7 Version: Art of Problem Solving (AoPS Incorporated)"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Converted to Flash 9 and ES4 by Golden Tree Academy"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "latency")
+   method
+    refid "Misc:Chat/instance/latency"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Latency: "
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getproperty         QName(PackageNamespace(""), "latency")
+      add
+      pushstring          " milliseconds"
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Misc:Chat"), "ignore") flag OVERRIDE
+   method
+    refid "Misc:Chat/instance/Misc:Chat:ignore"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsuper           QName(ProtectedNamespace("net.theyak.chat:Chat"), "ignore"), 1
+      convert_b
+      setlocal2
+
+      getlex              QName(PackageNamespace("net.theyak.util"), "Net")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "URLPath")
+      pushstring          "PHP/Ignore.php?u="
+      add
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      pushstring          "&s="
+      add
+      getlocal2
+      iffalse             L22
+
+      pushstring          "1"
+      coerce_a
+      jump                L24
+
+L22:
+      pushstring          "0"
+      coerce_a
+L24:
+      add
+      callpropvoid        QName(PackageNamespace(""), "callServer"), 1
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "away")
+   method
+    refid "Misc:Chat/instance/away"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "away")
+      not
+      setproperty         QName(PackageNamespace(""), "away")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "away")
+      callpropvoid        QName(PackageNamespace(""), "setAway"), 1
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "away")
+      iffalse             L19
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "manualAway")
+
+L19:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "away")
+      iffalse             L26
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "You are now marked away"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      jump                L29
+
+L26:
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "You are no longer away"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+L29:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "logout")
+   method
+    refid "Misc:Chat/instance/logout"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "Logout"
+      newobject           0
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      callpropvoid        QName(PackageNamespace(""), "stopPingPong"), 0
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      pushstring          "\n\n\n\n\n\nYou have been signed out"
+      callpropvoid        QName(PackageNamespace(""), "message"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "whisper") flag OVERRIDE
+   method
+    refid "Misc:Chat/instance/whisper"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L14:
+      dup
+      iftrue              L21
+
+      pop
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+L21:
+      dup
+      iftrue              L29
+
+      pop
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L29:
+      iffalse             L34
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: /whisper <username> <message>"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L34:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "W"
+      pushstring          "name"
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          "m"
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      findpropstrict      QName(PackageNamespace(""), "privateMessageEvent")
+      pushstring          "To: "
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      callpropvoid        QName(PackageNamespace(""), "privateMessageEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "history")
+   method
+    refid "Misc:Chat/instance/history"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L19
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      greaterthan
+L19:
+      dup
+      iffalse             L27
+
+      pop
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "access")
+      pushshort           255
+      greaterequals
+L27:
+      iffalse             L34
+
+      getlocal2
+      pushstring          "username"
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      jump                L40
+
+L34:
+      getlocal2
+      pushstring          "username"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "name")
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+L40:
+      getlocal2
+      pushstring          "games"
+      pushbyte            6
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "history"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "esServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "user_ping")
+   method
+    refid "Misc:Chat/instance/user_ping"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L14:
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: /ping <username>"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L19:
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal2
+      pushstring          "user"
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      getlocal2
+      pushstring          "time"
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "user_ping"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "esServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "debug")
+   method
+    refid "Misc:Chat/instance/debug"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "debug")
+      iffalse             L8
+
+      pushstring          "Debugging disabled"
+      jump                L9
+
+L8:
+      pushstring          "Debugging enabled"
+L9:
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "debug")
+      not
+      setproperty         QName(PackageNamespace(""), "debug")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "whois")
+   method
+    refid "Misc:Chat/instance/whois"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L14:
+      iffalse             L24
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: /"
+      getlocal1
+      getproperty         Multiname("command", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      pushstring          " <username>"
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L24:
+      findpropstrict      QName(PackageNamespace("Misc"), "Whois")
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      constructprop       QName(PackageNamespace("Misc"), "Whois"), 1
+      coerce              QName(PackageNamespace("Misc"), "Whois")
+      setlocal2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      callproperty        QName(PackageNamespace(""), "getScene"), 0
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "server_stats")
+   method
+    refid "Misc:Chat/instance/server_stats"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "server_users"
+      newobject           0
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "game_stats")
+   method
+    refid "Misc:Chat/instance/game_stats"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "manager")
+      pushstring          "game_stats"
+      newobject           0
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "user_info")
+   method
+    refid "Misc:Chat/instance/user_info"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L14:
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: /userinfo <username>"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L19:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "Userinfo"
+      pushstring          "user"
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "empty_game")
+   method
+    refid "Misc:Chat/instance/empty_game"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L14:
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: /emptygame <game id>"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L19:
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal2
+      pushstring          "game_id"
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "manager")
+      pushstring          "empty_game"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "esServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "palert")
+   method
+    refid "Misc:Chat/instance/palert"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L14:
+      dup
+      iftrue              L21
+
+      pop
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+L21:
+      dup
+      iftrue              L29
+
+      pop
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L29:
+      iffalse             L34
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: /palert <username> <message>"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L34:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "PAlert"
+      pushstring          "name"
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          "m"
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "listRooms")
+   method
+    refid "Misc:Chat/instance/listRooms"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      callproperty        QName(PackageNamespace(""), "getRoomList"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L29
+
+L11:
+      label
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      getlocal2
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("zonename", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          ":"
+      add
+      getlocal2
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("roomname", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L29:
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L11
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "kick")
+   method
+    refid "Misc:Chat/instance/kick"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L14:
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: /kick <username>"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L19:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "Kick"
+      pushstring          "user"
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "broadcast")
+   method
+    refid "Misc:Chat/instance/broadcast"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L14:
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: /broadcast <message>"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L19:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "Broadcast"
+      pushstring          "message"
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          " "
+      add
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      add
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "system")
+   method
+    refid "Misc:Chat/instance/system"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L14:
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: /system <message>"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L19:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "System"
+      pushstring          "message"
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          " "
+      add
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      add
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "alert")
+   method
+    refid "Misc:Chat/instance/alert"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L14:
+      iffalse             L19
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: /alert <message>"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L19:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "Alert"
+      pushstring          "zonename"
+      getlex              QName(PackageNamespace(""), "activeZoneName")
+      pushstring          "message"
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          " "
+      add
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      add
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nogames")
+   method
+    refid "Misc:Chat/instance/nogames"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      dup
+      iftrue              L17
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      equals
+L17:
+      iffalse             L31
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "manager")
+      pushstring          "NoGames"
+      pushstring          "reason"
+      pushstring          ""
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "New games now enabled"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      jump                L64
+
+L31:
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          " "
+      add
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "Misc:Chat/instance#0"), PackageNamespace(""), PackageNamespace("Misc"), PrivateNamespace(null, "Misc:Chat/instance#1"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Misc:Chat"), StaticProtectedNs("Misc:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      add
+      coerce_s
+      setlocal2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "manager")
+      pushstring          "NoGames"
+      pushstring          "reason"
+      getlocal2
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "Alert"
+      pushstring          "zonename"
+      getlex              QName(PackageNamespace(""), "activeZoneName")
+      pushstring          "message"
+      pushstring          "* Games can not currently be created. "
+      getlocal2
+      add
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+L64:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "lastGame")
+   method
+    refid "Misc:Chat/instance/lastGame"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "id")
+      pushbyte            0
+      ifngt               L15
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Last game this session was number "
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "id")
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      jump                L18
+
+L15:
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "You have not played a game this session."
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "send") flag OVERRIDE
+   method
+    refid "Misc:Chat/instance/send"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Null()
+    body
+     maxstack 9
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Date")
+      constructprop       QName(PackageNamespace(""), "Date"), 0
+      coerce              QName(PackageNamespace(""), "Date")
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "flood_mute")
+      pushbyte            0
+      ifeq                L26
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "time")
+      getlex              QName(PackageNamespace(""), "flood_mute")
+      pushshort           1000
+      pushbyte            60
+      multiply
+      pushbyte            10
+      multiply
+      add
+      ifnle               L23
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Sorry, you are currently muted"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L23:
+      findproperty        QName(PackageNamespace(""), "flood_mute")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "flood_mute")
+
+L26:
+      findpropstrict      QName(PackageNamespace(""), "checkFlood")
+      pushbyte            4
+      pushbyte            6
+      callproperty        QName(PackageNamespace(""), "checkFlood"), 2
+      iffalse             L80
+
+      findpropstrict      QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "floodCount")
+      dup
+      setlocal            5
+
+      getproperty         QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "floodCount")
+      increment
+      setlocal            6
+
+      getlocal            5
+      getlocal            6
+      setproperty         QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "floodCount")
+
+      kill                6
+      kill                5
+      getlex              QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "floodCount")
+      pushbyte            2
+      ifngt               L76
+
+      findproperty        QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "floodCount")
+      pushbyte            0
+      initproperty        QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "floodCount")
+
+      findproperty        QName(PackageNamespace(""), "flood_mute")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "time")
+      initproperty        QName(PackageNamespace(""), "flood_mute")
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "You have been muted"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "FloodMute"
+      pushstring          "id"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "id")
+      pushstring          "expires"
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "time")
+      pushshort           1000
+      pushbyte            60
+      multiply
+      pushbyte            10
+      multiply
+      add
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      jump                L79
+
+L76:
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Whoa! Slow down!"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+L79:
+      jump                L158
+
+L80:
+      findproperty        QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "languageCount")
+      findpropstrict      QName(PackageNamespace(""), "checkLanguage")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "checkLanguage"), 1
+      dup
+      setlocal            5
+
+      initproperty        QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "languageCount")
+
+      getlocal            5
+      kill                5
+      pushbyte            0
+      ifngt               L132
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "C"
+      pushstring          "msg"
+      pushstring          "Filtered: "
+      getlocal1
+      add
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      getlex              QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "languageCount")
+      pushbyte            2
+      ifngt               L121
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "Banme"
+      pushstring          "time"
+      pushbyte            60
+      pushbyte            24
+      multiply
+      pushbyte            7
+      multiply
+      pushstring          "reason"
+      pushstring          "Inappropriate language used in chat."
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      jump                L131
+
+L121:
+      getlex              QName(PrivateNamespace(null, "Misc:Chat/instance#0"), "languageCount")
+      pushbyte            1
+      ifne                L128
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Please, you have got to be more mature than that"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      jump                L131
+
+L128:
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Why oh why must you insist on such immature language? Next time, that's a banning."
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+L131:
+      jump                L158
+
+L132:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      ifngt               L151
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "auxiliary")
+      pushstring          "C"
+      pushstring          "msg"
+      getlocal1
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callsupervoid       QName(PackageNamespace(""), "send"), 3
+      jump                L158
+
+L151:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      ifnle               L158
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Message too short"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+L158:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Misc:Chat/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

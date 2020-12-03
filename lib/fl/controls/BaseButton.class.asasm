@@ -1,0 +1,786 @@
+class
+ refid "fl.controls:BaseButton"
+ instance QName(PackageNamespace("fl.controls"), "BaseButton")
+  extends QName(PackageNamespace("fl.core"), "UIComponent")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:BaseButton")
+  iinit
+   refid "fl.controls:BaseButton/instance/init"
+   body
+    maxstack 6
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected")
+
+     findproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+
+     findproperty        QName(PrivateNamespace(null, "fl.controls:BaseButton"), "_mouseStateLocked")
+     pushfalse
+     initproperty        QName(PrivateNamespace(null, "fl.controls:BaseButton"), "_mouseStateLocked")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "buttonMode")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "buttonMode")
+
+     findproperty        QName(PackageNamespace(""), "mouseChildren")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "mouseChildren")
+
+     findproperty        QName(PackageNamespace(""), "useHandCursor")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "useHandCursor")
+
+     findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "setupMouseEvents")
+     callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "setupMouseEvents"), 0
+
+     findpropstrict      QName(PackageNamespace(""), "setMouseState")
+     pushstring          "up"
+     callpropvoid        QName(PackageNamespace(""), "setMouseState"), 1
+
+     findproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+     pushbyte            1
+     pushbyte            0
+     constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+     initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+
+     getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+     getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+     getproperty         QName(PackageNamespace(""), "TIMER")
+     getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "buttonDown")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress")
+   method
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:endPress"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+      callpropvoid        QName(PackageNamespace(""), "reset"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "mouseStateLocked")
+   method
+    refid "fl.controls:BaseButton/instance/mouseStateLocked/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls:BaseButton"), "_mouseStateLocked")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls:BaseButton"), "_mouseStateLocked")
+
+      getlocal1
+      pushfalse
+      ifne                L12
+
+      findpropstrict      QName(PackageNamespace(""), "setMouseState")
+      getlex              QName(PrivateNamespace(null, "fl.controls:BaseButton"), "unlockedMouseState")
+      callpropvoid        QName(PackageNamespace(""), "setMouseState"), 1
+
+      jump                L15
+
+L12:
+      findproperty        QName(PrivateNamespace(null, "fl.controls:BaseButton"), "unlockedMouseState")
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState")
+      initproperty        QName(PrivateNamespace(null, "fl.controls:BaseButton"), "unlockedMouseState")
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "autoRepeat")
+   method
+    refid "fl.controls:BaseButton/instance/autoRepeat/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "fl.controls:BaseButton"), "unlockedMouseState") type QName(PackageNamespace(""), "String") end
+  trait setter QName(PackageNamespace(""), "autoRepeat")
+   method
+    refid "fl.controls:BaseButton/instance/autoRepeat/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    refid "fl.controls:BaseButton/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      findproperty        QName(PackageNamespace(""), "mouseEnabled")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "mouseEnabled")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selected")
+   method
+    refid "fl.controls:BaseButton/instance/selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseEventHandler")
+   method
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:mouseEventHandler"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      ifne                L13
+
+      findpropstrict      QName(PackageNamespace(""), "setMouseState")
+      pushstring          "down"
+      callpropvoid        QName(PackageNamespace(""), "setMouseState"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "startPress")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "startPress"), 0
+
+      jump                L43
+
+L13:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OVER")
+      equals
+      dup
+      iftrue              L26
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_UP")
+      equals
+L26:
+      iffalse             L33
+
+      findpropstrict      QName(PackageNamespace(""), "setMouseState")
+      pushstring          "over"
+      callpropvoid        QName(PackageNamespace(""), "setMouseState"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress"), 0
+
+      jump                L43
+
+L33:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OUT")
+      ifne                L43
+
+      findpropstrict      QName(PackageNamespace(""), "setMouseState")
+      pushstring          "up"
+      callpropvoid        QName(PackageNamespace(""), "setMouseState"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress"), 0
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "setMouseState")
+   method
+    refid "fl.controls:BaseButton/instance/setMouseState"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls:BaseButton"), "_mouseStateLocked")
+      iffalse             L8
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls:BaseButton"), "unlockedMouseState")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls:BaseButton"), "unlockedMouseState")
+
+      returnvoid
+
+L8:
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState")
+      getlocal1
+      ifne                L12
+
+      returnvoid
+
+L12:
+      findproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "startPress")
+   method
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:startPress"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+      iffalse             L13
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "getStyleValue")
+      pushstring          "repeatDelay"
+      callproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      setproperty         QName(PackageNamespace(""), "delay")
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+L13:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "BUTTON_DOWN")
+      pushtrue
+      constructprop       QName(PackageNamespace("fl.events"), "ComponentEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "buttonDown")
+   method
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:buttonDown"
+    param QName(PackageNamespace("flash.events"), "TimerEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat")
+      iftrue              L7
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "endPress"), 0
+
+      returnvoid
+
+L7:
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+      getproperty         QName(PackageNamespace(""), "currentCount")
+      pushbyte            1
+      ifne                L18
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "pressTimer")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "getStyleValue")
+      pushstring          "repeatInterval"
+      callproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      setproperty         QName(PackageNamespace(""), "delay")
+
+L18:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "BUTTON_DOWN")
+      pushtrue
+      constructprop       QName(PackageNamespace("fl.events"), "ComponentEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.controls:BaseButton"), "background") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait setter QName(PackageNamespace(""), "selected")
+   method
+    refid "fl.controls:BaseButton/instance/selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected")
+      getlocal1
+      ifne                L6
+
+      returnvoid
+
+L6:
+      findproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "_selected")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    refid "fl.controls:BaseButton/instance/enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "enabled")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "draw") flag OVERRIDE
+   method
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "isInvalid"), 2
+      iffalse             L16
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "drawBackground")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "drawBackground"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 2
+
+L16:
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "isInvalid"), 1
+      iffalse             L23
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "drawLayout")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:BaseButton"), "drawLayout"), 0
+
+L23:
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "draw"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "setupMouseEvents")
+   method
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:setupMouseEvents"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OVER")
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseEventHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseEventHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_UP")
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseEventHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "ROLL_OUT")
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseEventHandler")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "fl.controls:BaseButton"), "_mouseStateLocked") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "drawLayout")
+   method
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:drawLayout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:BaseButton"), "drawBackground")
+   method
+    refid "fl.controls:BaseButton/instance/fl.controls:BaseButton:drawBackground"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "enabled")
+      iffalse             L13
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "mouseState")
+      coerce_s
+      jump                L14
+
+L13:
+      pushstring          "disabled"
+L14:
+      coerce_s
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "selected")
+      iffalse             L31
+
+      pushstring          "selected"
+      getlocal1
+      pushbyte            0
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toUpperCase"), 0
+      add
+      getlocal1
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      add
+      coerce_s
+      setlocal1
+
+L31:
+      getlocal1
+      pushstring          "Skin"
+      add
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal2
+
+      findproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "getDisplayObjectInstance")
+      findpropstrict      QName(ProtectedNamespace("fl.controls:BaseButton"), "getStyleValue")
+      getlocal1
+      callproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "getStyleValue"), 1
+      callproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      getlocal2
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L60
+
+      pop
+      getlocal2
+      getlex              QName(ProtectedNamespace("fl.controls:BaseButton"), "background")
+      equals
+      not
+L60:
+      iffalse             L64
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L64:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.controls:BaseButton"), "_autoRepeat") type QName(PackageNamespace(""), "Boolean") value False() end
+ end ; instance
+ cinit
+  refid "fl.controls:BaseButton/class/init"
+  body
+   maxstack 25
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "fl.controls:BaseButton"), "defaultStyles")
+    pushstring          "upSkin"
+    pushstring          "Button_upSkin"
+    pushstring          "downSkin"
+    pushstring          "Button_downSkin"
+    pushstring          "overSkin"
+    pushstring          "Button_overSkin"
+    pushstring          "disabledSkin"
+    pushstring          "Button_disabledSkin"
+    pushstring          "selectedDisabledSkin"
+    pushstring          "Button_selectedDisabledSkin"
+    pushstring          "selectedUpSkin"
+    pushstring          "Button_selectedUpSkin"
+    pushstring          "selectedDownSkin"
+    pushstring          "Button_selectedDownSkin"
+    pushstring          "selectedOverSkin"
+    pushstring          "Button_selectedOverSkin"
+    pushstring          "focusRectSkin"
+    pushnull
+    pushstring          "focusRectPadding"
+    pushnull
+    pushstring          "repeatDelay"
+    pushshort           500
+    pushstring          "repeatInterval"
+    pushbyte            35
+    newobject           12
+    setproperty         QName(PrivateNamespace(null, "fl.controls:BaseButton"), "defaultStyles")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "fl.controls:BaseButton"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   refid "fl.controls:BaseButton/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "fl.controls:BaseButton"), "defaultStyles")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.adobe.utils:StringUtil/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("StringUtil", [PackageNamespace("com.adobe.utils")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.adobe.utils:StringUtil"
+    popscope
+    initproperty        QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+  #include "StringUtil.class.asasm"
+ end ; trait
+end ; script

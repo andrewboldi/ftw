@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "fl.controls:ButtonLabelPlacement/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ButtonLabelPlacement", [PackageNamespace("fl.controls")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "fl.controls:ButtonLabelPlacement"
+    popscope
+    initproperty        QName(PackageNamespace("fl.controls"), "ButtonLabelPlacement")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.controls"), "ButtonLabelPlacement")
+  #include "ButtonLabelPlacement.class.asasm"
+ end ; trait
+end ; script

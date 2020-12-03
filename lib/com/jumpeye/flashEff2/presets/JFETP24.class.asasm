@@ -1,0 +1,585 @@
+class
+ refid "com.jumpeye.flashEff2.presets:JFETP24"
+ instance QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP24")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24")
+  iinit
+   refid "com.jumpeye.flashEff2.presets:JFETP24/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.jumpeye.flashEff2.presets:JFETP24/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "jtpFill") flag FINAL dispid 4
+  method
+   refid "com.jumpeye.flashEff2.presets:JFETP24/class/jtpFill"
+   param null
+   param null
+   param QName(PackageNamespace(""), "Array")
+   returns QName(PackageNamespace(""), "Array")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 8
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     getlocal3
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     convert_d
+     setlocal            4
+
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal3
+     getlocal1
+     decrement
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     convert_b
+     dup
+     iftrue              L31
+
+     pop
+     getlocal3
+     getlocal1
+     decrement
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            1
+     add
+     greaterthan
+L31:
+     iffalse             L47
+
+     getlocal3
+     getlocal1
+     decrement
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     getlocal            4
+     pushbyte            1
+     add
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     findpropstrict      QName(PackageNamespace(""), "jtpFill")
+     getlocal1
+     decrement
+     getlocal2
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "jtpFill"), 3
+
+L47:
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal3
+     getlocal1
+     pushbyte            1
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     convert_b
+     dup
+     iftrue              L71
+
+     pop
+     getlocal3
+     getlocal1
+     pushbyte            1
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            1
+     add
+     greaterthan
+L71:
+     iffalse             L89
+
+     getlocal3
+     getlocal1
+     pushbyte            1
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     getlocal            4
+     pushbyte            1
+     add
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     findpropstrict      QName(PackageNamespace(""), "jtpFill")
+     getlocal1
+     pushbyte            1
+     add
+     getlocal2
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "jtpFill"), 3
+
+L89:
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal3
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     decrement
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     convert_b
+     dup
+     iftrue              L111
+
+     pop
+     getlocal3
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     decrement
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            1
+     add
+     greaterthan
+L111:
+     iffalse             L127
+
+     getlocal3
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     decrement
+     getlocal            4
+     pushbyte            1
+     add
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     findpropstrict      QName(PackageNamespace(""), "jtpFill")
+     getlocal1
+     getlocal2
+     decrement
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "jtpFill"), 3
+
+L127:
+     findpropstrict      QName(PackageNamespace(""), "isNaN")
+     getlocal3
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     pushbyte            1
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "isNaN"), 1
+     convert_b
+     dup
+     iftrue              L151
+
+     pop
+     getlocal3
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     pushbyte            1
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            4
+     pushbyte            1
+     add
+     greaterthan
+L151:
+     iffalse             L169
+
+     getlocal3
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     pushbyte            1
+     add
+     getlocal            4
+     pushbyte            1
+     add
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     findpropstrict      QName(PackageNamespace(""), "jtpFill")
+     getlocal1
+     getlocal2
+     pushbyte            1
+     add
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "jtpFill"), 3
+
+L169:
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "fep") flag FINAL dispid 3
+  method
+   refid "com.jumpeye.flashEff2.presets:JFETP24/class/fep"
+   param QName(PackageNamespace(""), "Array")
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 6
+    localcount 15
+    initscopedepth 8
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     pushundefined
+     coerce_a
+     setlocal2
+
+     pushbyte            0
+     setlocal3
+
+     pushbyte            0
+     convert_u
+     setlocal            6
+
+     pushnan
+     setlocal            14
+
+     newarray            0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_u
+     setlocal            5
+
+     pushbyte            0
+     convert_u
+     setlocal            7
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            5
+     pushbyte            2
+     divide
+     callproperty        QName(PackageNamespace(""), "ceil"), 1
+     convert_d
+     setlocal            8
+
+     newarray            0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            9
+
+     pushbyte            0
+     convert_d
+     setlocal            10
+
+     pushbyte            0
+     setlocal            11
+
+     pushbyte            0
+     coerce_a
+     setlocal2
+
+     jump                L71
+
+L41:
+     label
+     getlocal            4
+     getlocal2
+     newarray            0
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal            9
+     getlocal2
+     newarray            0
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal1
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getproperty         Multiname("length", [PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     convert_d
+     setlocal            14
+
+     getlocal            7
+     getlocal            14
+     add
+     convert_u
+     setlocal            7
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            10
+     getlocal            14
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            10
+
+     getlocal2
+     increment
+     coerce_a
+     setlocal2
+
+L71:
+     getlocal2
+     getlocal            5
+     iflt                L41
+
+     getlocal            9
+     getlocal            5
+     newarray            0
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal            9
+     getlocal            5
+     pushbyte            1
+     add
+     newarray            0
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            10
+     pushbyte            2
+     divide
+     callproperty        QName(PackageNamespace(""), "ceil"), 1
+     convert_d
+     setlocal            12
+
+     pushbyte            0
+     coerce_a
+     setlocal2
+
+     jump                L114
+
+L95:
+     label
+     getlocal            9
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     pushbyte            0
+     pushbyte            -1
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal            9
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            10
+     pushbyte            1
+     add
+     pushbyte            -1
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal2
+     increment
+     coerce_a
+     setlocal2
+
+L114:
+     getlocal2
+     getlocal            5
+     pushbyte            1
+     add
+     ifle                L95
+
+     pushbyte            0
+     coerce_a
+     setlocal2
+
+     jump                L142
+
+L123:
+     label
+     getlocal            9
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     pushbyte            -1
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal            9
+     getlocal            5
+     pushbyte            1
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal2
+     pushbyte            -1
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal2
+     increment
+     coerce_a
+     setlocal2
+
+L142:
+     getlocal2
+     getlocal            10
+     pushbyte            1
+     add
+     ifle                L123
+
+     getlocal            9
+     getlocal            8
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            12
+     pushbyte            0
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     findpropstrict      QName(PackageNamespace(""), "jtpFill")
+     getlocal            8
+     getlocal            12
+     getlocal            9
+     callpropvoid        QName(PackageNamespace(""), "jtpFill"), 3
+
+     pushbyte            0
+     setlocal            11
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            9
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            9
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            10
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            13
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            9
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     pushbyte            1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            13
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            13
+     getlocal            9
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            10
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal            13
+
+     pushbyte            0
+     coerce_a
+     setlocal2
+
+     jump                L243
+
+L198:
+     label
+     getlocal1
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getproperty         Multiname("length", [PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     convert_u
+     setlocal            6
+
+     pushbyte            0
+     setlocal3
+
+     jump                L236
+
+L208:
+     label
+     getlocal            4
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal3
+     getlocal            13
+     getlocal            9
+     getlocal2
+     pushbyte            1
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal3
+     pushbyte            1
+     add
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     subtract
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            11
+     getlocal            4
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP24/class#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP24"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_i
+     setlocal            11
+
+     inclocal_i          3
+L236:
+     getlocal3
+     getlocal            6
+     iflt                L208
+
+     getlocal2
+     increment
+     coerce_a
+     setlocal2
+
+L243:
+     getlocal2
+     getlocal            5
+     iflt                L198
+
+     pushstring          "maxItems"
+     getlocal            11
+     pushstring          "timeMatrix"
+     getlocal            4
+     newobject           2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,435 @@
+class
+ refid "Misc:EventManager"
+ instance QName(PackageNamespace("Misc"), "EventManager")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Misc:EventManager")
+  iinit
+   refid "Misc:EventManager/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "Misc:EventManager/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+    findpropstrict      QName(PackageNamespace(""), "Array")
+    constructprop       QName(PackageNamespace(""), "Array"), 0
+    setproperty         QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners") slotid 1 type QName(PackageNamespace(""), "Array") end
+ trait method QName(PackageNamespace(""), "exists") flag FINAL dispid 3
+  method
+   refid "Misc:EventManager/class/exists"
+   param QName(PackageNamespace("flash.events"), "EventDispatcher")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     convert_i
+     setlocal            4
+
+     jump                L39
+
+L8:
+     label
+     getlocal1
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("object", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     equals
+     dup
+     iffalse             L24
+
+     pop
+     getlocal2
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("type", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     equals
+L24:
+     dup
+     iffalse             L33
+
+     pop
+     getlocal3
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("listener", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     equals
+L33:
+     iffalse             L36
+
+     pushtrue
+     returnvalue
+
+L36:
+     getlocal            4
+     decrement_i
+     setlocal            4
+
+L39:
+     getlocal            4
+     pushbyte            0
+     ifge                L8
+
+     pushfalse
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "add") flag FINAL dispid 4
+  method
+   refid "Misc:EventManager/class/add"
+   param QName(PackageNamespace("flash.events"), "EventDispatcher")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            5
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlocal1
+     getlocal2
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "exists"), 3
+     iftrue              L40
+
+     getlocal1
+     getlocal2
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     coerce              QName(PackageNamespace(""), "Object")
+     dup
+     setlocal            5
+
+     getlocal1
+     setproperty         Multiname("object", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+
+     getlocal            5
+     getlocal2
+     setproperty         Multiname("type", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+
+     getlocal            5
+     getlocal3
+     setproperty         Multiname("listener", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+
+     getlocal            5
+     getlocal            4
+     setproperty         Multiname("description", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+
+     getlocal            5
+     findpropstrict      QName(PackageNamespace(""), "Date")
+     constructprop       QName(PackageNamespace(""), "Date"), 0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+     setproperty         Multiname("time", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getproperty         QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            5
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L40:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "remove") flag FINAL dispid 5
+  method
+   refid "Misc:EventManager/class/remove"
+   param QName(PackageNamespace("flash.events"), "EventDispatcher")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Null()
+   optional Null()
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     convert_i
+     setlocal            4
+
+     jump                L67
+
+L8:
+     label
+     getlocal1
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("object", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     ifne                L64
+
+     getlocal2
+     pushnull
+     equals
+     dup
+     iftrue              L29
+
+     pop
+     getlocal2
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("type", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     equals
+L29:
+     iffalse             L64
+
+     getlocal3
+     pushnull
+     equals
+     dup
+     iftrue              L42
+
+     pop
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("listener", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getlocal3
+     equals
+L42:
+     iffalse             L64
+
+     findpropstrict      QName(PackageNamespace("flash.events"), "EventDispatcher")
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("object", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace("flash.events"), "EventDispatcher"), 1
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("type", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("listener", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal            4
+     pushbyte            1
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+L64:
+     getlocal            4
+     decrement_i
+     setlocal            4
+
+L67:
+     getlocal            4
+     pushbyte            0
+     ifge                L8
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "toString") flag FINAL dispid 6
+  method
+   refid "Misc:EventManager/class/toString"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushstring          ""
+     setlocal2
+
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     convert_i
+     setlocal3
+
+     jump                L88
+
+L10:
+     label
+     getlocal1
+     pushnull
+     equals
+     dup
+     iftrue              L29
+
+     pop
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("category", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     pushbyte            0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     getlocal1
+     equals
+L29:
+     iffalse             L85
+
+     getlocal2
+     getlocal3
+     pushstring          ": "
+     add
+     add
+     coerce_s
+     setlocal2
+
+     getlocal2
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("time", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     pushstring          "\x09"
+     add
+     add
+     coerce_s
+     setlocal2
+
+     getlocal2
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("object", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     pushstring          "\x09\x09"
+     add
+     add
+     coerce_s
+     setlocal2
+
+     getlocal2
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("type", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     add
+     coerce_s
+     setlocal2
+
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("description", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     pushnull
+     ifeq                L81
+
+     getlocal2
+     pushstring          "\x09\x09"
+     getlex              QName(PrivateNamespace(null, "Misc:EventManager/class#0"), "listeners")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     getproperty         Multiname("description", [PrivateNamespace(null, "Misc:EventManager/class#0"), PackageNamespace(""), PrivateNamespace(null, "Misc:EventManager/class#1"), PackageNamespace("Misc"), PackageInternalNs("Misc"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Misc:EventManager"), StaticProtectedNs("Misc:EventManager"), StaticProtectedNs("Object")])
+     add
+     add
+     coerce_s
+     setlocal2
+
+L81:
+     getlocal2
+     pushstring          "\n"
+     add
+     setlocal2
+
+L85:
+     getlocal3
+     decrement_i
+     setlocal3
+
+L88:
+     getlocal3
+     pushbyte            0
+     ifge                L10
+
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

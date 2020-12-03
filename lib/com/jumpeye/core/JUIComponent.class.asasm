@@ -1,0 +1,554 @@
+class
+ refid "com.jumpeye.core:JUIComponent"
+ instance QName(PackageNamespace("com.jumpeye.core"), "JUIComponent")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.core:JUIComponent")
+  iinit
+   refid "com.jumpeye.core:JUIComponent/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "version")
+     pushstring          "3.0.0.15"
+     initproperty        QName(PackageNamespace(""), "version")
+
+     findproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidateFlag")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidateFlag")
+
+     findproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "_inspector")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "_inspector")
+
+     findproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "isLivePreview")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "isLivePreview")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidHash")
+     newobject           0
+     initproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidHash")
+
+     findproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "callLaterMethods")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     initproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "callLaterMethods")
+
+     findpropstrict      QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "configUI")
+     callpropvoid        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "configUI"), 0
+
+     findpropstrict      QName(PackageNamespace(""), "invalidate")
+     pushstring          "all"
+     callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "callLaterMethods") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait method QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "checkLivePreview")
+   method
+    refid "com.jumpeye.core:JUIComponent/instance/com.jumpeye.core:JUIComponent:checkLivePreview"
+    returns QName(PackageNamespace(""), "Boolean")
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 15
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      coerce_s
+      setslot             1
+
+      getlex              QName(PackageNamespace(""), "parent")
+      pushnull
+      ifne                L15
+
+      pushfalse
+      returnvalue
+
+L15:
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getQualifiedClassName")
+      getlex              QName(PackageNamespace(""), "parent")
+      callproperty        QName(PackageNamespace("flash.utils"), "getQualifiedClassName"), 1
+      coerce_s
+      setslot             1
+
+L21:
+      jump                L35
+
+L22:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L35:
+      getscopeobject      1
+      getslot             1
+      pushstring          "fl.livepreview::LivePreviewParent"
+      equals
+      returnvalue
+     end ; code
+     try from L15 to L21 target L22 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     trait slot QName(PackageInternalNs("com.jumpeye.core"), "className") slotid 1 type QName(PackageNamespace(""), "String") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), "callLaterDispatcher")
+   method
+    refid "com.jumpeye.core:JUIComponent/instance/com.jumpeye.core:JUIComponent/instance/callLaterDispatcher"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      ifne                L29
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlex              QName(PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), "callLaterDispatcher")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "RENDER")
+      getlex              QName(PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), "callLaterDispatcher")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(PackageNamespace(""), "stage")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 0
+
+      returnvoid
+
+L29:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "RENDER")
+      getlex              QName(PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), "callLaterDispatcher")
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.core:JUIComponent"), PackageInternalNs("com.jumpeye.core"), StaticProtectedNs("com.jumpeye.core:JUIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance/com.jumpeye.core:JUIComponent/instance/callLaterDispatcher"), PackageNamespace("com.jumpeye.core")]), 2
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushnull
+      ifne                L47
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlex              QName(PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), "callLaterDispatcher")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      returnvoid
+
+L47:
+      findproperty        QName(PackageNamespace(""), "inCallLaterPhase")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "inCallLaterPhase")
+
+      getlex              QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "callLaterMethods")
+      coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+      setlocal2
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal2
+      coerce_a
+      setlocal            5
+
+      jump                L73
+
+L59:
+      label
+      getlocal            5
+      getlocal            4
+      nextname
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal3
+      getglobalscope
+      call                0
+      pop
+      getlocal2
+      getlocal3
+      deleteproperty      MultinameL([PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.core:JUIComponent"), PackageInternalNs("com.jumpeye.core"), StaticProtectedNs("com.jumpeye.core:JUIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
+      pop
+L73:
+      hasnext2            5, 4
+      iftrue              L59
+
+      kill                5
+      kill                4
+      findproperty        QName(PackageNamespace(""), "inCallLaterPhase")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "inCallLaterPhase")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "validate")
+   method
+    refid "com.jumpeye.core:JUIComponent/instance/com.jumpeye.core:JUIComponent:validate"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidHash")
+      newobject           0
+      initproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidHash")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "invalidate")
+   method
+    refid "com.jumpeye.core:JUIComponent/instance/invalidate"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Utf8("all")
+    optional True()
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidHash")
+      getlocal1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.core:JUIComponent"), PackageInternalNs("com.jumpeye.core"), StaticProtectedNs("com.jumpeye.core:JUIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
+
+      getlocal2
+      iffalse             L11
+
+      getlocal0
+      getlex              QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "draw")
+      callpropvoid        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "callLater"), 1
+
+L11:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "draw")
+   method
+    refid "com.jumpeye.core:JUIComponent/instance/com.jumpeye.core:JUIComponent:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "validate")
+      callpropvoid        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "validate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "configUI")
+   method
+    refid "com.jumpeye.core:JUIComponent/instance/com.jumpeye.core:JUIComponent:configUI"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "isLivePreview")
+      findpropstrict      QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "checkLivePreview")
+      callproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "checkLivePreview"), 0
+      initproperty        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "isLivePreview")
+
+      getlex              QName(PackageNamespace(""), "numChildren")
+      pushbyte            0
+      ifngt               L12
+
+      findpropstrict      QName(PackageNamespace(""), "removeChildAt")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "removeChildAt"), 1
+
+L12:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidateFlag") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "isInvalid")
+   method
+    refid "com.jumpeye.core:JUIComponent/instance/com.jumpeye.core:JUIComponent:isInvalid"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag NEED_REST
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidHash")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.core:JUIComponent"), PackageInternalNs("com.jumpeye.core"), StaticProtectedNs("com.jumpeye.core:JUIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
+      convert_b
+      dup
+      iftrue              L13
+
+      pop
+      getlex              QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidHash")
+      pushstring          "all"
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.core:JUIComponent"), PackageInternalNs("com.jumpeye.core"), StaticProtectedNs("com.jumpeye.core:JUIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
+      convert_b
+L13:
+      iffalse             L16
+
+      pushtrue
+      returnvalue
+
+L16:
+      jump                L25
+
+L17:
+      label
+      getlex              QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidHash")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "pop"), 0
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.core:JUIComponent"), PackageInternalNs("com.jumpeye.core"), StaticProtectedNs("com.jumpeye.core:JUIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
+      iffalse             L25
+
+      pushtrue
+      returnvalue
+
+L25:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifgt                L17
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "_inspector") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "invalidHash") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "isLivePreview") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "callLater")
+   method
+    refid "com.jumpeye.core:JUIComponent/instance/com.jumpeye.core:JUIComponent:callLater"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "inCallLaterPhase")
+      iffalse             L5
+
+      returnvoid
+
+L5:
+      getlex              QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "callLaterMethods")
+      getlocal1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.core:JUIComponent"), PackageInternalNs("com.jumpeye.core"), StaticProtectedNs("com.jumpeye.core:JUIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushnull
+      ifeq                L23
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "RENDER")
+      getlex              QName(PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), "callLaterDispatcher")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(PackageNamespace(""), "stage")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 0
+
+      jump                L31
+
+L23:
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlex              QName(PrivateNamespace(null, "com.jumpeye.core:JUIComponent/instance"), "callLaterDispatcher")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "validateNow")
+   method
+    refid "com.jumpeye.core:JUIComponent/instance/validateNow"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      pushstring          "all"
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 2
+
+      findpropstrict      QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "draw")
+      callpropvoid        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "draw"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "drawNow")
+   method
+    refid "com.jumpeye.core:JUIComponent/instance/drawNow"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "draw")
+      callpropvoid        QName(ProtectedNamespace("com.jumpeye.core:JUIComponent"), "draw"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "version") type QName(PackageNamespace(""), "String") value Utf8("3.0.0.15") end
+ end ; instance
+ cinit
+  refid "com.jumpeye.core:JUIComponent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "inCallLaterPhase")
+    pushfalse
+    setproperty         QName(PackageNamespace(""), "inCallLaterPhase")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "inCallLaterPhase") slotid 1 type QName(PackageNamespace(""), "Boolean") value False() end
+end ; class

@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.message:QueuedMessage/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("QueuedMessage", [PackageNamespace("com.electrotank.electroserver4.message")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.electrotank.electroserver4.message:QueuedMessage"
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.message"), "QueuedMessage")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.message"), "QueuedMessage")
+  #include "QueuedMessage.class.asasm"
+ end ; trait
+end ; script

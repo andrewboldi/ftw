@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.protocol.codec:GetUsersInRoomRequestCodec/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("GetUsersInRoomRequestCodec", [PackageNamespace("com.electrotank.electroserver4.protocol.codec")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+    newclass            "com.electrotank.electroserver4.protocol.codec:GetUsersInRoomRequestCodec"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "GetUsersInRoomRequestCodec")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "GetUsersInRoomRequestCodec")
+  #include "GetUsersInRoomRequestCodec.class.asasm"
+ end ; trait
+end ; script

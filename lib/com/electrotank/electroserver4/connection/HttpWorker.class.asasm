@@ -1,0 +1,474 @@
+class
+ refid "com.electrotank.electroserver4.connection:HttpWorker"
+ instance QName(PackageInternalNs("com.electrotank.electroserver4.connection"), "HttpWorker")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("IEventDispatcher", [PackageNamespace("flash.events")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.connection:HttpWorker")
+  iinit
+   refid "com.electrotank.electroserver4.connection:HttpWorker/instance/init"
+   param QName(PackageNamespace("com.electrotank.electroserver4.connection"), "HttpConnection")
+   flag NEED_ACTIVATION
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     newactivation
+     dup
+     setlocal2
+
+     pushscope
+
+     getscopeobject      1
+     pushnull
+     coerce              QName(PackageInternalNs("com.electrotank.electroserver4.connection"), "HttpWorker")
+     setslot             2
+
+     getscopeobject      1
+     getlocal1
+     setslot             1
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getscopeobject      1
+     getslot             1
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "connection")
+
+     getlocal0
+     findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "counter")
+     dup
+     setlocal3
+
+     getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "counter")
+     convert_d
+     dup
+     increment
+     setlocal            4
+
+     getlocal3
+     getlocal            4
+     setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "counter")
+
+     kill                4
+     kill                3
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "_id")
+
+     getscopeobject      1
+     getlocal0
+     coerce              QName(PackageInternalNs("com.electrotank.electroserver4.connection"), "HttpWorker")
+     setslot             2
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.net"), "URLStream")
+     constructprop       QName(PackageNamespace("flash.net"), "URLStream"), 0
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "COMPLETE")
+     newfunction         "com.electrotank.electroserver4.connection:HttpWorker/instance/init/inline_method#0"
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "OPEN")
+     newfunction         "com.electrotank.electroserver4.connection:HttpWorker/instance/init/inline_method#1"
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+     getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+     getproperty         QName(PackageNamespace(""), "PROGRESS")
+     newfunction         "com.electrotank.electroserver4.connection:HttpWorker/instance/init/inline_method#2"
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+     getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
+     getproperty         QName(PackageNamespace(""), "IO_ERROR")
+     newfunction         "com.electrotank.electroserver4.connection:HttpWorker/instance/init/inline_method#3"
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+     getlex              QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+     getproperty         QName(PackageNamespace(""), "SECURITY_ERROR")
+     newfunction         "com.electrotank.electroserver4.connection:HttpWorker/instance/init/inline_method#4"
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+    trait slot QName(PackageInternalNs("com.electrotank.electroserver4.connection"), "connection") slotid 1 type QName(PackageNamespace("com.electrotank.electroserver4.connection"), "HttpConnection") end
+    trait slot QName(PackageInternalNs("com.electrotank.electroserver4.connection"), "worker") slotid 2 type QName(PackageInternalNs("com.electrotank.electroserver4.connection"), "HttpWorker") end
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "connection") type QName(PackageNamespace("com.electrotank.electroserver4.connection"), "HttpConnection") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream") type QName(PackageNamespace("flash.net"), "URLStream") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "bytesNeeded") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "_id") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageInternalNs("com.electrotank.electroserver4.connection"), "send")
+   method
+    refid "com.electrotank.electroserver4.connection:HttpWorker/instance/com.electrotank.electroserver4.connection:send"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 0
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      setlocal3
+
+      getlocal3
+      pushstring          "http://"
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "connection")
+      callproperty        QName(PackageNamespace(""), "getIp"), 0
+      add
+      pushstring          ":"
+      add
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "connection")
+      callproperty        QName(PackageNamespace(""), "getPort"), 0
+      add
+      getlocal1
+      add
+      pushstring          "?_="
+      add
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "_id")
+      add
+      setproperty         QName(PackageNamespace(""), "url")
+
+      getlocal3
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "data")
+
+      getlocal3
+      getlex              QName(PackageNamespace("flash.net"), "URLRequestMethod")
+      getproperty         QName(PackageNamespace(""), "POST")
+      setproperty         QName(PackageNamespace(""), "method")
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "load"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs("com.electrotank.electroserver4.connection"), "close")
+   method
+    refid "com.electrotank.electroserver4.connection:HttpWorker/instance/com.electrotank.electroserver4.connection:close"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "readData")
+   method
+    refid "com.electrotank.electroserver4.connection:HttpWorker/instance/com.electrotank.electroserver4.connection:HttpWorker/readData"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      getproperty         QName(PackageNamespace(""), "connected")
+      iftrue              L9
+
+      jump                L64
+
+L9:
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "bytesNeeded")
+      pushbyte            0
+      ifngt               L54
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      getproperty         QName(PackageNamespace(""), "bytesAvailable")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "bytesNeeded")
+      ifnge               L53
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      getlocal1
+      pushbyte            0
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "bytesNeeded")
+      callpropvoid        QName(PackageNamespace(""), "readBytes"), 3
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "bytesNeeded")
+      pushbyte            0
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "bytesNeeded")
+
+      pushbyte            0
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), PackageInternalNs("com.electrotank.electroserver4.connection"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.connection"), PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker/instance/com.electrotank.electroserver4.connection:HttpWorker/readData"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.connection:HttpWorker"), StaticProtectedNs("com.electrotank.electroserver4.connection:HttpWorker"), StaticProtectedNs("Object")])
+      equals
+      dup
+      iffalse             L41
+
+      pop
+      pushbyte            0
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), PackageInternalNs("com.electrotank.electroserver4.connection"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.connection"), PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker/instance/com.electrotank.electroserver4.connection:HttpWorker/readData"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.connection:HttpWorker"), StaticProtectedNs("com.electrotank.electroserver4.connection:HttpWorker"), StaticProtectedNs("Object")])
+      equals
+L41:
+      iffalse             L43
+
+      jump                L51
+
+L43:
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "connection")
+      pushstring          "onBinaryData"
+      pushstring          "target"
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "connection")
+      pushstring          "data"
+      getlocal1
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "notifyListeners"), 2
+
+L51:
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "readData")
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "readData"), 0
+
+L53:
+      jump                L64
+
+L54:
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      getproperty         QName(PackageNamespace(""), "bytesAvailable")
+      pushbyte            4
+      ifnge               L64
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "bytesNeeded")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "bytesNeeded")
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "readData")
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "readData"), 0
+
+L64:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "dispatchEvent")
+   method
+    refid "com.electrotank.electroserver4.connection:HttpWorker/instance/dispatchEvent"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "dispatchEvent"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "hasEventListener")
+   method
+    refid "com.electrotank.electroserver4.connection:HttpWorker/instance/hasEventListener"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "hasEventListener"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "willTrigger")
+   method
+    refid "com.electrotank.electroserver4.connection:HttpWorker/instance/willTrigger"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "willTrigger"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "removeEventListener")
+   method
+    refid "com.electrotank.electroserver4.connection:HttpWorker/instance/removeEventListener"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Function")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      getlocal1
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "addEventListener")
+   method
+    refid "com.electrotank.electroserver4.connection:HttpWorker/instance/addEventListener"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Function")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    optional Integer(0)
+    optional False()
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "stream")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "com.electrotank.electroserver4.connection:HttpWorker/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "[HttpWorker "
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "_id")
+      add
+      pushstring          "]"
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.connection:HttpWorker/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "counter")
+    pushbyte            0
+    setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "counter")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:HttpWorker"), "counter") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(0) end
+end ; class

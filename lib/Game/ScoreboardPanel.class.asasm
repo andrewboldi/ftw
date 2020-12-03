@@ -1,0 +1,773 @@
+class
+ refid "Game:ScoreboardPanel"
+ instance QName(PackageNamespace("Game"), "ScoreboardPanel")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Game:ScoreboardPanel")
+  iinit
+   refid "Game:ScoreboardPanel/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageInternalNs("Game"), "__setProp_scoreboard_ScoreboardPanel_Layer1_0")
+     callpropvoid        QName(PackageInternalNs("Game"), "__setProp_scoreboard_ScoreboardPanel_Layer1_0"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "scoreboard") type QName(PackageNamespace("fl.controls"), "DataGrid") end
+  trait slot QName(PackageNamespace(""), "next_problem") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "seconds") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "countdown_interval") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "ad") type QName(PackageNamespace("Ad"), "Ad") end
+  trait method QName(PackageNamespace(""), "EndProblemPanel")
+   method
+    refid "Game:ScoreboardPanel/instance/EndProblemPanel"
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushstring          "Time"
+      pushstring          "Response"
+      pushstring          "User"
+      newarray            3
+      setproperty         QName(PackageNamespace(""), "columns")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushstring          "borderStyle"
+      pushstring          "none"
+      callpropvoid        QName(PackageNamespace(""), "setStyle"), 2
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushstring          "Time"
+      callpropvoid        QName(PackageNamespace(""), "sortItemsOn"), 1
+
+      findproperty        QName(PackageNamespace(""), "countdown_interval")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "countdown_interval")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "countdown")
+   method
+    refid "Game:ScoreboardPanel/instance/countdown"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "seconds")
+
+      getlex              QName(PackageNamespace(""), "countdown_interval")
+      pushbyte            0
+      ifne                L19
+
+      findproperty        QName(PackageNamespace(""), "countdown_interval")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "setInterval")
+      getlex              QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "update_countdown")
+      pushshort           1000
+      callproperty        QName(PackageNamespace("flash.utils"), "setInterval"), 2
+      initproperty        QName(PackageNamespace(""), "countdown_interval")
+
+      getlex              QName(PackageNamespace(""), "next_problem")
+      pushstring          "Next problem in "
+      getlocal1
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "update_countdown")
+   method
+    refid "Game:ScoreboardPanel/instance/Game:ScoreboardPanel/instance/update_countdown"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "seconds")
+      dup
+      setlocal1
+
+      getproperty         QName(PackageNamespace(""), "seconds")
+      decrement
+      setlocal2
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "seconds")
+
+      kill                2
+      kill                1
+      getlex              QName(PackageNamespace(""), "seconds")
+      pushbyte            0
+      ifngt               L22
+
+      getlex              QName(PackageNamespace(""), "next_problem")
+      pushstring          "Next problem in "
+      getlex              QName(PackageNamespace(""), "seconds")
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L31
+
+L22:
+      getlex              QName(PackageNamespace(""), "next_problem")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "clearInterval")
+      getlex              QName(PackageNamespace(""), "countdown_interval")
+      callpropvoid        QName(PackageNamespace("flash.utils"), "clearInterval"), 1
+
+      findproperty        QName(PackageNamespace(""), "countdown_interval")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "countdown_interval")
+
+L31:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "board")
+   method
+    refid "Game:ScoreboardPanel/instance/board"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 6
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      pushundefined
+      coerce_a
+      setlocal            5
+
+      getlocal1
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L59
+
+L17:
+      label
+      getlocal2
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "\x09"
+      callproperty        Multiname("split", [PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      dup
+      setlocal            4
+
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            2
+      ifngt               L55
+
+      pushstring          "User"
+      getlocal            4
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "Response"
+      findpropstrict      QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "response_text")
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal            4
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      callproperty        QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "response_text"), 1
+      pushstring          "Time"
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal            4
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      pushbyte            3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toFixed"), 1
+      newobject           3
+      coerce_a
+      setlocal            5
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+L55:
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L59:
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L17
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "add")
+   method
+    refid "Game:ScoreboardPanel/instance/add"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "User"
+      getlocal1
+      pushstring          "Response"
+      findpropstrict      QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "response_text")
+      getlocal2
+      callproperty        QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "response_text"), 1
+      pushstring          "Time"
+      getlocal3
+      pushbyte            3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toFixed"), 1
+      newobject           3
+      coerce_a
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "response_text")
+   method
+    refid "Game:ScoreboardPanel/instance/Game:ScoreboardPanel/instance/response_text"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      jump                L17
+
+L3:
+      label
+      pushstring          "Incorrect"
+      returnvalue
+
+L6:
+      label
+      pushstring          "Correct"
+      returnvalue
+
+L9:
+      label
+      pushstring          "Give Up"
+      returnvalue
+
+L12:
+      label
+      pushstring          "Time Out"
+      returnvalue
+
+L15:
+      label
+      jump                L49
+
+L17:
+      getlocal1
+      setlocal2
+
+      pushbyte            0
+      getlocal2
+      ifstrictne          L24
+
+      pushbyte            0
+      jump                L47
+
+L24:
+      pushbyte            1
+      getlocal2
+      ifstrictne          L29
+
+      pushbyte            1
+      jump                L47
+
+L29:
+      pushbyte            2
+      getlocal2
+      ifstrictne          L34
+
+      pushbyte            2
+      jump                L47
+
+L34:
+      pushbyte            4
+      getlocal2
+      ifstrictne          L39
+
+      pushbyte            3
+      jump                L47
+
+L39:
+      jump                L46
+
+      ; 0x24
+      ; 0x04
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L46:
+      pushbyte            4
+L47:
+      kill                2
+      lookupswitch        L15, [L3, L6, L9, L12, L15]
+
+L49:
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "show")
+   method
+    refid "Game:ScoreboardPanel/instance/show"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 15
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+L6:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problemNumber")
+      pushbyte            0
+      ifngt               L51
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problemNumber")
+      getproperty         MultinameL([PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifne                L24
+
+      getlex              QName(PackageNamespace(""), "ad")
+      pushbyte            100
+      setproperty         Multiname("book", [PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      jump                L50
+
+L24:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problemNumber")
+      getproperty         MultinameL([PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushnull
+      ifne                L37
+
+      getlex              QName(PackageNamespace(""), "ad")
+      pushbyte            100
+      setproperty         Multiname("book", [PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      jump                L50
+
+L37:
+      getlex              QName(PackageNamespace(""), "ad")
+      pushbyte            100
+      setproperty         Multiname("book", [PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlex              QName(PackageNamespace(""), "ad")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problems")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "problemNumber")
+      getproperty         MultinameL([PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("book", [PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         Multiname("book", [PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L50:
+      jump                L54
+
+L51:
+      getlex              QName(PackageNamespace(""), "ad")
+      pushbyte            100
+      setproperty         Multiname("book", [PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L54:
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      callpropvoid        QName(PackageNamespace(""), "removeAll"), 0
+
+      getlocal0
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L59:
+      jump                L81
+
+L60:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "Exception: "
+      getscopeobject      2
+      getslot             1
+      callproperty        Multiname("toString", [PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      add
+      callpropvoid        QName(PackageNamespace(""), "log"), 1
+
+      popscope
+      kill                2
+L81:
+      returnvoid
+     end ; code
+     try from L6 to L59 target L60 type null name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "hide")
+   method
+    refid "Game:ScoreboardPanel/instance/hide"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "countdown_interval")
+      pushbyte            0
+      ifeq                L11
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "clearInterval")
+      getlex              QName(PackageNamespace(""), "countdown_interval")
+      callpropvoid        QName(PackageNamespace("flash.utils"), "clearInterval"), 1
+
+      findproperty        QName(PackageNamespace(""), "countdown_interval")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "countdown_interval")
+
+L11:
+      getlex              QName(PackageNamespace(""), "next_problem")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal0
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "on_removed_from_stage")
+   method
+    refid "Game:ScoreboardPanel/instance/Game:ScoreboardPanel/instance/on_removed_from_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlex              QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "on_removed_from_stage")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "on_added_to_stage")
+   method
+    refid "Game:ScoreboardPanel/instance/Game:ScoreboardPanel/instance/on_added_to_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlex              QName(PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), "on_added_to_stage")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs("Game"), "__setProp_scoreboard_ScoreboardPanel_Layer1_0")
+   method
+    refid "Game:ScoreboardPanel/instance/Game:__setProp_scoreboard_ScoreboardPanel_Layer1_0"
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 17
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+L6:
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushstring          "componentInspectorSetting"
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L10:
+      jump                L24
+
+L11:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L24:
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "allowMultipleSelection")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "editable")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushbyte            25
+      setproperty         QName(PackageNamespace(""), "headerHeight")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushbyte            4
+      setproperty         QName(PackageNamespace(""), "horizontalLineScrollSize")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "horizontalPageScrollSize")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushstring          "off"
+      setproperty         QName(PackageNamespace(""), "horizontalScrollPolicy")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "resizableColumns")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushbyte            20
+      setproperty         QName(PackageNamespace(""), "rowHeight")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "showHeaders")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "sortableColumns")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushbyte            4
+      setproperty         QName(PackageNamespace(""), "verticalLineScrollSize")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "verticalPageScrollSize")
+
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushstring          "auto"
+      setproperty         QName(PackageNamespace(""), "verticalScrollPolicy")
+
+L63:
+      getlex              QName(PackageNamespace(""), "scoreboard")
+      pushstring          "componentInspectorSetting"
+      pushfalse
+      setproperty         MultinameL([PrivateNamespace(null, "Game:ScoreboardPanel/instance#0"), PackageNamespace(""), PackageNamespace("flash.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game:ScoreboardPanel/instance#1"), PackageNamespace("Game"), PackageInternalNs("Game"), PackageNamespace("flash.events"), ProtectedNamespace("Game:ScoreboardPanel"), StaticProtectedNs("Game:ScoreboardPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L67:
+      jump                L81
+
+L68:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L81:
+      returnvoid
+     end ; code
+     try from L6 to L10 target L11 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L63 to L67 target L68 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Game:ScoreboardPanel/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

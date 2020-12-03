@@ -1,0 +1,139 @@
+class
+ refid "com.electrotank.electroserver4.transaction:CompositePluginMessageEventTransaction"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "CompositePluginMessageEventTransaction")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "TransactionImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.transaction:CompositePluginMessageEventTransaction")
+  iinit
+   refid "com.electrotank.electroserver4.transaction:CompositePluginMessageEventTransaction/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.transaction:CompositePluginMessageEventTransaction/instance/execute"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    param QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "PluginMessageEvent")
+      setlocal            7
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "CompositePluginMessageEvent")
+      getlocal1
+      callproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "CompositePluginMessageEvent"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "CompositePluginMessageEvent")
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getParameters"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            5
+
+      pushbyte            0
+      convert_d
+      setlocal            6
+
+      jump                L51
+
+L22:
+      label
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "PluginMessageEvent")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "PluginMessageEvent"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "PluginMessageEvent")
+      dup
+      setlocal            7
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getPluginName"), 0
+      callpropvoid        QName(PackageNamespace(""), "setPluginName"), 1
+
+      getlocal            7
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getOriginRoomId"), 0
+      callpropvoid        QName(PackageNamespace(""), "setOriginRoomId"), 1
+
+      getlocal            7
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getOriginZoneId"), 0
+      callpropvoid        QName(PackageNamespace(""), "setOriginZoneId"), 1
+
+      getlocal            7
+      getlocal            5
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.transaction:CompositePluginMessageEventTransaction/instance/execute#0"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.transaction:CompositePluginMessageEventTransaction/instance/execute#1"), PackageNamespace("com.electrotank.electroserver4.transaction"), PackageInternalNs("com.electrotank.electroserver4.transaction"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.zone"), ProtectedNamespace("com.electrotank.electroserver4.transaction:CompositePluginMessageEventTransaction"), StaticProtectedNs("com.electrotank.electroserver4.transaction:CompositePluginMessageEventTransaction"), StaticProtectedNs("com.electrotank.electroserver4.transaction:TransactionImpl"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "setEsObject"), 1
+
+      getlocal            4
+      getlocal            7
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            6
+      increment
+      convert_d
+      setlocal            6
+
+L51:
+      getlocal            6
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L22
+
+      getlocal2
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "processCompositeMessages"), 1
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.transaction:CompositePluginMessageEventTransaction/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

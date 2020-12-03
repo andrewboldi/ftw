@@ -1,0 +1,132 @@
+class
+ refid "Main"
+ instance QName(PackageNamespace(""), "Main")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Main")
+  iinit
+   refid "Main/instance/init"
+   body
+    maxstack 4
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace("Misc"), "g")
+     getlocal0
+     constructprop       QName(PackageNamespace("Misc"), "g"), 1
+     pop
+     getlocal0
+     pushstring          "connected"
+     getlex              QName(PrivateNamespace(null, "Main/instance"), "connected")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+     getlex              QName(PackageNamespace("Misc"), "g")
+     findpropstrict      QName(PackageNamespace("Scene"), "Manager")
+     getlocal0
+     constructprop       QName(PackageNamespace("Scene"), "Manager"), 1
+     setproperty         QName(PackageNamespace(""), "scene")
+
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "scene")
+     callpropvoid        QName(PackageNamespace(""), "loader"), 0
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "stage")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ACTIVATE")
+     getlex              QName(PrivateNamespace(null, "Main/instance"), "on_activate")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PrivateNamespace(null, "Main/instance"), "connected")
+   method
+    refid "Main/instance/Main/instance/connected"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushstring          "connected"
+      getlex              QName(PrivateNamespace(null, "Main/instance"), "connected")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      callpropvoid        QName(PackageNamespace(""), "lobby"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Main/instance"), "on_activate")
+   method
+    refid "Main/instance/Main/instance/on_activate"
+    param QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      getproperty         QName(PackageNamespace(""), "activeScene")
+      pushstring          "Lobby"
+      ifne                L15
+
+      getlex              QName(PackageNamespace("Scene"), "BaseChat")
+      getglobalscope
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      callproperty        QName(PackageNamespace(""), "getScene"), 0
+      call                1
+      getproperty         Multiname("_tInput", [PrivateNamespace(null, "Main/instance"), PackageNamespace(""), PackageNamespace("Scene"), PackageNamespace("flash.events"), PrivateNamespace(null, "Main/instance/Main/instance/on_activate"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("net.theyak.net"), ProtectedNamespace("Main"), StaticProtectedNs("Main"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("setFocus", [PrivateNamespace(null, "Main/instance"), PackageNamespace(""), PackageNamespace("Scene"), PackageNamespace("flash.events"), PrivateNamespace(null, "Main/instance/Main/instance/on_activate"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("net.theyak.net"), ProtectedNamespace("Main"), StaticProtectedNs("Main"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Main/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

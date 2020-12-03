@@ -1,0 +1,207 @@
+class
+ refid "net.theyak.util:Net"
+ instance QName(PackageNamespace("net.theyak.util"), "Net")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("net.theyak.util:Net")
+  iinit
+   refid "net.theyak.util:Net/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "net.theyak.util:Net/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "callServer") flag FINAL dispid 3
+  method
+   refid "net.theyak.util:Net/class/callServer"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   flag NEED_ACTIVATION
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     newactivation
+     dup
+     setlocal2
+
+     pushscope
+
+     getscopeobject      1
+     getlocal1
+     setslot             1
+
+     getscopeobject      1
+     findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+     getscopeobject      1
+     getslot             1
+     constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+     coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+     setslot             2
+
+     getscopeobject      1
+     findpropstrict      QName(PackageNamespace("flash.net"), "URLLoader")
+     constructprop       QName(PackageNamespace("flash.net"), "URLLoader"), 0
+     coerce              QName(PackageNamespace("flash.net"), "URLLoader")
+     setslot             3
+
+L21:
+     getscopeobject      1
+     getslot             3
+     getscopeobject      1
+     getslot             2
+     callpropvoid        QName(PackageNamespace(""), "load"), 1
+
+L26:
+     jump                L40
+
+L27:
+     getlocal0
+     pushscope
+
+     getlocal2
+     pushscope
+
+     newcatch            0
+     dup
+     setlocal3
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+     popscope
+     kill                3
+L40:
+     returnvoid
+    end ; code
+    try from L21 to L26 target L27 type QName(PackageNamespace(""), "SecurityError") name QName(PackageNamespace(""), "error") end
+    trait slot QName(PackageInternalNs("net.theyak.util"), "url") slotid 1 type QName(PackageNamespace(""), "String") end
+    trait slot QName(PackageInternalNs("net.theyak.util"), "request") slotid 2 type QName(PackageNamespace("flash.net"), "URLRequest") end
+    trait slot QName(PackageInternalNs("net.theyak.util"), "loader") slotid 3 type QName(PackageNamespace("flash.net"), "URLLoader") end
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getURL") flag FINAL dispid 4
+  method
+   refid "net.theyak.util:Net/class/getURL"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   flag NEED_ACTIVATION
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     newactivation
+     dup
+     setlocal3
+
+     pushscope
+
+     getscopeobject      1
+     getlocal1
+     setslot             1
+
+     getscopeobject      1
+     getlocal2
+     setslot             2
+
+     getscopeobject      1
+     findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+     getscopeobject      1
+     getslot             1
+     constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+     coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+     setslot             3
+
+L19:
+     findpropstrict      QName(PackageNamespace("flash.net"), "navigateToURL")
+     getscopeobject      1
+     getslot             3
+     getscopeobject      1
+     getslot             2
+     callpropvoid        QName(PackageNamespace("flash.net"), "navigateToURL"), 2
+
+L25:
+     jump                L45
+
+L26:
+     getlocal0
+     pushscope
+
+     getlocal3
+     pushscope
+
+     newcatch            0
+     dup
+     setlocal            4
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+     findpropstrict      QName(PackageNamespace(""), "trace")
+     pushstring          "Navigate to URL failed"
+     getscopeobject      2
+     getslot             1
+     getproperty         QName(PackageNamespace(""), "message")
+     callpropvoid        QName(PackageNamespace(""), "trace"), 2
+
+     popscope
+     kill                4
+L45:
+     returnvoid
+    end ; code
+    try from L19 to L25 target L26 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    trait slot QName(PackageInternalNs("net.theyak.util"), "url") slotid 1 type QName(PackageNamespace(""), "String") end
+    trait slot QName(PackageInternalNs("net.theyak.util"), "window") slotid 2 type QName(PackageNamespace(""), "String") value Null() end
+    trait slot QName(PackageInternalNs("net.theyak.util"), "req") slotid 3 type QName(PackageNamespace("flash.net"), "URLRequest") end
+   end ; body
+  end ; method
+ end ; trait
+end ; class

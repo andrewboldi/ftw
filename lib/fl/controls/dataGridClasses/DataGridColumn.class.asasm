@@ -1,0 +1,818 @@
+class
+ refid "fl.controls.dataGridClasses:DataGridColumn"
+ instance QName(PackageNamespace("fl.controls.dataGridClasses"), "DataGridColumn")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls.dataGridClasses:DataGridColumn")
+  iinit
+   refid "fl.controls.dataGridClasses:DataGridColumn/instance/init"
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_minWidth")
+     pushbyte            20
+     initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_minWidth")
+
+     findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width")
+     pushbyte            100
+     initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width")
+
+     findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_visible")
+     pushtrue
+     initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_visible")
+
+     findproperty        QName(PackageNamespace(""), "sortable")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "sortable")
+
+     findproperty        QName(PackageNamespace(""), "resizable")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "resizable")
+
+     findproperty        QName(PackageNamespace(""), "editable")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "editable")
+
+     findproperty        QName(PackageNamespace(""), "itemEditor")
+     pushstring          "fl.controls.dataGridClasses.DataGridCellEditor"
+     initproperty        QName(PackageNamespace(""), "itemEditor")
+
+     findproperty        QName(PackageNamespace(""), "editorDataField")
+     pushstring          "text"
+     initproperty        QName(PackageNamespace(""), "editorDataField")
+
+     findproperty        QName(PackageNamespace(""), "sortDescending")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "sortDescending")
+
+     findproperty        QName(PackageNamespace(""), "sortOptions")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "sortOptions")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     iffalse             L42
+
+     findproperty        QName(PackageNamespace(""), "dataField")
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "dataField")
+
+     findproperty        QName(PackageNamespace(""), "headerText")
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "headerText")
+
+L42:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_headerText") type QName(PackageNamespace(""), "String") end
+  trait setter QName(PackageNamespace(""), "headerRenderer")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/headerRenderer/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_headerRenderer")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_headerRenderer")
+
+      getlex              QName(PackageNamespace(""), "owner")
+      iffalse             L11
+
+      getlex              QName(PackageNamespace(""), "owner")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+L11:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "editorDataField") type QName(PackageNamespace(""), "String") value Utf8("text") end
+  trait getter QName(PackageNamespace(""), "imeMode")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/imeMode/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_imeMode")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "forceImport") type QName(PackageNamespace("fl.controls.dataGridClasses"), "DataGridCellEditor") end
+  trait method QName(PackageNamespace(""), "setWidth")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/setWidth"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "width")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/width/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      setlocal2
+
+      findproperty        QName(PackageNamespace(""), "explicitWidth")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "explicitWidth")
+
+      getlex              QName(PackageNamespace(""), "owner")
+      pushnull
+      ifeq                L24
+
+      getlex              QName(PackageNamespace(""), "resizable")
+      convert_b
+      setlocal2
+
+      findproperty        QName(PackageNamespace(""), "resizable")
+      pushfalse
+      initproperty        QName(PackageNamespace(""), "resizable")
+
+      getlex              QName(PackageNamespace(""), "owner")
+      getlex              QName(PackageNamespace(""), "colNum")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "resizeColumn"), 2
+
+      findproperty        QName(PackageNamespace(""), "resizable")
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "resizable")
+
+      jump                L27
+
+L24:
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width")
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_headerRenderer") type QName(PackageNamespace(""), "Object") end
+  trait setter QName(PackageNamespace(""), "cellRenderer")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/cellRenderer/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_cellRenderer")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_cellRenderer")
+
+      getlex              QName(PackageNamespace(""), "owner")
+      iffalse             L11
+
+      getlex              QName(PackageNamespace(""), "owner")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+L11:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "minWidth")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/minWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_minWidth")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "imeMode")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/imeMode/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_imeMode")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_imeMode")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "[object DataGridColumn]"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "visible")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/visible/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_visible")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "sortOptions") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_cellRenderer") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PackageNamespace(""), "itemToLabel")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/itemToLabel"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "String")
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getslot             1
+      iftrue              L14
+
+      pushstring          " "
+      returnvalue
+
+L14:
+      getlex              QName(PackageNamespace(""), "labelFunction")
+      pushnull
+      ifeq                L22
+
+      findpropstrict      QName(PackageNamespace(""), "labelFunction")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace(""), "labelFunction"), 1
+      returnvalue
+
+L22:
+      getlex              QName(PackageNamespace(""), "owner")
+      getproperty         QName(PackageNamespace(""), "labelFunction")
+      pushnull
+      ifeq                L32
+
+      getlex              QName(PackageNamespace(""), "owner")
+      getscopeobject      1
+      getslot             1
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "labelFunction"), 2
+      returnvalue
+
+L32:
+      getscopeobject      1
+      getslot             1
+      typeof
+      pushstring          "object"
+      equals
+      dup
+      iftrue              L45
+
+      pop
+      getscopeobject      1
+      getslot             1
+      typeof
+      pushstring          "xml"
+      equals
+L45:
+      iffalse             L71
+
+L46:
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace(""), "dataField")
+      getproperty         MultinameL([PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), PackageNamespace(""), PackageInternalNs("fl.controls.dataGridClasses"), ProtectedNamespace("fl.controls.dataGridClasses:DataGridColumn"), StaticProtectedNs("fl.controls.dataGridClasses:DataGridColumn"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setslot             1
+
+L53:
+      jump                L71
+
+L54:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setslot             1
+
+      popscope
+      kill                3
+L71:
+      getscopeobject      1
+      getslot             1
+      getlex              QName(PackageNamespace(""), "String")
+      istypelate
+      iffalse             L81
+
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      returnvalue
+
+L81:
+      getscopeobject      1
+      getslot             1
+      callproperty        Multiname("toString", [PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), PackageNamespace(""), PackageInternalNs("fl.controls.dataGridClasses"), ProtectedNamespace("fl.controls.dataGridClasses:DataGridColumn"), StaticProtectedNs("fl.controls.dataGridClasses:DataGridColumn"), StaticProtectedNs("Object"), PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance/itemToLabel"), PackageNamespace("fl.controls.dataGridClasses"), Namespace("http://adobe.com/AS3/2006/builtin")]), 0
+      returnvalue
+
+L85:
+      ; 0x10
+      ; 0x10
+      ; 0x00
+      ; 0x00
+L89:
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal3
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                3
+      pushstring          " "
+      returnvalue
+     end ; code
+     try from L46 to L53 target L54 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L81 to L85 target L89 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     trait slot QName(PackageInternalNs("fl.controls.dataGridClasses"), "data") slotid 1 type QName(PackageNamespace(""), "Object") end
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_columnName") type QName(PackageNamespace(""), "String") end
+  trait setter QName(PackageNamespace(""), "minWidth")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/minWidth/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_minWidth")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_minWidth")
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width")
+      getlocal1
+      ifnlt               L11
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width")
+
+L11:
+      getlex              QName(PackageNamespace(""), "owner")
+      iffalse             L17
+
+      getlex              QName(PackageNamespace(""), "owner")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+L17:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "resizable") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_sortCompareFunction") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_visible") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait setter QName(PackageNamespace(""), "headerText")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/headerText/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_headerText")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_headerText")
+
+      getlex              QName(PackageNamespace(""), "owner")
+      iffalse             L11
+
+      getlex              QName(PackageNamespace(""), "owner")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+L11:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "sortDescending") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait setter QName(PackageNamespace(""), "sortCompareFunction")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/sortCompareFunction/setter"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_sortCompareFunction")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_sortCompareFunction")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "owner") type QName(PackageNamespace("fl.controls"), "DataGrid") end
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_imeMode") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "width")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/width/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_width") type QName(PackageNamespace(""), "Number") value Integer(100) end
+  trait getter QName(PackageNamespace(""), "cellRenderer")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/cellRenderer/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_cellRenderer")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "labelFunction")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/labelFunction/setter"
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_labelFunction")
+      getlocal1
+      ifne                L6
+
+      returnvoid
+
+L6:
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_labelFunction")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_labelFunction")
+
+      getlex              QName(PackageNamespace(""), "owner")
+      iffalse             L15
+
+      getlex              QName(PackageNamespace(""), "owner")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "headerText")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/headerText/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_headerText")
+      pushnull
+      ifeq                L8
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_headerText")
+      coerce_s
+      jump                L10
+
+L8:
+      getlex              QName(PackageNamespace(""), "dataField")
+      coerce_s
+L10:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "editable") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait getter QName(PackageNamespace(""), "sortCompareFunction")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/sortCompareFunction/getter"
+    returns QName(PackageNamespace(""), "Function")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_sortCompareFunction")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "itemEditor") type QName(PackageNamespace(""), "Object") value Utf8("fl.controls.dataGridClasses.DataGridCellEditor") end
+  trait getter QName(PackageNamespace(""), "headerRenderer")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/headerRenderer/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_headerRenderer")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "explicitWidth") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_minWidth") type QName(PackageNamespace(""), "Number") value Integer(20) end
+  trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_labelFunction") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PackageNamespace(""), "sortable") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait getter QName(PackageNamespace(""), "labelFunction")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/labelFunction/getter"
+    returns QName(PackageNamespace(""), "Function")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_labelFunction")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "visible")
+   method
+    refid "fl.controls.dataGridClasses:DataGridColumn/instance/visible/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_visible")
+      getlocal1
+      ifeq                L14
+
+      findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_visible")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridColumn/instance"), "_visible")
+
+      getlex              QName(PackageNamespace(""), "owner")
+      iffalse             L14
+
+      getlex              QName(PackageNamespace(""), "owner")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+L14:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "colNum") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "dataField") type QName(PackageNamespace(""), "String") end
+ end ; instance
+ cinit
+  refid "fl.controls.dataGridClasses:DataGridColumn/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

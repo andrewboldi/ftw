@@ -1,0 +1,342 @@
+class
+ refid "com.electrotank.electroserver4:MessageConstants"
+ instance QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4:MessageConstants")
+  iinit
+   refid "com.electrotank.electroserver4:MessageConstants/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4:MessageConstants/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "MESSAGE_HEADER_SIZE")
+    pushbyte            1
+    setproperty         QName(PackageNamespace(""), "MESSAGE_HEADER_SIZE")
+
+    findproperty        QName(PackageNamespace(""), "MESSAGE_ID_SIZE")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "MESSAGE_ID_SIZE")
+
+    findproperty        QName(PackageNamespace(""), "GATEWAY_ID_LENGTH")
+    pushbyte            13
+    setproperty         QName(PackageNamespace(""), "GATEWAY_ID_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "GATEWAY_STATE_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "GATEWAY_STATE_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "USER_ID_LENGTH")
+    pushbyte            13
+    setproperty         QName(PackageNamespace(""), "USER_ID_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "USER_NAME_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "USER_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "USER_COUNT_LENGTH")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "USER_COUNT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "FULL_USER_COUNT_LENGTH")
+    pushbyte            6
+    setproperty         QName(PackageNamespace(""), "FULL_USER_COUNT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "USER_VARIABLE_COUNT_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "USER_VARIABLE_COUNT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "USER_VARIABLE_NAME_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "USER_VARIABLE_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "USER_VARIABLE_VALUE_PREFIX_LENGTH")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "USER_VARIABLE_VALUE_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PASSWORD_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "PASSWORD_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "VIDEO_STREAM_NAME_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "VIDEO_STREAM_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "VARIABLE_COUNT_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "VARIABLE_COUNT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "VARIABLE_NAME_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "VARIABLE_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "VARIABLE_VALUE_PREFIX_LENGTH")
+    pushbyte            5
+    setproperty         QName(PackageNamespace(""), "VARIABLE_VALUE_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ZONE_COUNT_LENGTH")
+    pushbyte            5
+    setproperty         QName(PackageNamespace(""), "ZONE_COUNT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ZONE_ID_LENGTH")
+    pushbyte            5
+    setproperty         QName(PackageNamespace(""), "ZONE_ID_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ZONE_NAME_PREFIX_LENGTH")
+    pushbyte            3
+    setproperty         QName(PackageNamespace(""), "ZONE_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "UPDATE_ACTION_LENGTH")
+    pushbyte            1
+    setproperty         QName(PackageNamespace(""), "UPDATE_ACTION_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ROOM_ID_LENGTH")
+    pushbyte            5
+    setproperty         QName(PackageNamespace(""), "ROOM_ID_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ROOM_NAME_PREFIX_LENGTH")
+    pushbyte            3
+    setproperty         QName(PackageNamespace(""), "ROOM_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ROOM_COUNT_LENGTH")
+    pushbyte            5
+    setproperty         QName(PackageNamespace(""), "ROOM_COUNT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ROOM_CAPACITY_LENGTH")
+    pushbyte            3
+    setproperty         QName(PackageNamespace(""), "ROOM_CAPACITY_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ROOM_PASSWORD_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "ROOM_PASSWORD_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ROOM_DESCRIPTION_PREFIX_LENGTH")
+    pushbyte            3
+    setproperty         QName(PackageNamespace(""), "ROOM_DESCRIPTION_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ROOM_EVICTION_REASON_PREFIX_LENGTH")
+    pushbyte            3
+    setproperty         QName(PackageNamespace(""), "ROOM_EVICTION_REASON_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ROOM_BAN_DURATION_LENGTH")
+    pushbyte            6
+    setproperty         QName(PackageNamespace(""), "ROOM_BAN_DURATION_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ROOM_VARIABLE_COUNT_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "ROOM_VARIABLE_COUNT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ROOM_VARIABLE_NAME_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "ROOM_VARIABLE_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "FILTER_NAME_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "FILTER_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "FILTER_FAILURES_BEFORE_KICK_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "FILTER_FAILURES_BEFORE_KICK_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "FILTER_KICKS_BEFORE_BAN_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "FILTER_KICKS_BEFORE_BAN_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "FLOODING_FILTER_MAX_DUP_MESSAGES_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "FLOODING_FILTER_MAX_DUP_MESSAGES_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "FLOODING_FILTER_WINDOW_DURATION_LENGTH")
+    pushbyte            3
+    setproperty         QName(PackageNamespace(""), "FLOODING_FILTER_WINDOW_DURATION_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "FLOODING_FILTER_MAX_MESSAGE_IN_WINDOW_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "FLOODING_FILTER_MAX_MESSAGE_IN_WINDOW_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PUBLIC_MESSAGE_PREFIX_LENGTH")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "PUBLIC_MESSAGE_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PRIVATE_MESSAGE_PREFIX_LENGTH")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "PRIVATE_MESSAGE_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "MESSAGE_NUMBER_LENGTH")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "MESSAGE_NUMBER_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "REQUEST_ID_LENGTH")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "REQUEST_ID_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ERROR_ID_LENGTH")
+    pushbyte            3
+    setproperty         QName(PackageNamespace(""), "ERROR_ID_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "DEFAULT_LONG_LENGTH")
+    pushbyte            64
+    setproperty         QName(PackageNamespace(""), "DEFAULT_LONG_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "DEFAULT_DOUBLE_LENGTH")
+    pushbyte            64
+    setproperty         QName(PackageNamespace(""), "DEFAULT_DOUBLE_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PASSPHRASE_PREFIX_LENGTH")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "PASSPHRASE_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "ZONE_AND_ROOM_ID_LIST_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "ZONE_AND_ROOM_ID_LIST_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "SHARED_SECRET_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "SHARED_SECRET_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PLUGIN_COUNT_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "PLUGIN_COUNT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "EXTENSION_NAME_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "EXTENSION_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PLUGIN_NAME_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "PLUGIN_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PLUGIN_HANDLE_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "PLUGIN_HANDLE_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PLUGIN_PARM_COUNT_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "PLUGIN_PARM_COUNT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PLUGIN_PARM_NAME_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "PLUGIN_PARM_NAME_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PLUGIN_PARM_VALUE_PREFIX_LENGTH")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "PLUGIN_PARM_VALUE_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PROTOCOL_COUNT_LENGTH")
+    pushbyte            3
+    setproperty         QName(PackageNamespace(""), "PROTOCOL_COUNT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PROTOCOL_HOST_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "PROTOCOL_HOST_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PROTOCOL_PORT_LENGTH")
+    pushbyte            5
+    setproperty         QName(PackageNamespace(""), "PROTOCOL_PORT_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "PROTOCOL_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "PROTOCOL_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "CUSTOM_POLICY_FILE_CONTENTS_PREFIX_LENGTH")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "CUSTOM_POLICY_FILE_CONTENTS_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "COMPOSITE_ESOBJECT_ARRAY_PREFIX_LENGTH")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "COMPOSITE_ESOBJECT_ARRAY_PREFIX_LENGTH")
+
+    findproperty        QName(PackageNamespace(""), "HASH_ID_LENGTH")
+    pushbyte            11
+    setproperty         QName(PackageNamespace(""), "HASH_ID_LENGTH")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "MESSAGE_HEADER_SIZE") slotid 1 type QName(PackageNamespace(""), "Number") value Integer(1) end
+ trait slot QName(PackageNamespace(""), "MESSAGE_ID_SIZE") slotid 2 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "GATEWAY_ID_LENGTH") slotid 3 type QName(PackageNamespace(""), "Number") value Integer(13) end
+ trait slot QName(PackageNamespace(""), "GATEWAY_STATE_LENGTH") slotid 4 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "USER_ID_LENGTH") slotid 5 type QName(PackageNamespace(""), "Number") value Integer(13) end
+ trait slot QName(PackageNamespace(""), "USER_NAME_PREFIX_LENGTH") slotid 6 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "USER_COUNT_LENGTH") slotid 7 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "FULL_USER_COUNT_LENGTH") slotid 8 type QName(PackageNamespace(""), "Number") value Integer(6) end
+ trait slot QName(PackageNamespace(""), "USER_VARIABLE_COUNT_LENGTH") slotid 9 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "USER_VARIABLE_NAME_PREFIX_LENGTH") slotid 10 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "USER_VARIABLE_VALUE_PREFIX_LENGTH") slotid 11 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "PASSWORD_PREFIX_LENGTH") slotid 12 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "VIDEO_STREAM_NAME_PREFIX_LENGTH") slotid 13 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "VARIABLE_COUNT_LENGTH") slotid 14 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "VARIABLE_NAME_PREFIX_LENGTH") slotid 15 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "VARIABLE_VALUE_PREFIX_LENGTH") slotid 16 type QName(PackageNamespace(""), "Number") value Integer(5) end
+ trait slot QName(PackageNamespace(""), "ZONE_COUNT_LENGTH") slotid 17 type QName(PackageNamespace(""), "Number") value Integer(5) end
+ trait slot QName(PackageNamespace(""), "ZONE_ID_LENGTH") slotid 18 type QName(PackageNamespace(""), "Number") value Integer(5) end
+ trait slot QName(PackageNamespace(""), "ZONE_NAME_PREFIX_LENGTH") slotid 19 type QName(PackageNamespace(""), "Number") value Integer(3) end
+ trait slot QName(PackageNamespace(""), "UPDATE_ACTION_LENGTH") slotid 20 type QName(PackageNamespace(""), "Number") value Integer(1) end
+ trait slot QName(PackageNamespace(""), "ROOM_ID_LENGTH") slotid 21 type QName(PackageNamespace(""), "Number") value Integer(5) end
+ trait slot QName(PackageNamespace(""), "ROOM_NAME_PREFIX_LENGTH") slotid 22 type QName(PackageNamespace(""), "Number") value Integer(3) end
+ trait slot QName(PackageNamespace(""), "ROOM_COUNT_LENGTH") slotid 23 type QName(PackageNamespace(""), "Number") value Integer(5) end
+ trait slot QName(PackageNamespace(""), "ROOM_CAPACITY_LENGTH") slotid 24 type QName(PackageNamespace(""), "Number") value Integer(3) end
+ trait slot QName(PackageNamespace(""), "ROOM_PASSWORD_PREFIX_LENGTH") slotid 25 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "ROOM_DESCRIPTION_PREFIX_LENGTH") slotid 26 type QName(PackageNamespace(""), "Number") value Integer(3) end
+ trait slot QName(PackageNamespace(""), "ROOM_EVICTION_REASON_PREFIX_LENGTH") slotid 27 type QName(PackageNamespace(""), "Number") value Integer(3) end
+ trait slot QName(PackageNamespace(""), "ROOM_BAN_DURATION_LENGTH") slotid 28 type QName(PackageNamespace(""), "Number") value Integer(6) end
+ trait slot QName(PackageNamespace(""), "ROOM_VARIABLE_COUNT_LENGTH") slotid 29 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "ROOM_VARIABLE_NAME_PREFIX_LENGTH") slotid 30 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "FILTER_NAME_PREFIX_LENGTH") slotid 31 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "FILTER_FAILURES_BEFORE_KICK_LENGTH") slotid 32 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "FILTER_KICKS_BEFORE_BAN_LENGTH") slotid 33 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "FLOODING_FILTER_MAX_DUP_MESSAGES_LENGTH") slotid 34 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "FLOODING_FILTER_WINDOW_DURATION_LENGTH") slotid 35 type QName(PackageNamespace(""), "Number") value Integer(3) end
+ trait slot QName(PackageNamespace(""), "FLOODING_FILTER_MAX_MESSAGE_IN_WINDOW_LENGTH") slotid 36 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "PUBLIC_MESSAGE_PREFIX_LENGTH") slotid 37 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "PRIVATE_MESSAGE_PREFIX_LENGTH") slotid 38 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "MESSAGE_NUMBER_LENGTH") slotid 39 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "REQUEST_ID_LENGTH") slotid 40 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "ERROR_ID_LENGTH") slotid 41 type QName(PackageNamespace(""), "Number") value Integer(3) end
+ trait slot QName(PackageNamespace(""), "DEFAULT_LONG_LENGTH") slotid 42 type QName(PackageNamespace(""), "Number") value Integer(64) end
+ trait slot QName(PackageNamespace(""), "DEFAULT_DOUBLE_LENGTH") slotid 43 type QName(PackageNamespace(""), "Number") value Integer(64) end
+ trait slot QName(PackageNamespace(""), "PASSPHRASE_PREFIX_LENGTH") slotid 44 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "ZONE_AND_ROOM_ID_LIST_LENGTH") slotid 45 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "SHARED_SECRET_LENGTH") slotid 46 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "PLUGIN_COUNT_LENGTH") slotid 47 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "EXTENSION_NAME_PREFIX_LENGTH") slotid 48 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "PLUGIN_NAME_PREFIX_LENGTH") slotid 49 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "PLUGIN_HANDLE_PREFIX_LENGTH") slotid 50 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "PLUGIN_PARM_COUNT_LENGTH") slotid 51 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "PLUGIN_PARM_NAME_PREFIX_LENGTH") slotid 52 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "PLUGIN_PARM_VALUE_PREFIX_LENGTH") slotid 53 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "PROTOCOL_COUNT_LENGTH") slotid 54 type QName(PackageNamespace(""), "Number") value Integer(3) end
+ trait slot QName(PackageNamespace(""), "PROTOCOL_HOST_PREFIX_LENGTH") slotid 55 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "PROTOCOL_PORT_LENGTH") slotid 56 type QName(PackageNamespace(""), "Number") value Integer(5) end
+ trait slot QName(PackageNamespace(""), "PROTOCOL_LENGTH") slotid 57 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "CUSTOM_POLICY_FILE_CONTENTS_PREFIX_LENGTH") slotid 58 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "COMPOSITE_ESOBJECT_ARRAY_PREFIX_LENGTH") slotid 59 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "HASH_ID_LENGTH") slotid 60 type QName(PackageNamespace(""), "Number") value Integer(11) end
+end ; class

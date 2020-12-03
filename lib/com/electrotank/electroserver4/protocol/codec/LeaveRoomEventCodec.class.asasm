@@ -1,0 +1,89 @@
+class
+ refid "com.electrotank.electroserver4.protocol.codec:LeaveRoomEventCodec"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "LeaveRoomEventCodec")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:LeaveRoomEventCodec")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.codec:LeaveRoomEventCodec/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "decode") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.protocol.codec:LeaveRoomEventCodec/instance/decode"
+    param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageReader")
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "LeaveRoomEvent")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "LeaveRoomEvent"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "LeaveRoomEvent")
+      setlocal2
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ZONE_ID_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      convert_d
+      setlocal3
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "setZoneId"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_ID_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      convert_d
+      setlocal            4
+
+      getlocal2
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "setRoomId"), 1
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.codec:LeaveRoomEventCodec/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

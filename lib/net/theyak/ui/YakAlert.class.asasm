@@ -1,0 +1,361 @@
+class
+ refid "net.theyak.ui:YakAlert"
+ instance QName(PackageNamespace("net.theyak.ui"), "YakAlert")
+  extends QName(PackageNamespace("net.theyak.ui"), "YakDialog")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("net.theyak.ui:YakAlert")
+  iinit
+   refid "net.theyak.ui:YakAlert/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Utf8("Alert")
+   optional Utf8("")
+   optional Utf8("")
+   optional Utf8("")
+   body
+    maxstack 4
+    localcount 10
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal            9
+
+     getlocal0
+     getlocal2
+     pushshort           300
+     pushshort           200
+     constructsuper      3
+
+     findpropstrict      QName(PackageNamespace(""), "getCanvasSize")
+     callproperty        QName(PackageNamespace(""), "getCanvasSize"), 0
+     coerce              QName(PackageNamespace("flash.geom"), "Rectangle")
+     setlocal            6
+
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     coerce              QName(PackageNamespace("flash.text"), "TextField")
+     dup
+     setlocal            7
+
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlocal            7
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "width")
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "textHeight")
+     pushbyte            50
+     ifngt               L38
+
+     getlocal            7
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "textHeight")
+     pushbyte            50
+     subtract
+     pushbyte            2
+     divide
+     setproperty         QName(PackageNamespace(""), "y")
+
+     jump                L44
+
+L38:
+     getlocal            7
+     pushbyte            50
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "textHeight")
+     subtract
+     setproperty         QName(PackageNamespace(""), "y")
+
+L44:
+     getlocal            7
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "wordWrap")
+
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+     constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+     coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+     dup
+     setlocal            8
+
+     pushstring          "center"
+     setproperty         QName(PackageNamespace(""), "align")
+
+     getlocal            8
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "bold")
+
+     getlocal            8
+     pushstring          "_sans"
+     setproperty         QName(PackageNamespace(""), "font")
+
+     getlocal            8
+     pushbyte            16
+     setproperty         QName(PackageNamespace(""), "size")
+
+     getlocal            7
+     getlocal            8
+     callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+     getlex              QName(PackageNamespace(""), "canvas")
+     getlocal            7
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            0
+     greaterthan
+     dup
+     iftrue              L80
+
+     pop
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            0
+     greaterthan
+L80:
+     dup
+     iftrue              L87
+
+     pop
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            0
+     greaterthan
+L87:
+     iffalse             L222
+
+     pushbyte            0
+     convert_u
+     setlocal            9
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "buttons")
+     findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+     constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+     initproperty        QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "buttons")
+
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            0
+     ifngt               L126
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button1")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+     constructprop       QName(PackageNamespace("fl.controls"), "Button"), 0
+     initproperty        QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button1")
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button1")
+     getlocal3
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button1")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlex              QName(PackageNamespace(""), "pressed")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button1")
+     pushbyte            70
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button1")
+     getproperty         QName(PackageNamespace(""), "height")
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button1")
+     getproperty         QName(PackageNamespace(""), "mouseEnabled")
+     pop
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "buttons")
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button1")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal            9
+     increment
+     convert_u
+     setlocal            9
+
+L126:
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            0
+     ifngt               L162
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button2")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+     constructprop       QName(PackageNamespace("fl.controls"), "Button"), 0
+     initproperty        QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button2")
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button2")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button2")
+     getlocal            9
+     pushbyte            75
+     multiply
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button2")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlex              QName(PackageNamespace(""), "pressed")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button2")
+     pushbyte            70
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button2")
+     getproperty         QName(PackageNamespace(""), "height")
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button2")
+     getproperty         QName(PackageNamespace(""), "mouseEnabled")
+     pop
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "buttons")
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button2")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal            9
+     increment
+     convert_u
+     setlocal            9
+
+L162:
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            0
+     ifngt               L198
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button3")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+     constructprop       QName(PackageNamespace("fl.controls"), "Button"), 0
+     initproperty        QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button3")
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button3")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button3")
+     getlocal            9
+     pushbyte            75
+     multiply
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button3")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlex              QName(PackageNamespace(""), "pressed")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button3")
+     pushbyte            70
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button3")
+     getproperty         QName(PackageNamespace(""), "height")
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button3")
+     getproperty         QName(PackageNamespace(""), "mouseEnabled")
+     pop
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "buttons")
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button3")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal            9
+     increment
+     convert_u
+     setlocal            9
+
+L198:
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "buttons")
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "height")
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button1")
+     getproperty         QName(PackageNamespace(""), "height")
+     subtract
+     pushbyte            10
+     subtract
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "buttons")
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            75
+     getlocal            9
+     multiply
+     pushbyte            5
+     subtract
+     subtract
+     pushbyte            2
+     divide
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "buttons")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L222:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "buttons") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button1") type QName(PackageNamespace("fl.controls"), "Button") value Null() end
+  trait slot QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button2") type QName(PackageNamespace("fl.controls"), "Button") value Null() end
+  trait slot QName(PrivateNamespace(null, "net.theyak.ui:YakAlert/instance/init"), "_button3") type QName(PackageNamespace("fl.controls"), "Button") value Null() end
+  trait method QName(PackageNamespace(""), "pressed")
+   method
+    refid "net.theyak.ui:YakAlert/instance/pressed"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("net.theyak.events"), "AlertEvent")
+      findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("fl.controls"), "Button"), 1
+      getproperty         QName(PackageNamespace(""), "label")
+      constructprop       QName(PackageNamespace("net.theyak.events"), "AlertEvent"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "close"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "net.theyak.ui:YakAlert/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

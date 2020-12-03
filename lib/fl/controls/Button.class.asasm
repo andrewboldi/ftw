@@ -1,0 +1,428 @@
+class
+ refid "fl.controls:Button"
+ instance QName(PackageNamespace("fl.controls"), "Button")
+  extends QName(PackageNamespace("fl.controls"), "LabelButton")
+  implements Multiname("IFocusManagerComponent", [PackageNamespace("fl.managers")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:Button")
+  iinit
+   refid "fl.controls:Button/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 12
+    maxscopedepth 13
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "drawFocus") flag OVERRIDE
+   method
+    refid "fl.controls:Button/instance/drawFocus"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushundefined
+      coerce_a
+      setlocal3
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "drawFocus"), 1
+      getlocal1
+      iffalse             L73
+
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.controls:Button"), "getStyleValue")
+      pushstring          "emphasizedPadding"
+      callproperty        QName(ProtectedNamespace("fl.controls:Button"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+      setlocal2
+
+      getlocal2
+      pushbyte            0
+      lessthan
+      dup
+      iftrue              L27
+
+      pop
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+      not
+L27:
+      iffalse             L31
+
+      pushbyte            0
+      convert_d
+      setlocal2
+
+L31:
+      findpropstrict      QName(ProtectedNamespace("fl.controls:Button"), "getStyleValue")
+      pushstring          "focusRectPadding"
+      callproperty        QName(ProtectedNamespace("fl.controls:Button"), "getStyleValue"), 1
+      coerce_a
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifne                L42
+
+      pushbyte            2
+      coerce_a
+      jump                L44
+
+L42:
+      getlocal3
+      coerce_a
+L44:
+      coerce_a
+      setlocal3
+
+      getlocal3
+      getlocal2
+      add
+      coerce_a
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "uiFocusRect")
+      getlocal3
+      negate
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "uiFocusRect")
+      getlocal3
+      negate
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "uiFocusRect")
+      getlex              QName(PackageNamespace(""), "width")
+      getlocal3
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "uiFocusRect")
+      getlex              QName(PackageNamespace(""), "height")
+      getlocal3
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "height")
+
+L73:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait setter QName(PackageNamespace(""), "emphasized")
+   method
+    refid "fl.controls:Button/instance/emphasized/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.controls:Button"), "_emphasized") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(ProtectedNamespace("fl.controls:Button"), "draw") flag OVERRIDE
+   method
+    refid "fl.controls:Button/instance/fl.controls:Button:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:Button"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callproperty        QName(ProtectedNamespace("fl.controls:Button"), "isInvalid"), 1
+      convert_b
+      dup
+      iftrue              L15
+
+      pop
+      findpropstrict      QName(ProtectedNamespace("fl.controls:Button"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callproperty        QName(ProtectedNamespace("fl.controls:Button"), "isInvalid"), 1
+      convert_b
+L15:
+      iffalse             L18
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:Button"), "drawEmphasized")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:Button"), "drawEmphasized"), 0
+
+L18:
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.controls:LabelButton"), "draw"), 0
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      pushnull
+      ifeq                L28
+
+      findpropstrict      QName(PackageNamespace(""), "setChildIndex")
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      getlex              QName(PackageNamespace(""), "numChildren")
+      decrement
+      callpropvoid        QName(PackageNamespace(""), "setChildIndex"), 2
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "emphasized")
+   method
+    refid "fl.controls:Button/instance/emphasized/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:Button"), "initializeAccessibility") flag OVERRIDE
+   method
+    refid "fl.controls:Button/instance/fl.controls:Button:initializeAccessibility"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("fl.controls"), "Button")
+      getproperty         QName(PackageNamespace(""), "createAccessibilityImplementation")
+      pushnull
+      ifeq                L9
+
+      getlex              QName(PackageNamespace("fl.controls"), "Button")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "createAccessibilityImplementation"), 1
+
+L9:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:Button"), "drawEmphasized")
+   method
+    refid "fl.controls:Button/instance/fl.controls:Button:drawEmphasized"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      pushnan
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      pushnull
+      ifeq                L13
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L13:
+      findproperty        QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      pushnull
+      initproperty        QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "_emphasized")
+      iftrue              L19
+
+      returnvoid
+
+L19:
+      findpropstrict      QName(ProtectedNamespace("fl.controls:Button"), "getStyleValue")
+      pushstring          "emphasizedSkin"
+      callproperty        QName(ProtectedNamespace("fl.controls:Button"), "getStyleValue"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      pushnull
+      ifeq                L32
+
+      findproperty        QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      findpropstrict      QName(ProtectedNamespace("fl.controls:Button"), "getDisplayObjectInstance")
+      getlocal1
+      callproperty        QName(ProtectedNamespace("fl.controls:Button"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+
+L32:
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      pushnull
+      ifeq                L70
+
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.controls:Button"), "getStyleValue")
+      pushstring          "emphasizedPadding"
+      callproperty        QName(ProtectedNamespace("fl.controls:Button"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      getlocal2
+      negate
+      dup
+      setlocal3
+
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal3
+      kill                3
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      getlex              QName(PackageNamespace(""), "width")
+      getlocal2
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.controls:Button"), "emphasizedBorder")
+      getlex              QName(PackageNamespace(""), "height")
+      getlocal2
+      pushbyte            2
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "height")
+
+L70:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.controls:Button/class/init"
+  body
+   maxstack 5
+   localcount 1
+   initscopedepth 11
+   maxscopedepth 12
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "fl.controls:Button/class"), "defaultStyles")
+    pushstring          "emphasizedSkin"
+    pushstring          "Button_emphasizedSkin"
+    pushstring          "emphasizedPadding"
+    pushbyte            2
+    newobject           2
+    setproperty         QName(PrivateNamespace(null, "fl.controls:Button/class"), "defaultStyles")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "fl.controls:Button/class"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait slot QName(PackageNamespace(""), "createAccessibilityImplementation") slotid 2 type QName(PackageNamespace(""), "Function") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   refid "fl.controls:Button/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+     getlex              QName(PackageNamespace("fl.controls"), "LabelButton")
+     callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+     getlex              QName(PrivateNamespace(null, "fl.controls:Button/class"), "defaultStyles")
+     callproperty        QName(PackageNamespace(""), "mergeStyles"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

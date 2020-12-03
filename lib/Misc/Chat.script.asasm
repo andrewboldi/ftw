@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "Misc:Chat/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Chat", [PackageNamespace("Misc")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("net.theyak.chat"), "Chat")
+    pushscope
+
+    getlex              QName(PackageNamespace("net.theyak.chat"), "Chat")
+    newclass            "Misc:Chat"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("Misc"), "Chat")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Misc"), "Chat")
+  #include "Chat.class.asasm"
+ end ; trait
+end ; script

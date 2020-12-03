@@ -1,0 +1,90 @@
+class
+ refid "com.electrotank.electroserver4.message.event:ConnectionClosedEvent"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "ConnectionClosedEvent")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "EventImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.event:ConnectionClosedEvent")
+  iinit
+   refid "com.electrotank.electroserver4.message.event:ConnectionClosedEvent/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "ConnectionClosedEvent")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionClosedEvent/instance"), "connection") type QName(PackageNamespace("com.electrotank.electroserver4.connection"), "AbstractConnection") end
+  trait method QName(PackageNamespace(""), "setConnection")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionClosedEvent/instance/setConnection"
+    param QName(PackageNamespace("com.electrotank.electroserver4.connection"), "AbstractConnection")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionClosedEvent/instance"), "connection")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionClosedEvent/instance"), "connection")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getConnection")
+   method
+    refid "com.electrotank.electroserver4.message.event:ConnectionClosedEvent/instance/getConnection"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.connection"), "AbstractConnection")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:ConnectionClosedEvent/instance"), "connection")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.event:ConnectionClosedEvent/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

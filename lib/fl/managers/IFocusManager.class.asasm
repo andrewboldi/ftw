@@ -1,0 +1,120 @@
+class
+ refid "fl.managers:IFocusManager"
+ instance QName(PackageNamespace("fl.managers"), "IFocusManager")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   refid "fl.managers:IFocusManager/instance/init"
+  end ; method
+  trait method QName(Namespace("fl.managers:IFocusManager"), "getFocus")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:getFocus"
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("fl.managers:IFocusManager"), "deactivate")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:deactivate"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("fl.managers:IFocusManager"), "defaultButton")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:defaultButton/setter"
+    param QName(PackageNamespace("fl.controls"), "Button")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("fl.managers:IFocusManager"), "showFocusIndicator")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:showFocusIndicator/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("fl.managers:IFocusManager"), "defaultButtonEnabled")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:defaultButtonEnabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("fl.managers:IFocusManager"), "nextTabIndex")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:nextTabIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("fl.managers:IFocusManager"), "defaultButton")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:defaultButton/getter"
+    returns QName(PackageNamespace("fl.controls"), "Button")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("fl.managers:IFocusManager"), "showFocusIndicator")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:showFocusIndicator/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("fl.managers:IFocusManager"), "setFocus")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:setFocus"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("fl.managers:IFocusManager"), "activate")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:activate"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("fl.managers:IFocusManager"), "showFocus")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:showFocus"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("fl.managers:IFocusManager"), "defaultButtonEnabled")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:defaultButtonEnabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("fl.managers:IFocusManager"), "hideFocus")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:hideFocus"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("fl.managers:IFocusManager"), "findFocusManagerComponent")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:findFocusManagerComponent"
+    param QName(PackageNamespace("flash.display"), "InteractiveObject")
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("fl.managers:IFocusManager"), "getNextFocusManagerComponent")
+   method
+    refid "fl.managers:IFocusManager/instance/fl.managers:IFocusManager:getNextFocusManagerComponent"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace("flash.display"), "InteractiveObject")
+    flag HAS_OPTIONAL
+    optional False()
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.managers:IFocusManager/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

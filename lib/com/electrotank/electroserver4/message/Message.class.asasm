@@ -1,0 +1,66 @@
+class
+ refid "com.electrotank.electroserver4.message:Message"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   refid "com.electrotank.electroserver4.message:Message/instance/init"
+  end ; method
+  trait method QName(Namespace("com.electrotank.electroserver4.message:Message"), "getMessageId")
+   method
+    refid "com.electrotank.electroserver4.message:Message/instance/com.electrotank.electroserver4.message:Message:getMessageId"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.message:Message"), "setMessageId")
+   method
+    refid "com.electrotank.electroserver4.message:Message/instance/com.electrotank.electroserver4.message:Message:setMessageId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.message:Message"), "setMessageType")
+   method
+    refid "com.electrotank.electroserver4.message:Message/instance/com.electrotank.electroserver4.message:Message:setMessageType"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.message:Message"), "getMessageType")
+   method
+    refid "com.electrotank.electroserver4.message:Message/instance/com.electrotank.electroserver4.message:Message:getMessageType"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.message:Message"), "validate")
+   method
+    refid "com.electrotank.electroserver4.message:Message/instance/com.electrotank.electroserver4.message:Message:validate"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.message:Message"), "getIsRealServerMessage")
+   method
+    refid "com.electrotank.electroserver4.message:Message/instance/com.electrotank.electroserver4.message:Message:getIsRealServerMessage"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.message:Message"), "getRealMessage")
+   method
+    refid "com.electrotank.electroserver4.message:Message/instance/com.electrotank.electroserver4.message:Message:getRealMessage"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message:Message/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,142 @@
+class
+ refid "com.electrotank.electroserver4.message:QueuedMessage"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message"), "QueuedMessage")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message:QueuedMessage")
+  iinit
+   refid "com.electrotank.electroserver4.message:QueuedMessage/instance/init"
+   param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageReader")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("com.electrotank.electroserver4.connection"), "AbstractConnection")
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "messageReader")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "id")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "_messageId")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "connection")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "messageReader") type QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageReader") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "_messageId") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "id") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "connection") type QName(PackageNamespace("com.electrotank.electroserver4.connection"), "AbstractConnection") end
+  trait method QName(PackageNamespace(""), "getConnection")
+   method
+    refid "com.electrotank.electroserver4.message:QueuedMessage/instance/getConnection"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.connection"), "AbstractConnection")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "connection")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getMessageReader")
+   method
+    refid "com.electrotank.electroserver4.message:QueuedMessage/instance/getMessageReader"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageReader")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "messageReader")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "messageId")
+   method
+    refid "com.electrotank.electroserver4.message:QueuedMessage/instance/messageId/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "_messageId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getId")
+   method
+    refid "com.electrotank.electroserver4.message:QueuedMessage/instance/getId"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message:QueuedMessage/instance"), "id")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message:QueuedMessage/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

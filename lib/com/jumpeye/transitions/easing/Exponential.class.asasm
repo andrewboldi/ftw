@@ -1,0 +1,234 @@
+class
+ refid "com.jumpeye.transitions.easing:Exponential"
+ instance QName(PackageNamespace("com.jumpeye.transitions.easing"), "Exponential")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.transitions.easing:Exponential")
+  iinit
+   refid "com.jumpeye.transitions.easing:Exponential/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.jumpeye.transitions.easing:Exponential/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "easeOut") flag FINAL dispid 4
+  method
+   refid "com.jumpeye.transitions.easing:Exponential/class/easeOut"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getlocal            4
+     ifne                L10
+
+     getlocal2
+     getlocal3
+     add
+     convert_d
+     jump                L26
+
+L10:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            2
+     pushbyte            -10
+     getlocal1
+     multiply
+     getlocal            4
+     divide
+     callproperty        QName(PackageNamespace(""), "pow"), 2
+     negate
+     pushbyte            1
+     add
+     multiply
+     getlocal2
+     add
+     convert_d
+L26:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "easeIn") flag FINAL dispid 3
+  method
+   refid "com.jumpeye.transitions.easing:Exponential/class/easeIn"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushbyte            0
+     ifne                L8
+
+     getlocal2
+     convert_d
+     jump                L26
+
+L8:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            2
+     pushbyte            10
+     getlocal1
+     getlocal            4
+     divide
+     decrement
+     multiply
+     callproperty        QName(PackageNamespace(""), "pow"), 2
+     multiply
+     getlocal2
+     add
+     getlocal3
+     pushdouble          0.001
+     multiply
+     subtract
+     convert_d
+L26:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "easeInOut") flag FINAL dispid 5
+  method
+   refid "com.jumpeye.transitions.easing:Exponential/class/easeInOut"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 6
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushbyte            0
+     ifne                L7
+
+     getlocal2
+     returnvalue
+
+L7:
+     getlocal1
+     getlocal            4
+     ifne                L14
+
+     getlocal2
+     getlocal3
+     add
+     returnvalue
+
+L14:
+     getlocal1
+     getlocal            4
+     pushbyte            2
+     divide
+     divide
+     dup
+     setlocal            5
+
+     convert_d
+     setlocal1
+
+     getlocal            5
+     kill                5
+     pushbyte            1
+     ifnlt               L41
+
+     getlocal3
+     pushbyte            2
+     divide
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            2
+     pushbyte            10
+     getlocal1
+     decrement
+     multiply
+     callproperty        QName(PackageNamespace(""), "pow"), 2
+     multiply
+     getlocal2
+     add
+     returnvalue
+
+L41:
+     getlocal3
+     pushbyte            2
+     divide
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            2
+     pushbyte            -10
+     getlocal1
+     decrement
+     dup
+     convert_d
+     setlocal1
+
+     multiply
+     callproperty        QName(PackageNamespace(""), "pow"), 2
+     negate
+     pushbyte            2
+     add
+     multiply
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

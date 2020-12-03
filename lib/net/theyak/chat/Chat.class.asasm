@@ -1,0 +1,2706 @@
+class
+ refid "net.theyak.chat:Chat"
+ instance QName(PackageNamespace("net.theyak.chat"), "Chat")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("net.theyak.chat:Chat")
+  iinit
+   refid "net.theyak.chat:Chat/instance/init"
+   param QName(PackageNamespace("fl.controls"), "TextArea")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 25
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "systemCommands")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "systemCommands")
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+
+     findproperty        QName(PackageNamespace(""), "ignores")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageNamespace(""), "ignores")
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     pushstring          "It's sad that people swear. It's more sad that you are looking for the swears in the compiled code."
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language")
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "languageAnywhere")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     pushstring          "fuck"
+     pushstring          "dafuq"
+     pushstring          "cunt"
+     pushstring          "bastard"
+     pushstring          "nigger"
+     pushstring          "vagina"
+     pushstring          "penis"
+     pushstring          "f u c k"
+     pushstring          "p3n1s"
+     pushstring          "p3n!s"
+     pushstring          "nigger"
+     pushstring          "bitch"
+     pushstring          "shit"
+     pushstring          "f*ck"
+     pushstring          "asshole"
+     pushstring          "pussy"
+     pushstring          "dyke"
+     pushstring          "whore"
+     pushstring          "damnit"
+     pushstring          "omfg"
+     pushstring          "wtf"
+     pushstring          "retard"
+     pushstring          "faggot"
+     constructprop       QName(PackageNamespace(""), "Array"), 23
+     initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "languageAnywhere")
+
+     findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "languageWord")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     pushstring          "fuk"
+     pushstring          "fuq"
+     pushstring          "gay"
+     pushstring          "fuk"
+     pushstring          "ffs"
+     pushstring          "cock"
+     pushstring          "damn"
+     pushstring          "ass"
+     pushstring          "cum"
+     pushstring          "fag"
+     pushstring          "slut"
+     pushstring          "twat"
+     constructprop       QName(PackageNamespace(""), "Array"), 12
+     initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "languageWord")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "help"
+     pushstring          "help"
+     pushstring          "Display this help"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "me"
+     pushstring          "me"
+     pushstring          "<action> Perform an action"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "whisper"
+     pushstring          "whisper"
+     pushstring          "<username> <message> Send private message to user"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "w"
+     pushstring          "whisper"
+     pushstring          "Alias for /whisper"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "msg"
+     pushstring          "whisper"
+     pushstring          "Alias for /whisper"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "ignore"
+     pushstring          "ignore"
+     pushstring          "<username> Toggles ignore status for a user"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "ignorelist"
+     pushstring          "ignoreList"
+     pushstring          "List users you have ignored"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "clearchat"
+     pushstring          "clearchat"
+     pushstring          "Clears the chat area"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     findpropstrict      QName(PackageNamespace(""), "registerCommand")
+     pushstring          "cc"
+     pushstring          "clearchat"
+     pushstring          "Alias for /clearchat"
+     callpropvoid        QName(PackageNamespace(""), "registerCommand"), 3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "buffer") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output") type QName(PackageNamespace("fl.controls"), "TextArea") value Null() end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "cmdChar") type QName(PackageNamespace(""), "String") value Utf8("/") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "publicMessageColor") value Utf8("#0000CC") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "noticeMessageColor") value Utf8("#009900") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "privateMessageColor") value Utf8("#CC0000") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "systemMessageColor") value Utf8("#00CCCC") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "systemCommands") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "ignores") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_muted") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayTime") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayChat") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PackageNamespace(""), "activeRoomName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "activeZoneName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "languageAnywhere") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "languageWord") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "getOutput")
+   method
+    refid "net.theyak.chat:Chat/instance/getOutput"
+    returns QName(PackageNamespace("fl.controls"), "TextArea")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setOutput")
+   method
+    refid "net.theyak.chat:Chat/instance/setOutput"
+    param QName(PackageNamespace("fl.controls"), "TextArea")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clear")
+   method
+    refid "net.theyak.chat:Chat/instance/clear"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findproperty        QName(PackageNamespace(""), "buffer")
+      pushstring          ""
+      initproperty        QName(PackageNamespace(""), "buffer")
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "send")
+   method
+    refid "net.theyak.chat:Chat/instance/send"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Null()
+    body
+     maxstack 4
+     localcount 10
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            4
+
+      pushfalse
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            7
+
+      pushnull
+      coerce_s
+      setlocal            8
+
+      getlocal1
+      pushnull
+      equals
+      dup
+      iftrue              L24
+
+      pop
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_muted")
+      convert_b
+L24:
+      iffalse             L26
+
+      returnvoid
+
+L26:
+      getlocal2
+      pushnull
+      ifne                L32
+
+      getlex              QName(PackageNamespace(""), "activeZoneName")
+      coerce_s
+      setlocal2
+
+L32:
+      getlocal3
+      pushnull
+      ifne                L38
+
+      getlex              QName(PackageNamespace(""), "activeRoomName")
+      coerce_s
+      setlocal3
+
+L38:
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      coerce_s
+      setlocal1
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushshort           255
+      ifngt               L53
+
+      getlocal1
+      pushbyte            0
+      pushshort           255
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      coerce_s
+      setlocal1
+
+L53:
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "updateHistory")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "updateHistory"), 1
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifne                L61
+
+      returnvoid
+
+L61:
+      getlocal1
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "cmdChar")
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      ifne                L131
+
+      findpropstrict      QName(PackageNamespace(""), "parse")
+      getlocal1
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      callproperty        QName(PackageNamespace(""), "parse"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            4
+
+      pushfalse
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      jump                L118
+
+L81:
+      label
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getlocal            4
+      getproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      ifne                L114
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("scope", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            7
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("funcName", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            8
+
+      getlocal            7
+      dup
+      setlocal            9
+
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getlocal            9
+      getlocal            4
+      call                1
+      pop
+      kill                9
+      pushtrue
+      setlocal            5
+
+      jump                L122
+
+L114:
+      getlocal            6
+      increment
+      convert_u
+      setlocal            6
+
+L118:
+      getlocal            6
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L81
+
+L122:
+      getlocal            5
+      iftrue              L130
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Invalid command: "
+      getlocal            4
+      getproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+L130:
+      jump                L137
+
+L131:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlocal1
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "sendPublicMessage"), 3
+
+L137:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "forceSend")
+   method
+    refid "net.theyak.chat:Chat/instance/forceSend"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Null()
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_muted")
+      coerce_a
+      setlocal            4
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_muted")
+      pushfalse
+      initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_muted")
+
+      findpropstrict      QName(PackageNamespace(""), "send")
+      getlocal1
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "send"), 3
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_muted")
+      getlocal            4
+      initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_muted")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "publicMessageEvent")
+   method
+    refid "net.theyak.chat:Chat/instance/publicMessageEvent"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "ignored")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "ignored"), 1
+      pushbyte            0
+      ifnlt               L104
+
+      getlocal2
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          "~"
+      ifnle               L66
+
+      getlocal3
+      getlex              QName(PackageNamespace(""), "activeZoneName")
+      equals
+      dup
+      iffalse             L21
+
+      pop
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "activeRoomName")
+      equals
+L21:
+      iffalse             L40
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer")
+      pushstring          "<font color=\""
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "publicMessageColor")
+      add
+      pushstring          "\">"
+      add
+      getlocal1
+      add
+      pushstring          "</font>: "
+      add
+      findpropstrict      QName(PackageNamespace(""), "wrap_url")
+      getlex              QName(PackageNamespace("net.theyak.util"), "StringEx")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "htmlspecialchars"), 1
+      callproperty        QName(PackageNamespace(""), "wrap_url"), 1
+      add
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer"), 1
+
+      jump                L65
+
+L40:
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer")
+      pushstring          "<font color=\""
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "publicMessageColor")
+      add
+      pushstring          "\">"
+      add
+      getlocal1
+      add
+      pushstring          " ("
+      add
+      getlocal3
+      add
+      pushstring          ":"
+      add
+      getlocal            4
+      add
+      pushstring          ")</font>: "
+      add
+      findpropstrict      QName(PackageNamespace(""), "wrap_url")
+      getlex              QName(PackageNamespace("net.theyak.util"), "StringEx")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "htmlspecialchars"), 1
+      callproperty        QName(PackageNamespace(""), "wrap_url"), 1
+      add
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer"), 1
+
+L65:
+      jump                L100
+
+L66:
+      getlocal2
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      getlex              QName(PackageNamespace(""), "ACTION_MESSAGE_CODE")
+      ifne                L91
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer")
+      pushstring          "<font color=\""
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "publicMessageColor")
+      add
+      pushstring          "\" >* "
+      add
+      getlocal1
+      add
+      pushstring          " "
+      add
+      getlex              QName(PackageNamespace("net.theyak.util"), "StringEx")
+      getlocal2
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      callproperty        QName(PackageNamespace(""), "htmlspecialchars"), 1
+      add
+      pushstring          "</font>"
+      add
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer"), 1
+
+      jump                L100
+
+L91:
+      getlocal2
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      getlex              QName(PackageNamespace(""), "SYSTEM_MESSAGE_CODE")
+      ifne                L100
+
+      findpropstrict      QName(PackageNamespace(""), "systemMessageEvent")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "systemMessageEvent"), 2
+
+L100:
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayChat")
+      iffalse             L104
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display"), 0
+
+L104:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "noticeEvent")
+   method
+    refid "net.theyak.chat:Chat/instance/noticeEvent"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer")
+      pushstring          "<font color=\""
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "noticeMessageColor")
+      add
+      pushstring          "\">"
+      add
+      getlex              QName(PackageNamespace("net.theyak.util"), "StringEx")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "htmlspecialchars"), 1
+      add
+      pushstring          "</font>&nbsp;"
+      add
+      pushtrue
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer"), 2
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "privateMessageEvent")
+   method
+    refid "net.theyak.chat:Chat/instance/privateMessageEvent"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      getlex              QName(PackageNamespace(""), "SYSTEM_MESSAGE_CODE")
+      ifne                L12
+
+      findpropstrict      QName(PackageNamespace(""), "systemMessageEvent")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "systemMessageEvent"), 2
+
+      jump                L38
+
+L12:
+      findpropstrict      QName(PackageNamespace(""), "ignored")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "ignored"), 1
+      pushbyte            0
+      ifnlt               L38
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer")
+      pushstring          "<font color=\""
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "privateMessageColor")
+      add
+      pushstring          "\">["
+      add
+      getlocal1
+      add
+      pushstring          "]</font> "
+      add
+      findpropstrict      QName(PackageNamespace(""), "wrap_url")
+      getlex              QName(PackageNamespace("net.theyak.util"), "StringEx")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "htmlspecialchars"), 1
+      callproperty        QName(PackageNamespace(""), "wrap_url"), 1
+      add
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer"), 1
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayChat")
+      iffalse             L38
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display"), 0
+
+L38:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "systemMessageEvent")
+   method
+    refid "net.theyak.chat:Chat/instance/systemMessageEvent"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            5
+
+      pushnull
+      coerce_s
+      setlocal            6
+
+      jump                L15
+
+L9:
+      label
+      getlocal2
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      coerce_s
+      setlocal2
+
+L15:
+      getlocal2
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      getlex              QName(PackageNamespace(""), "SYSTEM_MESSAGE_CODE")
+      ifeq                L9
+
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      coerce_s
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "parse")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "parse"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L70
+
+L34:
+      label
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "systemCommands")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getlocal3
+      getproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      ifne                L66
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "systemCommands")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("scope", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            5
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "systemCommands")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("funcName", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            6
+
+      getlocal            5
+      dup
+      setlocal            7
+
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getlocal            7
+      getlocal1
+      getlocal3
+      call                2
+      pop
+      kill                7
+      jump                L74
+
+L66:
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L70:
+      getlocal            4
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "systemCommands")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L34
+
+L74:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "whisper")
+   method
+    refid "net.theyak.chat:Chat/instance/whisper"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      lessequals
+L14:
+      dup
+      iftrue              L21
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      equals
+L21:
+      dup
+      iftrue              L29
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      lessequals
+L29:
+      iffalse             L39
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: "
+      getlocal1
+      getproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      pushstring          " <username> <msg>"
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L39:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "sendPrivateMessage"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "privateMessageEvent")
+      pushstring          "To: "
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "privateMessageEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "me")
+   method
+    refid "net.theyak.chat:Chat/instance/net.theyak.chat:Chat/me"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      lessequals
+L14:
+      iffalse             L24
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: "
+      getlocal1
+      getproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      pushstring          " <msg>"
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+
+L24:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace(""), "String")
+      getlex              QName(PackageNamespace(""), "ACTION_MESSAGE_CODE")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "fromCharCode"), 1
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      pushstring          " "
+      add
+      getlocal1
+      getproperty         Multiname("str", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      getlex              QName(PackageNamespace(""), "activeZoneName")
+      getlex              QName(PackageNamespace(""), "activeRoomName")
+      callpropvoid        QName(PackageNamespace(""), "sendPublicMessage"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("net.theyak.chat:Chat"), "ignore")
+   method
+    refid "net.theyak.chat:Chat/instance/net.theyak.chat:Chat:ignore"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      equals
+      dup
+      iftrue              L14
+
+      pop
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushbyte            0
+      lessequals
+L14:
+      iffalse             L25
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Usage: "
+      getlocal1
+      getproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      pushstring          " <username>"
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      pushfalse
+      returnvalue
+
+L25:
+      findpropstrict      QName(PackageNamespace(""), "ignored")
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "ignored"), 1
+      convert_i
+      setlocal2
+
+      getlocal2
+      pushbyte            0
+      ifnge               L46
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          " removed from ignore list"
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      getlex              QName(PackageNamespace(""), "ignores")
+      getlocal2
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      pushfalse
+      returnvalue
+
+L46:
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          " added to ignore list"
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      getlex              QName(PackageNamespace(""), "ignores")
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")]), 0
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("net.theyak.chat:Chat"), "ignoreList")
+   method
+    refid "net.theyak.chat:Chat/instance/net.theyak.chat:Chat:ignoreList"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      pushstring          "Currently ignored: "
+      getlex              QName(PackageNamespace(""), "ignores")
+      pushstring          ", "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ignored")
+   method
+    refid "net.theyak.chat:Chat/instance/ignored"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal1
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L22
+
+L10:
+      label
+      getlex              QName(PackageNamespace(""), "ignores")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getlocal1
+      ifne                L18
+
+      getlocal2
+      returnvalue
+
+L18:
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L22:
+      getlocal2
+      getlex              QName(PackageNamespace(""), "ignores")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L10
+
+      pushbyte            -1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "clearchat")
+   method
+    refid "net.theyak.chat:Chat/instance/net.theyak.chat:Chat/clearchat"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "clear")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "help")
+   method
+    refid "net.theyak.chat:Chat/instance/help"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L46
+
+L9:
+      label
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("help", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          "hidden"
+      ifeq                L42
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "cmdChar")
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      pushstring          " "
+      add
+      setlocal3
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("help", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushnull
+      ifeq                L39
+
+      getlocal3
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("help", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      coerce_s
+      setlocal3
+
+L39:
+      findpropstrict      QName(PackageNamespace(""), "noticeEvent")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+L42:
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L46:
+      getlocal2
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L9
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "completeName")
+   method
+    refid "net.theyak.chat:Chat/instance/completeName"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifnle               L10
+
+      pushstring          ""
+      returnvalue
+
+L10:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      convert_i
+      setlocal            5
+
+      jump                L27
+
+L16:
+      label
+      getlocal1
+      getlocal            5
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          " "
+      ifne                L24
+
+      inclocal_i          5
+      jump                L30
+
+L24:
+      getlocal            5
+      decrement_i
+      setlocal            5
+
+L27:
+      getlocal            5
+      pushbyte            0
+      ifge                L16
+
+L30:
+      getlocal            5
+      pushbyte            0
+      ifnlt               L35
+
+      pushbyte            0
+      setlocal            5
+
+L35:
+      getlocal1
+      getlocal            5
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal            6
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlocal2
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getUsersInRoom"), 2
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            7
+
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      jump                L108
+
+L52:
+      label
+      getlocal            7
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("name", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")]), 0
+      pushbyte            0
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      callproperty        Multiname("substr", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")]), 2
+      getlocal            6
+      ifne                L104
+
+      getlocal            7
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("name", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      pushstring          " "
+      callproperty        Multiname("indexOf", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")]), 1
+      pushbyte            -1
+      ifngt               L90
+
+      getlocal1
+      pushbyte            0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      subtract
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      pushstring          "\""
+      add
+      getlocal            7
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("name", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      pushstring          "\""
+      add
+      returnvalue
+
+L90:
+      getlocal1
+      pushbyte            0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      subtract
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      getlocal            7
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("name", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      add
+      returnvalue
+
+L104:
+      getlocal            8
+      increment
+      convert_u
+      setlocal            8
+
+L108:
+      getlocal            8
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L52
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "parse")
+   method
+    refid "net.theyak.chat:Chat/instance/parse"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Object")
+      constructprop       QName(PackageNamespace(""), "Object"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal2
+      pushstring          ""
+      setproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlocal2
+      pushstring          ""
+      setproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlocal2
+      pushstring          ""
+      setproperty         Multiname("str", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlocal1
+      pushnull
+      equals
+      dup
+      iftrue              L25
+
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      equals
+L25:
+      iffalse             L28
+
+      getlocal2
+      returnvalue
+
+L28:
+      pushbyte            0
+      setlocal3
+
+      jump                L33
+
+L31:
+      label
+      inclocal_i          3
+L33:
+      getlocal1
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "cmdChar")
+      pushbyte            0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      equals
+      dup
+      iftrue              L55
+
+      pop
+      getlocal1
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      pushbyte            32
+      lessequals
+      dup
+      iffalse             L55
+
+      pop
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      lessthan
+L55:
+      iftrue              L31
+
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      coerce_s
+      setlocal1
+
+      pushbyte            0
+      setlocal3
+
+      jump                L66
+
+L64:
+      label
+      inclocal_i          3
+L66:
+      getlocal1
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      pushbyte            32
+      greaterthan
+      dup
+      iffalse             L78
+
+      pop
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      lessthan
+L78:
+      iftrue              L64
+
+      getlocal2
+      getlocal1
+      pushbyte            0
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      setproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      jump                L89
+
+L87:
+      label
+      inclocal_i          3
+L89:
+      getlocal1
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      pushbyte            32
+      lessequals
+      dup
+      iffalse             L101
+
+      pop
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      lessthan
+L101:
+      iftrue              L87
+
+      pushfalse
+      setlocal            4
+
+      pushfalse
+      setlocal            5
+
+      getlocal3
+      convert_i
+      setlocal            6
+
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      ifnlt               L181
+
+      getlocal1
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          "\""
+      ifne                L122
+
+      inclocal_i          3
+      inclocal_i          6
+      pushtrue
+      setlocal            4
+
+L122:
+      jump                L141
+
+L123:
+      label
+      inclocal_i          3
+      getlocal            4
+      convert_b
+      dup
+      iffalse             L135
+
+      pop
+      getlocal1
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          "\""
+      equals
+L135:
+      iffalse             L141
+
+      pushfalse
+      setlocal            4
+
+      pushtrue
+      setlocal            5
+
+      jump                L159
+
+L141:
+      getlocal1
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+      pushbyte            32
+      greaterthan
+      dup
+      iftrue              L151
+
+      pop
+      getlocal            4
+      convert_b
+L151:
+      dup
+      iffalse             L158
+
+      pop
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      lessthan
+L158:
+      iftrue              L123
+
+L159:
+      getlocal2
+      getlocal1
+      getlocal            6
+      getlocal3
+      getlocal            6
+      subtract
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      setproperty         Multiname("target", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlocal            5
+      iffalse             L170
+
+      inclocal_i          3
+L170:
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      ifnlt               L181
+
+      getlocal2
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlocal1
+      getlocal3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      setproperty         Multiname("str", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+L181:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "registerCommand")
+   method
+    refid "net.theyak.chat:Chat/instance/registerCommand"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Null()
+    body
+     maxstack 2
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal            4
+      pushnull
+      ifne                L8
+
+      getlocal0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            4
+
+L8:
+      findpropstrict      QName(PackageNamespace(""), "Object")
+      constructprop       QName(PackageNamespace(""), "Object"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      dup
+      setlocal            5
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      setproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlocal            5
+      getlocal2
+      setproperty         Multiname("funcName", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlocal            5
+      getlocal            4
+      setproperty         Multiname("scope", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlocal            5
+      getlocal3
+      setproperty         Multiname("help", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "commands")
+      getlocal            5
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "registerSystemCommand")
+   method
+    refid "net.theyak.chat:Chat/instance/registerSystemCommand"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushnull
+      ifne                L8
+
+      getlocal0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+L8:
+      findpropstrict      QName(PackageNamespace(""), "Object")
+      constructprop       QName(PackageNamespace(""), "Object"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      dup
+      setlocal            4
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      setproperty         Multiname("command", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlocal            4
+      getlocal2
+      setproperty         Multiname("funcName", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlocal            4
+      getlocal3
+      setproperty         Multiname("scope", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "systemCommands")
+      getlocal            4
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "updateHistory")
+   method
+    refid "net.theyak.chat:Chat/instance/net.theyak.chat:Chat/updateHistory"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            10
+      ifnge               L10
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      pushbyte            0
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+L10:
+      findpropstrict      QName(PackageNamespace(""), "Object")
+      constructprop       QName(PackageNamespace(""), "Object"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      setproperty         Multiname("Text", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlocal2
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      setproperty         Multiname("Time", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      pushbyte            -1
+      initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getPrevious")
+   method
+    refid "net.theyak.chat:Chat/instance/getPrevious"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifnle               L8
+
+      pushstring          ""
+      returnvalue
+
+L8:
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      pushbyte            0
+      ifnlt               L15
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      getproperty         QName(PackageNamespace(""), "length")
+      initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+
+L15:
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      dup
+      setlocal1
+
+      getproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      decrement_i
+      setlocal2
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+
+      kill                2
+      kill                1
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      pushbyte            0
+      ifnlt               L34
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+
+L34:
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("Text", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getNext")
+   method
+    refid "net.theyak.chat:Chat/instance/getNext"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      pushbyte            -1
+      equals
+      dup
+      iftrue              L13
+
+      pop
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      equals
+L13:
+      iffalse             L16
+
+      pushstring          ""
+      returnvalue
+
+L16:
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      dup
+      setlocal1
+
+      getproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      increment_i
+      setlocal2
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+
+      kill                2
+      kill                1
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "historyPointer")
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("Text", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkFlood")
+   method
+    refid "net.theyak.chat:Chat/instance/checkFlood"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal3
+
+      jump                L16
+
+L9:
+      label
+      getlocal3
+      decrement_i
+      setlocal3
+
+      getlocal1
+      decrement_i
+      setlocal1
+
+L16:
+      getlocal1
+      convert_b
+      dup
+      iffalse             L24
+
+      pop
+      getlocal3
+      pushbyte            0
+      greaterequals
+L24:
+      iftrue              L9
+
+      getlocal3
+      getlocal1
+      ifnlt               L30
+
+      pushfalse
+      returnvalue
+
+L30:
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "history")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      getproperty         Multiname("Time", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      getlocal2
+      pushshort           1000
+      multiply
+      add
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      ifngt               L46
+
+      pushtrue
+      returnvalue
+
+L46:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkLanguage")
+   method
+    refid "net.theyak.chat:Chat/instance/checkLanguage"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal1
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L38
+
+L13:
+      label
+      getlocal1
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "languageAnywhere")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            0
+      ifnge               L34
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count")
+      dup
+      setlocal            5
+
+      getproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count")
+      increment
+      setlocal            6
+
+      getlocal            5
+      getlocal            6
+      setproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count")
+
+      kill                6
+      kill                5
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count")
+      returnvalue
+
+L34:
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L38:
+      getlocal2
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "languageAnywhere")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L13
+
+      getlocal1
+      pushstring          " "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L90
+
+L51:
+      label
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L82
+
+L56:
+      label
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      callproperty        Multiname("toLowerCase", [PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")]), 0
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "languageWord")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.chat:Chat"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.chat:Chat/instance"), PackageNamespace("net.theyak.chat"), PackageInternalNs("net.theyak.chat"), PackageNamespace("net.theyak.util"), ProtectedNamespace("net.theyak.chat:Chat"), StaticProtectedNs("net.theyak.chat:Chat"), StaticProtectedNs("Object")])
+      ifne                L78
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count")
+      dup
+      setlocal            5
+
+      getproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count")
+      increment
+      setlocal            6
+
+      getlocal            5
+      getlocal            6
+      setproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count")
+
+      kill                6
+      kill                5
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count")
+      returnvalue
+
+L78:
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L82:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L56
+
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L90:
+      getlocal2
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "languageWord")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L51
+
+      pushbyte            0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "addBuffer")
+   method
+    refid "net.theyak.chat:Chat/instance/net.theyak.chat:Chat/addBuffer"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "buffer")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L11
+
+      findproperty        QName(PackageNamespace(""), "buffer")
+      getlex              QName(PackageNamespace(""), "buffer")
+      pushstring          "\n"
+      add
+      initproperty        QName(PackageNamespace(""), "buffer")
+
+L11:
+      findproperty        QName(PackageNamespace(""), "buffer")
+      getlex              QName(PackageNamespace(""), "buffer")
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "getTime")
+      callproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "getTime"), 0
+      pushstring          " "
+      add
+      add
+      initproperty        QName(PackageNamespace(""), "buffer")
+
+      findproperty        QName(PackageNamespace(""), "buffer")
+      getlex              QName(PackageNamespace(""), "buffer")
+      getlocal1
+      add
+      initproperty        QName(PackageNamespace(""), "buffer")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "mute")
+   method
+    refid "net.theyak.chat:Chat/instance/mute/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_muted")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_muted")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "mute")
+   method
+    refid "net.theyak.chat:Chat/instance/mute/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_muted")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "displayTime")
+   method
+    refid "net.theyak.chat:Chat/instance/displayTime/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayTime")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayTime")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "displayTime")
+   method
+    refid "net.theyak.chat:Chat/instance/displayTime/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayTime")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "displayChat")
+   method
+    refid "net.theyak.chat:Chat/instance/displayChat/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayChat")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayChat")
+
+      getlocal1
+      pushtrue
+      ifne                L10
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display"), 0
+
+L10:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "displayChat")
+   method
+    refid "net.theyak.chat:Chat/instance/displayChat/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayChat")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "getTime")
+   method
+    refid "net.theyak.chat:Chat/instance/net.theyak.chat:Chat/getTime"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Date")
+      setlocal1
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "_displayTime")
+      iffalse             L50
+
+      findpropstrict      QName(PackageNamespace(""), "Date")
+      constructprop       QName(PackageNamespace(""), "Date"), 0
+      coerce              QName(PackageNamespace(""), "Date")
+      setlocal1
+
+      pushstring          "["
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getHours"), 0
+      add
+      pushstring          ":"
+      add
+      setlocal2
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getMinutes"), 0
+      pushbyte            10
+      ifnlt               L36
+
+      getlocal2
+      pushstring          "0"
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getMinutes"), 0
+      add
+      pushstring          "] "
+      add
+      add
+      coerce_s
+      setlocal2
+
+      jump                L44
+
+L36:
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getMinutes"), 0
+      pushstring          "] "
+      add
+      add
+      coerce_s
+      setlocal2
+
+L44:
+      getlocal2
+      returnvalue
+
+      ; 0x10
+      ; 0x03
+      ; 0x00
+      ; 0x00
+L50:
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "display")
+   method
+    refid "net.theyak.chat:Chat/instance/net.theyak.chat:Chat/display"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal1
+
+      pushfalse
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "buffer")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushint             32768
+      ifngt               L28
+
+      findproperty        QName(PackageNamespace(""), "buffer")
+      getlex              QName(PackageNamespace(""), "buffer")
+      pushshort           4096
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      initproperty        QName(PackageNamespace(""), "buffer")
+
+      getlex              QName(PackageNamespace(""), "buffer")
+      pushstring          "<font"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_d
+      setlocal1
+
+      getlocal1
+      pushbyte            -1
+      ifngt               L28
+
+      findproperty        QName(PackageNamespace(""), "buffer")
+      getlex              QName(PackageNamespace(""), "buffer")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      initproperty        QName(PackageNamespace(""), "buffer")
+
+L28:
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+      iffalse             L47
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+      getproperty         QName(PackageNamespace(""), "verticalScrollPosition")
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+      getproperty         QName(PackageNamespace(""), "maxVerticalScrollPosition")
+      equals
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+      getlex              QName(PackageNamespace(""), "buffer")
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+      getlocal2
+      iffalse             L47
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+      callpropvoid        QName(PackageNamespace(""), "validateNow"), 0
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+      getlex              QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "output")
+      getproperty         QName(PackageNamespace(""), "maxVerticalScrollPosition")
+      setproperty         QName(PackageNamespace(""), "verticalScrollPosition")
+
+L47:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "wrap_url")
+   method
+    refid "net.theyak.chat:Chat/instance/wrap_url"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      pushnull
+      coerce_s
+      setlocal            5
+
+      getlocal1
+      pushstring          "http://"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setlocal2
+
+      getlocal2
+      pushbyte            0
+      ifnlt               L23
+
+      getlocal1
+      pushstring          "https://"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      convert_i
+      setlocal2
+
+L23:
+      getlocal2
+      pushbyte            0
+      ifnge               L82
+
+      getlocal1
+      pushstring          " "
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+      convert_i
+      setlocal3
+
+      getlocal3
+      pushbyte            6
+      ifnlt               L39
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal3
+
+L39:
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal2
+      subtract
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      coerce_s
+      dup
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "RegExp")
+      pushstring          "[\\\"]"
+      pushstring          "g"
+      construct           2
+      pushstring          ""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      coerce_s
+      setlocal            4
+
+      pushstring          "<a target=\"_blank\" href=\""
+      getlocal            4
+      add
+      pushstring          "\"><u>"
+      add
+      getlocal            4
+      add
+      pushstring          "</u></a>"
+      add
+      setlocal            5
+
+      getlocal1
+      pushbyte            0
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      getlocal            5
+      add
+      getlocal1
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal3
+      subtract
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      add
+      coerce_s
+      setlocal1
+
+L82:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "net.theyak.chat:Chat/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count")
+    pushbyte            0
+    setproperty         QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count")
+
+    findproperty        QName(PackageNamespace(""), "ACTION_MESSAGE_CODE")
+    pushshort           253
+    setproperty         QName(PackageNamespace(""), "ACTION_MESSAGE_CODE")
+
+    findproperty        QName(PackageNamespace(""), "SYSTEM_MESSAGE_CODE")
+    pushshort           254
+    setproperty         QName(PackageNamespace(""), "SYSTEM_MESSAGE_CODE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "net.theyak.chat:Chat"), "language_count") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(0) end
+ trait slot QName(PackageNamespace(""), "ACTION_MESSAGE_CODE") slotid 2 type QName(PackageNamespace(""), "Number") value Integer(253) end
+ trait slot QName(PackageNamespace(""), "SYSTEM_MESSAGE_CODE") slotid 3 type QName(PackageNamespace(""), "Number") value Integer(254) end
+end ; class

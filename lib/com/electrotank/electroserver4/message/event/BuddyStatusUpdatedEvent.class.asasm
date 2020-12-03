@@ -1,0 +1,315 @@
+class
+ refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "BuddyStatusUpdatedEvent")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "EventImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent")
+  iinit
+   refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "BuddyStatusUpdatedEvent")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "actionId") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "userId") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "userName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "user") type QName(PackageNamespace("com.electrotank.electroserver4.user"), "User") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "esObject") type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "hasEsObject") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "setHasEsObject")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/setHasEsObject"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "hasEsObject")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "hasEsObject")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getHasEsObject")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/getHasEsObject"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "hasEsObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setEsObject")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/setEsObject"
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "esObject")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "esObject")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getEsObject")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/getEsObject"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "esObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setUser")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/setUser"
+    param QName(PackageNamespace("com.electrotank.electroserver4.user"), "User")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "user")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "user")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getUser")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/getUser"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.user"), "User")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "user")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setActionId")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/setActionId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "actionId")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "actionId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getActionId")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/getActionId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "actionId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setUserId")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/setUserId"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "userId")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "userId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getUserId")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/getUserId"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "userId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setUserName")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/setUserName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "userName")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "userName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getUserName")
+   method
+    refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance/getUserName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/instance"), "userName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.event:BuddyStatusUpdatedEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "LoggedIn")
+    pushbyte            0
+    setproperty         QName(PackageNamespace(""), "LoggedIn")
+
+    findproperty        QName(PackageNamespace(""), "LoggedOut")
+    pushbyte            1
+    setproperty         QName(PackageNamespace(""), "LoggedOut")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "LoggedIn") slotid 1 type QName(PackageNamespace(""), "Number") value Integer(0) end
+ trait slot QName(PackageNamespace(""), "LoggedOut") slotid 2 type QName(PackageNamespace(""), "Number") value Integer(1) end
+end ; class

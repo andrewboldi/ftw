@@ -1,0 +1,222 @@
+class
+ refid "fl.controls.dataGridClasses:DataGridCellEditor"
+ instance QName(PackageNamespace("fl.controls.dataGridClasses"), "DataGridCellEditor")
+  extends QName(PackageNamespace("fl.controls"), "TextInput")
+  implements Multiname("ICellRenderer", [PackageNamespace("fl.controls.listClasses")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls.dataGridClasses:DataGridCellEditor")
+  iinit
+   refid "fl.controls.dataGridClasses:DataGridCellEditor/instance/init"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait getter QName(PackageNamespace(""), "selected")
+   method
+    refid "fl.controls.dataGridClasses:DataGridCellEditor/instance/selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.controls.dataGridClasses:DataGridCellEditor"), "_data") type QName(PackageNamespace(""), "Object") end
+  trait setter QName(PackageNamespace(""), "listData")
+   method
+    refid "fl.controls.dataGridClasses:DataGridCellEditor/instance/listData/setter"
+    param QName(PackageNamespace("fl.controls.listClasses"), "ListData")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls.dataGridClasses:DataGridCellEditor"), "_listData")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls.dataGridClasses:DataGridCellEditor"), "_listData")
+
+      findproperty        QName(PackageNamespace(""), "text")
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:DataGridCellEditor"), "_listData")
+      getproperty         QName(PackageNamespace(""), "label")
+      initproperty        QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.controls.dataGridClasses:DataGridCellEditor"), "_listData") type QName(PackageNamespace("fl.controls.listClasses"), "ListData") end
+  trait method QName(PackageNamespace(""), "setMouseState")
+   method
+    refid "fl.controls.dataGridClasses:DataGridCellEditor/instance/setMouseState"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selected")
+   method
+    refid "fl.controls.dataGridClasses:DataGridCellEditor/instance/selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "data")
+   method
+    refid "fl.controls.dataGridClasses:DataGridCellEditor/instance/data/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls.dataGridClasses:DataGridCellEditor"), "_data")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls.dataGridClasses:DataGridCellEditor"), "_data")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "listData")
+   method
+    refid "fl.controls.dataGridClasses:DataGridCellEditor/instance/listData/getter"
+    returns QName(PackageNamespace("fl.controls.listClasses"), "ListData")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:DataGridCellEditor"), "_listData")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "data")
+   method
+    refid "fl.controls.dataGridClasses:DataGridCellEditor/instance/data/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:DataGridCellEditor"), "_data")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.controls.dataGridClasses:DataGridCellEditor/class/init"
+  body
+   maxstack 7
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridCellEditor/class"), "defaultStyles")
+    pushstring          "textPadding"
+    pushbyte            1
+    pushstring          "textFormat"
+    pushnull
+    pushstring          "upSkin"
+    pushstring          "DataGridCellEditor_skin"
+    newobject           3
+    setproperty         QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridCellEditor/class"), "defaultStyles")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridCellEditor/class"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   refid "fl.controls.dataGridClasses:DataGridCellEditor/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:DataGridCellEditor/class"), "defaultStyles")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

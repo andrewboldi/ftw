@@ -1,0 +1,256 @@
+class
+ refid "com.electrotank.electroserver4.protocol.codec:UserListUpdateEventCodec"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "UserListUpdateEventCodec")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:UserListUpdateEventCodec")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.codec:UserListUpdateEventCodec/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "decode") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.protocol.codec:UserListUpdateEventCodec/instance/decode"
+    param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageReader")
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    body
+     maxstack 4
+     localcount 13
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      pushnull
+      coerce_s
+      setlocal            11
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal            12
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      setlocal2
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ZONE_ID_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      convert_d
+      setlocal3
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "setZoneId"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_ID_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      convert_d
+      setlocal            4
+
+      getlocal2
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "setRoomId"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "UPDATE_ACTION_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextShort"), 1
+      convert_d
+      setlocal            5
+
+      getlocal2
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "setActionId"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "USER_ID_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextLong"), 1
+      coerce_s
+      setlocal            6
+
+      getlocal2
+      getlocal            6
+      callpropvoid        QName(PackageNamespace(""), "setUserId"), 1
+
+      getlocal            5
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "AddUser")
+      ifne                L127
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "USER_NAME_PREFIX_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextPrefixedString"), 1
+      coerce_s
+      setlocal            7
+
+      getlocal2
+      getlocal            7
+      callpropvoid        QName(PackageNamespace(""), "setUserName"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "VARIABLE_COUNT_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      convert_d
+      setlocal            8
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            9
+
+      pushbyte            0
+      convert_d
+      setlocal            10
+
+      jump                L107
+
+L85:
+      label
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "VARIABLE_NAME_PREFIX_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextPrefixedString"), 1
+      coerce_s
+      setlocal            11
+
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "EsObjectCodec")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "decode"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal            12
+
+      getlocal            9
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.entities"), "UserVariable")
+      getlocal            11
+      getlocal            12
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.entities"), "UserVariable"), 2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            10
+      increment
+      convert_d
+      setlocal            10
+
+L107:
+      getlocal            10
+      getlocal            8
+      iflt                L85
+
+      getlocal2
+      getlocal            9
+      callpropvoid        QName(PackageNamespace(""), "setUserVariables"), 1
+
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean"), 0
+      callpropvoid        QName(PackageNamespace(""), "setIsSendingVideo"), 1
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getIsSendingVideo"), 0
+      iffalse             L126
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "VIDEO_STREAM_NAME_PREFIX_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextPrefixedString"), 1
+      callpropvoid        QName(PackageNamespace(""), "setVideoStreamName"), 1
+
+L126:
+      jump                L151
+
+L127:
+      getlocal            5
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "SendingVideoStream")
+      ifne                L141
+
+      getlocal2
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "setIsSendingVideo"), 1
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "VIDEO_STREAM_NAME_PREFIX_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextPrefixedString"), 1
+      callpropvoid        QName(PackageNamespace(""), "setVideoStreamName"), 1
+
+      jump                L151
+
+L141:
+      getlocal            5
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "StoppingVideoStream")
+      ifne                L151
+
+      getlocal2
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "setIsSendingVideo"), 1
+
+      getlocal2
+      pushstring          ""
+      callpropvoid        QName(PackageNamespace(""), "setVideoStreamName"), 1
+
+L151:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.codec:UserListUpdateEventCodec/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

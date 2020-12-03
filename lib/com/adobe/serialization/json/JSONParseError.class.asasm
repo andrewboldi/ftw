@@ -1,0 +1,98 @@
+class
+ refid "com.adobe.serialization.json:JSONParseError"
+ instance QName(PackageNamespace("com.adobe.serialization.json"), "JSONParseError")
+  extends QName(PackageNamespace(""), "Error")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.adobe.serialization.json:JSONParseError")
+  iinit
+   refid "com.adobe.serialization.json:JSONParseError/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   optional Integer(0)
+   optional Utf8("")
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     findproperty        QName(PrivateNamespace(null, "com.adobe.serialization.json:JSONParseError/instance"), "_location")
+     getlocal2
+     initproperty        QName(PrivateNamespace(null, "com.adobe.serialization.json:JSONParseError/instance"), "_location")
+
+     findproperty        QName(PrivateNamespace(null, "com.adobe.serialization.json:JSONParseError/instance"), "_text")
+     getlocal3
+     initproperty        QName(PrivateNamespace(null, "com.adobe.serialization.json:JSONParseError/instance"), "_text")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.adobe.serialization.json:JSONParseError/instance"), "_location") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "com.adobe.serialization.json:JSONParseError/instance"), "_text") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "location")
+   method
+    refid "com.adobe.serialization.json:JSONParseError/instance/location/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.adobe.serialization.json:JSONParseError/instance"), "_location")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "text")
+   method
+    refid "com.adobe.serialization.json:JSONParseError/instance/text/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.adobe.serialization.json:JSONParseError/instance"), "_text")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.adobe.serialization.json:JSONParseError/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

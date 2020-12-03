@@ -1,0 +1,71 @@
+class
+ refid "com.electrotank.electroserver4.transaction:TransactionImpl"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "TransactionImpl")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("Transaction", [PackageNamespace("com.electrotank.electroserver4.transaction")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.transaction:TransactionImpl")
+  iinit
+   refid "com.electrotank.electroserver4.transaction:TransactionImpl/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "execute")
+   method
+    refid "com.electrotank.electroserver4.transaction:TransactionImpl/instance/execute"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    param QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Error: 'execute' method not overwritten in transaction for "
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.message:Message"), "getMessageType"), 0
+      callproperty        QName(PackageNamespace(""), "getMessageTypeName"), 0
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.transaction:TransactionImpl/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

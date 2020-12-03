@@ -1,0 +1,185 @@
+class
+ refid "com.electrotank.electroserver4.message.response:GenericErrorResponse"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "GenericErrorResponse")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "ResponseImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.response:GenericErrorResponse")
+  iinit
+   refid "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "GenericErrorResponse")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "hasEsObject")
+     pushfalse
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "hasEsObject")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "requestMessageType") type QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "errorType") type QName(PackageNamespace("com.electrotank.electroserver4.errors"), "EsError") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "esObject") type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "hasEsObject") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "setEsObject")
+   method
+    refid "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance/setEsObject"
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "esObject")
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "hasEsObject")
+      pushtrue
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "hasEsObject")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getEsObject")
+   method
+    refid "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance/getEsObject"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "esObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRequestMessageType")
+   method
+    refid "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance/setRequestMessageType"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "requestMessageType")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "requestMessageType")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRequestMessageType")
+   method
+    refid "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance/getRequestMessageType"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "requestMessageType")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setErrorType")
+   method
+    refid "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance/setErrorType"
+    param QName(PackageNamespace("com.electrotank.electroserver4.errors"), "EsError")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "errorType")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "errorType")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getErrorType")
+   method
+    refid "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance/getErrorType"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.errors"), "EsError")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GenericErrorResponse/instance"), "errorType")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.response:GenericErrorResponse/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

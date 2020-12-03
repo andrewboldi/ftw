@@ -1,0 +1,41 @@
+class
+ refid "window:Right"
+ instance QName(PackageNamespace("window"), "Right")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("window:Right")
+  iinit
+   refid "window:Right/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "window:Right/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class
