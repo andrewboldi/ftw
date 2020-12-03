@@ -1,0 +1,3092 @@
+class
+ refid "net.theyak.server:ElectroServer4"
+ instance QName(PackageNamespace("net.theyak.server"), "ElectroServer4")
+  extends QName(PackageNamespace("net.theyak.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("net.theyak.server:ElectroServer4")
+  iinit
+   refid "net.theyak.server:ElectroServer4/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+     findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer")
+     constructprop       QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer"), 0
+     initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+
+     getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setDebug"), 1
+
+     findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+     callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+     initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+
+     findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "initializeListeners")
+     callpropvoid        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "initializeListeners"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server") type QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "_ip") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "_port") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "reconnect") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PackageNamespace(""), "isConnected") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "hasConnected") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "debug") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait method QName(PackageNamespace(""), "connect")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/connect"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Integer(0)
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+
+      getlocal1
+      pushnull
+      ifne                L16
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "_ip")
+      coerce_s
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "_port")
+      convert_u
+      setlocal2
+
+      jump                L22
+
+L16:
+      findproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "_port")
+      getlocal2
+      initproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "_port")
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "_ip")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "_ip")
+
+L22:
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "createConnection"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onConnectionEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onConnectionEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "ConnectionEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "isConnected")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getAccepted"), 0
+      initproperty        QName(PackageNamespace(""), "isConnected")
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "hasConnected")
+      iffalse             L21
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      pushstring          "Sending reconnection event"
+      getlex              QName(PackageNamespace(""), "isConnected")
+      add
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "reconnection"
+      pushstring          "connected"
+      getlex              QName(PackageNamespace(""), "isConnected")
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      jump                L30
+
+L21:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "connection"
+      pushstring          "connected"
+      getlex              QName(PackageNamespace(""), "isConnected")
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "hasConnected")
+      getlex              QName(PackageNamespace(""), "isConnected")
+      initproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "hasConnected")
+
+L30:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onConnectionClosedEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onConnectionClosedEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "ConnectionClosedEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "connectionClosed"
+      newobject           0
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      findproperty        QName(PackageNamespace(""), "isConnected")
+      pushfalse
+      initproperty        QName(PackageNamespace(""), "isConnected")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "reset")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/reset"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "destroyListeners")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "destroyListeners"), 0
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "initializeListeners")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "initializeListeners"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onGenericError")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onGenericError"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "GenericErrorResponse")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getRequestMessageType"), 0
+      callproperty        QName(PackageNamespace(""), "getMessageTypeName"), 0
+      pushstring          "LogoutRequest"
+      ifne                L27
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GenericErrorResponse")
+      pushstring          "onGenericError"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "initializeListeners")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "initializeListeners"), 0
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "hasConnected")
+      pushtrue
+      initproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "hasConnected")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "connectionCloseReset"
+      newobject           0
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      jump                L61
+
+L27:
+      jump                L47
+
+L28:
+      label
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "(ERR) Unhandled Error: "
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getRequestMessageType"), 0
+      callproperty        QName(PackageNamespace(""), "getMessageTypeName"), 0
+      add
+      pushstring          " : "
+      add
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getErrorType"), 0
+      callproperty        QName(PackageNamespace(""), "getDescription"), 0
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      jump                L61
+
+      ; 0x10
+      ; 0x20
+      ; 0x00
+      ; 0x00
+L47:
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getErrorType"), 0
+      callproperty        QName(PackageNamespace(""), "getId"), 0
+      setlocal2
+
+      jump                L58
+
+      ; 0x24
+      ; 0x00
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L58:
+      pushbyte            0
+      kill                2
+      lookupswitch        L28, [L28]
+
+L61:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "disconnectAndReset")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/disconnectAndReset"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      pushstring          "Disconnect and reset"
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "destroyListeners")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "destroyListeners"), 0
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      pushstring          "Dropping connections"
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GenericErrorResponse")
+      pushstring          "onGenericError"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LogoutRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LogoutRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LogoutRequest")
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onConnectionCloseResetEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onConnectionCloseResetEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "ConnectionClosedEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      pushstring          "onConnectionCloseResetEvent"
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "ConnectionClosedEvent")
+      pushstring          "onConnectionCloseResetEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "initializeListeners")
+      callpropvoid        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "initializeListeners"), 0
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "hasConnected")
+      pushfalse
+      initproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "hasConnected")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "connectionCloseReset"
+      newobject           0
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "login")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/login"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LoginRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LoginRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LoginRequest")
+      setlocal3
+
+      getlocal3
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setUserName"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onLoginResponse")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onLoginResponse"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "LoginResponse")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getEsError"), 0
+      iffalse             L13
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      pushstring          "Error: "
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getEsError"), 0
+      callproperty        QName(PackageNamespace(""), "getDescription"), 0
+      add
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+L13:
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getAccepted"), 0
+      iffalse             L23
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "login"
+      pushstring          "success"
+      pushtrue
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      jump                L29
+
+L23:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "login"
+      pushstring          "success"
+      pushfalse
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+L29:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "logout")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/logout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+
+      findproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "reconnect")
+      pushfalse
+      initproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "reconnect")
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LogoutRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LogoutRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LogoutRequest")
+      setlocal1
+
+      getlocal1
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "setDropAllConnections"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "joinRoom")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/joinRoom"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Null()
+    body
+     maxstack 2
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "CreateRoomRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "CreateRoomRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "CreateRoomRequest")
+      dup
+      setlocal            5
+
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setRoomName"), 1
+
+      getlocal            5
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setZoneName"), 1
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.plugin"), "Plugin")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.plugin"), "Plugin"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.plugin"), "Plugin")
+      dup
+      setlocal            6
+
+      pushstring          "PublicMessageEventHandler"
+      callpropvoid        QName(PackageNamespace(""), "setPluginHandle"), 1
+
+      getlocal            6
+      pushstring          "ScrewYouPlugin"
+      callpropvoid        QName(PackageNamespace(""), "setPluginName"), 1
+
+      getlocal            6
+      pushstring          "ForTheWin"
+      callpropvoid        QName(PackageNamespace(""), "setExtensionName"), 1
+
+      getlocal            5
+      getlocal            6
+      newarray            1
+      callpropvoid        QName(PackageNamespace(""), "setPlugins"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "leaveRoom")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/leaveRoom"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LeaveRoomRequest")
+      setlocal3
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+
+      findpropstrict      QName(PackageNamespace(""), "inRoom")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "inRoom"), 2
+      iffalse             L32
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LeaveRoomRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LeaveRoomRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LeaveRoomRequest")
+      setlocal3
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "toRoomId")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "toRoomId"), 2
+      callpropvoid        QName(PackageNamespace(""), "setRoomId"), 1
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "toZoneId")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "toZoneId"), 1
+      callpropvoid        QName(PackageNamespace(""), "setZoneId"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+L32:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "leaveAllRooms")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/leaveAllRooms"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LeaveRoomRequest")
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace(""), "getRoomList")
+      callproperty        QName(PackageNamespace(""), "getRoomList"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L45
+
+L13:
+      label
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LeaveRoomRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LeaveRoomRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "LeaveRoomRequest")
+      setlocal3
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "toRoomId")
+      getlocal1
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("zonename", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("roomname", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "toRoomId"), 2
+      callpropvoid        QName(PackageNamespace(""), "setRoomId"), 1
+
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "toZoneId")
+      getlocal1
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("zonename", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "toZoneId"), 1
+      callpropvoid        QName(PackageNamespace(""), "setZoneId"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L45:
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getUsersInRoom")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/getUsersInRoom"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      callproperty        QName(PackageNamespace(""), "getZoneManager"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneByName"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      setlocal3
+
+      getlocal3
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getRoomByName"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.room"), "Room")
+      setlocal            4
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "getUserCount"), 0
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      getlocal0
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "getUsers"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toUsers"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRoomList")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/getRoomList"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 9
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            6
+
+      pushbyte            0
+      convert_u
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            8
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      callproperty        QName(PackageNamespace(""), "getZoneManager"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "ZoneManager")
+      setlocal2
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getZones"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L81
+
+L30:
+      label
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      dup
+      setlocal            5
+
+      callproperty        QName(PackageNamespace(""), "getRooms"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            6
+
+      pushbyte            0
+      convert_u
+      setlocal            7
+
+      jump                L73
+
+L44:
+      label
+      getlocal            6
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("getIsJoined", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      iffalse             L69
+
+      findpropstrict      QName(PackageNamespace(""), "Object")
+      constructprop       QName(PackageNamespace(""), "Object"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      dup
+      setlocal            8
+
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("getZoneName", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      setproperty         Multiname("zonename", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal            8
+      getlocal            6
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("getRoomName", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      setproperty         Multiname("roomname", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getlocal            8
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L69:
+      getlocal            7
+      increment
+      convert_u
+      setlocal            7
+
+L73:
+      getlocal            7
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L44
+
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L81:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L30
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "inRoom")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/inRoom"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getRoomList")
+      callproperty        QName(PackageNamespace(""), "getRoomList"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L33
+
+L10:
+      label
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("zonename", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      equals
+      dup
+      iffalse             L26
+
+      pop
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("roomname", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      equals
+L26:
+      iffalse             L29
+
+      pushtrue
+      returnvalue
+
+L29:
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L33:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L10
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onJoinRoomEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onJoinRoomEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "JoinRoomEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 14
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "joinRoom"
+      pushstring          "users"
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toUsers")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getUsers"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toUsers"), 1
+      pushstring          "description"
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getRoomDescription"), 0
+      pushstring          "zonename"
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneName"), 0
+      pushstring          "roomname"
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getRoomName"), 0
+      pushstring          "variables"
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getRoomVariables"), 0
+      pushstring          "capacity"
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getCapacity"), 0
+      newobject           6
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onLeaveRoomEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onLeaveRoomEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "LeaveRoomEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      pushstring          "Leaving room "
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toZoneName")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toZoneName"), 1
+      add
+      pushstring          ":"
+      add
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toRoomName")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getRoomId"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toRoomName"), 2
+      add
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "leaveRoom"
+      pushstring          "zonename"
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toZoneName")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toZoneName"), 1
+      pushstring          "roomname"
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toRoomName")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getRoomId"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toRoomName"), 2
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getServerZoneList")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/getServerZoneList"
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GetZonesResponse")
+      pushstring          "onZonesResponse"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "GetZonesRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "GetZonesRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "GetZonesRequest")
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onZonesResponse")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onZonesResponse"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "GetZonesResponse")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushstring          ""
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GetZonesResponse")
+      pushstring          "onZonesResponse"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZones"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L33
+
+L18:
+      label
+      getlocal2
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("getZoneName", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal2
+
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L33:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L18
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "zoneList"
+      pushstring          "zones"
+      getlocal2
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRoomsInZone")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/getRoomsInZone"
+    param QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GetRoomsInZoneResponse")
+      pushstring          "onRoomsInZoneResponse"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "GetRoomsInZoneRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "GetRoomsInZoneRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "GetRoomsInZoneRequest")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setZoneName"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onRoomsInZoneResponse")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onRoomsInZoneResponse"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "GetRoomsInZoneResponse")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushstring          ""
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GetRoomsInZoneResponse")
+      pushstring          "onRoomsInZoneResponse"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getRooms"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L33
+
+L18:
+      label
+      getlocal2
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("getRoomName", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal2
+
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L33:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L18
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "roomsInZone"
+      pushstring          "zonename"
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneName"), 0
+      pushstring          "rooms"
+      getlocal2
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setUserVariable")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/setUserVariable"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "UpdateUserVariableRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "UpdateUserVariableRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "UpdateUserVariableRequest")
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      dup
+      setlocal            4
+
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      getlocal3
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "setValue"), 1
+
+      getlocal3
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setName"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getUserVariable")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/getUserVariable"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "UserVariable")
+      setlocal            4
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      callproperty        QName(PackageNamespace(""), "getUserManager"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getUserByName"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.user"), "User")
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifeq                L27
+
+      getlocal3
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getUserVariable"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "UserVariable")
+      dup
+      setlocal            4
+
+      pushnull
+      ifeq                L27
+
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "getValue"), 0
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getString"), 1
+      returnvalue
+
+L27:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sendPublicMessage")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/sendPublicMessage"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PublicMessageRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PublicMessageRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PublicMessageRequest")
+      dup
+      setlocal            4
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setMessage"), 1
+
+      getlocal            4
+      findpropstrict      QName(PackageNamespace(""), "toRoomId")
+      getlocal2
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "toRoomId"), 2
+      callpropvoid        QName(PackageNamespace(""), "setRoomId"), 1
+
+      getlocal            4
+      findpropstrict      QName(PackageNamespace(""), "toZoneId")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "toZoneId"), 1
+      callpropvoid        QName(PackageNamespace(""), "setZoneId"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sendPrivateMessage")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/sendPrivateMessage"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PrivateMessageRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PrivateMessageRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PrivateMessageRequest")
+      setlocal3
+
+      getlocal3
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setMessage"), 1
+
+      getlocal3
+      getlocal1
+      newarray            1
+      callpropvoid        QName(PackageNamespace(""), "setUserNames"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "serverPlugin")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/serverPlugin"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional True()
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "esServerPlugin")
+      getlocal1
+      getlocal2
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toEsObject")
+      getlocal3
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toEsObject"), 1
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "esServerPlugin"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "esServerPlugin")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/esServerPlugin"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional True()
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iffalse             L8
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+
+L8:
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PluginRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PluginRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PluginRequest")
+      dup
+      setlocal            5
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setPluginName"), 1
+
+      getlocal3
+      pushstring          "Action"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      getlocal            5
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "setEsObject"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "roomPlugin")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/roomPlugin"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "esRoomPlugin")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toEsObject")
+      getlocal            5
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toEsObject"), 1
+      getlocal            6
+      callpropvoid        QName(PackageNamespace(""), "esRoomPlugin"), 6
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "esRoomPlugin")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/esRoomPlugin"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional True()
+    body
+     maxstack 3
+     localcount 9
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PluginRequest")
+      setlocal            8
+
+      getlocal            6
+      iffalse             L11
+
+      findproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "lastRequest")
+
+L11:
+      findpropstrict      QName(PackageNamespace(""), "toRoomId")
+      getlocal2
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "toRoomId"), 2
+      convert_d
+      dup
+      setlocal            7
+
+      pushbyte            0
+      ifnge               L51
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PluginRequest")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PluginRequest"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PluginRequest")
+      dup
+      setlocal            8
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setPluginName"), 1
+
+      getlocal            8
+      getlocal            7
+      callpropvoid        QName(PackageNamespace(""), "setRoomId"), 1
+
+      getlocal            8
+      findpropstrict      QName(PackageNamespace(""), "toZoneId")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "toZoneId"), 1
+      callpropvoid        QName(PackageNamespace(""), "setZoneId"), 1
+
+      getlocal            5
+      iftrue              L41
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal            5
+
+L41:
+      getlocal            5
+      pushstring          "Action"
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      getlocal            8
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "setEsObject"), 1
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+L51:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onUserListUpdateEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onUserListUpdateEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 12
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      jump                L36
+
+L6:
+      label
+      pushstring          "add"
+      setlocal2
+
+      jump                L91
+
+L10:
+      label
+      pushstring          "remove"
+      setlocal2
+
+      jump                L91
+
+L14:
+      label
+      pushstring          "update"
+      setlocal2
+
+      jump                L91
+
+L18:
+      label
+      pushstring          "ops"
+      setlocal2
+
+      jump                L91
+
+L22:
+      label
+      pushstring          "noops"
+      setlocal2
+
+      jump                L91
+
+L26:
+      label
+      pushstring          "startvideo"
+      setlocal2
+
+      jump                L91
+
+L30:
+      label
+      pushstring          "stopvideo"
+      setlocal2
+
+      jump                L91
+
+L34:
+      label
+      jump                L91
+
+L36:
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getActionId"), 0
+      setlocal3
+
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "AddUser")
+      getlocal3
+      ifstrictne          L45
+
+      pushbyte            0
+      jump                L89
+
+L45:
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "DeleteUser")
+      getlocal3
+      ifstrictne          L51
+
+      pushbyte            1
+      jump                L89
+
+L51:
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "UpdateUser")
+      getlocal3
+      ifstrictne          L57
+
+      pushbyte            2
+      jump                L89
+
+L57:
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "OperatorGranted")
+      getlocal3
+      ifstrictne          L63
+
+      pushbyte            3
+      jump                L89
+
+L63:
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "OperatorRevoked")
+      getlocal3
+      ifstrictne          L69
+
+      pushbyte            4
+      jump                L89
+
+L69:
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "SendingVideoStream")
+      getlocal3
+      ifstrictne          L75
+
+      pushbyte            5
+      jump                L89
+
+L75:
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserListUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "StoppingVideoStream")
+      getlocal3
+      ifstrictne          L81
+
+      pushbyte            6
+      jump                L89
+
+L81:
+      jump                L88
+
+      ; 0x24
+      ; 0x07
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L88:
+      pushbyte            7
+L89:
+      kill                3
+      lookupswitch        L34, [L6, L10, L14, L18, L22, L26, L30, L34]
+
+L91:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "userListUpdate"
+      pushstring          "action"
+      getlocal2
+      pushstring          "user"
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toUser")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getUser"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toUser"), 1
+      pushstring          "zonename"
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toZoneName")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toZoneName"), 1
+      pushstring          "roomname"
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toRoomName")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getRoomId"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toRoomName"), 2
+      newobject           4
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onPublicMessageEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onPublicMessageEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "PublicMessageEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 11
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "publicMessage"
+      pushstring          "name"
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getUserName"), 0
+      pushstring          "message"
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getMessage"), 0
+      pushstring          "roomname"
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toRoomName")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getRoomId"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toRoomName"), 2
+      pushstring          "zonename"
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toZoneName")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toZoneName"), 1
+      newobject           4
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onPrivateMessageEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onPrivateMessageEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "PrivateMessageEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "privateMessage"
+      pushstring          "from"
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getUserName"), 0
+      pushstring          "message"
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getMessage"), 0
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onPluginMessageEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onPluginMessageEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "PluginMessageEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      pushstring          "pluginMessage"
+      pushstring          "response"
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toObject")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getEsObject"), 0
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toObject"), 1
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onUserVariableUpdateEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/onUserVariableUpdateEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserVariableUpdateEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "UserVariableUpdated"
+      setlocal2
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getActionId"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserVariableUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "VariableCreated")
+      ifne                L12
+
+      pushstring          "UserVariableCreated"
+      setlocal2
+
+      jump                L19
+
+L12:
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getActionId"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserVariableUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "VariableDeleted")
+      ifne                L19
+
+      pushstring          "UserVariableDeleted"
+      setlocal2
+
+L19:
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getVariable"), 0
+      callproperty        QName(PackageNamespace(""), "getValue"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getVariableName"), 0
+      callproperty        QName(PackageNamespace(""), "getString"), 1
+      coerce_s
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace(""), "Object")
+      constructprop       QName(PackageNamespace(""), "Object"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      dup
+      setlocal            4
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "user")
+      callproperty        QName(PackageNamespace(""), "getUserName"), 0
+      setproperty         Multiname("username", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal            4
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getVariableName"), 0
+      setproperty         Multiname("variable", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal            4
+      getlocal3
+      setproperty         Multiname("value", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal2
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toEsObject")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/net.theyak.server:ElectroServer4/instance/toEsObject"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal2
+      pushnull
+      ifne                L17
+
+      getlocal2
+      returnvalue
+
+L17:
+      getlocal1
+      getlex              QName(PackageNamespace(""), "Array")
+      istypelate
+      iffalse             L110
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L105
+
+L25:
+      label
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("type", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "s"
+      ifne                L45
+
+      getlocal2
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("key", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("value", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      jump                L101
+
+L45:
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("type", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "i"
+      ifne                L64
+
+      getlocal2
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("key", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      findpropstrict      QName(PackageNamespace(""), "parseInt")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("value", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "parseInt"), 1
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      jump                L101
+
+L64:
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("type", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "b"
+      ifne                L83
+
+      getlocal2
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("key", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      findpropstrict      QName(PackageNamespace(""), "Boolean")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("value", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "Boolean"), 1
+      callpropvoid        QName(PackageNamespace(""), "setBoolean"), 2
+
+      jump                L101
+
+L83:
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("type", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "r"
+      ifne                L101
+
+      getlocal2
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("key", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("value", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      callpropvoid        QName(PackageNamespace(""), "setFloat"), 2
+
+L101:
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L105:
+      getlocal3
+      getlocal1
+      getproperty         Multiname("length", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iflt                L25
+
+      jump                L138
+
+L110:
+      getlocal1
+      getlex              QName(PackageNamespace(""), "Object")
+      istypelate
+      iffalse             L138
+
+      pushbyte            0
+      setlocal            5
+
+      getlocal1
+      coerce_a
+      setlocal            6
+
+      jump                L134
+
+L120:
+      label
+      getlocal            6
+      getlocal            5
+      nextname
+      coerce_s
+      setlocal            4
+
+      getlocal2
+      getlocal            4
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+L134:
+      hasnext2            6, 5
+      iftrue              L120
+
+      kill                6
+      kill                5
+L138:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toObject")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/net.theyak.server:ElectroServer4/instance/toObject"
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Object")
+      constructprop       QName(PackageNamespace(""), "Object"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getEntries"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L29
+
+L14:
+      label
+      getlocal2
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("getName", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("getRawValue", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      setproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L29:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L14
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toUser")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/net.theyak.server:ElectroServer4/instance/toUser"
+    param QName(PackageNamespace("com.electrotank.electroserver4.user"), "User")
+    returns QName(PackageNamespace("net.theyak.server"), "User")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("net.theyak.server"), "User")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getUserName"), 0
+      constructprop       QName(PackageNamespace("net.theyak.server"), "User"), 1
+      coerce              QName(PackageNamespace("net.theyak.server"), "User")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getIsMe"), 0
+      setproperty         QName(PackageNamespace(""), "isMe")
+
+      getlocal2
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getIsSendingVideo"), 0
+      setproperty         QName(PackageNamespace(""), "isSendingVideo")
+
+      getlocal2
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getVideoStreamName"), 0
+      setproperty         QName(PackageNamespace(""), "videoStreamName")
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getUserVariables"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L48
+
+L28:
+      label
+      getlocal2
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("getName", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("getValue", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("getName", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      callproperty        Multiname("getString", [PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+      callpropvoid        QName(PackageNamespace(""), "setVariable"), 2
+
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L48:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L28
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toUsers")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/net.theyak.server:ElectroServer4/instance/toUsers"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L28
+
+L10:
+      label
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.user"), "User")
+      istypelate
+      iffalse             L24
+
+      getlocal2
+      findpropstrict      QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toUser")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toUser"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L24:
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L28:
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L10
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toZoneId")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/toZoneId"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      callproperty        QName(PackageNamespace(""), "getZoneManager"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneByName"), 1
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toRoomId")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/toRoomId"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Number")
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 6
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      setslot             1
+
+      getscopeobject      1
+      getlocal2
+      setslot             2
+
+      getscopeobject      1
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      callproperty        QName(PackageNamespace(""), "getZoneManager"), 0
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(PackageNamespace(""), "getZoneByName"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      setslot             3
+
+L20:
+      getscopeobject      1
+      getslot             3
+      pushnull
+      ifeq                L35
+
+      getscopeobject      1
+      getslot             3
+      getscopeobject      1
+      getslot             2
+      callproperty        QName(PackageNamespace(""), "getRoomByName"), 1
+      callproperty        QName(PackageNamespace(""), "getRoomId"), 0
+      returnvalue
+
+      ; 0x10
+      ; 0x0D
+      ; 0x00
+      ; 0x00
+L35:
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "zone is null"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      pushbyte            -1
+      returnvalue
+
+L40:
+      ; 0x10
+      ; 0x1E
+      ; 0x00
+      ; 0x00
+L44:
+      getlocal0
+      pushscope
+
+      getlocal3
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Invalid zone"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      pushbyte            -1
+      returnvalue
+
+      ; 0x1D
+      ; 0x08
+      ; 0x04
+      ; 0x24
+      ; 0xFF
+      ; 0x48
+     end ; code
+     try from L20 to L40 target L44 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+     trait slot QName(PackageInternalNs("net.theyak.server"), "zonename") slotid 1 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("net.theyak.server"), "roomname") slotid 2 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("net.theyak.server"), "zone") slotid 3 type QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toZoneName")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/net.theyak.server:ElectroServer4/instance/toZoneName"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      callproperty        QName(PackageNamespace(""), "getZoneManager"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneById"), 1
+      callproperty        QName(PackageNamespace(""), "getZoneName"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "toRoomName")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/net.theyak.server:ElectroServer4/instance/toRoomName"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      callproperty        QName(PackageNamespace(""), "getZoneManager"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getZoneById"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+      setlocal3
+
+      getlocal3
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getRoomById"), 1
+      callproperty        QName(PackageNamespace(""), "getRoomName"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "debugEvent")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/debugEvent"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "EventImpl")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "debugResponse")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/debugResponse"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "ResponseImpl")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "initializeListeners")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/net.theyak.server:ElectroServer4/instance/initializeListeners"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 21
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "JoinRoomEvent")
+      pushstring          "onJoinRoomEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "LeaveRoomEvent")
+      pushstring          "onLeaveRoomEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "UserListUpdateEvent")
+      pushstring          "onUserListUpdateEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "UserVariableUpdateEvent")
+      pushstring          "onUserVariableUpdateEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "PublicMessageEvent")
+      pushstring          "onPublicMessageEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "PrivateMessageEvent")
+      pushstring          "onPrivateMessageEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "PluginMessageEvent")
+      pushstring          "onPluginMessageEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "ConnectionEvent")
+      pushstring          "onConnectionEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "ConnectionClosedEvent")
+      pushstring          "onConnectionClosedEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "LoginResponse")
+      pushstring          "onLoginResponse"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GenericErrorResponse")
+      pushstring          "onGenericError"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "LoginResponse")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GetUsersInRoomResponse")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GetUserCountResponse")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GetZonesResponse")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GetRoomsInZoneResponse")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GenericErrorResponse")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "FindZoneAndRoomByNameResponse")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "ValidateAdditionalLoginResponse")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "CreateOrJoinGameResponse")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "FindGamesResponse")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GetUserVariablesResponse")
+      newarray            11
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "ConnectionEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "ClientIdleEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "JoinRoomEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "JoinZoneEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "PublicMessageEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "PrivateMessageEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "ZoneUpdateEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "LeaveRoomEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "LeaveZoneEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "UserListUpdateEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "RoomVariableUpdateEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "UserVariableUpdateEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "BuddyStatusUpdatedEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "UserEvictedFromRoomEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "UpdateRoomDetailsEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "PluginMessageEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "CompositePluginMessageEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "ConnectionClosedEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "RtmpConnectionEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "RtmpConnectionClosedEvent")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "RtmpOnStatusEvent")
+      newarray            21
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "debug")
+      convert_b
+      dup
+      iffalse             L149
+
+      pop
+      pushbyte            1
+      pushbyte            0
+      equals
+L149:
+      iffalse             L190
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L166
+
+L154:
+      label
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal2
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "debugEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L166:
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L154
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L186
+
+L174:
+      label
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), ProtectedNamespace("net.theyak.server:ElectroServer4"), PackageNamespace("com.electrotank.electroserver4"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.message.request"), PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#1"), PackageNamespace("net.theyak.server"), PackageInternalNs("net.theyak.server"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.user"), PackageNamespace("com.electrotank.electroserver4.entities"), PackageNamespace("com.electrotank.electroserver4.zone"), StaticProtectedNs("net.theyak.server:ElectroServer4"), StaticProtectedNs("net.theyak.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "debugResponse"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L186:
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L174
+
+L190:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "destroyListeners")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/net.theyak.server:ElectroServer4/instance/destroyListeners"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "JoinRoomEvent")
+      pushstring          "onJoinRoomEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "LeaveRoomEvent")
+      pushstring          "onLeaveRoomEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "UserListUpdateEvent")
+      pushstring          "onUserListUpdateEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "UserVariableUpdateEvent")
+      pushstring          "onUserVariableUpdateEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "PublicMessageEvent")
+      pushstring          "onPublicMessageEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "PrivateMessageEvent")
+      pushstring          "onPrivateMessageEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "PluginMessageEvent")
+      pushstring          "onPluginMessageEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "ConnectionEvent")
+      pushstring          "onConnectionEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "ConnectionClosedEvent")
+      pushstring          "onConnectionClosedEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "LoginResponse")
+      pushstring          "onLoginResponse"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(ProtectedNamespace("net.theyak.server:ElectroServer4"), "server")
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+      getproperty         QName(PackageNamespace(""), "GenericErrorResponse")
+      pushstring          "onGenericError"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "eventDisplay")
+   method
+    refid "net.theyak.server:ElectroServer4/instance/net.theyak.server:ElectroServer4/instance/eventDisplay"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "net.theyak.server:ElectroServer4/instance#0"), "debug")
+      iffalse             L8
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+L8:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "net.theyak.server:ElectroServer4/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,1730 @@
+class
+ refid "Lobby:GameInfo"
+ instance QName(PackageNamespace("Lobby"), "GameInfo")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Lobby:GameInfo")
+  iinit
+   refid "Lobby:GameInfo/instance/init"
+   param QName(PackageNamespace(""), "uint")
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "instance_number_counter")
+     dup
+     setlocal            6
+
+     getproperty         QName(PackageNamespace(""), "instance_number_counter")
+     increment_i
+     setlocal            7
+
+     getlocal            6
+     getlocal            7
+     setproperty         QName(PackageNamespace(""), "instance_number_counter")
+
+     kill                7
+     kill                6
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "instance_number")
+     getlex              QName(PackageNamespace(""), "instance_number_counter")
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "instance_number")
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "game_id")
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "game_id")
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     findpropstrict      QName(PackageNamespace("net.theyak.ui"), "YakDialog")
+     pushstring          "Game Information"
+     pushshort           250
+     pushshort           375
+     constructprop       QName(PackageNamespace("net.theyak.ui"), "YakDialog"), 3
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     pushstring          "DialogEvent"
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_dialog_closed")
+     callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+     findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+     constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+     coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+     setlocal2
+
+     getlocal2
+     pushstring          "game_id"
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "game_id")
+     callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "server")
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "manager")
+     pushstring          "subscribe"
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "esServerPlugin"), 3
+
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "server")
+     pushstring          "pluginMessage"
+     pushstring          "on_plugin_message"
+     getlocal0
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+     constructprop       QName(PackageNamespace("fl.controls"), "Button"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+     constructprop       QName(PackageNamespace("fl.controls"), "Button"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+     pushstring          "Join"
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+     pushshort           314
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+     pushbyte            90
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+     getproperty         QName(PackageNamespace(""), "height")
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "visible")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+     pushstring          "Spectate"
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+     pushshort           314
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+     pushbyte            90
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+     getproperty         QName(PackageNamespace(""), "height")
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "visible")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PackageNamespace(""), "userlist")
+     findpropstrict      QName(PackageNamespace("Lobby"), "Userlist")
+     constructprop       QName(PackageNamespace("Lobby"), "Userlist"), 0
+     initproperty        QName(PackageNamespace(""), "userlist")
+
+     getlex              QName(PackageNamespace(""), "userlist")
+     pushshort           228
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PackageNamespace(""), "userlist")
+     pushshort           150
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PackageNamespace(""), "userlist")
+     pushbyte            5
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PackageNamespace(""), "userlist")
+     pushbyte            5
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PackageNamespace(""), "userlist")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+     constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+     coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+     setlocal3
+
+     getlocal3
+     pushstring          "_sans"
+     setproperty         QName(PackageNamespace(""), "font")
+
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+     constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+     coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+     dup
+     setlocal            4
+
+     pushstring          "_sans"
+     setproperty         QName(PackageNamespace(""), "font")
+
+     getlocal            4
+     pushstring          "center"
+     setproperty         QName(PackageNamespace(""), "align")
+
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+     constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+     coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+     dup
+     setlocal            5
+
+     pushstring          "_sans"
+     setproperty         QName(PackageNamespace(""), "font")
+
+     getlocal            5
+     pushstring          "right"
+     setproperty         QName(PackageNamespace(""), "align")
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+     getlex              QName(PackageNamespace(""), "userlist")
+     getproperty         QName(PackageNamespace(""), "width")
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+     pushbyte            22
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+     pushstring          "Obtaining Status"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+     pushshort           160
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+     pushbyte            2
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getproperty         QName(PackageNamespace(""), "width")
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem")
+     pushbyte            22
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem")
+     pushstring          ""
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem")
+     pushshort           178
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem")
+     pushbyte            2
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getproperty         QName(PackageNamespace(""), "width")
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+     pushbyte            22
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+     pushstring          ""
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+     pushshort           196
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+     pushbyte            2
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getproperty         QName(PackageNamespace(""), "width")
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+     pushbyte            22
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+     pushstring          ""
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+     pushshort           214
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+     pushbyte            2
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getproperty         QName(PackageNamespace(""), "width")
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method")
+     pushbyte            22
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method")
+     pushstring          ""
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method")
+     pushshort           232
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method")
+     pushbyte            2
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getproperty         QName(PackageNamespace(""), "width")
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds")
+     pushbyte            22
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds")
+     pushstring          ""
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds")
+     pushshort           250
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds")
+     pushbyte            2
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getproperty         QName(PackageNamespace(""), "width")
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels")
+     pushbyte            22
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels")
+     pushstring          ""
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels")
+     pushshort           268
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels")
+     pushbyte            2
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+     pushbyte            90
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+     pushbyte            22
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+     getlocal            5
+     setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+     pushstring          "Password"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+     pushshort           287
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+     pushbyte            2
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "visible")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "TextInput")
+     constructprop       QName(PackageNamespace("fl.controls"), "TextInput"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password")
+     pushbyte            95
+     pushshort           287
+     callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "visible")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "scene")
+     callproperty        QName(PackageNamespace(""), "getScene"), 0
+     callpropvoid        QName(PackageNamespace(""), "center"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+     getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_removed_from_stage")
+     callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "instance_number") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window") type QName(PackageNamespace("net.theyak.ui"), "YakDialog") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join") type QName(PackageNamespace("fl.controls"), "Button") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate") type QName(PackageNamespace("fl.controls"), "Button") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password") type QName(PackageNamespace("fl.controls"), "TextInput") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "game_password") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "userlist") type QName(PackageNamespace("Lobby"), "Userlist") end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "game_id") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageNamespace(""), "on_plugin_message")
+   method
+    refid "Lobby:GameInfo/instance/on_plugin_message"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      jump                L54
+
+L3:
+      label
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_player_list")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("players", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_player_list"), 1
+
+      jump                L103
+
+L10:
+      label
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_player_add")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("name", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("rating", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_player_add"), 2
+
+      jump                L103
+
+L20:
+      label
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_player_leave")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("name", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_player_leave"), 1
+
+      jump                L103
+
+L27:
+      label
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_status")
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("status", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_status"), 1
+
+      jump                L103
+
+L36:
+      label
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_information")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_information"), 1
+
+      jump                L103
+
+L42:
+      label
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_full")
+      pushtrue
+      pushbyte            1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_full"), 2
+
+      jump                L103
+
+L48:
+      label
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "close")
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "close"), 0
+
+      jump                L103
+
+L52:
+      label
+      jump                L103
+
+L54:
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("Action", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setlocal2
+
+      pushstring          "sub_player_list"
+      getlocal2
+      ifstrictne          L63
+
+      pushbyte            0
+      jump                L101
+
+L63:
+      pushstring          "sub_player_add"
+      getlocal2
+      ifstrictne          L68
+
+      pushbyte            1
+      jump                L101
+
+L68:
+      pushstring          "sub_player_leave"
+      getlocal2
+      ifstrictne          L73
+
+      pushbyte            2
+      jump                L101
+
+L73:
+      pushstring          "sub_game_status"
+      getlocal2
+      ifstrictne          L78
+
+      pushbyte            3
+      jump                L101
+
+L78:
+      pushstring          "sub_game_info"
+      getlocal2
+      ifstrictne          L83
+
+      pushbyte            4
+      jump                L101
+
+L83:
+      pushstring          "sub_game_full"
+      getlocal2
+      ifstrictne          L88
+
+      pushbyte            5
+      jump                L101
+
+L88:
+      pushstring          "sub_close"
+      getlocal2
+      ifstrictne          L93
+
+      pushbyte            6
+      jump                L101
+
+L93:
+      jump                L100
+
+      ; 0x24
+      ; 0x07
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L100:
+      pushbyte            7
+L101:
+      kill                2
+      lookupswitch        L52, [L3, L10, L20, L27, L36, L42, L48, L52]
+
+L103:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_player_list")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_player_list"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifnle               L10
+
+      returnvoid
+
+L10:
+      getlex              QName(PackageNamespace(""), "userlist")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlocal1
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L44
+
+L21:
+      label
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal2
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      pushstring          "\x09"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "userlist")
+      getlocal            4
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal            4
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "addUser"), 3
+
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L44:
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L21
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_player_add")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_player_add"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "userlist")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addUser"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_player_leave")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_player_leave"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "userlist")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "removeUser"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_status")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_game_status"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("Type"), "GameStatus")
+      getproperty         QName(PackageNamespace(""), "STARTING")
+      equals
+      dup
+      iftrue              L13
+
+      pop
+      getlocal1
+      getlex              QName(PackageNamespace("Type"), "GameStatus")
+      getproperty         QName(PackageNamespace(""), "STARTED")
+      equals
+L13:
+      iffalse             L22
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+      pushstring          "Game has started"
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L52
+
+L22:
+      getlocal1
+      getlex              QName(PackageNamespace("Type"), "GameStatus")
+      getproperty         QName(PackageNamespace(""), "ENDING")
+      equals
+      dup
+      iftrue              L33
+
+      pop
+      getlocal1
+      getlex              QName(PackageNamespace("Type"), "GameStatus")
+      getproperty         QName(PackageNamespace(""), "ENDED")
+      equals
+L33:
+      iffalse             L45
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+      pushstring          "Game has ended"
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L52
+
+L45:
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+L52:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_information")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_game_information"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal1
+      getproperty         Multiname("sprint", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L16
+
+      getlocal2
+      pushstring          "Sprint"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L16:
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L22
+
+      getlocal2
+      pushstring          "Target"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L22:
+      getlocal1
+      getproperty         Multiname("team", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L28
+
+      getlocal2
+      pushstring          "Team"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L28:
+      getlocal1
+      getproperty         Multiname("countdown", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L34
+
+      getlocal2
+      pushstring          "Countdown"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L34:
+      getlocal1
+      getproperty         Multiname("school", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L40
+
+      getlocal3
+      pushstring          "School"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L40:
+      getlocal1
+      getproperty         Multiname("chapter", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L46
+
+      getlocal3
+      pushstring          "Chapter"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L46:
+      getlocal1
+      getproperty         Multiname("state", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L52
+
+      getlocal3
+      pushstring          "State"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L52:
+      getlocal1
+      getproperty         Multiname("national", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L58
+
+      getlocal3
+      pushstring          "Nats"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L58:
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rounds")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            4
+      equals
+      iffalse             L66
+
+      pushstring          ""
+      jump                L70
+
+L66:
+      getlocal2
+      pushstring          ", "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      coerce_s
+L70:
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "levels")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            4
+      equals
+      iffalse             L79
+
+      pushstring          ""
+      jump                L83
+
+L79:
+      getlocal3
+      pushstring          ", "
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      coerce_s
+L83:
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_number_of_problems")
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getproperty         Multiname("problems", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_number_of_problems"), 1
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_time_per_problem")
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getproperty         Multiname("time", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_time_per_problem"), 1
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_rated")
+      getlocal1
+      getproperty         Multiname("rated", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_rated"), 1
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_scoring_method")
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getproperty         Multiname("scoring", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_scoring_method"), 1
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_password")
+      getlocal1
+      getproperty         Multiname("pw", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_password"), 1
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_join_game")
+      pushstring          "GameInfo.Join"
+      callpropvoid        QName(PackageNamespace(""), "add"), 4
+
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getproperty         Multiname("max_players", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      pushbyte            0
+      lessthan
+      dup
+      iftrue              L135
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getproperty         Multiname("max_players", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getproperty         Multiname("players", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      greaterthan
+L135:
+      iffalse             L140
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L149
+
+L140:
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      pushbyte            20
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      pushbyte            20
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L149:
+      getlocal1
+      getproperty         Multiname("spectators", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L176
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_spectate_game")
+      pushstring          "GameInfo.Spectate"
+      callpropvoid        QName(PackageNamespace(""), "add"), 4
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      pushbyte            25
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      getproperty         QName(PackageNamespace(""), "visible")
+      iffalse             L169
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+      pushbyte            125
+      setproperty         QName(PackageNamespace(""), "x")
+
+      jump                L172
+
+L169:
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+      pushbyte            75
+      setproperty         QName(PackageNamespace(""), "x")
+
+L172:
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L182
+
+L176:
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      pushbyte            75
+      setproperty         QName(PackageNamespace(""), "x")
+
+L182:
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_status")
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal1
+      getproperty         Multiname("status", [PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_status"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_full")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_game_full"
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L12
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "status")
+      pushstring          "Game is full"
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L15
+
+L12:
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_status")
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_game_status"), 1
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_number_of_problems")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_number_of_problems"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+      pushstring          "Number of Problems: "
+      getlocal1
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_time_per_problem")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_time_per_problem"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "time_per_problem")
+      pushstring          "Time Per Problem: "
+      getlocal1
+      add
+      pushstring          " seconds"
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_rated")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_rated"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L9
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+      pushstring          "Game is rated"
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L13
+
+L9:
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "rated")
+      pushstring          "Game is not rated"
+      setproperty         QName(PackageNamespace(""), "text")
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_scoring_method")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_scoring_method"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "scoring_method")
+      pushstring          "Scoring method: "
+      getlex              QName(PackageNamespace("Type"), "ScoringMethod")
+      getproperty         QName(PackageNamespace(""), "LABELS")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameInfo/instance#0"), PackageNamespace(""), PackageNamespace("Lobby"), PackageNamespace("flash.text"), PackageNamespace("flash.events"), PrivateNamespace(null, "Lobby:GameInfo/instance#1"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:GameInfo"), StaticProtectedNs("Lobby:GameInfo"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal1
+      getlex              QName(PackageNamespace("Type"), "ScoringMethod")
+      getproperty         QName(PackageNamespace(""), "COUNTDOWN")
+      ifne                L17
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "number_of_problems")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+L17:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_password")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_password"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "game_password")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "game_password")
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L21
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "access")
+      pushshort           255
+      ifnge               L20
+
+L20:
+      jump                L27
+
+L21:
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password_label")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_button")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_button"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("net.theyak.ui"), "YakAlert")
+      setlocal3
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "game_password")
+      ifne                L46
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      callpropvoid        QName(PackageNamespace(""), "reset"), 0
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "player_type")
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal2
+      pushstring          "id"
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "game_id")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlocal2
+      pushstring          "pw"
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "password")
+      getproperty         QName(PackageNamespace(""), "text")
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      getlocal2
+      pushstring          "user_id"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "id")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "manager")
+      pushstring          "join_game"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "esServerPlugin"), 3
+
+      jump                L63
+
+L46:
+      findpropstrict      QName(PackageNamespace("net.theyak.ui"), "YakAlert")
+      pushstring          "Invalid Password"
+      pushstring          "Error"
+      pushstring          "OK"
+      constructprop       QName(PackageNamespace("net.theyak.ui"), "YakAlert"), 3
+      coerce              QName(PackageNamespace("net.theyak.ui"), "YakAlert")
+      setlocal3
+
+      getlocal3
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      callproperty        QName(PackageNamespace(""), "getScene"), 0
+      callpropvoid        QName(PackageNamespace(""), "center"), 1
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      callproperty        QName(PackageNamespace(""), "getScene"), 0
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L63:
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "close")
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "close"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_join_game")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_join_game"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_button")
+      getlex              QName(PackageNamespace("Type"), "FTW")
+      getproperty         QName(PackageNamespace(""), "PLAYER")
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_button"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_spectate_game")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_spectate_game"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_button")
+      getlex              QName(PackageNamespace("Type"), "FTW")
+      getproperty         QName(PackageNamespace(""), "SPECTATOR")
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_button"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_removed_from_stage")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_removed_from_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "window")
+      pushstring          "DialogEvent"
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_dialog_closed")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "join")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_join_game")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "spectate")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_spectate_game")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_removed_from_stage")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal2
+      pushstring          "game_id"
+      getlex              QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "game_id")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "manager")
+      pushstring          "unsubscribe"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "esServerPlugin"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "on_dialog_closed")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/on_dialog_closed"
+    param QName(PackageNamespace("net.theyak.events"), "DialogEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "action")
+      pushstring          "close"
+      ifne                L9
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "close")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "close"), 1
+
+L9:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameInfo/instance#0"), "close")
+   method
+    refid "Lobby:GameInfo/instance/Lobby:GameInfo/instance/close"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "parent")
+      pushnull
+      ifeq                L8
+
+      getlex              QName(PackageNamespace(""), "parent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L8:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Lobby:GameInfo/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "class_name")
+    pushstring          "Lobby.GameInfo"
+    setproperty         QName(PackageNamespace(""), "class_name")
+
+    findproperty        QName(PackageNamespace(""), "instance_number_counter")
+    pushbyte            0
+    setproperty         QName(PackageNamespace(""), "instance_number_counter")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "class_name") slotid 1 value Utf8("Lobby.GameInfo") end
+ trait slot QName(PackageNamespace(""), "instance_number_counter") slotid 2 type QName(PackageNamespace(""), "int") value Integer(0) end
+end ; class

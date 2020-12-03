@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "net.theyak.events:DialogEvent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("DialogEvent", [PackageNamespace("net.theyak.events")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    newclass            "net.theyak.events:DialogEvent"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("net.theyak.events"), "DialogEvent")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("net.theyak.events"), "DialogEvent")
+  #include "DialogEvent.class.asasm"
+ end ; trait
+end ; script

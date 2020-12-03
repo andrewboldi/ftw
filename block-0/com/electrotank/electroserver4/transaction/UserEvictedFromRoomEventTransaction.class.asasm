@@ -1,0 +1,88 @@
+class
+ refid "com.electrotank.electroserver4.transaction:UserEvictedFromRoomEventTransaction"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "UserEvictedFromRoomEventTransaction")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "TransactionImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.transaction:UserEvictedFromRoomEventTransaction")
+  iinit
+   refid "com.electrotank.electroserver4.transaction:UserEvictedFromRoomEventTransaction/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.transaction:UserEvictedFromRoomEventTransaction/instance/execute"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    param QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserEvictedFromRoomEvent")
+      getlocal1
+      callproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserEvictedFromRoomEvent"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UserEvictedFromRoomEvent")
+      setlocal3
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getUserManager"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.user"), "UserManager")
+      dup
+      setlocal            4
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getUserId"), 0
+      callproperty        QName(PackageNamespace(""), "getUserById"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.user"), "User")
+      setlocal            5
+
+      getlocal3
+      getlocal            5
+      setproperty         QName(PackageNamespace(""), "user")
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.transaction:UserEvictedFromRoomEventTransaction/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

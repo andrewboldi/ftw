@@ -1,0 +1,310 @@
+class
+ refid "com.electrotank.electroserver4.message.request:PluginRequest"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "PluginRequest")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "RequestImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.request:PluginRequest")
+  iinit
+   refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "PluginRequest")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "esObject")
+     findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+     constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "esObject")
+
+     findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "setSentToRoom")
+     pushfalse
+     callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "setSentToRoom"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "zoneId") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "roomId") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "esObject") type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "pluginName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "sentToRoom") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "validate") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/validate"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushtrue
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+      getlocal1
+      getlocal2
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse"), 2
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+      setlocal3
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getEsObject")
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/getEsObject"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "esObject")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setEsObject")
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/setEsObject"
+    param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "esObject")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setPluginName")
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/setPluginName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "pluginName")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "pluginName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getPluginName")
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/getPluginName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "pluginName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "wasSentToRoom")
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/wasSentToRoom"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "sentToRoom")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "setSentToRoom")
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/com.electrotank.electroserver4.message.request:PluginRequest/instance/setSentToRoom"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "sentToRoom")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "sentToRoom")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setZoneId")
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/setZoneId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "setSentToRoom")
+      pushtrue
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "setSentToRoom"), 1
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "zoneId")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "zoneId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getZoneId")
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/getZoneId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "zoneId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRoomId")
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/setRoomId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "roomId")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "roomId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRoomId")
+   method
+    refid "com.electrotank.electroserver4.message.request:PluginRequest/instance/getRoomId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:PluginRequest/instance"), "roomId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.request:PluginRequest/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

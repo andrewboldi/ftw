@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.jumpeye.transitions:TweenLite/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("TweenLite", [PackageNamespace("com.jumpeye.transitions")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.jumpeye.transitions:TweenLite"
+    popscope
+    initproperty        QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+  #include "TweenLite.class.asasm"
+ end ; trait
+end ; script

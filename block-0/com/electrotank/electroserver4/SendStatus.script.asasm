@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4:SendStatus/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("SendStatus", [PackageNamespace("com.electrotank.electroserver4")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.electrotank.electroserver4:SendStatus"
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4"), "SendStatus")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4"), "SendStatus")
+  #include "SendStatus.class.asasm"
+ end ; trait
+end ; script

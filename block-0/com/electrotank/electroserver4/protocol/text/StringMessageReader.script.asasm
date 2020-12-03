@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.protocol.text:StringMessageReader/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("StringMessageReader", [PackageNamespace("com.electrotank.electroserver4.protocol.text")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.electrotank.electroserver4.protocol.text:StringMessageReader"
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.protocol.text"), "StringMessageReader")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.protocol.text"), "StringMessageReader")
+  #include "StringMessageReader.class.asasm"
+ end ; trait
+end ; script

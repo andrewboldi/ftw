@@ -1,0 +1,144 @@
+class
+ refid "com.electrotank.electroserver4.protocol.codec:RoomVariableUpdateEventCodec"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "RoomVariableUpdateEventCodec")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:RoomVariableUpdateEventCodec")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.codec:RoomVariableUpdateEventCodec/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "decode") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.protocol.codec:RoomVariableUpdateEventCodec/instance/decode"
+    param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageReader")
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "RoomVariableUpdateEvent")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "RoomVariableUpdateEvent"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "RoomVariableUpdateEvent")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ZONE_ID_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      callpropvoid        QName(PackageNamespace(""), "setZoneId"), 1
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_ID_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      callpropvoid        QName(PackageNamespace(""), "setRoomId"), 1
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "UPDATE_ACTION_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextShort"), 1
+      callpropvoid        QName(PackageNamespace(""), "setUpdateAction"), 1
+
+      getlocal2
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "ROOM_VARIABLE_NAME_PREFIX_LENGTH")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextPrefixedString"), 1
+      callpropvoid        QName(PackageNamespace(""), "setName"), 1
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getUpdateAction"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "RoomVariableUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "VariableDeleted")
+      ifeq                L67
+
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean"), 0
+      callpropvoid        QName(PackageNamespace(""), "setValueChanged"), 1
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getValueChanged"), 0
+      iffalse             L47
+
+      getlocal2
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "EsObjectCodec")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "decode"), 1
+      callpropvoid        QName(PackageNamespace(""), "setValue"), 1
+
+L47:
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean"), 0
+      callpropvoid        QName(PackageNamespace(""), "setLockChanged"), 1
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getLockChanged"), 0
+      iffalse             L58
+
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean"), 0
+      callpropvoid        QName(PackageNamespace(""), "setLocked"), 1
+
+L58:
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getUpdateAction"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "RoomVariableUpdateEvent")
+      getproperty         QName(PackageNamespace(""), "VariableCreated")
+      ifne                L67
+
+      getlocal2
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean"), 0
+      callpropvoid        QName(PackageNamespace(""), "setPersistent"), 1
+
+L67:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.codec:RoomVariableUpdateEventCodec/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

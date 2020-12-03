@@ -1,0 +1,274 @@
+class
+ refid "com.jumpeye.transitions.easing:Bounce"
+ instance QName(PackageNamespace("com.jumpeye.transitions.easing"), "Bounce")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.transitions.easing:Bounce")
+  iinit
+   refid "com.jumpeye.transitions.easing:Bounce/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.jumpeye.transitions.easing:Bounce/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "easeOut") flag FINAL dispid 3
+  method
+   refid "com.jumpeye.transitions.easing:Bounce/class/easeOut"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getlocal            4
+     divide
+     dup
+     setlocal            5
+
+     convert_d
+     setlocal1
+
+     getlocal            5
+     kill                5
+     pushbyte            1
+     pushdouble          2.75
+     divide
+     ifnlt               L25
+
+     getlocal3
+     pushdouble          7.5625
+     getlocal1
+     multiply
+     getlocal1
+     multiply
+     multiply
+     getlocal2
+     add
+     returnvalue
+
+L25:
+     getlocal1
+     pushbyte            2
+     pushdouble          2.75
+     divide
+     ifnlt               L52
+
+     getlocal3
+     pushdouble          7.5625
+     getlocal1
+     pushdouble          1.5
+     pushdouble          2.75
+     divide
+     subtract
+     dup
+     setlocal            5
+
+     convert_d
+     setlocal1
+
+     getlocal            5
+     kill                5
+     multiply
+     getlocal1
+     multiply
+     pushdouble          0.75
+     add
+     multiply
+     getlocal2
+     add
+     returnvalue
+
+L52:
+     getlocal1
+     pushdouble          2.5
+     pushdouble          2.75
+     divide
+     ifnlt               L79
+
+     getlocal3
+     pushdouble          7.5625
+     getlocal1
+     pushdouble          2.25
+     pushdouble          2.75
+     divide
+     subtract
+     dup
+     setlocal            5
+
+     convert_d
+     setlocal1
+
+     getlocal            5
+     kill                5
+     multiply
+     getlocal1
+     multiply
+     pushdouble          0.9375
+     add
+     multiply
+     getlocal2
+     add
+     returnvalue
+
+L79:
+     getlocal3
+     pushdouble          7.5625
+     getlocal1
+     pushdouble          2.625
+     pushdouble          2.75
+     divide
+     subtract
+     dup
+     setlocal            5
+
+     convert_d
+     setlocal1
+
+     getlocal            5
+     kill                5
+     multiply
+     getlocal1
+     multiply
+     pushdouble          0.984375
+     add
+     multiply
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "easeIn") flag FINAL dispid 4
+  method
+   refid "com.jumpeye.transitions.easing:Bounce/class/easeIn"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal3
+     findpropstrict      QName(PackageNamespace(""), "easeOut")
+     getlocal            4
+     getlocal1
+     subtract
+     pushbyte            0
+     getlocal3
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "easeOut"), 4
+     subtract
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "easeInOut") flag FINAL dispid 5
+  method
+   refid "com.jumpeye.transitions.easing:Bounce/class/easeInOut"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getlocal            4
+     pushbyte            2
+     divide
+     ifnlt               L20
+
+     findpropstrict      QName(PackageNamespace(""), "easeIn")
+     getlocal1
+     pushbyte            2
+     multiply
+     pushbyte            0
+     getlocal3
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "easeIn"), 4
+     pushdouble          0.5
+     multiply
+     getlocal2
+     add
+     returnvalue
+
+L20:
+     findpropstrict      QName(PackageNamespace(""), "easeOut")
+     getlocal1
+     pushbyte            2
+     multiply
+     getlocal            4
+     subtract
+     pushbyte            0
+     getlocal3
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "easeOut"), 4
+     pushdouble          0.5
+     multiply
+     getlocal3
+     pushdouble          0.5
+     multiply
+     add
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "StarRating/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("StarRating", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "BitmapData")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "BitmapData")
+    newclass            "StarRating"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "StarRating")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "StarRating")
+  #include "StarRating.class.asasm"
+ end ; trait
+end ; script

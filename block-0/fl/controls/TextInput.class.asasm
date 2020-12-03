@@ -1,0 +1,1604 @@
+class
+ refid "fl.controls:TextInput"
+ instance QName(PackageNamespace("fl.controls"), "TextInput")
+  extends QName(PackageNamespace("fl.core"), "UIComponent")
+  implements Multiname("IFocusManagerComponent", [PackageNamespace("fl.managers")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:TextInput")
+  iinit
+   refid "fl.controls:TextInput/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_editable")
+     pushtrue
+     initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_editable")
+
+     findproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_html")
+     pushfalse
+     initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_html")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "drawFocus") flag OVERRIDE
+   method
+    refid "fl.controls:TextInput/instance/drawFocus"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "focusTarget")
+      pushnull
+      ifeq                L9
+
+      getlex              QName(PackageNamespace(""), "focusTarget")
+      getlocal1
+      callpropvoid        QName(Namespace("fl.managers:IFocusManagerComponent"), "drawFocus"), 1
+
+      returnvoid
+
+L9:
+      getlocal0
+      getlocal1
+      callsupervoid       QName(PackageNamespace(""), "drawFocus"), 1
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "imeMode")
+   method
+    refid "fl.controls:TextInput/instance/imeMode/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_imeMode")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_imeMode")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "isOurFocus") flag OVERRIDE
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:isOurFocus"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "textField")
+      equals
+      dup
+      iftrue              L12
+
+      pop
+      getlocal0
+      getlocal1
+      callsuper           QName(ProtectedNamespace("fl.core:UIComponent"), "isOurFocus"), 1
+      convert_b
+L12:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "handleKeyDown")
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:handleKeyDown"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      ifne                L14
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getlex              QName(PackageNamespace("fl.events"), "ComponentEvent")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      pushtrue
+      constructprop       QName(PackageNamespace("fl.events"), "ComponentEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L14:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "text")
+   method
+    refid "fl.controls:TextInput/instance/text/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_html")
+      pushfalse
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_html")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType")
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:updateTextFieldType"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "enabled")
+      convert_b
+      dup
+      iffalse             L10
+
+      pop
+      getlex              QName(PackageNamespace(""), "editable")
+      convert_b
+L10:
+      iffalse             L15
+
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldType")
+      getproperty         QName(PackageNamespace(""), "INPUT")
+      coerce_s
+      jump                L18
+
+L15:
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldType")
+      getproperty         QName(PackageNamespace(""), "DYNAMIC")
+      coerce_s
+L18:
+      setproperty         QName(PackageNamespace(""), "type")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "enabled")
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectionEndIndex")
+   method
+    refid "fl.controls:TextInput/instance/selectionEndIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "selectionEndIndex")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "editable")
+   method
+    refid "fl.controls:TextInput/instance/editable/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "_editable")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "focusInHandler") flag OVERRIDE
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:focusInHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManager")
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal0
+      ifne                L12
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace(""), "textField")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+L12:
+      getlex              QName(PackageNamespace(""), "focusManager")
+      coerce              QName(PackageNamespace("fl.managers"), "IFocusManager")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "editable")
+      convert_b
+      dup
+      iffalse             L22
+
+      pop
+      getlocal2
+      convert_b
+L22:
+      iffalse             L43
+
+      getlocal2
+      pushtrue
+      setproperty         QName(Namespace("fl.managers:IFocusManager"), "showFocusIndicator")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "selectable")
+      convert_b
+      dup
+      iffalse             L37
+
+      pop
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "selectionBeginIndex")
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "selectionBeginIndex")
+      equals
+L37:
+      iffalse             L43
+
+      findpropstrict      QName(PackageNamespace(""), "setSelection")
+      pushbyte            0
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PackageNamespace(""), "setSelection"), 2
+
+L43:
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "focusInHandler"), 1
+      getlex              QName(PackageNamespace(""), "editable")
+      iffalse             L51
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "setIMEMode")
+      pushtrue
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "setIMEMode"), 1
+
+L51:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selectionBeginIndex")
+   method
+    refid "fl.controls:TextInput/instance/selectionBeginIndex/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "selectionBeginIndex")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "alwaysShowSelection")
+   method
+    refid "fl.controls:TextInput/instance/alwaysShowSelection/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "alwaysShowSelection")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    refid "fl.controls:TextInput/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setsuper            QName(PackageNamespace(""), "enabled")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "setEmbedFont")
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:setEmbedFont"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "getStyleValue")
+      pushstring          "embedFonts"
+      callproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "getStyleValue"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      pushnull
+      ifeq                L16
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "embedFonts")
+
+L16:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "horizontalScrollPosition")
+   method
+    refid "fl.controls:TextInput/instance/horizontalScrollPosition/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "scrollH")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.controls:TextInput"), "_html") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait setter QName(PackageNamespace(""), "condenseWhite")
+   method
+    refid "fl.controls:TextInput/instance/condenseWhite/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "condenseWhite")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "displayAsPassword")
+   method
+    refid "fl.controls:TextInput/instance/displayAsPassword/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "displayAsPassword")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "horizontalScrollPosition")
+   method
+    refid "fl.controls:TextInput/instance/horizontalScrollPosition/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "scrollH")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "restrict")
+   method
+    refid "fl.controls:TextInput/instance/restrict/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "restrict")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "textWidth")
+   method
+    refid "fl.controls:TextInput/instance/textWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "textWidth")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "textHeight")
+   method
+    refid "fl.controls:TextInput/instance/textHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "textHeight")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "editable")
+   method
+    refid "fl.controls:TextInput/instance/editable/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_editable")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_editable")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "maxChars")
+   method
+    refid "fl.controls:TextInput/instance/maxChars/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "maxChars")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "length")
+   method
+    refid "fl.controls:TextInput/instance/length/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "length")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getLineMetrics")
+   method
+    refid "fl.controls:TextInput/instance/getLineMetrics"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.text"), "TextLineMetrics")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "getLineMetrics"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "imeMode")
+   method
+    refid "fl.controls:TextInput/instance/imeMode/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "_imeMode")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "focusOutHandler") flag OVERRIDE
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:focusOutHandler"
+    param QName(PackageNamespace("flash.events"), "FocusEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "focusOutHandler"), 1
+      getlex              QName(PackageNamespace(""), "editable")
+      iffalse             L10
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "setIMEMode")
+      pushfalse
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "setIMEMode"), 1
+
+L10:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "htmlText")
+   method
+    refid "fl.controls:TextInput/instance/htmlText/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushstring          ""
+      ifne                L9
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          ""
+      initproperty        QName(PackageNamespace(""), "text")
+
+      returnvoid
+
+L9:
+      findproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_html")
+      pushtrue
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_html")
+
+      findproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_savedHTML")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "_savedHTML")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "text")
+   method
+    refid "fl.controls:TextInput/instance/text/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "text")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.controls:TextInput"), "_savedHTML") type QName(PackageNamespace(""), "String") end
+  trait slot QName(ProtectedNamespace("fl.controls:TextInput"), "background") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait getter QName(PackageNamespace(""), "enabled") flag OVERRIDE
+   method
+    refid "fl.controls:TextInput/instance/enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "enabled")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "condenseWhite")
+   method
+    refid "fl.controls:TextInput/instance/condenseWhite/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "condenseWhite")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "alwaysShowSelection")
+   method
+    refid "fl.controls:TextInput/instance/alwaysShowSelection/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "alwaysShowSelection")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "draw") flag OVERRIDE
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STYLES")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "STATE")
+      callproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "isInvalid"), 2
+      iffalse             L32
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "drawTextFormat")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "drawTextFormat"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "drawBackground")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "drawBackground"), 0
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "getStyleValue")
+      pushstring          "embedFonts"
+      callproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "getStyleValue"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      pushnull
+      ifeq                L27
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "embedFonts")
+
+L27:
+      findpropstrict      QName(PackageNamespace(""), "invalidate")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 2
+
+L32:
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "isInvalid")
+      getlex              QName(PackageNamespace("fl.core"), "InvalidationType")
+      getproperty         QName(PackageNamespace(""), "SIZE")
+      callproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "isInvalid"), 1
+      iffalse             L39
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "drawLayout")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "drawLayout"), 0
+
+L39:
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "draw"), 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "handleTextInput")
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:handleTextInput"
+    param QName(PackageNamespace("flash.events"), "TextEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "stopPropagation"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "TextEvent")
+      getlex              QName(PackageNamespace("flash.events"), "TextEvent")
+      getproperty         QName(PackageNamespace(""), "TEXT_INPUT")
+      pushtrue
+      pushfalse
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "text")
+      constructprop       QName(PackageNamespace("flash.events"), "TextEvent"), 4
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "configUI") flag OVERRIDE
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:configUI"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("fl.core:UIComponent"), "configUI"), 0
+      findproperty        QName(PackageNamespace(""), "tabChildren")
+      pushtrue
+      initproperty        QName(PackageNamespace(""), "tabChildren")
+
+      findproperty        QName(PackageNamespace(""), "textField")
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      initproperty        QName(PackageNamespace(""), "textField")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlex              QName(PackageNamespace(""), "textField")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "updateTextFieldType"), 0
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace("flash.events"), "TextEvent")
+      getproperty         QName(PackageNamespace(""), "TEXT_INPUT")
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "handleTextInput")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "handleChange")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "handleKeyDown")
+      pushfalse
+      pushbyte            0
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setSelection")
+   method
+    refid "fl.controls:TextInput/instance/setSelection"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setSelection"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "displayAsPassword")
+   method
+    refid "fl.controls:TextInput/instance/displayAsPassword/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "displayAsPassword")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "appendText")
+   method
+    refid "fl.controls:TextInput/instance/appendText"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "appendText"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "restrict")
+   method
+    refid "fl.controls:TextInput/instance/restrict/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "componentInspectorSetting")
+      convert_b
+      dup
+      iffalse             L10
+
+      pop
+      getlocal1
+      pushstring          ""
+      equals
+L10:
+      iffalse             L14
+
+      pushnull
+      coerce_s
+      setlocal1
+
+L14:
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "restrict")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "htmlText")
+   method
+    refid "fl.controls:TextInput/instance/htmlText/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "htmlText")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "drawBackground")
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:drawBackground"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "enabled")
+      iffalse             L15
+
+      pushstring          "upSkin"
+      jump                L16
+
+L15:
+      pushstring          "disabledSkin"
+L16:
+      coerce_s
+      setlocal2
+
+      findproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "getDisplayObjectInstance")
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "getStyleValue")
+      getlocal2
+      callproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "getStyleValue"), 1
+      callproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "getDisplayObjectInstance"), 1
+      initproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      pushnull
+      ifne                L29
+
+      returnvoid
+
+L29:
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      getlocal1
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L44
+
+      pop
+      getlocal1
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      equals
+      not
+L44:
+      dup
+      iffalse             L51
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      convert_b
+L51:
+      iffalse             L55
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L55:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFocus") flag OVERRIDE
+   method
+    refid "fl.controls:TextInput/instance/setFocus"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getlex              QName(PackageNamespace(""), "textField")
+      setproperty         QName(PackageNamespace(""), "focus")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "drawLayout")
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:drawLayout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "getStyleValue")
+      pushstring          "textPadding"
+      callproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+      setlocal1
+
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      pushnull
+      ifeq                L20
+
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "background")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+L20:
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            2
+      getlocal1
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "height")
+      pushbyte            2
+      getlocal1
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      dup
+      setlocal2
+
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal2
+      kill                2
+      setproperty         QName(PackageNamespace(""), "x")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "maxChars")
+   method
+    refid "fl.controls:TextInput/instance/maxChars/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "maxChars")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.controls:TextInput"), "_editable") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PackageNamespace(""), "textField") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait getter QName(PackageNamespace(""), "maxHorizontalScrollPosition")
+   method
+    refid "fl.controls:TextInput/instance/maxHorizontalScrollPosition/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "maxScrollH")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "drawTextFormat")
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:drawTextFormat"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal3
+
+      getlex              QName(PackageNamespace("fl.core"), "UIComponent")
+      callproperty        QName(PackageNamespace(""), "getStyleDefinition"), 0
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "enabled")
+      iffalse             L23
+
+      getlocal1
+      getproperty         Multiname("defaultTextFormat", [PrivateNamespace(null, "fl.controls:TextInput"), PackageNamespace(""), ProtectedNamespace("fl.controls:TextInput"), PrivateNamespace(null, "fl.controls:TextInput/instance/fl.controls:TextInput:drawTextFormat"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:TextInput"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      jump                L28
+
+L23:
+      getlocal1
+      getproperty         Multiname("defaultDisabledTextFormat", [PrivateNamespace(null, "fl.controls:TextInput"), PackageNamespace(""), ProtectedNamespace("fl.controls:TextInput"), PrivateNamespace(null, "fl.controls:TextInput/instance/fl.controls:TextInput:drawTextFormat"), PackageNamespace("fl.controls"), PackageInternalNs("fl.controls"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("fl.controls:TextInput"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+L28:
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "getStyleValue")
+      getlex              QName(PackageNamespace(""), "enabled")
+      iffalse             L38
+
+      pushstring          "textFormat"
+      jump                L39
+
+L38:
+      pushstring          "disabledTextFormat"
+L39:
+      callproperty        QName(ProtectedNamespace("fl.controls:TextInput"), "getStyleValue"), 1
+      getlex              QName(PackageNamespace("flash.text"), "TextFormat")
+      astypelate
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal3
+
+      getlocal3
+      pushnull
+      ifeq                L51
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+      jump                L54
+
+L51:
+      getlocal2
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal3
+
+L54:
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      findpropstrict      QName(ProtectedNamespace("fl.controls:TextInput"), "setEmbedFont")
+      callpropvoid        QName(ProtectedNamespace("fl.controls:TextInput"), "setEmbedFont"), 0
+
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "_html")
+      iffalse             L64
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(ProtectedNamespace("fl.controls:TextInput"), "_savedHTML")
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+L64:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls:TextInput"), "handleChange")
+   method
+    refid "fl.controls:TextInput/instance/fl.controls:TextInput:handleChange"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "stopPropagation"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      pushtrue
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.controls:TextInput/class/init"
+  body
+   maxstack 17
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "fl.controls:TextInput"), "defaultStyles")
+    pushstring          "upSkin"
+    pushstring          "TextInput_upSkin"
+    pushstring          "disabledSkin"
+    pushstring          "TextInput_disabledSkin"
+    pushstring          "focusRectSkin"
+    pushnull
+    pushstring          "focusRectPadding"
+    pushnull
+    pushstring          "textFormat"
+    pushnull
+    pushstring          "disabledTextFormat"
+    pushnull
+    pushstring          "textPadding"
+    pushbyte            0
+    pushstring          "embedFonts"
+    pushfalse
+    newobject           8
+    setproperty         QName(PrivateNamespace(null, "fl.controls:TextInput"), "defaultStyles")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "fl.controls:TextInput"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait slot QName(PackageNamespace(""), "createAccessibilityImplementation") slotid 2 type QName(PackageNamespace(""), "Function") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   refid "fl.controls:TextInput/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "fl.controls:TextInput"), "defaultStyles")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

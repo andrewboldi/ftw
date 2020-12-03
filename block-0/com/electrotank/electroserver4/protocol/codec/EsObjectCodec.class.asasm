@@ -1,0 +1,1352 @@
+class
+ refid "com.electrotank.electroserver4.protocol.codec:EsObjectCodec"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "EsObjectCodec")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:EsObjectCodec")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "getDefaultMessageSize") flag FINAL dispid 3
+  method
+   refid "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class/getDefaultMessageSize"
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushshort           1024
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "encode") flag FINAL dispid 4
+  method
+   refid "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class/encode"
+   param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageWriter")
+   param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 7
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObjectDataHolder")
+     setlocal            6
+
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getSize"), 0
+     convert_d
+     setlocal3
+
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getSize"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 1
+
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getEntries"), 0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     pushbyte            0
+     convert_d
+     setlocal            5
+
+     jump                L35
+
+L21:
+     label
+     getlocal            4
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.esobject"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#1"), PackageNamespace("com.electrotank.electroserver4.protocol.codec"), PackageInternalNs("com.electrotank.electroserver4.protocol.codec"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.protocol"), PackageNamespace("com.electrotank.electroserver4.message.request"), ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:MessageCodecImpl"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObjectDataHolder")
+     setlocal            6
+
+     findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#0"), "encodeObjectEntry")
+     getlocal1
+     getlocal            6
+     callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#0"), "encodeObjectEntry"), 2
+
+     getlocal            5
+     increment
+     convert_d
+     setlocal            5
+
+L35:
+     getlocal            5
+     getlocal3
+     iflt                L21
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "encodeMap") flag FINAL dispid 5
+  method
+   refid "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class/encodeMap"
+   param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageWriter")
+   param QName(PackageNamespace(""), "Array")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObjectMap")
+     setlocal            4
+
+     getlocal1
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 1
+
+     pushbyte            0
+     convert_d
+     setlocal3
+
+     jump                L32
+
+L13:
+     label
+     getlocal2
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.esobject"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#1"), PackageNamespace("com.electrotank.electroserver4.protocol.codec"), PackageInternalNs("com.electrotank.electroserver4.protocol.codec"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.protocol"), PackageNamespace("com.electrotank.electroserver4.message.request"), ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:MessageCodecImpl"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObjectMap")
+     setlocal            4
+
+     getlocal1
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "getName"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeString"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "encode")
+     getlocal1
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "getValue"), 0
+     callpropvoid        QName(PackageNamespace(""), "encode"), 2
+
+     getlocal3
+     increment
+     convert_d
+     setlocal3
+
+L32:
+     getlocal3
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L13
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#0"), "encodeObjectEntry") flag FINAL dispid 6
+  method
+   refid "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class/com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class/encodeObjectEntry"
+   param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageWriter")
+   param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObjectDataHolder")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 4
+    localcount 9
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            5
+
+     pushnan
+     setlocal            6
+
+     pushnan
+     setlocal            7
+
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getDataType"), 0
+     coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     setlocal3
+
+     getlocal1
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "getIndicator"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeCharacter"), 1
+
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getName"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeString"), 1
+
+     jump                L210
+
+L25:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getIntValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 1
+
+     jump                L354
+
+L31:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getStringValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeString"), 1
+
+     jump                L354
+
+L37:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getDoubleValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeDouble"), 1
+
+     jump                L354
+
+L43:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getFloatValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeFloat"), 1
+
+     jump                L354
+
+L49:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getBooleanValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBoolean"), 1
+
+     jump                L354
+
+L55:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getByteValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeByte"), 1
+
+     jump                L354
+
+L61:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getCharValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeCharacter"), 1
+
+     jump                L354
+
+L67:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getLongValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeLong"), 1
+
+     jump                L354
+
+L73:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getShortValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeShort"), 1
+
+     jump                L354
+
+L79:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getNumberValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeDouble"), 1
+
+     jump                L354
+
+L85:
+     label
+     findpropstrict      QName(PackageNamespace(""), "encode")
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getEsObjectValue"), 0
+     callpropvoid        QName(PackageNamespace(""), "encode"), 2
+
+     jump                L354
+
+L92:
+     label
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getEsObjectArrayValue"), 0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     getlocal1
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "length")
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 1
+
+     pushbyte            0
+     convert_d
+     setlocal            6
+
+     jump                L116
+
+L105:
+     label
+     findpropstrict      QName(PackageNamespace(""), "encode")
+     getlocal1
+     getlocal            4
+     getlocal            6
+     getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.esobject"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#1"), PackageNamespace("com.electrotank.electroserver4.protocol.codec"), PackageInternalNs("com.electrotank.electroserver4.protocol.codec"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.protocol"), PackageNamespace("com.electrotank.electroserver4.message.request"), ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:MessageCodecImpl"), StaticProtectedNs("Object")])
+     callpropvoid        QName(PackageNamespace(""), "encode"), 2
+
+     getlocal            6
+     increment
+     convert_d
+     setlocal            6
+
+L116:
+     getlocal            6
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L105
+
+     jump                L354
+
+L121:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getIntArrayValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeIntegerArray"), 1
+
+     jump                L354
+
+L127:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getStringArrayValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeStringArray"), 1
+
+     jump                L354
+
+L133:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getDoubleArrayValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeDoubleArray"), 1
+
+     jump                L354
+
+L139:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getFloatArrayValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeFloatArray"), 1
+
+     jump                L354
+
+L145:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getBooleanArrayValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeBooleanArray"), 1
+
+     jump                L354
+
+L151:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getByteArrayValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeByteArray"), 1
+
+     jump                L354
+
+L157:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getCharArrayValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeCharacterArray"), 1
+
+     jump                L354
+
+L163:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getLongArrayValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeLongArray"), 1
+
+     jump                L354
+
+L169:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getShortArrayValue"), 0
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeShortArray"), 1
+
+     jump                L354
+
+L175:
+     label
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getNumberArrayValue"), 0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            5
+
+     getlocal1
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "length")
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeInteger"), 1
+
+     pushbyte            0
+     convert_d
+     setlocal            7
+
+     jump                L198
+
+L188:
+     label
+     getlocal1
+     getlocal            5
+     getlocal            7
+     getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.esobject"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#1"), PackageNamespace("com.electrotank.electroserver4.protocol.codec"), PackageInternalNs("com.electrotank.electroserver4.protocol.codec"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.protocol"), PackageNamespace("com.electrotank.electroserver4.message.request"), ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:MessageCodecImpl"), StaticProtectedNs("Object")])
+     callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writeDouble"), 1
+
+     getlocal            7
+     increment
+     convert_d
+     setlocal            7
+
+L198:
+     getlocal            7
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L188
+
+     jump                L354
+
+L203:
+     label
+     findpropstrict      QName(PackageNamespace(""), "trace")
+     pushstring          "Unable to encode data type "
+     getlocal3
+     add
+     callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+     jump                L354
+
+L210:
+     getlocal3
+     setlocal            8
+
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Integer")
+     getlocal            8
+     ifstrictne          L218
+
+     pushbyte            0
+     jump                L352
+
+L218:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsString")
+     getlocal            8
+     ifstrictne          L224
+
+     pushbyte            1
+     jump                L352
+
+L224:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Double")
+     getlocal            8
+     ifstrictne          L230
+
+     pushbyte            2
+     jump                L352
+
+L230:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Float")
+     getlocal            8
+     ifstrictne          L236
+
+     pushbyte            3
+     jump                L352
+
+L236:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsBoolean")
+     getlocal            8
+     ifstrictne          L242
+
+     pushbyte            4
+     jump                L352
+
+L242:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Byte")
+     getlocal            8
+     ifstrictne          L248
+
+     pushbyte            5
+     jump                L352
+
+L248:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Character")
+     getlocal            8
+     ifstrictne          L254
+
+     pushbyte            6
+     jump                L352
+
+L254:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Long")
+     getlocal            8
+     ifstrictne          L260
+
+     pushbyte            7
+     jump                L352
+
+L260:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Short")
+     getlocal            8
+     ifstrictne          L266
+
+     pushbyte            8
+     jump                L352
+
+L266:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsNumber")
+     getlocal            8
+     ifstrictne          L272
+
+     pushbyte            9
+     jump                L352
+
+L272:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsObject")
+     getlocal            8
+     ifstrictne          L278
+
+     pushbyte            10
+     jump                L352
+
+L278:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsObjectArray")
+     getlocal            8
+     ifstrictne          L284
+
+     pushbyte            11
+     jump                L352
+
+L284:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "IntegerArray")
+     getlocal            8
+     ifstrictne          L290
+
+     pushbyte            12
+     jump                L352
+
+L290:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "StringArray")
+     getlocal            8
+     ifstrictne          L296
+
+     pushbyte            13
+     jump                L352
+
+L296:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "DoubleArray")
+     getlocal            8
+     ifstrictne          L302
+
+     pushbyte            14
+     jump                L352
+
+L302:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "FloatArray")
+     getlocal            8
+     ifstrictne          L308
+
+     pushbyte            15
+     jump                L352
+
+L308:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "BooleanArray")
+     getlocal            8
+     ifstrictne          L314
+
+     pushbyte            16
+     jump                L352
+
+L314:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsByteArray")
+     getlocal            8
+     ifstrictne          L320
+
+     pushbyte            17
+     jump                L352
+
+L320:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "CharacterArray")
+     getlocal            8
+     ifstrictne          L326
+
+     pushbyte            18
+     jump                L352
+
+L326:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "LongArray")
+     getlocal            8
+     ifstrictne          L332
+
+     pushbyte            19
+     jump                L352
+
+L332:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "ShortArray")
+     getlocal            8
+     ifstrictne          L338
+
+     pushbyte            20
+     jump                L352
+
+L338:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "NumberArray")
+     getlocal            8
+     ifstrictne          L344
+
+     pushbyte            21
+     jump                L352
+
+L344:
+     jump                L351
+
+     ; 0x24
+     ; 0x16
+     ; 0x10
+     ; 0x02
+     ; 0x00
+     ; 0x00
+L351:
+     pushbyte            22
+L352:
+     kill                8
+     lookupswitch        L203, [L25, L31, L37, L43, L49, L55, L61, L67, L73, L79, L85, L92, L121, L127, L133, L139, L145, L151, L157, L163, L169, L175, L203]
+
+L354:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "decode") flag FINAL dispid 7
+  method
+   refid "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class/decode"
+   param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageReader")
+   returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+   body
+    maxstack 5
+    localcount 15
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal            5
+
+     pushnull
+     coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     setlocal            6
+
+     pushnull
+     coerce_s
+     setlocal            7
+
+     pushnan
+     setlocal            8
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            9
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            11
+
+     pushnan
+     setlocal            12
+
+     pushnan
+     setlocal            13
+
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 0
+     convert_d
+     setlocal2
+
+     findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+     constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+     coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+     setlocal3
+
+     pushbyte            0
+     convert_d
+     setlocal            4
+
+     jump                L418
+
+L38:
+     label
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextCharacter"), 0
+     coerce_s
+     setlocal            5
+
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getlocal            5
+     callproperty        QName(PackageNamespace(""), "findTypeByIndicator"), 1
+     coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     setlocal            6
+
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextString"), 0
+     coerce_s
+     setlocal            7
+
+     jump                L270
+
+L53:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 0
+     callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+     jump                L414
+
+L60:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextString"), 0
+     callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+     jump                L414
+
+L67:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextDouble"), 0
+     callpropvoid        QName(PackageNamespace(""), "setDouble"), 2
+
+     jump                L414
+
+L74:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextFloat"), 0
+     callpropvoid        QName(PackageNamespace(""), "setFloat"), 2
+
+     jump                L414
+
+L81:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean"), 0
+     callpropvoid        QName(PackageNamespace(""), "setBoolean"), 2
+
+     jump                L414
+
+L88:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextByte"), 0
+     callpropvoid        QName(PackageNamespace(""), "setByte"), 2
+
+     jump                L414
+
+L95:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextCharacter"), 0
+     callpropvoid        QName(PackageNamespace(""), "setChar"), 2
+
+     jump                L414
+
+L102:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextLong"), 0
+     callpropvoid        QName(PackageNamespace(""), "setLong"), 2
+
+     jump                L414
+
+L109:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextShort"), 0
+     callpropvoid        QName(PackageNamespace(""), "setShort"), 2
+
+     jump                L414
+
+L116:
+     label
+     getlocal3
+     getlocal            7
+     findpropstrict      QName(PackageNamespace(""), "Number")
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextDouble"), 0
+     constructprop       QName(PackageNamespace(""), "Number"), 1
+     callpropvoid        QName(PackageNamespace(""), "setNumber"), 2
+
+     jump                L414
+
+L125:
+     label
+     getlocal3
+     getlocal            7
+     findpropstrict      QName(PackageNamespace(""), "decode")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "decode"), 1
+     callpropvoid        QName(PackageNamespace(""), "setEsObject"), 2
+
+     jump                L414
+
+L133:
+     label
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 0
+     convert_d
+     setlocal            8
+
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            9
+
+     pushbyte            0
+     convert_d
+     setlocal            12
+
+     jump                L157
+
+L146:
+     label
+     getlocal            9
+     getlocal            12
+     findpropstrict      QName(PackageNamespace(""), "decode")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "decode"), 1
+     setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.esobject"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#1"), PackageNamespace("com.electrotank.electroserver4.protocol.codec"), PackageInternalNs("com.electrotank.electroserver4.protocol.codec"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.protocol"), PackageNamespace("com.electrotank.electroserver4.message.request"), ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:MessageCodecImpl"), StaticProtectedNs("Object")])
+
+     getlocal            12
+     increment
+     convert_d
+     setlocal            12
+
+L157:
+     getlocal            12
+     getlocal            8
+     iflt                L146
+
+     getlocal3
+     getlocal            7
+     getlocal            9
+     callpropvoid        QName(PackageNamespace(""), "setEsObjectArray"), 2
+
+     jump                L414
+
+L165:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextIntegerArray"), 0
+     callpropvoid        QName(PackageNamespace(""), "setIntegerArray"), 2
+
+     jump                L414
+
+L172:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextStringArray"), 0
+     callpropvoid        QName(PackageNamespace(""), "setStringArray"), 2
+
+     jump                L414
+
+L179:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextDoubleArray"), 0
+     callpropvoid        QName(PackageNamespace(""), "setDoubleArray"), 2
+
+     jump                L414
+
+L186:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextFloatArray"), 0
+     callpropvoid        QName(PackageNamespace(""), "setFloatArray"), 2
+
+     jump                L414
+
+L193:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBooleanArray"), 0
+     callpropvoid        QName(PackageNamespace(""), "setBooleanArray"), 2
+
+     jump                L414
+
+L200:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextByteArray"), 0
+     callpropvoid        QName(PackageNamespace(""), "setByteArray"), 2
+
+     jump                L414
+
+L207:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextCharacterArray"), 0
+     callpropvoid        QName(PackageNamespace(""), "setCharArray"), 2
+
+     jump                L414
+
+L214:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextLongArray"), 0
+     callpropvoid        QName(PackageNamespace(""), "setLongArray"), 2
+
+     jump                L414
+
+L221:
+     label
+     getlocal3
+     getlocal            7
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextShortArray"), 0
+     callpropvoid        QName(PackageNamespace(""), "setShortArray"), 2
+
+     jump                L414
+
+L228:
+     label
+     getlocal1
+     callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextDoubleArray"), 0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            10
+
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            11
+
+     pushbyte            0
+     convert_d
+     setlocal            13
+
+     jump                L254
+
+L241:
+     label
+     getlocal            11
+     getlocal            13
+     findpropstrict      QName(PackageNamespace(""), "Number")
+     getlocal            10
+     getlocal            13
+     getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.esobject"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#1"), PackageNamespace("com.electrotank.electroserver4.protocol.codec"), PackageInternalNs("com.electrotank.electroserver4.protocol.codec"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.protocol"), PackageNamespace("com.electrotank.electroserver4.message.request"), ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:MessageCodecImpl"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "Number"), 1
+     setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#0"), PackageNamespace(""), PackageNamespace("com.electrotank.electroserver4.esobject"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.codec:EsObjectCodec/class#1"), PackageNamespace("com.electrotank.electroserver4.protocol.codec"), PackageInternalNs("com.electrotank.electroserver4.protocol.codec"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.protocol"), PackageNamespace("com.electrotank.electroserver4.message.request"), ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:EsObjectCodec"), StaticProtectedNs("com.electrotank.electroserver4.protocol.codec:MessageCodecImpl"), StaticProtectedNs("Object")])
+
+     getlocal            13
+     increment
+     convert_d
+     setlocal            13
+
+L254:
+     getlocal            13
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L241
+
+     getlocal3
+     getlocal            7
+     getlocal            11
+     callpropvoid        QName(PackageNamespace(""), "setNumberArray"), 2
+
+     jump                L414
+
+L263:
+     label
+     findpropstrict      QName(PackageNamespace(""), "trace")
+     pushstring          "Unable to decode data type "
+     getlocal            6
+     add
+     callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+     jump                L414
+
+L270:
+     getlocal            6
+     setlocal            14
+
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Integer")
+     getlocal            14
+     ifstrictne          L278
+
+     pushbyte            0
+     jump                L412
+
+L278:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsString")
+     getlocal            14
+     ifstrictne          L284
+
+     pushbyte            1
+     jump                L412
+
+L284:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Double")
+     getlocal            14
+     ifstrictne          L290
+
+     pushbyte            2
+     jump                L412
+
+L290:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Float")
+     getlocal            14
+     ifstrictne          L296
+
+     pushbyte            3
+     jump                L412
+
+L296:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsBoolean")
+     getlocal            14
+     ifstrictne          L302
+
+     pushbyte            4
+     jump                L412
+
+L302:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Byte")
+     getlocal            14
+     ifstrictne          L308
+
+     pushbyte            5
+     jump                L412
+
+L308:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Character")
+     getlocal            14
+     ifstrictne          L314
+
+     pushbyte            6
+     jump                L412
+
+L314:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Long")
+     getlocal            14
+     ifstrictne          L320
+
+     pushbyte            7
+     jump                L412
+
+L320:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "Short")
+     getlocal            14
+     ifstrictne          L326
+
+     pushbyte            8
+     jump                L412
+
+L326:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsNumber")
+     getlocal            14
+     ifstrictne          L332
+
+     pushbyte            9
+     jump                L412
+
+L332:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsObject")
+     getlocal            14
+     ifstrictne          L338
+
+     pushbyte            10
+     jump                L412
+
+L338:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsObjectArray")
+     getlocal            14
+     ifstrictne          L344
+
+     pushbyte            11
+     jump                L412
+
+L344:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "IntegerArray")
+     getlocal            14
+     ifstrictne          L350
+
+     pushbyte            12
+     jump                L412
+
+L350:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "StringArray")
+     getlocal            14
+     ifstrictne          L356
+
+     pushbyte            13
+     jump                L412
+
+L356:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "DoubleArray")
+     getlocal            14
+     ifstrictne          L362
+
+     pushbyte            14
+     jump                L412
+
+L362:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "FloatArray")
+     getlocal            14
+     ifstrictne          L368
+
+     pushbyte            15
+     jump                L412
+
+L368:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "BooleanArray")
+     getlocal            14
+     ifstrictne          L374
+
+     pushbyte            16
+     jump                L412
+
+L374:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "EsByteArray")
+     getlocal            14
+     ifstrictne          L380
+
+     pushbyte            17
+     jump                L412
+
+L380:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "CharacterArray")
+     getlocal            14
+     ifstrictne          L386
+
+     pushbyte            18
+     jump                L412
+
+L386:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "LongArray")
+     getlocal            14
+     ifstrictne          L392
+
+     pushbyte            19
+     jump                L412
+
+L392:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "ShortArray")
+     getlocal            14
+     ifstrictne          L398
+
+     pushbyte            20
+     jump                L412
+
+L398:
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+     getproperty         QName(PackageNamespace(""), "NumberArray")
+     getlocal            14
+     ifstrictne          L404
+
+     pushbyte            21
+     jump                L412
+
+L404:
+     jump                L411
+
+     ; 0x24
+     ; 0x16
+     ; 0x10
+     ; 0x02
+     ; 0x00
+     ; 0x00
+L411:
+     pushbyte            22
+L412:
+     kill                14
+     lookupswitch        L263, [L53, L60, L67, L74, L81, L88, L95, L102, L109, L116, L125, L133, L165, L172, L179, L186, L193, L200, L207, L214, L221, L228, L263]
+
+L414:
+     getlocal            4
+     increment
+     convert_d
+     setlocal            4
+
+L418:
+     getlocal            4
+     getlocal2
+     iflt                L38
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,179 @@
+class
+ refid "com.electrotank.electroserver4.protocol.codec:FindGamesResponseCodec"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "FindGamesResponseCodec")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:FindGamesResponseCodec")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.codec:FindGamesResponseCodec/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "decode") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.protocol.codec:FindGamesResponseCodec/instance/decode"
+    param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageReader")
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    body
+     maxstack 2
+     localcount 12
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            7
+
+      pushfalse
+      setlocal            8
+
+      pushfalse
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "ServerGame")
+      setlocal            11
+
+      getlocal1
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "MESSAGE_ID_SIZE")
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "FindGamesResponse")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "FindGamesResponse"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "FindGamesResponse")
+      setlocal3
+
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 0
+      convert_d
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            5
+
+      getlocal3
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "setGames"), 1
+
+      pushbyte            0
+      convert_d
+      setlocal            6
+
+      jump                L87
+
+L40:
+      label
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger"), 0
+      convert_d
+      setlocal            7
+
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean"), 0
+      convert_b
+      setlocal            8
+
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean"), 0
+      convert_b
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal            10
+
+      getlocal1
+      callproperty        QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean"), 0
+      iffalse             L64
+
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "EsObjectCodec")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "decode"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal            10
+
+L64:
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.entities"), "ServerGame")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.entities"), "ServerGame"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "ServerGame")
+      dup
+      setlocal            11
+
+      getlocal            7
+      callpropvoid        QName(PackageNamespace(""), "setGameId"), 1
+
+      getlocal            11
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "setLocked"), 1
+
+      getlocal            11
+      getlocal            9
+      callpropvoid        QName(PackageNamespace(""), "setPasswordProtected"), 1
+
+      getlocal            11
+      getlocal            10
+      callpropvoid        QName(PackageNamespace(""), "setGameDetails"), 1
+
+      getlocal            5
+      getlocal            11
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            6
+      increment
+      convert_d
+      setlocal            6
+
+L87:
+      getlocal            6
+      getlocal            4
+      iflt                L40
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.codec:FindGamesResponseCodec/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

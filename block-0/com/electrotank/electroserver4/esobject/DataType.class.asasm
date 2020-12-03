@@ -1,0 +1,369 @@
+class
+ refid "com.electrotank.electroserver4.esobject:DataType"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.esobject:DataType")
+  iinit
+   refid "com.electrotank.electroserver4.esobject:DataType/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "indicator")
+     getlocal1
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "indicator")
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "name")
+     getlocal2
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "name")
+
+     findpropstrict      QName(PackageNamespace(""), "register")
+     getlocal0
+     callpropvoid        QName(PackageNamespace(""), "register"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "indicator") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "name") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "getIndicator")
+   method
+    refid "com.electrotank.electroserver4.esobject:DataType/instance/getIndicator"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "indicator")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getName")
+   method
+    refid "com.electrotank.electroserver4.esobject:DataType/instance/getName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "name")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.esobject:DataType/class/init"
+  body
+   maxstack 4
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "Integer")
+    getlocal0
+    pushstring          "0"
+    pushstring          "integer"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "Integer")
+
+    findproperty        QName(PackageNamespace(""), "EsString")
+    getlocal0
+    pushstring          "1"
+    pushstring          "string"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "EsString")
+
+    findproperty        QName(PackageNamespace(""), "Double")
+    getlocal0
+    pushstring          "2"
+    pushstring          "double"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "Double")
+
+    findproperty        QName(PackageNamespace(""), "Float")
+    getlocal0
+    pushstring          "3"
+    pushstring          "float"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "Float")
+
+    findproperty        QName(PackageNamespace(""), "EsBoolean")
+    getlocal0
+    pushstring          "4"
+    pushstring          "boolean"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "EsBoolean")
+
+    findproperty        QName(PackageNamespace(""), "Byte")
+    getlocal0
+    pushstring          "5"
+    pushstring          "byte"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "Byte")
+
+    findproperty        QName(PackageNamespace(""), "Character")
+    getlocal0
+    pushstring          "6"
+    pushstring          "character"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "Character")
+
+    findproperty        QName(PackageNamespace(""), "Long")
+    getlocal0
+    pushstring          "7"
+    pushstring          "long"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "Long")
+
+    findproperty        QName(PackageNamespace(""), "Short")
+    getlocal0
+    pushstring          "8"
+    pushstring          "short"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "Short")
+
+    findproperty        QName(PackageNamespace(""), "EsObject")
+    getlocal0
+    pushstring          "9"
+    pushstring          "esobject"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "EsObject")
+
+    findproperty        QName(PackageNamespace(""), "EsObjectArray")
+    getlocal0
+    pushstring          "a"
+    pushstring          "esobject_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "EsObjectArray")
+
+    findproperty        QName(PackageNamespace(""), "IntegerArray")
+    getlocal0
+    pushstring          "b"
+    pushstring          "integer_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "IntegerArray")
+
+    findproperty        QName(PackageNamespace(""), "StringArray")
+    getlocal0
+    pushstring          "c"
+    pushstring          "string_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "StringArray")
+
+    findproperty        QName(PackageNamespace(""), "DoubleArray")
+    getlocal0
+    pushstring          "d"
+    pushstring          "double_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "DoubleArray")
+
+    findproperty        QName(PackageNamespace(""), "FloatArray")
+    getlocal0
+    pushstring          "e"
+    pushstring          "float_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "FloatArray")
+
+    findproperty        QName(PackageNamespace(""), "BooleanArray")
+    getlocal0
+    pushstring          "f"
+    pushstring          "boolean_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "BooleanArray")
+
+    findproperty        QName(PackageNamespace(""), "EsByteArray")
+    getlocal0
+    pushstring          "g"
+    pushstring          "byte_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "EsByteArray")
+
+    findproperty        QName(PackageNamespace(""), "CharacterArray")
+    getlocal0
+    pushstring          "h"
+    pushstring          "character_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "CharacterArray")
+
+    findproperty        QName(PackageNamespace(""), "LongArray")
+    getlocal0
+    pushstring          "i"
+    pushstring          "long_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "LongArray")
+
+    findproperty        QName(PackageNamespace(""), "ShortArray")
+    getlocal0
+    pushstring          "j"
+    pushstring          "short_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "ShortArray")
+
+    findproperty        QName(PackageNamespace(""), "EsNumber")
+    getlocal0
+    pushstring          "k"
+    pushstring          "number"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "EsNumber")
+
+    findproperty        QName(PackageNamespace(""), "NumberArray")
+    getlocal0
+    pushstring          "l"
+    pushstring          "number_array"
+    construct           2
+    setproperty         QName(PackageNamespace(""), "NumberArray")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "Integer") slotid 1 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "EsString") slotid 2 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "Double") slotid 3 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "Float") slotid 4 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "EsBoolean") slotid 5 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "Byte") slotid 6 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "Character") slotid 7 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "Long") slotid 8 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "Short") slotid 9 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "EsObject") slotid 10 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "EsObjectArray") slotid 11 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "IntegerArray") slotid 12 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "StringArray") slotid 13 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "DoubleArray") slotid 14 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "FloatArray") slotid 15 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "BooleanArray") slotid 16 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "EsByteArray") slotid 17 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "CharacterArray") slotid 18 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "LongArray") slotid 19 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "ShortArray") slotid 20 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "EsNumber") slotid 21 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PackageNamespace(""), "NumberArray") slotid 22 type QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType") end
+ trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByIndicator") slotid 23 type QName(PackageNamespace(""), "Object") end
+ trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByName") slotid 24 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "register") flag FINAL dispid 3
+  method
+   refid "com.electrotank.electroserver4.esobject:DataType/class/register"
+   param QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByIndicator")
+     pushnull
+     ifne                L9
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByIndicator")
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByIndicator")
+
+L9:
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByName")
+     pushnull
+     ifne                L16
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByName")
+     findpropstrict      QName(PackageNamespace(""), "Object")
+     constructprop       QName(PackageNamespace(""), "Object"), 0
+     setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByName")
+
+L16:
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByIndicator")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "getIndicator"), 0
+     getlocal1
+     setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType/class"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageInternalNs("com.electrotank.electroserver4.esobject"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.esobject:DataType"), StaticProtectedNs("com.electrotank.electroserver4.esobject:DataType"), StaticProtectedNs("Object")])
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByName")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "getName"), 0
+     getlocal1
+     setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType/class"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageInternalNs("com.electrotank.electroserver4.esobject"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.esobject:DataType"), StaticProtectedNs("com.electrotank.electroserver4.esobject:DataType"), StaticProtectedNs("Object")])
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "findTypeByIndicator") flag FINAL dispid 4
+  method
+   refid "com.electrotank.electroserver4.esobject:DataType/class/findTypeByIndicator"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByIndicator")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType/class"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageInternalNs("com.electrotank.electroserver4.esobject"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.esobject:DataType"), StaticProtectedNs("com.electrotank.electroserver4.esobject:DataType"), StaticProtectedNs("Object")])
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "findTypeByName") flag FINAL dispid 5
+  method
+   refid "com.electrotank.electroserver4.esobject:DataType/class/findTypeByName"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), "typesByName")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.esobject:DataType/class"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageInternalNs("com.electrotank.electroserver4.esobject"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.esobject:DataType"), StaticProtectedNs("com.electrotank.electroserver4.esobject:DataType"), StaticProtectedNs("Object")])
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

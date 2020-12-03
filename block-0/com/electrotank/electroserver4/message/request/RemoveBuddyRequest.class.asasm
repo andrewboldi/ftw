@@ -1,0 +1,124 @@
+class
+ refid "com.electrotank.electroserver4.message.request:RemoveBuddyRequest"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "RemoveBuddyRequest")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "RequestImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.request:RemoveBuddyRequest")
+  iinit
+   refid "com.electrotank.electroserver4.message.request:RemoveBuddyRequest/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "RemoveBuddyRequest")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:RemoveBuddyRequest/instance"), "buddyName") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "validate") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.message.request:RemoveBuddyRequest/instance/validate"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushtrue
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+      getlocal1
+      getlocal2
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse"), 2
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+      setlocal3
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setBuddyName")
+   method
+    refid "com.electrotank.electroserver4.message.request:RemoveBuddyRequest/instance/setBuddyName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:RemoveBuddyRequest/instance"), "buddyName")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:RemoveBuddyRequest/instance"), "buddyName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getBuddyName")
+   method
+    refid "com.electrotank.electroserver4.message.request:RemoveBuddyRequest/instance/getBuddyName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:RemoveBuddyRequest/instance"), "buddyName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.request:RemoveBuddyRequest/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,293 @@
+class
+ refid "fl.controls.dataGridClasses:HeaderRenderer"
+ instance QName(PackageNamespace("fl.controls.dataGridClasses"), "HeaderRenderer")
+  extends QName(PackageNamespace("fl.controls"), "LabelButton")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer")
+  iinit
+   refid "fl.controls.dataGridClasses:HeaderRenderer/instance/init"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 12
+    maxscopedepth 13
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "focusEnabled")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "focusEnabled")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_column") type QName(PackageNamespace(""), "uint") end
+  trait setter QName(PackageNamespace(""), "column")
+   method
+    refid "fl.controls.dataGridClasses:HeaderRenderer/instance/column/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "_column")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "_column")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "column")
+   method
+    refid "fl.controls.dataGridClasses:HeaderRenderer/instance/column/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_column")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "drawLayout") flag OVERRIDE
+   method
+    refid "fl.controls.dataGridClasses:HeaderRenderer/instance/fl.controls.dataGridClasses:HeaderRenderer:drawLayout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 6
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal1
+
+      pushnan
+      setlocal2
+
+      pushnan
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "getStyleValue")
+      pushstring          "textPadding"
+      callproperty        QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "getStyleValue"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "textHeight")
+      pushbyte            4
+      add
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "label")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      greaterthan
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "textWidth")
+      pushbyte            4
+      add
+      convert_d
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "textHeight")
+      pushbyte            4
+      add
+      convert_d
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "icon")
+      pushnull
+      ifne                L49
+
+      pushbyte            0
+      convert_d
+      jump                L54
+
+L49:
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "icon")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            4
+      add
+      convert_d
+L54:
+      convert_d
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      getlex              QName(PackageNamespace(""), "width")
+      pushbyte            2
+      getlocal1
+      multiply
+      subtract
+      getlocal            4
+      subtract
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      convert_d
+      setlocal            5
+
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "icon")
+      pushnull
+      ifeq                L94
+
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "icon")
+      getlex              QName(PackageNamespace(""), "width")
+      getlocal1
+      subtract
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "icon")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      pushbyte            2
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "icon")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace(""), "height")
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "icon")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            2
+      divide
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      setproperty         QName(PackageNamespace(""), "y")
+
+L94:
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal            5
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PackageNamespace(""), "textField")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace(""), "height")
+      getlex              QName(PackageNamespace(""), "textField")
+      getproperty         QName(PackageNamespace(""), "height")
+      subtract
+      pushbyte            2
+      divide
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "background")
+      getlex              QName(PackageNamespace(""), "width")
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlex              QName(ProtectedNamespace("fl.controls.dataGridClasses:HeaderRenderer"), "background")
+      getlex              QName(PackageNamespace(""), "height")
+      setproperty         QName(PackageNamespace(""), "height")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.controls.dataGridClasses:HeaderRenderer/class/init"
+  body
+   maxstack 23
+   localcount 1
+   initscopedepth 11
+   maxscopedepth 12
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "fl.controls.dataGridClasses:HeaderRenderer/class"), "defaultStyles")
+    pushstring          "upSkin"
+    pushstring          "HeaderRenderer_upSkin"
+    pushstring          "downSkin"
+    pushstring          "HeaderRenderer_downSkin"
+    pushstring          "overSkin"
+    pushstring          "HeaderRenderer_overSkin"
+    pushstring          "disabledSkin"
+    pushstring          "HeaderRenderer_disabledSkin"
+    pushstring          "selectedDisabledSkin"
+    pushstring          "HeaderRenderer_selectedDisabledSkin"
+    pushstring          "selectedUpSkin"
+    pushstring          "HeaderRenderer_selectedUpSkin"
+    pushstring          "selectedDownSkin"
+    pushstring          "HeaderRenderer_selectedDownSkin"
+    pushstring          "selectedOverSkin"
+    pushstring          "HeaderRenderer_selectedOverSkin"
+    pushstring          "textFormat"
+    pushnull
+    pushstring          "disabledTextFormat"
+    pushnull
+    pushstring          "textPadding"
+    pushbyte            5
+    newobject           11
+    setproperty         QName(PrivateNamespace(null, "fl.controls.dataGridClasses:HeaderRenderer/class"), "defaultStyles")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "fl.controls.dataGridClasses:HeaderRenderer/class"), "defaultStyles") slotid 1 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "getStyleDefinition") flag FINAL dispid 3
+  method
+   refid "fl.controls.dataGridClasses:HeaderRenderer/class/getStyleDefinition"
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "fl.controls.dataGridClasses:HeaderRenderer/class"), "defaultStyles")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

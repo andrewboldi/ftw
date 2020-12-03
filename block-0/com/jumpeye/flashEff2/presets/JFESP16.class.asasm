@@ -1,0 +1,289 @@
+class
+ refid "com.jumpeye.flashEff2.presets:JFESP16"
+ instance QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP16")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.flashEff2.presets:JFESP16")
+  iinit
+   refid "com.jumpeye.flashEff2.presets:JFESP16/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.jumpeye.flashEff2.presets:JFESP16/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "fep") flag FINAL dispid 3
+  method
+   refid "com.jumpeye.flashEff2.presets:JFESP16/class/fep"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace(""), "Array")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 3
+    localcount 11
+    initscopedepth 8
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     pushundefined
+     coerce_a
+     setlocal            6
+
+     pushbyte            0
+     convert_u
+     setlocal            7
+
+     pushbyte            0
+     convert_d
+     setlocal            8
+
+     getlocal3
+     getlocal2
+     multiply
+     coerce_a
+     dup
+     setlocal            9
+
+     convert_d
+     setlocal            8
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal2
+     pushbyte            2
+     divide
+     callproperty        QName(PackageNamespace(""), "ceil"), 1
+     convert_d
+     setlocal            10
+
+     pushbyte            0
+     coerce_a
+     setlocal            6
+
+     jump                L161
+
+L30:
+     label
+     getlocal            6
+     getlocal3
+     getlocal            6
+     subtract
+     decrement
+     ifnle               L63
+
+     getlocal            6
+     convert_u
+     setlocal            7
+
+     jump                L56
+
+L41:
+     label
+     getlocal            9
+     decrement
+     coerce_a
+     setlocal            9
+
+     getlocal            4
+     getlocal            7
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            6
+     getlocal            9
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal            7
+     increment
+     convert_u
+     setlocal            7
+
+L56:
+     getlocal            7
+     getlocal2
+     getlocal            6
+     subtract
+     pushbyte            2
+     subtract
+     ifle                L41
+
+L63:
+     getlocal            6
+     convert_u
+     setlocal            7
+
+     jump                L85
+
+L67:
+     label
+     getlocal            9
+     decrement
+     coerce_a
+     setlocal            9
+
+     getlocal            4
+     getlocal2
+     getlocal            6
+     subtract
+     decrement
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            7
+     getlocal            9
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal            7
+     increment
+     convert_u
+     setlocal            7
+
+L85:
+     getlocal            7
+     getlocal3
+     getlocal            6
+     subtract
+     decrement
+     ifle                L67
+
+     getlocal3
+     getlocal            6
+     subtract
+     decrement
+     getlocal            6
+     ifngt               L126
+
+     getlocal2
+     getlocal            6
+     subtract
+     pushbyte            2
+     subtract
+     convert_u
+     setlocal            7
+
+     jump                L123
+
+L105:
+     label
+     getlocal            9
+     decrement
+     coerce_a
+     setlocal            9
+
+     getlocal            4
+     getlocal            7
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal3
+     getlocal            6
+     subtract
+     decrement
+     getlocal            9
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal            7
+     decrement
+     convert_u
+     setlocal            7
+
+L123:
+     getlocal            7
+     getlocal            6
+     ifgt                L105
+
+L126:
+     getlocal            6
+     getlocal2
+     getlocal            6
+     subtract
+     decrement
+     ifnlt               L157
+
+     getlocal3
+     getlocal            6
+     subtract
+     decrement
+     convert_u
+     setlocal            7
+
+     jump                L154
+
+L139:
+     label
+     getlocal            9
+     decrement
+     coerce_a
+     setlocal            9
+
+     getlocal            4
+     getlocal            6
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     getlocal            7
+     getlocal            9
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal            7
+     decrement
+     convert_u
+     setlocal            7
+
+L154:
+     getlocal            7
+     getlocal            6
+     ifgt                L139
+
+L157:
+     getlocal            6
+     increment
+     coerce_a
+     setlocal            6
+
+L161:
+     getlocal            6
+     getlocal            10
+     iflt                L30
+
+     getlocal            5
+     pushnull
+     ifeq                L170
+
+     getlocal            5
+     getlocal            8
+     setproperty         Multiname("MAX", [PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#0"), PackageNamespace(""), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFESP16/class/fep#1"), PackageNamespace("com.jumpeye.flashEff2.presets"), PackageInternalNs("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFESP16"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L170:
+     getlocal            4
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

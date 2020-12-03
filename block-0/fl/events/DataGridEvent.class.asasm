@@ -1,0 +1,252 @@
+class
+ refid "fl.events:DataGridEvent"
+ instance QName(PackageNamespace("fl.events"), "DataGridEvent")
+  extends QName(PackageNamespace("fl.events"), "ListEvent")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.events:DataGridEvent")
+  iinit
+   refid "fl.events:DataGridEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional False()
+   optional False()
+   optional Integer(-1)
+   optional Integer(-1)
+   optional Null()
+   optional Null()
+   optional Null()
+   body
+    maxstack 6
+    localcount 9
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     getlocal            5
+     constructsuper      5
+
+     findproperty        QName(ProtectedNamespace("fl.events:DataGridEvent"), "_itemRenderer")
+     getlocal            6
+     initproperty        QName(ProtectedNamespace("fl.events:DataGridEvent"), "_itemRenderer")
+
+     findproperty        QName(ProtectedNamespace("fl.events:DataGridEvent"), "_dataField")
+     getlocal            7
+     initproperty        QName(ProtectedNamespace("fl.events:DataGridEvent"), "_dataField")
+
+     findproperty        QName(ProtectedNamespace("fl.events:DataGridEvent"), "_reason")
+     getlocal            8
+     initproperty        QName(ProtectedNamespace("fl.events:DataGridEvent"), "_reason")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait getter QName(PackageNamespace(""), "reason")
+   method
+    refid "fl.events:DataGridEvent/instance/reason/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.events:DataGridEvent"), "_reason")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.events:DataGridEvent"), "_itemRenderer") type QName(PackageNamespace(""), "Object") end
+  trait setter QName(PackageNamespace(""), "dataField")
+   method
+    refid "fl.events:DataGridEvent/instance/dataField/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("fl.events:DataGridEvent"), "_dataField")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("fl.events:DataGridEvent"), "_dataField")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.events:DataGridEvent"), "_reason") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "fl.events:DataGridEvent/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 10
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "formatToString")
+      pushstring          "DataGridEvent"
+      pushstring          "type"
+      pushstring          "bubbles"
+      pushstring          "cancelable"
+      pushstring          "columnIndex"
+      pushstring          "rowIndex"
+      pushstring          "itemRenderer"
+      pushstring          "dataField"
+      pushstring          "reason"
+      callproperty        QName(PackageNamespace(""), "formatToString"), 9
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "dataField")
+   method
+    refid "fl.events:DataGridEvent/instance/dataField/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.events:DataGridEvent"), "_dataField")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    refid "fl.events:DataGridEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 9
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("fl.events"), "DataGridEvent")
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(PackageNamespace(""), "bubbles")
+      getlex              QName(PackageNamespace(""), "cancelable")
+      getlex              QName(PackageNamespace(""), "columnIndex")
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlex              QName(PackageNamespace(""), "rowIndex")
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getlex              QName(ProtectedNamespace("fl.events:DataGridEvent"), "_itemRenderer")
+      getlex              QName(ProtectedNamespace("fl.events:DataGridEvent"), "_dataField")
+      getlex              QName(ProtectedNamespace("fl.events:DataGridEvent"), "_reason")
+      constructprop       QName(PackageNamespace("fl.events"), "DataGridEvent"), 8
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "itemRenderer")
+   method
+    refid "fl.events:DataGridEvent/instance/itemRenderer/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.events:DataGridEvent"), "_itemRenderer")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.events:DataGridEvent"), "_dataField") type QName(PackageNamespace(""), "String") end
+ end ; instance
+ cinit
+  refid "fl.events:DataGridEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "COLUMN_STRETCH")
+    pushstring          "columnStretch"
+    initproperty        QName(PackageNamespace(""), "COLUMN_STRETCH")
+
+    findproperty        QName(PackageNamespace(""), "HEADER_RELEASE")
+    pushstring          "headerRelease"
+    initproperty        QName(PackageNamespace(""), "HEADER_RELEASE")
+
+    findproperty        QName(PackageNamespace(""), "ITEM_EDIT_BEGINNING")
+    pushstring          "itemEditBeginning"
+    initproperty        QName(PackageNamespace(""), "ITEM_EDIT_BEGINNING")
+
+    findproperty        QName(PackageNamespace(""), "ITEM_EDIT_BEGIN")
+    pushstring          "itemEditBegin"
+    initproperty        QName(PackageNamespace(""), "ITEM_EDIT_BEGIN")
+
+    findproperty        QName(PackageNamespace(""), "ITEM_EDIT_END")
+    pushstring          "itemEditEnd"
+    initproperty        QName(PackageNamespace(""), "ITEM_EDIT_END")
+
+    findproperty        QName(PackageNamespace(""), "ITEM_FOCUS_IN")
+    pushstring          "itemFocusIn"
+    initproperty        QName(PackageNamespace(""), "ITEM_FOCUS_IN")
+
+    findproperty        QName(PackageNamespace(""), "ITEM_FOCUS_OUT")
+    pushstring          "itemFocusOut"
+    initproperty        QName(PackageNamespace(""), "ITEM_FOCUS_OUT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "ITEM_EDIT_BEGIN") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("itemEditBegin") end
+ trait const QName(PackageNamespace(""), "ITEM_EDIT_END") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("itemEditEnd") end
+ trait const QName(PackageNamespace(""), "ITEM_EDIT_BEGINNING") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("itemEditBeginning") end
+ trait const QName(PackageNamespace(""), "HEADER_RELEASE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("headerRelease") end
+ trait const QName(PackageNamespace(""), "ITEM_FOCUS_IN") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("itemFocusIn") end
+ trait const QName(PackageNamespace(""), "ITEM_FOCUS_OUT") slotid 7 type QName(PackageNamespace(""), "String") value Utf8("itemFocusOut") end
+ trait const QName(PackageNamespace(""), "COLUMN_STRETCH") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("columnStretch") end
+end ; class

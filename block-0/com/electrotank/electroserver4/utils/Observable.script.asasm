@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.utils:Observable/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Observable", [PackageNamespace("com.electrotank.electroserver4.utils")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.electrotank.electroserver4.utils:Observable"
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.utils"), "Observable")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.utils"), "Observable")
+  #include "Observable.class.asasm"
+ end ; trait
+end ; script

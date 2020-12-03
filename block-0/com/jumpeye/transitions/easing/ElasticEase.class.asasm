@@ -1,0 +1,51 @@
+class
+ refid "com.jumpeye.transitions.easing:ElasticEase"
+ instance QName(PackageNamespace("com.jumpeye.transitions.easing"), "ElasticEase")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.transitions.easing:ElasticEase")
+  iinit
+   refid "com.jumpeye.transitions.easing:ElasticEase/instance/init"
+   body
+    maxstack 1
+    localcount 2
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     pushundefined
+     coerce_a
+     setlocal1
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace("com.jumpeye.transitions.easing"), "Elastic")
+     constructprop       QName(PackageNamespace("com.jumpeye.transitions.easing"), "Elastic"), 0
+     coerce_a
+     setlocal1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.jumpeye.transitions.easing:ElasticEase/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

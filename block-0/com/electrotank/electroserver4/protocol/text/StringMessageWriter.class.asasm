@@ -1,0 +1,1288 @@
+class
+ refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.text"), "StringMessageWriter")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("MessageWriter", [PackageNamespace("com.electrotank.electroserver4.protocol")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/init"
+   body
+    maxstack 21
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pads_arr")
+     pushstring          ""
+     pushstring          " "
+     pushstring          "  "
+     pushstring          "   "
+     pushstring          "    "
+     pushstring          "     "
+     pushstring          "      "
+     pushstring          "       "
+     pushstring          "        "
+     pushstring          "         "
+     pushstring          "          "
+     pushstring          "           "
+     pushstring          "            "
+     pushstring          "             "
+     pushstring          "              "
+     pushstring          "               "
+     pushstring          "                "
+     pushstring          "                 "
+     pushstring          "                  "
+     pushstring          "                   "
+     newarray            20
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pads_arr")
+
+     findpropstrict      QName(PackageNamespace(""), "setMessage")
+     pushstring          ""
+     callpropvoid        QName(PackageNamespace(""), "setMessage"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "data") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pads_arr") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "setMessage")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/setMessage"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "data")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "data")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getMessage")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/getMessage"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "data")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pad")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/pad"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      subtract
+      convert_d
+      setlocal3
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pads_arr")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      getlocal1
+      add
+      coerce_s
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "append")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/append"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "data")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "data")
+      getlocal1
+      add
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "data")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeCharacter")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeCharacter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "append")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writePrefixedString")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writePrefixedString"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushnull
+      ifne                L7
+
+      pushstring          ""
+      setlocal1
+
+L7:
+      getlocal2
+      pushbyte            0
+      ifngt               L15
+
+      findpropstrict      QName(PackageNamespace(""), "writeInteger")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "writeInteger"), 2
+
+L15:
+      findpropstrict      QName(PackageNamespace(""), "append")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "trim")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/trim"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushstring          " "
+      setlocal2
+
+      jump                L11
+
+L5:
+      label
+      getlocal1
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      coerce_s
+      setlocal1
+
+L11:
+      getlocal1
+      pushbyte            0
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      getlocal2
+      ifeq                L5
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeString")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeString"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushnull
+      ifne                L6
+
+      returnvoid
+
+L6:
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "trim")
+      getlocal1
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "trim"), 1
+      coerce_s
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "writeInteger")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PackageNamespace(""), "writeInteger"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "append")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeInteger")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeInteger"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      convert_i
+      setlocal2
+
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            2
+      ifne                L36
+
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      convert_d
+      setlocal            4
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal            4
+      ifngt               L29
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Integer is longer then the specified length"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L29:
+      findpropstrict      QName(PackageNamespace(""), "append")
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pad")
+      getlocal3
+      getlocal            4
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pad"), 2
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      jump                L43
+
+L36:
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "append")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeLong")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeLong"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal2
+
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            2
+      ifne                L36
+
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      convert_d
+      setlocal            4
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal            4
+      ifngt               L29
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Long is longer then the specified length"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L29:
+      findpropstrict      QName(PackageNamespace(""), "append")
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pad")
+      getlocal3
+      getlocal            4
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pad"), 2
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      jump                L43
+
+L36:
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "append")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeDouble")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeDouble"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      convert_d
+      setlocal2
+
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            2
+      ifne                L36
+
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      convert_d
+      setlocal            4
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal            4
+      ifngt               L29
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Double is longer then the specified length"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L29:
+      findpropstrict      QName(PackageNamespace(""), "append")
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pad")
+      getlocal3
+      getlocal            4
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pad"), 2
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      jump                L43
+
+L36:
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "append")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeBoolean")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeBoolean"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L8
+
+      findpropstrict      QName(PackageNamespace(""), "append")
+      pushstring          "1"
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      jump                L11
+
+L8:
+      findpropstrict      QName(PackageNamespace(""), "append")
+      pushstring          "0"
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+L11:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeShort")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeShort"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_REST
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      convert_d
+      setlocal2
+
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            2
+      ifne                L36
+
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      convert_d
+      setlocal            4
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal            4
+      ifngt               L29
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "Integer is longer then the specified length"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L29:
+      findpropstrict      QName(PackageNamespace(""), "append")
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pad")
+      getlocal3
+      getlocal            4
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "pad"), 2
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      jump                L43
+
+L36:
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "append")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeByte")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeByte"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      coerce_s
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            2
+      ifnlt               L16
+
+      pushstring          "0"
+      getlocal2
+      add
+      coerce_s
+      setlocal2
+
+L16:
+      findpropstrict      QName(PackageNamespace(""), "writeString")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "writeString"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeFloat")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeFloat"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      coerce_s
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "append")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeIntegerArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeIntegerArray"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_d
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix")
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix"), 1
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L23
+
+L13:
+      label
+      findpropstrict      QName(PackageNamespace(""), "writeInteger")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "writeInteger"), 1
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L23:
+      getlocal3
+      getlocal2
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeBooleanArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeBooleanArray"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_d
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix")
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix"), 1
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L23
+
+L13:
+      label
+      findpropstrict      QName(PackageNamespace(""), "writeBoolean")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "writeBoolean"), 1
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L23:
+      getlocal3
+      getlocal2
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeByteArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeByteArray"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "writeInteger")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "writeInteger"), 1
+
+      pushbyte            0
+      setlocal3
+
+      jump                L19
+
+L12:
+      label
+      findpropstrict      QName(PackageNamespace(""), "writeByte")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "writeByte"), 1
+
+      inclocal_i          3
+L19:
+      getlocal3
+      getlocal2
+      iflt                L12
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeCharacterArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeCharacterArray"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_d
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix")
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix"), 1
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L23
+
+L13:
+      label
+      findpropstrict      QName(PackageNamespace(""), "writeCharacter")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "writeCharacter"), 1
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L23:
+      getlocal3
+      getlocal2
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeDoubleArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeDoubleArray"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_d
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix")
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix"), 1
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L23
+
+L13:
+      label
+      findpropstrict      QName(PackageNamespace(""), "writeDouble")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "writeDouble"), 1
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L23:
+      getlocal3
+      getlocal2
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeFloatArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeFloatArray"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_d
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix")
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix"), 1
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L23
+
+L13:
+      label
+      findpropstrict      QName(PackageNamespace(""), "writeFloat")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "writeFloat"), 1
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L23:
+      getlocal3
+      getlocal2
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeLongArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeLongArray"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_d
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix")
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix"), 1
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L23
+
+L13:
+      label
+      findpropstrict      QName(PackageNamespace(""), "writeLong")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "writeLong"), 1
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L23:
+      getlocal3
+      getlocal2
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeShortArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeShortArray"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_d
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix")
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix"), 1
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L23
+
+L13:
+      label
+      findpropstrict      QName(PackageNamespace(""), "writeShort")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "writeShort"), 1
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L23:
+      getlocal3
+      getlocal2
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeStringArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/writeStringArray"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_d
+      setlocal2
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix")
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix"), 1
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L23
+
+L13:
+      label
+      findpropstrict      QName(PackageNamespace(""), "writeString")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.text"), PackageInternalNs("com.electrotank.electroserver4.protocol.text"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("com.electrotank.electroserver4.protocol.text:StringMessageWriter"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "writeString"), 1
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L23:
+      getlocal3
+      getlocal2
+      iflt                L13
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getData")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/getData"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "data")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setData")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/setData"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "data")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "data")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/_writePrefix"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "append")
+      getlocal1
+      pushbyte            36
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writeArrayPrefix")
+   method
+    refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance/_writeArrayPrefix"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.text:StringMessageWriter/instance#0"), "_writePrefix"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "append")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      callpropvoid        QName(PackageNamespace(""), "append"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.text:StringMessageWriter/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

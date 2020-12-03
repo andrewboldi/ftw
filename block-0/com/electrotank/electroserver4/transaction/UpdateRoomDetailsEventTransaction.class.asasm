@@ -1,0 +1,132 @@
+class
+ refid "com.electrotank.electroserver4.transaction:UpdateRoomDetailsEventTransaction"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "UpdateRoomDetailsEventTransaction")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.transaction"), "TransactionImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.transaction:UpdateRoomDetailsEventTransaction")
+  iinit
+   refid "com.electrotank.electroserver4.transaction:UpdateRoomDetailsEventTransaction/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.transaction:UpdateRoomDetailsEventTransaction/instance/execute"
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    param QName(PackageNamespace("com.electrotank.electroserver4"), "ElectroServer")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UpdateRoomDetailsEvent")
+      getlocal1
+      callproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UpdateRoomDetailsEvent"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "UpdateRoomDetailsEvent")
+      setlocal3
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getZoneManager"), 0
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getZoneId"), 0
+      callproperty        QName(PackageNamespace(""), "getZoneById"), 1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getRoomId"), 0
+      callproperty        QName(PackageNamespace(""), "getRoomById"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.room"), "Room")
+      setlocal            4
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "isHiddenUpdate"), 0
+      iffalse             L24
+
+      getlocal            4
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getHidden"), 0
+      callpropvoid        QName(PackageNamespace(""), "setIsHidden"), 1
+
+L24:
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "isDescriptionUpdate"), 0
+      iffalse             L31
+
+      getlocal            4
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getDescription"), 0
+      callpropvoid        QName(PackageNamespace(""), "setDescription"), 1
+
+L31:
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "isCapacityUpdate"), 0
+      iffalse             L38
+
+      getlocal            4
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getCapacity"), 0
+      callpropvoid        QName(PackageNamespace(""), "setCapacity"), 1
+
+L38:
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "isRoomNameUpdate"), 0
+      iffalse             L45
+
+      getlocal            4
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getRoomName"), 0
+      callpropvoid        QName(PackageNamespace(""), "setRoomName"), 1
+
+L45:
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "isPasswordUpdate"), 0
+      iffalse             L48
+
+L48:
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "room")
+
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.transaction:UpdateRoomDetailsEventTransaction/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

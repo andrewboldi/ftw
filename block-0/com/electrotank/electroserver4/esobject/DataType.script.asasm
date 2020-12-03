@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.esobject:DataType/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("DataType", [PackageNamespace("com.electrotank.electroserver4.esobject")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.electrotank.electroserver4.esobject:DataType"
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "DataType")
+  #include "DataType.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.message:ValidationResponse/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ValidationResponse", [PackageNamespace("com.electrotank.electroserver4.message")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.electrotank.electroserver4.message:ValidationResponse"
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+  #include "ValidationResponse.class.asasm"
+ end ; trait
+end ; script

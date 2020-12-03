@@ -1,0 +1,536 @@
+class
+ refid "net.theyak.util:StringEx"
+ instance QName(PackageNamespace("net.theyak.util"), "StringEx")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("net.theyak.util:StringEx")
+  iinit
+   refid "net.theyak.util:StringEx/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "net.theyak.util:StringEx/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "toAscii") flag FINAL dispid 3
+  method
+   refid "net.theyak.util:StringEx/class/toAscii"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal3
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     convert_i
+     setlocal2
+
+     jump                L65
+
+L11:
+     label
+     getlocal1
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_u
+     setlocal3
+
+     getlocal3
+     pushbyte            127
+     greaterequals
+     dup
+     iftrue              L26
+
+     pop
+     getlocal3
+     pushbyte            32
+     lessthan
+L26:
+     iffalse             L62
+
+     getlocal2
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     ifne                L41
+
+     getlocal1
+     pushbyte            0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     coerce_s
+     setlocal1
+
+     jump                L62
+
+L41:
+     getlocal2
+     pushbyte            0
+     ifne                L50
+
+     getlocal1
+     pushbyte            1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     coerce_s
+     setlocal1
+
+     jump                L62
+
+L50:
+     getlocal1
+     pushbyte            0
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     getlocal1
+     getlocal2
+     pushbyte            1
+     add
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     add
+     coerce_s
+     setlocal1
+
+L62:
+     getlocal2
+     decrement_i
+     setlocal2
+
+L65:
+     getlocal2
+     pushbyte            0
+     ifge                L11
+
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "remove_triplets") flag FINAL dispid 4
+  method
+   refid "net.theyak.util:StringEx/class/remove_triplets"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal3
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     convert_i
+     setlocal2
+
+     getlocal1
+     returnvalue
+
+     ; 0xD1
+     ; 0x48
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "remove_duplicates") flag FINAL dispid 5
+  method
+   refid "net.theyak.util:StringEx/class/remove_duplicates"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "uint")
+   flag HAS_OPTIONAL
+   optional Integer(3)
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal            4
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     convert_i
+     setlocal3
+
+     pushbyte            0
+     convert_u
+     setlocal            5
+
+     pushbyte            0
+     convert_u
+     setlocal            6
+
+     getlocal2
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     ifnge               L22
+
+     getlocal1
+     returnvalue
+
+L22:
+     jump                L84
+
+L23:
+     label
+     getlocal1
+     getlocal3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_u
+     dup
+     setlocal            4
+
+     getlocal            5
+     ifne                L75
+
+     getlocal            6
+     increment
+     convert_u
+     dup
+     setlocal            6
+
+     getlocal2
+     ifnge               L74
+
+     getlocal3
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     ifne                L53
+
+     getlocal1
+     pushbyte            0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     coerce_s
+     setlocal1
+
+     jump                L74
+
+L53:
+     getlocal3
+     pushbyte            0
+     ifne                L62
+
+     getlocal1
+     pushbyte            1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     coerce_s
+     setlocal1
+
+     jump                L74
+
+L62:
+     getlocal1
+     pushbyte            0
+     getlocal3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     getlocal1
+     getlocal3
+     pushbyte            1
+     add
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+     add
+     coerce_s
+     setlocal1
+
+L74:
+     jump                L78
+
+L75:
+     pushbyte            0
+     convert_u
+     setlocal            6
+
+L78:
+     getlocal            4
+     convert_u
+     setlocal            5
+
+     getlocal3
+     decrement_i
+     setlocal3
+
+L84:
+     getlocal3
+     pushbyte            0
+     ifge                L23
+
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "replace") flag FINAL dispid 6
+  method
+   refid "net.theyak.util:StringEx/class/replace"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 3
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushundefined
+     coerce_a
+     setlocal            5
+
+     pushundefined
+     coerce_a
+     setlocal            6
+
+     pushundefined
+     coerce_a
+     setlocal            7
+
+     pushbyte            0
+     convert_d
+     setlocal            4
+
+     jump                L60
+
+L15:
+     label
+     getlocal3
+     getlocal1
+     getlocal            4
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+     coerce_a
+     dup
+     setlocal            5
+
+     pushbyte            -1
+     ifne                L30
+
+     jump                L64
+
+     ; 0x10
+     ; 0x35
+     ; 0x00
+     ; 0x00
+L30:
+     getlocal3
+     pushbyte            0
+     getlocal            5
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     coerce_a
+     setlocal            6
+
+     getlocal3
+     getlocal            5
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     add
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "length")
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     coerce_a
+     setlocal            7
+
+     getlocal            6
+     getlocal2
+     add
+     getlocal            7
+     add
+     coerce_s
+     setlocal3
+
+     getlocal            6
+     getproperty         Multiname("length", [PrivateNamespace(null, "net.theyak.util:StringEx/class/replace#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "net.theyak.util:StringEx/class/replace#1"), PackageNamespace("net.theyak.util"), PackageInternalNs("net.theyak.util"), ProtectedNamespace("net.theyak.util:StringEx"), StaticProtectedNs("net.theyak.util:StringEx"), StaticProtectedNs("Object")])
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     add
+     convert_d
+     setlocal            4
+
+L60:
+     getlocal            4
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "length")
+     iflt                L15
+
+L64:
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "htmlspecialchars") flag FINAL dispid 7
+  method
+   refid "net.theyak.util:StringEx/class/htmlspecialchars"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal2
+
+     findpropstrict      QName(PackageNamespace(""), "replace")
+     pushstring          "&"
+     pushstring          "&amp;"
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "replace"), 3
+     coerce_s
+     setlocal2
+
+     findpropstrict      QName(PackageNamespace(""), "replace")
+     pushstring          "<"
+     pushstring          "&lt;"
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "replace"), 3
+     coerce_s
+     setlocal2
+
+     findpropstrict      QName(PackageNamespace(""), "replace")
+     pushstring          ">"
+     pushstring          "&gt;"
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "replace"), 3
+     coerce_s
+     setlocal2
+
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "isCodeAlphaNumeric") flag FINAL dispid 8
+  method
+   refid "net.theyak.util:StringEx/class/isCodeAlphaNumeric"
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushbyte            48
+     greaterequals
+     dup
+     iffalse             L11
+
+     pop
+     getlocal1
+     pushbyte            57
+     lessequals
+L11:
+     dup
+     iftrue              L23
+
+     pop
+     getlocal1
+     pushbyte            65
+     greaterequals
+     dup
+     iffalse             L23
+
+     pop
+     getlocal1
+     pushbyte            90
+     lessequals
+L23:
+     dup
+     iftrue              L35
+
+     pop
+     getlocal1
+     pushbyte            97
+     greaterequals
+     dup
+     iffalse             L35
+
+     pop
+     getlocal1
+     pushbyte            122
+     lessequals
+L35:
+     iffalse             L38
+
+     pushtrue
+     returnvalue
+
+L38:
+     pushfalse
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

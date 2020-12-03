@@ -1,0 +1,1842 @@
+class
+ refid "Scene:LoadAndLogin"
+ instance QName(PackageNamespace("Scene"), "LoadAndLogin")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Scene:LoadAndLogin")
+  iinit
+   refid "Scene:LoadAndLogin/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+     pushbyte            0
+     initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+
+     findpropstrict      QName(PackageNamespace(""), "loadConfiguration")
+     callpropvoid        QName(PackageNamespace(""), "loadConfiguration"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket") type QName(PackageNamespace("flash.net"), "Socket") end
+  trait slot QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "real_ip") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_check") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "_URLLoader") type QName(PackageNamespace("flash.net"), "URLLoader") end
+  trait slot QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage") type QName(PackageNamespace(""), "String") value Utf8("Welcome to <i>For the Win!</i>") end
+  trait slot QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "ignores") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectionInterval") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginInterval") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "_tText") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "_tReason") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "_tExpires") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait setter QName(PackageNamespace(""), "text")
+   method
+    refid "Scene:LoadAndLogin/instance/text/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_tText")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "loadConfiguration")
+   method
+    refid "Scene:LoadAndLogin/instance/loadConfiguration"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Loading configuration..."
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace(""), "Date")
+      constructprop       QName(PackageNamespace(""), "Date"), 0
+      coerce              QName(PackageNamespace(""), "Date")
+      setslot             1
+
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("net.theyak.net"), "XMLLoader")
+      pushstring          "/m/ftw/ftw-config.php?t="
+      getscopeobject      1
+      getslot             1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "valueOf"), 0
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 0
+      add
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loadedConfiguration")
+      pushstring          "ioError"
+      newfunction         "Scene:LoadAndLogin/instance/loadConfiguration/inline_method"
+      pushstring          "securityError"
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "securityError")
+      newobject           2
+      constructprop       QName(PackageNamespace("net.theyak.net"), "XMLLoader"), 3
+      coerce              QName(PackageNamespace("net.theyak.net"), "XMLLoader")
+      setslot             2
+
+      returnvoid
+     end ; code
+     trait slot QName(PackageInternalNs("Scene"), "now") slotid 1 type QName(PackageNamespace(""), "Date") end
+     trait slot QName(PackageInternalNs("Scene"), "xmlLoader") slotid 2 type QName(PackageNamespace("net.theyak.net"), "XMLLoader") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loadedConfiguration")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/loadedConfiguration"
+    param QName(PackageNamespace(""), "XML")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "RegExp")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal            4
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Configuration loaded. Loading user data."
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getlocal1
+      pushstring          "server-port"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L21
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal1
+      pushstring          "server-port"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "port")
+
+L21:
+      getlocal1
+      pushstring          "server-ip"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L31
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal1
+      pushstring          "server-ip"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "ip")
+
+L31:
+      getlocal1
+      pushstring          "php-path"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L41
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal1
+      pushstring          "php-path"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "phpPath")
+
+L41:
+      getlocal1
+      pushstring          "latex-path"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L51
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal1
+      pushstring          "latex-path"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "latexPath")
+
+L51:
+      pushstring          ""
+      coerce_a
+      setlocal2
+
+      getlocal1
+      pushstring          "host"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifne                L78
+
+      findpropstrict      QName(PackageNamespace(""), "RegExp")
+      pushstring          "http://(www|).*?.(com|org|net)"
+      pushstring          "i"
+      constructprop       QName(PackageNamespace(""), "RegExp"), 2
+      coerce              QName(PackageNamespace(""), "RegExp")
+      setlocal3
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "loaderInfo")
+      getproperty         QName(PackageNamespace(""), "url")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "exec"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      dup
+      setlocal            4
+
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal2
+
+      jump                L83
+
+L78:
+      getlocal1
+      pushstring          "host"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_a
+      setlocal2
+
+L83:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal2
+      pushstring          "/m/ftw/php/"
+      add
+      setproperty         QName(PackageNamespace(""), "phpPath")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal2
+      pushstring          "http://"
+      pushstring          ""
+      callproperty        Multiname("replace", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
+      setproperty         QName(PackageNamespace(""), "host")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "host")
+      pushstring          "https://"
+      pushstring          ""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+      setproperty         QName(PackageNamespace(""), "host")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "host")
+      setproperty         QName(PackageNamespace(""), "remote")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal2
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "root")
+      add
+      setproperty         QName(PackageNamespace(""), "URLPath")
+
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loadUserConfig")
+      callpropvoid        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loadUserConfig"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loadUserConfig")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/loadUserConfig"
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "text")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "phpPath")
+      pushstring          "user_config.php"
+      add
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("net.theyak.net"), "JSONLoader")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "phpPath")
+      pushstring          "user_config.php"
+      add
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loadedUserConfig")
+      pushstring          "ioError"
+      newfunction         "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/loadUserConfig/inline_method"
+      pushstring          "securityError"
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "securityError")
+      newobject           2
+      constructprop       QName(PackageNamespace("net.theyak.net"), "JSONLoader"), 3
+      coerce              QName(PackageNamespace("net.theyak.net"), "JSONLoader")
+      setslot             1
+
+      returnvoid
+     end ; code
+     trait slot QName(PackageInternalNs("Scene"), "loader") slotid 1 type QName(PackageNamespace("net.theyak.net"), "JSONLoader") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loadedUserConfig")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/loadedUserConfig"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushstring          "background"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L13
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      getlocal1
+      pushstring          "background"
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "background")
+
+L13:
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loadUserInformation")
+      callpropvoid        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loadUserInformation"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loadUserInformation")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/loadUserInformation"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Loading user information..."
+      initproperty        QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(PackageNamespace("net.theyak.net"), "queryLoader")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "phpPath")
+      pushstring          "Login.php"
+      add
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "userLoaded")
+      pushstring          "ioError"
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "userLoadedError")
+      pushstring          "securityError"
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "securityError")
+      newobject           2
+      constructprop       QName(PackageNamespace("net.theyak.net"), "queryLoader"), 3
+      coerce              QName(PackageNamespace("net.theyak.net"), "queryLoader")
+      setlocal1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "userLoaded")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/userLoaded"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      pushbyte            0
+      pushbyte            8
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+      pushstring          "%3Cbr%20"
+      ifne                L29
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      findpropstrict      QName(PackageNamespace(""), "unescape")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      callproperty        QName(PackageNamespace(""), "unescape"), 1
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      findpropstrict      QName(PackageNamespace(""), "unescape")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      callproperty        QName(PackageNamespace(""), "unescape"), 1
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Error retrieving user data from server."
+      initproperty        QName(PackageNamespace(""), "text")
+
+      returnvoid
+
+L29:
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "User information loaded"
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("user_id", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "id")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("token", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "token")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("username", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "name")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal1
+      getproperty         Multiname("rating", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      setproperty         QName(PackageNamespace(""), "current_rating")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal1
+      getproperty         Multiname("rating", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      setproperty         QName(PackageNamespace(""), "login_rating")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("access", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "access")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("muted", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "1"
+      equals
+      setproperty         QName(PackageNamespace(""), "muted")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("gameChat", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "1"
+      equals
+      setproperty         QName(PackageNamespace(""), "gameChat")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("lobbyChat", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "1"
+      equals
+      setproperty         QName(PackageNamespace(""), "lobbyChat")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("showTime", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "1"
+      equals
+      setproperty         QName(PackageNamespace(""), "showTime")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("gamesToday", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "gamesToday")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("ip", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "ip")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("gameNumber", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "gameNumber")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("font_face", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "font")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("font_size", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "font_size")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("leading", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "leading")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("flood_mute", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "flood_mute")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("s3", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "1"
+      equals
+      setproperty         QName(PackageNamespace(""), "s3")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlocal1
+      getproperty         Multiname("gameNumber", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "id")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal1
+      getproperty         Multiname("debug", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "1"
+      equals
+      setproperty         QName(PackageNamespace(""), "debug")
+
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_check")
+      getlocal1
+      getproperty         Multiname("proxy_check", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "1"
+      equals
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_check")
+
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "ignores")
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "ignores")
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L175
+
+L161:
+      label
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "ignores")
+      getlocal1
+      pushstring          "ignore"
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      add
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L175:
+      getlocal1
+      pushstring          "ignore"
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      add
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iftrue              L161
+
+      getlocal1
+      getproperty         Multiname("intro", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushnull
+      ifeq                L191
+
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+      getlocal1
+      getproperty         Multiname("intro", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+
+L191:
+      getlocal1
+      getproperty         Multiname("banned", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "1"
+      ifne                L215
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "<b>You have been banned</b>"
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getlocal1
+      getproperty         Multiname("reason", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushnull
+      ifeq                L206
+
+      getlex              QName(PackageNamespace(""), "_tReason")
+      getlocal1
+      getproperty         Multiname("reason", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "text")
+
+L206:
+      getlocal1
+      getproperty         Multiname("expires", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushnull
+      ifeq                L214
+
+      getlex              QName(PackageNamespace(""), "_tExpires")
+      getlocal1
+      getproperty         Multiname("expires", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "text")
+
+L214:
+      jump                L299
+
+L215:
+      getlocal1
+      getproperty         Multiname("muted", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "1"
+      ifne                L292
+
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+      pushstring          " You are currently muted"
+      add
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+
+      getlocal1
+      getproperty         Multiname("reason", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L237
+
+      pop
+      getlocal1
+      getproperty         Multiname("reason", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            0
+      greaterthan
+L237:
+      iffalse             L248
+
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+      pushstring          " ("
+      getlocal1
+      getproperty         Multiname("reason", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      add
+      pushstring          ")"
+      add
+      add
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+
+L248:
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+      pushstring          "."
+      add
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+
+      getlocal1
+      getproperty         Multiname("expires", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      convert_b
+      dup
+      iffalse             L264
+
+      pop
+      getlocal1
+      getproperty         Multiname("expires", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            0
+      greaterthan
+L264:
+      iffalse             L275
+
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+      pushstring          " Mute will expire on "
+      getlocal1
+      getproperty         Multiname("expires", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      add
+      pushstring          "."
+      add
+      add
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+
+L275:
+      getlocal1
+      getproperty         Multiname("expiresSeconds", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      convert_b
+      dup
+      iffalse             L286
+
+      pop
+      getlocal1
+      getproperty         Multiname("expiresSeconds", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            0
+      greaterthan
+L286:
+      iffalse             L292
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlocal1
+      getproperty         Multiname("expiresSeconds", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "setMuteInterval"), 1
+
+L292:
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_check")
+      iffalse             L297
+
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxycheck")
+      callpropvoid        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxycheck"), 0
+
+      jump                L299
+
+L297:
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectToServer")
+      callpropvoid        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectToServer"), 0
+
+L299:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "userLoadedError")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/userLoadedError"
+    param QName(PackageNamespace("flash.events"), "IOErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "<b>Unable to load user information. Try refresh (F5).</b>"
+      initproperty        QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxycheck")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/proxycheck"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("flash.system"), "Security")
+      pushstring          "xmlsocket://76.12.70.148:5555"
+      callpropvoid        QName(PackageNamespace(""), "loadPolicyFile"), 1
+
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      findpropstrict      QName(PackageNamespace("flash.net"), "Socket")
+      pushstring          "76.12.70.148"
+      pushshort           5555
+      constructprop       QName(PackageNamespace("flash.net"), "Socket"), 2
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CLOSE")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_close_handler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CONNECT")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_connect_handler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+      getproperty         QName(PackageNamespace(""), "SECURITY_ERROR")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_security_error_handler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+      getproperty         QName(PackageNamespace(""), "SOCKET_DATA")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_data_handler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
+      getproperty         QName(PackageNamespace(""), "IO_ERROR")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_io_error_handler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_remove_events")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/proxy_remove_events"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CLOSE")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_close_handler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CONNECT")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_connect_handler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+      getproperty         QName(PackageNamespace(""), "SECURITY_ERROR")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_security_error_handler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+      getproperty         QName(PackageNamespace(""), "SOCKET_DATA")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_data_handler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
+      getproperty         QName(PackageNamespace(""), "IO_ERROR")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_io_error_handler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_close_handler")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/proxy_close_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_remove_events")
+      callpropvoid        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_remove_events"), 0
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectToServer")
+      callpropvoid        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectToServer"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_connect_handler")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/proxy_connect_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      pushstring          "{\"__c\":\"ip\"}\n"
+      callpropvoid        QName(PackageNamespace(""), "writeUTFBytes"), 1
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      callpropvoid        QName(PackageNamespace(""), "flush"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_security_error_handler")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/proxy_security_error_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_close_handler")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_close_handler"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_io_error_handler")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/proxy_io_error_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_close_handler")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_close_handler"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_data_handler")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/proxy_data_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getproperty         QName(PackageNamespace(""), "bytesAvailable")
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      coerce_s
+      setlocal2
+
+      getlocal2
+      pushstring          "\"ip\""
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            0
+      ifngt               L67
+
+      getlex              QName(PackageNamespace("com.adobe.serialization.json"), "JSON")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "decode"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal3
+      getproperty         Multiname("ip", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "ip")
+      ifeq                L67
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "name")
+      pushstring          " ("
+      add
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "id")
+      add
+      pushstring          ") "
+      add
+      dup
+      setlocal            4
+
+      pushstring          "IP addresses do not match. PHP: "
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "ip")
+      add
+      add
+      coerce_s
+      dup
+      setlocal            4
+
+      pushstring          " Flash: "
+      getlocal3
+      getproperty         Multiname("ip", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      add
+      add
+      coerce_s
+      setlocal            4
+
+      getlex              QName(PackageNamespace("net.theyak.util"), "Net")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "URLPath")
+      pushstring          "PHP/log.php?msg="
+      add
+      getlocal            4
+      add
+      callpropvoid        QName(PackageNamespace(""), "callServer"), 1
+
+L67:
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_close_handler")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "proxy_close_handler"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectToServer")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/connectToServer"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "access")
+      pushshort           255
+      ifnge               L19
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Connecting to server..."
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "ip")
+      add
+      pushstring          ":"
+      add
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "port")
+      add
+      initproperty        QName(PackageNamespace(""), "text")
+
+      jump                L22
+
+L19:
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Connecting to server..."
+      initproperty        QName(PackageNamespace(""), "text")
+
+L22:
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectionInterval")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "setInterval")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "failed_connect")
+      pushshort           6000
+      callproperty        QName(PackageNamespace("flash.utils"), "setInterval"), 2
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectionInterval")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "connection"
+      pushstring          "on_connection_event"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "ip")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "port")
+      callpropvoid        QName(PackageNamespace(""), "connect"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_connection_event")
+   method
+    refid "Scene:LoadAndLogin/instance/on_connection_event"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectionInterval")
+      iffalse             L7
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "clearInterval")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectionInterval")
+      callpropvoid        QName(PackageNamespace("flash.utils"), "clearInterval"), 1
+
+L7:
+      getlocal1
+      getproperty         Multiname("connected", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L35
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "connection"
+      pushstring          "onConnectionEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Connected to server"
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "login"
+      pushstring          "onLoginResponse"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "name")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "token")
+      callpropvoid        QName(PackageNamespace(""), "login"), 2
+
+      jump                L38
+
+L35:
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "<b>Unable to connect to server. Please try again later.</b>"
+      initproperty        QName(PackageNamespace(""), "text")
+
+L38:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "failed_connect")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/failed_connect"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "on_connection_event")
+      pushstring          "connected"
+      pushfalse
+      newobject           1
+      callpropvoid        QName(PackageNamespace(""), "on_connection_event"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket_close_handler")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/socket_close_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "socket close"
+      initproperty        QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket_connect_handler")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/socket_connect_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "socket connect"
+      initproperty        QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "security_error_handler")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/security_error_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "text")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CLOSE")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket_close_handler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CONNECT")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket_connect_handler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+      getproperty         QName(PackageNamespace(""), "SECURITY_ERROR")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "security_error_handler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+      getproperty         QName(PackageNamespace(""), "SOCKET_DATA")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket_data_handler")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket_data_handler")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/socket_data_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "data "
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      add
+      initproperty        QName(PackageNamespace(""), "text")
+
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "real_ip")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "socket")
+      getproperty         QName(PackageNamespace(""), "bytesAvailable")
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "real_ip")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onLoginResponse")
+   method
+    refid "Scene:LoadAndLogin/instance/onLoginResponse"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("success", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L40
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "pluginMessage"
+      pushstring          "onPluginMessageEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "login"
+      pushstring          "onLoginResponse"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Loading user information"
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "manager")
+      pushstring          "getUser"
+      pushstring          "token"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "token")
+      pushstring          "userId"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "id")
+      pushstring          "username"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "name")
+      newobject           3
+      callpropvoid        QName(PackageNamespace(""), "toServerPlugin"), 3
+
+      jump                L62
+
+L40:
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Username in use. The user has been kicked off.\nPlease click refresh (F5) to re-try login."
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      callpropvoid        QName(PackageNamespace(""), "disconnectAndReset"), 0
+
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+      pushbyte            10
+      ifnge               L56
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Login failed. Please try again later.</b>"
+      initproperty        QName(PackageNamespace(""), "text")
+
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+      pushbyte            0
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+
+      jump                L62
+
+L56:
+      findproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginInterval")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "setInterval")
+      getlex              QName(PackageNamespace(""), "retryLogin")
+      pushshort           1000
+      callproperty        QName(PackageNamespace("flash.utils"), "setInterval"), 2
+      initproperty        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginInterval")
+
+L62:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onPluginMessageEvent")
+   method
+    refid "Scene:LoadAndLogin/instance/onPluginMessageEvent"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      jump                L19
+
+L7:
+      label
+      findpropstrict      QName(PackageNamespace(""), "onUserValidated")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "onUserValidated"), 1
+
+      jump                L43
+
+L13:
+      label
+      findpropstrict      QName(PackageNamespace(""), "onNotValidated")
+      callpropvoid        QName(PackageNamespace(""), "onNotValidated"), 0
+
+      jump                L43
+
+L17:
+      label
+      jump                L43
+
+L19:
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("Action", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setlocal3
+
+      pushstring          "UserValidated"
+      getlocal3
+      ifstrictne          L28
+
+      pushbyte            0
+      jump                L41
+
+L28:
+      pushstring          "UserNotValidated"
+      getlocal3
+      ifstrictne          L33
+
+      pushbyte            1
+      jump                L41
+
+L33:
+      jump                L40
+
+      ; 0x24
+      ; 0x02
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L40:
+      pushbyte            2
+L41:
+      kill                3
+      lookupswitch        L17, [L7, L13, L17]
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onNotValidated")
+   method
+    refid "Scene:LoadAndLogin/instance/onNotValidated"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "pluginMessage"
+      pushstring          "onPluginMessageEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Sorry, we were unable to validate your account."
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace(""), "_tReason")
+      pushstring          "We are unable to log you in to For the Win!"
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onUserValidated")
+   method
+    refid "Scene:LoadAndLogin/instance/onUserValidated"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "pluginMessage"
+      pushstring          "onPluginMessageEvent"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Logged in as "
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "name")
+      add
+      initproperty        QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      findpropstrict      QName(PackageNamespace(""), "parseInt")
+      getlocal1
+      getproperty         Multiname("access", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            10
+      callproperty        QName(PackageNamespace(""), "parseInt"), 2
+      setproperty         QName(PackageNamespace(""), "access")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getlocal1
+      getproperty         Multiname("rating", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "login_rating")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "rating"
+      getlocal1
+      getproperty         Multiname("rating", [PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), PackageNamespace(""), PackageNamespace("net.theyak.net"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs("Scene"), PrivateNamespace(null, "Scene:LoadAndLogin/instance#1"), PackageNamespace("Scene"), PackageNamespace("Misc"), PackageNamespace("flash.utils"), PackageNamespace("flash.system"), PackageNamespace("net.theyak.util"), PackageNamespace("com.electrotank.electroserver4.message.request"), PackageNamespace("com.electrotank.electroserver4.message.event"), PackageNamespace("com.electrotank.electroserver4.message.response"), PackageNamespace("com.electrotank.electroserver4.esobject"), PackageNamespace("com.electrotank.electroserver4.errors"), PackageNamespace("com.adobe.serialization.json"), ProtectedNamespace("Scene:LoadAndLogin"), StaticProtectedNs("Scene:LoadAndLogin"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "setUserVariable"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "away"
+      pushstring          "false"
+      callpropvoid        QName(PackageNamespace(""), "setUserVariable"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      findpropstrict      QName(PackageNamespace("Misc"), "Chat")
+      constructprop       QName(PackageNamespace("Misc"), "Chat"), 0
+      setproperty         QName(PackageNamespace(""), "chat")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "introMessage")
+      setproperty         QName(PackageNamespace(""), "buffer")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "muted")
+      setproperty         QName(PackageNamespace(""), "mute")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "showTime")
+      setproperty         QName(PackageNamespace(""), "displayTime")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "ignores")
+      setproperty         QName(PackageNamespace(""), "ignores")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "flood_mute")
+      setproperty         QName(PackageNamespace(""), "flood_mute")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      callpropvoid        QName(PackageNamespace(""), "startPingPong"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      pushstring          "connected"
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "retryLogin")
+   method
+    refid "Scene:LoadAndLogin/instance/retryLogin"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+      dup
+      setlocal1
+
+      getproperty         QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+      increment
+      setlocal2
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+
+      kill                2
+      kill                1
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+      pushbyte            5
+      equals
+      dup
+      iftrue              L22
+
+      pop
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+      pushbyte            10
+      equals
+L22:
+      iffalse             L32
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Attempting login"
+      initproperty        QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "clearInterval")
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginInterval")
+      callpropvoid        QName(PackageNamespace("flash.utils"), "clearInterval"), 1
+
+      findpropstrict      QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectToServer")
+      callpropvoid        QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "connectToServer"), 0
+
+      jump                L43
+
+L32:
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "Username in use. Retry in "
+      pushbyte            6
+      getlex              QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "loginTicker")
+      pushbyte            5
+      modulo
+      subtract
+      add
+      pushstring          " seconds..."
+      add
+      initproperty        QName(PackageNamespace(""), "text")
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:LoadAndLogin/instance#0"), "securityError")
+   method
+    refid "Scene:LoadAndLogin/instance/Scene:LoadAndLogin/instance/securityError"
+    param QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "text")
+      pushstring          "<b>Security Error. Probably a domain name messed up in config.</b>"
+      initproperty        QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Scene:LoadAndLogin/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,48 @@
+class
+ refid "com.electrotank.electroserver4.message.event:RtmpConnectionClosedEvent"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "RtmpConnectionClosedEvent")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.event"), "EventImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.event:RtmpConnectionClosedEvent")
+  iinit
+   refid "com.electrotank.electroserver4.message.event:RtmpConnectionClosedEvent/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "RtmpConnectionClosedEvent")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.event:RtmpConnectionClosedEvent/instance"), "accepted") type QName(PackageNamespace(""), "Boolean") end
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.event:RtmpConnectionClosedEvent/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

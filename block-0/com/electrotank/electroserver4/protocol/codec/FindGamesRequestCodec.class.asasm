@@ -1,0 +1,97 @@
+class
+ refid "com.electrotank.electroserver4.protocol.codec:FindGamesRequestCodec"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "FindGamesRequestCodec")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:FindGamesRequestCodec")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.codec:FindGamesRequestCodec/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "getDefaultMessageSize")
+   method
+    refid "com.electrotank.electroserver4.protocol.codec:FindGamesRequestCodec/instance/getDefaultMessageSize"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushshort           1024
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "encode") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.protocol.codec:FindGamesRequestCodec/instance/encode"
+    param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageWriter")
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "FindGamesRequest")
+      getlocal2
+      callproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "FindGamesRequest"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "FindGamesRequest")
+      setlocal3
+
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getSearchCriteria"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "SearchCriteria")
+      setlocal            4
+
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "SearchCriteriaCodec")
+      getlocal1
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "encode"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.codec:FindGamesRequestCodec/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

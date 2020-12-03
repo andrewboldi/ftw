@@ -1,0 +1,509 @@
+class
+ refid "com.jumpeye.transitions.easing:Elastic"
+ instance QName(PackageNamespace("com.jumpeye.transitions.easing"), "Elastic")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.transitions.easing:Elastic")
+  iinit
+   refid "com.jumpeye.transitions.easing:Elastic/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.jumpeye.transitions.easing:Elastic/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "com.jumpeye.transitions.easing:Elastic/class"), "_2PI")
+    getlex              QName(PackageNamespace(""), "Math")
+    getproperty         QName(PackageNamespace(""), "PI")
+    pushbyte            2
+    multiply
+    initproperty        QName(PrivateNamespace(null, "com.jumpeye.transitions.easing:Elastic/class"), "_2PI")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "easeIn") flag FINAL dispid 3
+  method
+   refid "com.jumpeye.transitions.easing:Elastic/class/easeIn"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 6
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            7
+
+     getlocal1
+     pushbyte            0
+     ifne                L9
+
+     getlocal2
+     returnvalue
+
+L9:
+     getlocal1
+     getlocal            4
+     divide
+     dup
+     setlocal            8
+
+     convert_d
+     setlocal1
+
+     getlocal            8
+     kill                8
+     pushbyte            1
+     ifne                L24
+
+     getlocal2
+     getlocal3
+     add
+     returnvalue
+
+L24:
+     getlocal            6
+     iftrue              L31
+
+     getlocal            4
+     pushdouble          0.3
+     multiply
+     convert_d
+     setlocal            6
+
+L31:
+     getlocal            5
+     not
+     dup
+     iftrue              L41
+
+     pop
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     lessthan
+L41:
+     iffalse             L51
+
+     getlocal3
+     convert_d
+     setlocal            5
+
+     getlocal            6
+     pushbyte            4
+     divide
+     convert_d
+     setlocal            7
+
+     jump                L62
+
+L51:
+     getlocal            6
+     getlex              QName(PrivateNamespace(null, "com.jumpeye.transitions.easing:Elastic/class"), "_2PI")
+     divide
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal3
+     getlocal            5
+     divide
+     callproperty        QName(PackageNamespace(""), "asin"), 1
+     multiply
+     convert_d
+     setlocal            7
+
+L62:
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            2
+     pushbyte            10
+     getlocal1
+     decrement
+     dup
+     setlocal            8
+
+     convert_d
+     setlocal1
+
+     getlocal            8
+     kill                8
+     multiply
+     callproperty        QName(PackageNamespace(""), "pow"), 2
+     multiply
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     getlocal            4
+     multiply
+     getlocal            7
+     subtract
+     getlex              QName(PrivateNamespace(null, "com.jumpeye.transitions.easing:Elastic/class"), "_2PI")
+     multiply
+     getlocal            6
+     divide
+     callproperty        QName(PackageNamespace(""), "sin"), 1
+     multiply
+     negate
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait const QName(PrivateNamespace(null, "com.jumpeye.transitions.easing:Elastic/class"), "_2PI") slotid 1 type QName(PackageNamespace(""), "Number") end
+ trait method QName(PackageNamespace(""), "easeInOut") flag FINAL dispid 5
+  method
+   refid "com.jumpeye.transitions.easing:Elastic/class/easeInOut"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 7
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            7
+
+     getlocal1
+     pushbyte            0
+     ifne                L9
+
+     getlocal2
+     returnvalue
+
+L9:
+     getlocal1
+     getlocal            4
+     pushbyte            2
+     divide
+     divide
+     dup
+     setlocal            8
+
+     convert_d
+     setlocal1
+
+     getlocal            8
+     kill                8
+     pushbyte            2
+     ifne                L26
+
+     getlocal2
+     getlocal3
+     add
+     returnvalue
+
+L26:
+     getlocal            6
+     iftrue              L35
+
+     getlocal            4
+     pushdouble          0.3
+     pushdouble          1.5
+     multiply
+     multiply
+     convert_d
+     setlocal            6
+
+L35:
+     getlocal            5
+     not
+     dup
+     iftrue              L45
+
+     pop
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     lessthan
+L45:
+     iffalse             L55
+
+     getlocal3
+     convert_d
+     setlocal            5
+
+     getlocal            6
+     pushbyte            4
+     divide
+     convert_d
+     setlocal            7
+
+     jump                L66
+
+L55:
+     getlocal            6
+     getlex              QName(PrivateNamespace(null, "com.jumpeye.transitions.easing:Elastic/class"), "_2PI")
+     divide
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal3
+     getlocal            5
+     divide
+     callproperty        QName(PackageNamespace(""), "asin"), 1
+     multiply
+     convert_d
+     setlocal            7
+
+L66:
+     getlocal1
+     pushbyte            1
+     ifnlt               L101
+
+     pushdouble          -0.5
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            2
+     pushbyte            10
+     getlocal1
+     decrement
+     dup
+     setlocal            8
+
+     convert_d
+     setlocal1
+
+     getlocal            8
+     kill                8
+     multiply
+     callproperty        QName(PackageNamespace(""), "pow"), 2
+     multiply
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     getlocal            4
+     multiply
+     getlocal            7
+     subtract
+     getlex              QName(PrivateNamespace(null, "com.jumpeye.transitions.easing:Elastic/class"), "_2PI")
+     multiply
+     getlocal            6
+     divide
+     callproperty        QName(PackageNamespace(""), "sin"), 1
+     multiply
+     multiply
+     getlocal2
+     add
+     returnvalue
+
+L101:
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            2
+     pushbyte            -10
+     getlocal1
+     decrement
+     dup
+     setlocal            8
+
+     convert_d
+     setlocal1
+
+     getlocal            8
+     kill                8
+     multiply
+     callproperty        QName(PackageNamespace(""), "pow"), 2
+     multiply
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     getlocal            4
+     multiply
+     getlocal            7
+     subtract
+     getlex              QName(PrivateNamespace(null, "com.jumpeye.transitions.easing:Elastic/class"), "_2PI")
+     multiply
+     getlocal            6
+     divide
+     callproperty        QName(PackageNamespace(""), "sin"), 1
+     multiply
+     pushdouble          0.5
+     multiply
+     getlocal3
+     add
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "easeOut") flag FINAL dispid 4
+  method
+   refid "com.jumpeye.transitions.easing:Elastic/class/easeOut"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 5
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            7
+
+     getlocal1
+     pushbyte            0
+     ifne                L9
+
+     getlocal2
+     returnvalue
+
+L9:
+     getlocal1
+     getlocal            4
+     divide
+     dup
+     setlocal            8
+
+     convert_d
+     setlocal1
+
+     getlocal            8
+     kill                8
+     pushbyte            1
+     ifne                L24
+
+     getlocal2
+     getlocal3
+     add
+     returnvalue
+
+L24:
+     getlocal            6
+     iftrue              L31
+
+     getlocal            4
+     pushdouble          0.3
+     multiply
+     convert_d
+     setlocal            6
+
+L31:
+     getlocal            5
+     not
+     dup
+     iftrue              L41
+
+     pop
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "abs"), 1
+     lessthan
+L41:
+     iffalse             L51
+
+     getlocal3
+     convert_d
+     setlocal            5
+
+     getlocal            6
+     pushbyte            4
+     divide
+     convert_d
+     setlocal            7
+
+     jump                L62
+
+L51:
+     getlocal            6
+     getlex              QName(PrivateNamespace(null, "com.jumpeye.transitions.easing:Elastic/class"), "_2PI")
+     divide
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal3
+     getlocal            5
+     divide
+     callproperty        QName(PackageNamespace(""), "asin"), 1
+     multiply
+     convert_d
+     setlocal            7
+
+L62:
+     getlocal            5
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            2
+     pushbyte            -10
+     getlocal1
+     multiply
+     callproperty        QName(PackageNamespace(""), "pow"), 2
+     multiply
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     getlocal            4
+     multiply
+     getlocal            7
+     subtract
+     getlex              QName(PrivateNamespace(null, "com.jumpeye.transitions.easing:Elastic/class"), "_2PI")
+     multiply
+     getlocal            6
+     divide
+     callproperty        QName(PackageNamespace(""), "sin"), 1
+     multiply
+     getlocal3
+     add
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,559 @@
+class
+ refid "Lobby:UserListRenderer"
+ instance QName(PackageNamespace("Lobby"), "UserListRenderer")
+  extends QName(PackageNamespace("fl.core"), "UIComponent")
+  implements Multiname("ICellRenderer", [PackageNamespace("fl.controls.listClasses")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Lobby:UserListRenderer")
+  iinit
+   refid "Lobby:UserListRenderer/instance/init"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "focusEnabled")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "focusEnabled")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("Lobby:UserListRenderer"), "_selected") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(ProtectedNamespace("Lobby:UserListRenderer"), "_listData") type QName(PackageNamespace("fl.controls.listClasses"), "ListData") end
+  trait slot QName(ProtectedNamespace("Lobby:UserListRenderer"), "_data") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PackageNamespace(""), "setSize") flag OVERRIDE
+   method
+    refid "Lobby:UserListRenderer/instance/setSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callsupervoid       QName(PackageNamespace(""), "setSize"), 2
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "listData")
+   method
+    refid "Lobby:UserListRenderer/instance/listData/getter"
+    returns QName(PackageNamespace("fl.controls.listClasses"), "ListData")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("Lobby:UserListRenderer"), "_listData")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "listData")
+   method
+    refid "Lobby:UserListRenderer/instance/listData/setter"
+    param QName(PackageNamespace("fl.controls.listClasses"), "ListData")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("Lobby:UserListRenderer"), "_listData")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("Lobby:UserListRenderer"), "_listData")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "data")
+   method
+    refid "Lobby:UserListRenderer/instance/data/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("Lobby:UserListRenderer"), "_data")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "data")
+   method
+    refid "Lobby:UserListRenderer/instance/data/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("Lobby:UserListRenderer"), "_data")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("Lobby:UserListRenderer"), "_data")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selected")
+   method
+    refid "Lobby:UserListRenderer/instance/selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("Lobby:UserListRenderer"), "_selected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selected")
+   method
+    refid "Lobby:UserListRenderer/instance/selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("Lobby:UserListRenderer"), "_selected")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("Lobby:UserListRenderer"), "_selected")
+
+      findpropstrict      QName(ProtectedNamespace("Lobby:UserListRenderer"), "drawLayout")
+      callpropvoid        QName(ProtectedNamespace("Lobby:UserListRenderer"), "drawLayout"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Lobby:UserListRenderer"), "toggleSelected")
+   method
+    refid "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:toggleSelected"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("Lobby:UserListRenderer"), "_selected")
+      getlex              QName(ProtectedNamespace("Lobby:UserListRenderer"), "_selected")
+      not
+      initproperty        QName(ProtectedNamespace("Lobby:UserListRenderer"), "_selected")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setMouseState")
+   method
+    refid "Lobby:UserListRenderer/instance/setMouseState"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Lobby:UserListRenderer"), "drawLayout")
+   method
+    refid "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 9
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal            7
+
+      pushbyte            1
+      dup
+      dup
+      pushbyte            1
+      dup
+      newarray            5
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      pushbyte            1
+      pushbyte            127
+      pushshort           224
+      pushshort           255
+      newarray            5
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("Lobby:UserListRenderer"), "_data")
+      getproperty         Multiname("name", [PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#0"), PackageNamespace(""), ProtectedNamespace("Lobby:UserListRenderer"), PackageNamespace("flash.geom"), PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#1"), PackageNamespace("Lobby"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Lobby:UserListRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#0"), PackageNamespace(""), ProtectedNamespace("Lobby:UserListRenderer"), PackageNamespace("flash.geom"), PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#1"), PackageNamespace("Lobby"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Lobby:UserListRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            0
+      ifngt               L228
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlex              QName(ProtectedNamespace("Lobby:UserListRenderer"), "_selected")
+      iffalse             L90
+
+      pushbyte            0
+      pushint             15663086
+      pushint             13434828
+      pushint             15663086
+      pushbyte            0
+      newarray            5
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+      constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+      dup
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "height")
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      pushbyte            2
+      divide
+      pushbyte            0
+      dup
+      callpropvoid        QName(PackageNamespace(""), "createGradientBox"), 5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("flash.display"), "GradientType")
+      getproperty         QName(PackageNamespace(""), "LINEAR")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlex              QName(PackageNamespace("flash.display"), "SpreadMethod")
+      getproperty         QName(PackageNamespace(""), "PAD")
+      callpropvoid        QName(PackageNamespace(""), "beginGradientFill"), 6
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            1
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "width")
+      decrement
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+L90:
+      getlex              QName(PackageNamespace(""), "numChildren")
+      pushbyte            0
+      ifnle               L167
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            5
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            6
+
+      getlocal            5
+      getlocal            6
+      pushfalse
+      dup
+      setlocal            8
+
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      getlocal            8
+      kill                8
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      getlocal            5
+      getlocal            6
+      pushtrue
+      dup
+      setlocal            8
+
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlocal            8
+      kill                8
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlocal            5
+      getlocal            6
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "width")
+      dup
+      setlocal            8
+
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlocal            8
+      kill                8
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlocal            5
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "doubleClickEnabled")
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      dup
+      setlocal            7
+
+      pushstring          "right"
+      setproperty         QName(PackageNamespace(""), "align")
+
+      getlocal            7
+      pushstring          "_sans"
+      setproperty         QName(PackageNamespace(""), "font")
+
+      getlocal            6
+      getlocal            7
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      dup
+      setlocal            7
+
+      pushstring          "left"
+      setproperty         QName(PackageNamespace(""), "align")
+
+      getlocal            7
+      pushstring          "_sans"
+      setproperty         QName(PackageNamespace(""), "font")
+
+      getlocal            5
+      getlocal            7
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlocal            6
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlocal            5
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      jump                L181
+
+L167:
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      callproperty        QName(PackageNamespace("flash.text"), "TextField"), 1
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            6
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      callproperty        QName(PackageNamespace("flash.text"), "TextField"), 1
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            5
+
+L181:
+      getlocal            5
+      pushbyte            2
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            5
+      getlex              QName(ProtectedNamespace("Lobby:UserListRenderer"), "_data")
+      getproperty         Multiname("name", [PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#0"), PackageNamespace(""), ProtectedNamespace("Lobby:UserListRenderer"), PackageNamespace("flash.geom"), PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#1"), PackageNamespace("Lobby"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Lobby:UserListRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal            6
+      getlex              QName(ProtectedNamespace("Lobby:UserListRenderer"), "_data")
+      getproperty         Multiname("rating", [PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#0"), PackageNamespace(""), ProtectedNamespace("Lobby:UserListRenderer"), PackageNamespace("flash.geom"), PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#1"), PackageNamespace("Lobby"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Lobby:UserListRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      dup
+      setlocal            7
+
+      pushstring          "_sans"
+      setproperty         QName(PackageNamespace(""), "font")
+
+      getlex              QName(ProtectedNamespace("Lobby:UserListRenderer"), "_data")
+      getproperty         Multiname("away", [PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#0"), PackageNamespace(""), ProtectedNamespace("Lobby:UserListRenderer"), PackageNamespace("flash.geom"), PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#1"), PackageNamespace("Lobby"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Lobby:UserListRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L205
+
+      getlocal            7
+      pushint             12303291
+      setproperty         QName(PackageNamespace(""), "color")
+
+L205:
+      getlocal            5
+      getlocal            7
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      dup
+      setlocal            7
+
+      pushstring          "_sans"
+      setproperty         QName(PackageNamespace(""), "font")
+
+      getlex              QName(ProtectedNamespace("Lobby:UserListRenderer"), "_data")
+      getproperty         Multiname("away", [PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#0"), PackageNamespace(""), ProtectedNamespace("Lobby:UserListRenderer"), PackageNamespace("flash.geom"), PrivateNamespace(null, "Lobby:UserListRenderer/instance/Lobby:UserListRenderer:drawLayout#1"), PackageNamespace("Lobby"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Lobby:UserListRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      iffalse             L221
+
+      getlocal            7
+      pushint             12303291
+      setproperty         QName(PackageNamespace(""), "color")
+
+L221:
+      getlocal            7
+      pushstring          "right"
+      setproperty         QName(PackageNamespace(""), "align")
+
+      getlocal            6
+      getlocal            7
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+      jump                L231
+
+L228:
+      getlocal0
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L231:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Lobby:UserListRenderer/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

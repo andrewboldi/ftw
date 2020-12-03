@@ -1,0 +1,890 @@
+class
+ refid "Lobby:NewGame"
+ instance QName(PackageNamespace("Lobby"), "NewGame")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Lobby:NewGame")
+  iinit
+   refid "Lobby:NewGame/instance/init"
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "instance_number_counter")
+     dup
+     setlocal2
+
+     getproperty         QName(PackageNamespace(""), "instance_number_counter")
+     increment_i
+     setlocal3
+
+     getlocal2
+     getlocal3
+     setproperty         QName(PackageNamespace(""), "instance_number_counter")
+
+     kill                3
+     kill                2
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "instance_number")
+     getlex              QName(PackageNamespace(""), "instance_number_counter")
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "instance_number")
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     findpropstrict      QName(PackageNamespace("net.theyak.ui"), "YakDialog")
+     pushstring          "New Game"
+     pushshort           250
+     pushshort           290
+     constructprop       QName(PackageNamespace("net.theyak.ui"), "YakDialog"), 3
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     pushstring          "DialogEvent"
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_dialog_closed")
+     callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "ComboBox")
+     constructprop       QName(PackageNamespace("fl.controls"), "ComboBox"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+     pushbyte            100
+     pushbyte            22
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+     pushstring          "label"
+     pushstring          "Ranking"
+     pushstring          "data"
+     getlex              QName(PackageNamespace("Game"), "ScoringType")
+     getproperty         QName(PackageNamespace(""), "RANK")
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+     pushstring          "label"
+     pushstring          "Time"
+     pushstring          "data"
+     getlex              QName(PackageNamespace("Game"), "ScoringType")
+     getproperty         QName(PackageNamespace(""), "TIME")
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+     pushstring          "label"
+     pushstring          "Responses"
+     pushstring          "data"
+     getlex              QName(PackageNamespace("Game"), "ScoringType")
+     getproperty         QName(PackageNamespace(""), "CORRECT")
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+     pushstring          "label"
+     pushstring          "Time/Rank"
+     pushstring          "data"
+     getlex              QName(PackageNamespace("Game"), "ScoringType")
+     getproperty         QName(PackageNamespace(""), "COMPOSITE")
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+     pushbyte            120
+     pushbyte            10
+     callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "NumericStepper")
+     constructprop       QName(PackageNamespace("fl.controls"), "NumericStepper"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count")
+     pushbyte            1
+     setproperty         QName(PackageNamespace(""), "stepSize")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count")
+     pushbyte            4
+     setproperty         QName(PackageNamespace(""), "minimum")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count")
+     pushbyte            20
+     setproperty         QName(PackageNamespace(""), "maximum")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "value")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count")
+     pushbyte            45
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count")
+     pushbyte            120
+     pushbyte            45
+     callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "NumericStepper")
+     constructprop       QName(PackageNamespace("fl.controls"), "NumericStepper"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem")
+     pushbyte            1
+     setproperty         QName(PackageNamespace(""), "stepSize")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem")
+     pushbyte            5
+     setproperty         QName(PackageNamespace(""), "minimum")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem")
+     pushbyte            120
+     setproperty         QName(PackageNamespace(""), "maximum")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem")
+     pushbyte            45
+     setproperty         QName(PackageNamespace(""), "value")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem")
+     pushbyte            45
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem")
+     pushbyte            120
+     pushbyte            80
+     callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "CheckBox")
+     constructprop       QName(PackageNamespace("fl.controls"), "CheckBox"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated")
+     pushbyte            115
+     dup
+     callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated")
+     pushstring          " "
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "selected")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "CheckBox")
+     constructprop       QName(PackageNamespace("fl.controls"), "CheckBox"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators")
+     pushbyte            115
+     pushshort           150
+     callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators")
+     pushstring          " "
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "TextInput")
+     constructprop       QName(PackageNamespace("fl.controls"), "TextInput"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password")
+     pushbyte            115
+     pushshort           185
+     callpropvoid        QName(PackageNamespace(""), "move"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+     constructprop       QName(PackageNamespace("fl.controls"), "Button"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+     pushstring          "Create Game"
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+     pushbyte            25
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+     pushshort           220
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_create_game")
+     pushstring          "NewGame.Create"
+     callpropvoid        QName(PackageNamespace(""), "add"), 4
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+     pushbyte            90
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+     getproperty         QName(PackageNamespace(""), "height")
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+     constructprop       QName(PackageNamespace("fl.controls"), "Button"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+     pushstring          "Cancel"
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+     pushbyte            125
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+     pushshort           220
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_cancel")
+     pushstring          "NewGame.Cancel"
+     callpropvoid        QName(PackageNamespace(""), "add"), 4
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+     pushbyte            90
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+     getproperty         QName(PackageNamespace(""), "height")
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+     constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+     coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+     setlocal1
+
+     getlocal1
+     pushstring          "_sans"
+     setproperty         QName(PackageNamespace(""), "font")
+
+     getlocal1
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "bold")
+
+     getlocal1
+     pushstring          "right"
+     setproperty         QName(PackageNamespace(""), "align")
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method_label")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method_label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method_label")
+     pushbyte            105
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method_label")
+     pushbyte            25
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method_label")
+     pushstring          "Game Type"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method_label")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method_label")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method_label")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method_label")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count_label")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count_label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count_label")
+     pushbyte            105
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count_label")
+     pushbyte            25
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count_label")
+     pushstring          "Problem Count"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count_label")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count_label")
+     pushbyte            45
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count_label")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count_label")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem_label")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem_label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem_label")
+     pushbyte            105
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem_label")
+     pushbyte            25
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem_label")
+     pushstring          "Time Per Problem"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem_label")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem_label")
+     pushbyte            80
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem_label")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem_label")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated_label")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated_label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated_label")
+     pushbyte            105
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated_label")
+     pushbyte            25
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated_label")
+     pushstring          "Rated"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated_label")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated_label")
+     pushbyte            115
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated_label")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated_label")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators_label")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators_label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators_label")
+     pushbyte            105
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators_label")
+     pushbyte            25
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators_label")
+     pushstring          "Spectators"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators_label")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators_label")
+     pushshort           150
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators_label")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators_label")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password_label")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password_label")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password_label")
+     pushbyte            105
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password_label")
+     pushbyte            25
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password_label")
+     pushstring          "Password"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password_label")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password_label")
+     pushshort           185
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password_label")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getproperty         QName(PackageNamespace(""), "canvas")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password_label")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "scene")
+     callproperty        QName(PackageNamespace(""), "getScene"), 0
+     callpropvoid        QName(PackageNamespace(""), "center"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+     getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_removed_from_stage")
+     callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "instance_number") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window") type QName(PackageNamespace("net.theyak.ui"), "YakDialog") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method") type QName(PackageNamespace("fl.controls"), "ComboBox") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count") type QName(PackageNamespace("fl.controls"), "NumericStepper") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem") type QName(PackageNamespace("fl.controls"), "NumericStepper") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated") type QName(PackageNamespace("fl.controls"), "CheckBox") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators") type QName(PackageNamespace("fl.controls"), "CheckBox") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok") type QName(PackageNamespace("fl.controls"), "Button") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel") type QName(PackageNamespace("fl.controls"), "Button") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password") type QName(PackageNamespace("fl.controls"), "TextInput") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "school") type QName(PackageNamespace("fl.controls"), "CheckBox") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "chapter") type QName(PackageNamespace("fl.controls"), "CheckBox") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "state") type QName(PackageNamespace("fl.controls"), "CheckBox") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "sprint") type QName(PackageNamespace("fl.controls"), "CheckBox") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "target") type QName(PackageNamespace("fl.controls"), "CheckBox") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "countdown") type QName(PackageNamespace("fl.controls"), "CheckBox") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "school_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "chapter_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "state_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "sprint_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "target_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "countdown_label") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait method QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_create_game")
+   method
+    refid "Lobby:NewGame/instance/Lobby:NewGame/instance/on_create_game"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      callpropvoid        QName(PackageNamespace(""), "reset"), 0
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      pushstring          "FTW"
+      setproperty         QName(PackageNamespace(""), "type")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      pushbyte            -1
+      setproperty         QName(PackageNamespace(""), "max_players")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "problem_count")
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "problem_count")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "time_per_problem")
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "time_per_problem")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "rated")
+      getproperty         QName(PackageNamespace(""), "selected")
+      setproperty         QName(PackageNamespace(""), "rated")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "spectators")
+      getproperty         QName(PackageNamespace(""), "selected")
+      setproperty         QName(PackageNamespace(""), "spectators")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+      getproperty         QName(PackageNamespace(""), "selectedItem")
+      getproperty         Multiname("data", [PrivateNamespace(null, "Lobby:NewGame/instance"), PackageNamespace(""), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PrivateNamespace(null, "Lobby:NewGame/instance/Lobby:NewGame/instance/on_create_game"), PackageNamespace("Lobby"), PackageInternalNs("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Lobby:NewGame"), StaticProtectedNs("Lobby:NewGame"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "scoring_method")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "password")
+      getproperty         QName(PackageNamespace(""), "text")
+      setproperty         QName(PackageNamespace(""), "password")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      pushtrue
+      dup
+      setlocal2
+
+      setproperty         QName(PackageNamespace(""), "countdown")
+
+      getlocal2
+      kill                2
+      dup
+      setlocal2
+
+      setproperty         QName(PackageNamespace(""), "team")
+
+      getlocal2
+      kill                2
+      dup
+      setlocal2
+
+      setproperty         QName(PackageNamespace(""), "target")
+
+      getlocal2
+      kill                2
+      setproperty         QName(PackageNamespace(""), "sprint")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      pushtrue
+      dup
+      setlocal2
+
+      setproperty         QName(PackageNamespace(""), "national")
+
+      getlocal2
+      kill                2
+      dup
+      setlocal2
+
+      setproperty         QName(PackageNamespace(""), "state")
+
+      getlocal2
+      kill                2
+      dup
+      setlocal2
+
+      setproperty         QName(PackageNamespace(""), "chapter")
+
+      getlocal2
+      kill                2
+      setproperty         QName(PackageNamespace(""), "school")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "amc8")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      callproperty        QName(PackageNamespace(""), "clone"), 0
+      setproperty         QName(PackageNamespace(""), "replay")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      callpropvoid        QName(PackageNamespace(""), "create"), 0
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "close")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "close"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_cancel")
+   method
+    refid "Lobby:NewGame/instance/Lobby:NewGame/instance/on_cancel"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "close")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "close"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_dialog_closed")
+   method
+    refid "Lobby:NewGame/instance/Lobby:NewGame/instance/on_dialog_closed"
+    param QName(PackageNamespace("net.theyak.events"), "DialogEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "action")
+      pushstring          "close"
+      ifne                L9
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "close")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "close"), 1
+
+L9:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "close")
+   method
+    refid "Lobby:NewGame/instance/Lobby:NewGame/instance/close"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "scoring_method")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+      getlex              QName(PackageNamespace(""), "parent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_removed_from_stage")
+   method
+    refid "Lobby:NewGame/instance/Lobby:NewGame/instance/on_removed_from_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "window")
+      pushstring          "DialogEvent"
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_dialog_closed")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "ok")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_create_game")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "cancel")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_cancel")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlex              QName(PrivateNamespace(null, "Lobby:NewGame/instance"), "on_removed_from_stage")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Lobby:NewGame/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "class_name")
+    pushstring          "Lobby.NewGame"
+    setproperty         QName(PackageNamespace(""), "class_name")
+
+    findproperty        QName(PackageNamespace(""), "instance_number_counter")
+    pushbyte            0
+    setproperty         QName(PackageNamespace(""), "instance_number_counter")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "class_name") slotid 1 value Utf8("Lobby.NewGame") end
+ trait slot QName(PackageNamespace(""), "instance_number_counter") slotid 2 type QName(PackageNamespace(""), "int") value Integer(0) end
+end ; class

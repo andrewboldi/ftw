@@ -1,0 +1,48 @@
+class
+ refid "StarWon"
+ instance QName(PackageNamespace(""), "StarWon")
+  extends QName(PackageNamespace("flash.display"), "BitmapData")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("StarWon")
+  iinit
+   refid "StarWon/instance/init"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   flag HAS_OPTIONAL
+   optional Integer(32)
+   optional Integer(32)
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "StarWon/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

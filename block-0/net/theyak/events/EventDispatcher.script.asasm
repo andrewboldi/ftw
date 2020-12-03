@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "net.theyak.events:EventDispatcher/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("EventDispatcher", [PackageNamespace("net.theyak.events")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "net.theyak.events:EventDispatcher"
+    popscope
+    initproperty        QName(PackageNamespace("net.theyak.events"), "EventDispatcher")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("net.theyak.events"), "EventDispatcher")
+  #include "EventDispatcher.class.asasm"
+ end ; trait
+end ; script

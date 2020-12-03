@@ -1,0 +1,422 @@
+class
+ refid "FlashEff2Code"
+ instance QName(PackageNamespace(""), "FlashEff2Code")
+  extends QName(PackageNamespace(""), "FlashEff2")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("FlashEff2Code")
+  iinit
+   refid "FlashEff2Code/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(ProtectedNamespace("FlashEff2Code"), "initAssets")
+     callpropvoid        QName(ProtectedNamespace("FlashEff2Code"), "initAssets"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("FlashEff2Code"), "initAssets")
+   method
+    refid "FlashEff2Code/instance/FlashEff2Code:initAssets"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 90
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP1")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP2")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP3")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP4")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP5")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP6")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP7")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP8")
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP9")
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP10")
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP11")
+      setlocal            11
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP12")
+      setlocal            12
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP13")
+      setlocal            13
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP14")
+      setlocal            14
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP15")
+      setlocal            15
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP16")
+      setlocal            16
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP17")
+      setlocal            17
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP18")
+      setlocal            18
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP19")
+      setlocal            19
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESP20")
+      setlocal            20
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESPM2")
+      setlocal            21
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESPM3")
+      setlocal            22
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESPM4")
+      setlocal            23
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESPM5")
+      setlocal            24
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESPM6")
+      setlocal            25
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESPM7")
+      setlocal            26
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFESPM8")
+      setlocal            27
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP2")
+      setlocal            28
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3")
+      setlocal            29
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP4")
+      setlocal            30
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP5")
+      setlocal            31
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP6")
+      setlocal            32
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP7")
+      setlocal            33
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP8")
+      setlocal            34
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP9")
+      setlocal            35
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP10")
+      setlocal            36
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP11")
+      setlocal            37
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP12")
+      setlocal            38
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP13")
+      setlocal            39
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP14")
+      setlocal            40
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP15")
+      setlocal            41
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP16")
+      setlocal            42
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP17")
+      setlocal            43
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP18")
+      setlocal            44
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP19")
+      setlocal            45
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP20")
+      setlocal            46
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP21")
+      setlocal            47
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP22")
+      setlocal            48
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP23")
+      setlocal            49
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP24")
+      setlocal            50
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP25")
+      setlocal            51
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP26")
+      setlocal            52
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP27")
+      setlocal            53
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP28")
+      setlocal            54
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP29")
+      setlocal            55
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP30")
+      setlocal            56
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D2")
+      setlocal            57
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D3")
+      setlocal            58
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D4")
+      setlocal            59
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D5")
+      setlocal            60
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D6")
+      setlocal            61
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D7")
+      setlocal            62
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D8")
+      setlocal            63
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D9")
+      setlocal            64
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D10")
+      setlocal            65
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D11")
+      setlocal            66
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D12")
+      setlocal            67
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D13")
+      setlocal            68
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D14")
+      setlocal            69
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D15")
+      setlocal            70
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D16")
+      setlocal            71
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D17")
+      setlocal            72
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D18")
+      setlocal            73
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.presets"), "JFETP3D19")
+      setlocal            74
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Back")
+      setlocal            75
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Bounce")
+      setlocal            76
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Circular")
+      setlocal            77
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Cubic")
+      setlocal            78
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Elastic")
+      setlocal            79
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Exponential")
+      setlocal            80
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Linear")
+      setlocal            81
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Quadratic")
+      setlocal            82
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Quartic")
+      setlocal            83
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Quintic")
+      setlocal            84
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Sine")
+      setlocal            85
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.easing"), "Strong")
+      setlocal            86
+
+      findpropstrict      QName(PackageNamespace("com.jumpeye.flashEff2.buttonEffect"), "FEBColorMatrixFilterPlugin")
+      constructprop       QName(PackageNamespace("com.jumpeye.flashEff2.buttonEffect"), "FEBColorMatrixFilterPlugin"), 0
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.buttonEffect"), "FEBColorMatrixFilterPlugin")
+      setlocal            87
+
+      findpropstrict      QName(PackageNamespace("com.jumpeye.flashEff2.buttonEffect"), "FEBCustomTintPlugin")
+      constructprop       QName(PackageNamespace("com.jumpeye.flashEff2.buttonEffect"), "FEBCustomTintPlugin"), 0
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.buttonEffect"), "FEBCustomTintPlugin")
+      setlocal            88
+
+      findpropstrict      QName(PackageNamespace("com.jumpeye.flashEff2.buttonEffect"), "FEBFilterPlugins")
+      constructprop       QName(PackageNamespace("com.jumpeye.flashEff2.buttonEffect"), "FEBFilterPlugins"), 0
+      coerce              QName(PackageNamespace("com.jumpeye.flashEff2.buttonEffect"), "FEBFilterPlugins")
+      setlocal            89
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "FlashEff2Code/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

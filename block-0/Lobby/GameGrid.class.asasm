@@ -1,0 +1,1300 @@
+class
+ refid "Lobby:GameGrid"
+ instance QName(PackageNamespace("Lobby"), "GameGrid")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Lobby:GameGrid")
+  iinit
+   refid "Lobby:GameGrid/instance/init"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "instance_number_counter")
+     dup
+     setlocal1
+
+     getproperty         QName(PackageNamespace(""), "instance_number_counter")
+     increment_i
+     setlocal2
+
+     getlocal1
+     getlocal2
+     setproperty         QName(PackageNamespace(""), "instance_number_counter")
+
+     kill                2
+     kill                1
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "instance_number")
+     getlex              QName(PackageNamespace(""), "instance_number_counter")
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "instance_number")
+
+     findproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlocal0
+     pushstring          "HIDE_GAME_CLIP"
+     getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "final_hide")
+     callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+     getlex              QName(PackageNamespace(""), "on_added_to_stage")
+     callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+     getlex              QName(PackageNamespace(""), "on_removed_from_stage")
+     callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+     findpropstrict      QName(PackageInternalNs("Lobby"), "__setProp__spGames_GameGrid_Layer1_0")
+     callpropvoid        QName(PackageInternalNs("Lobby"), "__setProp__spGames_GameGrid_Layer1_0"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "instance_number") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "_spGames") type QName(PackageNamespace("fl.containers"), "ScrollPane") end
+  trait method QName(PackageNamespace(""), "is_game")
+   method
+    refid "Lobby:GameGrid/instance/is_game"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip")
+      getlocal1
+      callproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip"), 1
+      coerce              QName(PackageNamespace("Lobby"), "GameClip")
+      setlocal2
+
+      getlocal2
+      pushnull
+      equals
+      dup
+      iftrue              L17
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "visible")
+      pushfalse
+      equals
+L17:
+      iffalse             L20
+
+      pushfalse
+      returnvalue
+
+L20:
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "new_game")
+   method
+    refid "Lobby:GameGrid/instance/new_game"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("Lobby"), "GameClip")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlocal            5
+      constructprop       QName(PackageNamespace("Lobby"), "GameClip"), 5
+      coerce              QName(PackageNamespace("Lobby"), "GameClip")
+      dup
+      setlocal            6
+
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      getlex              QName(PackageNamespace(""), "_spGames")
+      getproperty         QName(PackageNamespace(""), "content")
+      callproperty        QName(PackageNamespace("flash.display"), "Sprite"), 1
+      getlocal            6
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            6
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "game_list")
+   method
+    refid "Lobby:GameGrid/instance/game_list"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 14
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Lobby"), "GameClip")
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushnull
+      coerce_s
+      setlocal            7
+
+      pushnull
+      coerce_s
+      setlocal            8
+
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      pushbyte            0
+      convert_u
+      setlocal            10
+
+      pushbyte            0
+      convert_u
+      setlocal            11
+
+      pushbyte            0
+      convert_u
+      setlocal            12
+
+      pushbyte            0
+      convert_u
+      setlocal            13
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifnle               L37
+
+      returnvoid
+
+L37:
+      getlocal1
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      jump                L186
+
+L46:
+      label
+      getlocal2
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "\x09"
+      callproperty        Multiname("split", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip")
+      getlocal            4
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip"), 1
+      coerce              QName(PackageNamespace("Lobby"), "GameClip")
+      dup
+      setlocal            5
+
+      pushnull
+      ifne                L182
+
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal            4
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      convert_u
+      setlocal            6
+
+      getlocal            4
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            7
+
+      getlocal            4
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      coerce_s
+      setlocal            8
+
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal            4
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      convert_u
+      setlocal            9
+
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal            4
+      pushbyte            4
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      convert_u
+      setlocal            10
+
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal            4
+      pushbyte            5
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      convert_u
+      setlocal            11
+
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal            4
+      pushbyte            6
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      convert_u
+      setlocal            12
+
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlocal            4
+      pushbyte            7
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      convert_u
+      setlocal            13
+
+      findpropstrict      QName(PackageNamespace("Lobby"), "GameClip")
+      getlocal            6
+      getlocal            7
+      getlocal            8
+      getlocal            9
+      getlocal            12
+      getlocal            11
+      getlocal            10
+      constructprop       QName(PackageNamespace("Lobby"), "GameClip"), 7
+      coerce              QName(PackageNamespace("Lobby"), "GameClip")
+      dup
+      setlocal            5
+
+      getlocal            13
+      setproperty         QName(PackageNamespace(""), "problem")
+
+      getlocal            5
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      getlex              QName(PackageNamespace(""), "_spGames")
+      getproperty         QName(PackageNamespace(""), "content")
+      callproperty        QName(PackageNamespace("flash.display"), "Sprite"), 1
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            5
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            11
+      pushbyte            0
+      greaterthan
+      dup
+      iffalse             L160
+
+      pop
+      getlocal            11
+      pushbyte            50
+      lessequals
+      dup
+      iftrue              L160
+
+      pop
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "access")
+      pushbyte            100
+      greaterthan
+L160:
+      dup
+      iffalse             L168
+
+      pop
+      getlocal            10
+      getlex              QName(PackageNamespace("Lobby"), "GameClip")
+      getproperty         QName(PackageNamespace(""), "ENDED")
+      equals
+      not
+L168:
+      dup
+      iffalse             L176
+
+      pop
+      getlocal            10
+      getlex              QName(PackageNamespace("Lobby"), "GameClip")
+      getproperty         QName(PackageNamespace(""), "ENDING")
+      equals
+      not
+L176:
+      iffalse             L182
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "display_game")
+      getlocal            4
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "display_game"), 1
+
+L182:
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L186:
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L46
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "remove_game")
+   method
+    refid "Lobby:GameGrid/instance/remove_game"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip_position")
+      getlocal1
+      callproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip_position"), 1
+      convert_i
+      setlocal2
+
+      getlocal2
+      pushbyte            0
+      ifnge               L13
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "hide_game")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "hide_game"), 1
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "update")
+   method
+    refid "Lobby:GameGrid/instance/update"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip")
+      getlocal1
+      callproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip"), 1
+      coerce              QName(PackageNamespace("Lobby"), "GameClip")
+      dup
+      setlocal            6
+
+      pushnull
+      ifne                L11
+
+      returnvoid
+
+L11:
+      getlocal2
+      getlex              QName(PackageNamespace("Lobby"), "GameClip")
+      getproperty         QName(PackageNamespace(""), "ENDED")
+      equals
+      dup
+      iftrue              L22
+
+      pop
+      getlocal2
+      getlex              QName(PackageNamespace("Lobby"), "GameClip")
+      getproperty         QName(PackageNamespace(""), "ENDING")
+      equals
+L22:
+      dup
+      iftrue              L28
+
+      pop
+      getlocal            5
+      pushbyte            0
+      lessequals
+L28:
+      dup
+      iftrue              L34
+
+      pop
+      getlocal            5
+      pushbyte            50
+      greaterthan
+L34:
+      dup
+      iftrue              L40
+
+      pop
+      getlocal            4
+      pushbyte            50
+      greaterthan
+L40:
+      iffalse             L58
+
+      getlocal            6
+      getlocal2
+      getlex              QName(PackageNamespace("Lobby"), "GameClip")
+      getproperty         QName(PackageNamespace(""), "ENDED")
+      equals
+      dup
+      iftrue              L53
+
+      pop
+      getlocal2
+      getlex              QName(PackageNamespace("Lobby"), "GameClip")
+      getproperty         QName(PackageNamespace(""), "ENDING")
+      equals
+L53:
+      setproperty         QName(PackageNamespace(""), "destroy")
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "hide_game")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "hide_game"), 1
+
+      jump                L61
+
+L58:
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "display_game")
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "display_game"), 1
+
+L61:
+      getlocal            6
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "status")
+
+      getlocal            6
+      getlocal            5
+      setproperty         QName(PackageNamespace(""), "players")
+
+      getlocal            6
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "problem")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "display_game")
+   method
+    refid "Lobby:GameGrid/instance/Lobby:GameGrid/instance/display_game"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip_position")
+      getlocal1
+      callproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip_position"), 1
+      convert_i
+      setlocal2
+
+      getlocal2
+      pushbyte            0
+      greaterequals
+      dup
+      iffalse             L23
+
+      pop
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("visible", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushfalse
+      equals
+L23:
+      iffalse             L76
+
+      pushbyte            0
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L38
+
+L29:
+      label
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("visible", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushtrue
+      ifne                L37
+
+      inclocal_i          3
+L37:
+      inclocal_i          4
+L38:
+      getlocal            4
+      getlocal2
+      iflt                L29
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("show", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "set_display_position")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal3
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "set_display_position"), 2
+
+      getlocal2
+      pushbyte            1
+      add
+      convert_i
+      setlocal            4
+
+      jump                L72
+
+L57:
+      label
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("visible", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushtrue
+      ifne                L71
+
+      inclocal_i          3
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "set_display_position")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal3
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "set_display_position"), 2
+
+L71:
+      inclocal_i          4
+L72:
+      getlocal            4
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L57
+
+L76:
+      getlex              QName(PackageNamespace(""), "_spGames")
+      callpropvoid        QName(PackageNamespace(""), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "hide_game")
+   method
+    refid "Lobby:GameGrid/instance/Lobby:GameGrid/instance/hide_game"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip")
+      getlocal1
+      callproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip"), 1
+      coerce              QName(PackageNamespace("Lobby"), "GameClip")
+      setlocal2
+
+      getlocal2
+      pushnull
+      equals
+      not
+      dup
+      iffalse             L17
+
+      pop
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "visible")
+      convert_b
+L17:
+      iffalse             L20
+
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "hide"), 0
+
+L20:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "final_hide")
+   method
+    refid "Lobby:GameGrid/instance/Lobby:GameGrid/instance/final_hide"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      findpropstrict      QName(PackageNamespace("Lobby"), "GameClip")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      callproperty        QName(PackageNamespace("Lobby"), "GameClip"), 1
+      coerce              QName(PackageNamespace("Lobby"), "GameClip")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "id")
+      convert_u
+      setlocal3
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip_position")
+      getlocal3
+      callproperty        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip_position"), 1
+      convert_i
+      dup
+      setlocal            4
+
+      pushbyte            0
+      ifnge               L95
+
+      pushbyte            0
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      jump                L38
+
+L29:
+      label
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("visible", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushtrue
+      ifne                L37
+
+      inclocal_i          5
+L37:
+      inclocal_i          6
+L38:
+      getlocal            6
+      getlocal            4
+      iflt                L29
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal            4
+      pushbyte            1
+      add
+      convert_i
+      setlocal            6
+
+      jump                L67
+
+L52:
+      label
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("visible", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushtrue
+      ifne                L66
+
+      findpropstrict      QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "set_display_position")
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal            5
+      callpropvoid        QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "set_display_position"), 2
+
+      inclocal_i          5
+L66:
+      inclocal_i          6
+L67:
+      getlocal            6
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L52
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("destroy", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      convert_b
+      dup
+      iftrue              L82
+
+      pop
+      pushbyte            1
+      dup
+      equals
+L82:
+      iffalse             L95
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      getlex              QName(PackageNamespace(""), "_spGames")
+      getproperty         QName(PackageNamespace(""), "content")
+      callproperty        QName(PackageNamespace("flash.display"), "Sprite"), 1
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal            4
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+L95:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "set_display_position")
+   method
+    refid "Lobby:GameGrid/instance/Lobby:GameGrid/instance/set_display_position"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal2
+      pushbyte            4
+      modulo
+      pushbyte            125
+      multiply
+      convert_u
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      pushbyte            4
+      divide
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      pushbyte            105
+      multiply
+      convert_u
+      setlocal            4
+
+      getlocal1
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal1
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip")
+   method
+    refid "Lobby:GameGrid/instance/Lobby:GameGrid/instance/find_clip"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace("Lobby"), "GameClip")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L21
+
+L6:
+      label
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("id", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      ifne                L17
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      returnvalue
+
+L17:
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L21:
+      getlocal2
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L6
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "find_clip_position")
+   method
+    refid "Lobby:GameGrid/instance/Lobby:GameGrid/instance/find_clip_position"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L19
+
+L6:
+      label
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("id", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      ifne                L15
+
+      getlocal2
+      returnvalue
+
+L15:
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L19:
+      getlocal2
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L6
+
+      pushbyte            -1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_added_to_stage")
+   method
+    refid "Lobby:GameGrid/instance/on_added_to_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlex              QName(PackageNamespace(""), "on_added_to_stage")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_removed_from_stage")
+   method
+    refid "Lobby:GameGrid/instance/on_removed_from_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+      getlex              QName(PackageNamespace(""), "on_added_to_stage")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlex              QName(PackageNamespace(""), "on_removed_from_stage")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      pushstring          "HIDE_GAME_CLIP"
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "final_hide")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "Lobby:GameGrid/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "[object GameGrid] "
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifnle               L12
+
+      getlocal1
+      pushstring          "No games"
+      add
+      returnvalue
+
+L12:
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      jump                L31
+
+L16:
+      label
+      getlocal1
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        Multiname("toString", [PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
+      pushstring          "\n"
+      add
+      add
+      coerce_s
+      setlocal1
+
+      getlocal2
+      increment
+      convert_u
+      setlocal2
+
+L31:
+      getlocal2
+      getlex              QName(PrivateNamespace(null, "Lobby:GameGrid/instance#0"), "games")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L16
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs("Lobby"), "__setProp__spGames_GameGrid_Layer1_0")
+   method
+    refid "Lobby:GameGrid/instance/Lobby:__setProp__spGames_GameGrid_Layer1_0"
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 17
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+L6:
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushstring          "componentInspectorSetting"
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L10:
+      jump                L24
+
+L11:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L24:
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushbyte            4
+      setproperty         QName(PackageNamespace(""), "horizontalLineScrollSize")
+
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "horizontalPageScrollSize")
+
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushstring          "auto"
+      setproperty         QName(PackageNamespace(""), "horizontalScrollPolicy")
+
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "scrollDrag")
+
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushstring          "EmptyClip"
+      setproperty         QName(PackageNamespace(""), "source")
+
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushbyte            4
+      setproperty         QName(PackageNamespace(""), "verticalLineScrollSize")
+
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "verticalPageScrollSize")
+
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushstring          "auto"
+      setproperty         QName(PackageNamespace(""), "verticalScrollPolicy")
+
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L54:
+      getlex              QName(PackageNamespace(""), "_spGames")
+      pushstring          "componentInspectorSetting"
+      pushfalse
+      setproperty         MultinameL([PrivateNamespace(null, "Lobby:GameGrid/instance#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs("Lobby"), PackageNamespace("Lobby"), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Lobby:GameGrid/instance#1"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Lobby:GameGrid"), StaticProtectedNs("Lobby:GameGrid"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L58:
+      jump                L72
+
+L59:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L72:
+      returnvoid
+     end ; code
+     try from L6 to L10 target L11 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L54 to L58 target L59 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Lobby:GameGrid/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "class_name")
+    pushstring          "Lobby.GameInfo"
+    setproperty         QName(PackageNamespace(""), "class_name")
+
+    findproperty        QName(PackageNamespace(""), "instance_number_counter")
+    pushbyte            0
+    setproperty         QName(PackageNamespace(""), "instance_number_counter")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "class_name") slotid 1 value Utf8("Lobby.GameInfo") end
+ trait slot QName(PackageNamespace(""), "instance_number_counter") slotid 2 type QName(PackageNamespace(""), "int") value Integer(0) end
+end ; class

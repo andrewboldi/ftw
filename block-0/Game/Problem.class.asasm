@@ -1,0 +1,1045 @@
+class
+ refid "Game:Problem"
+ instance QName(PackageNamespace("Game"), "Problem")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Game:Problem")
+  iinit
+   refid "Game:Problem/instance/init"
+   param QName(PackageNamespace(""), "uint")
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "number")
+
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "server")
+     pushstring          "pluginMessage"
+     pushstring          "on_plugin_message"
+     getlocal0
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageNamespace(""), "answers")
+
+     findproperty        QName(PackageNamespace(""), "loadCount")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "loadCount")
+
+     findpropstrict      QName(PrivateNamespace(null, "Game:Problem/instance"), "poll")
+     callpropvoid        QName(PrivateNamespace(null, "Game:Problem/instance"), "poll"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "number") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "filename") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PackageNamespace(""), "answer") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PackageNamespace(""), "real_answer") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PackageNamespace(""), "answers") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "user_answer") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PackageNamespace(""), "book") type QName(PackageNamespace(""), "uint") value Integer(100) end
+  trait slot QName(PackageNamespace(""), "image") type QName(PackageNamespace("flash.display"), "Loader") value Null() end
+  trait slot QName(PackageNamespace(""), "loaded") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "error") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PackageNamespace(""), "reported") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "loadInterval") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "loadCount") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "Game:Problem/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal1
+
+      pushstring          "Problem Number: "
+      getlex              QName(PackageNamespace(""), "number")
+      add
+      pushstring          "\n"
+      add
+      pushstring          "Problem ID: "
+      add
+      getlex              QName(PackageNamespace(""), "id")
+      add
+      pushstring          "\n"
+      add
+      pushstring          "Filename: "
+      add
+      getlex              QName(PackageNamespace(""), "filename")
+      add
+      pushstring          "\n"
+      add
+      pushstring          "Answer: "
+      add
+      getlex              QName(PackageNamespace(""), "answer")
+      add
+      pushstring          "\n"
+      add
+      pushstring          "User Answer: "
+      add
+      getlex              QName(PackageNamespace(""), "user_answer")
+      add
+      pushstring          "\n"
+      add
+      pushstring          "Book: "
+      add
+      getlex              QName(PackageNamespace(""), "book")
+      add
+      pushstring          "\n"
+      add
+      pushstring          "Loaded: "
+      add
+      getlex              QName(PackageNamespace(""), "loaded")
+      add
+      pushstring          "\n"
+      add
+      pushstring          "Error: "
+      add
+      getlex              QName(PackageNamespace(""), "error")
+      add
+      pushstring          "\n"
+      add
+      pushstring          "Reported: "
+      add
+      getlex              QName(PackageNamespace(""), "reported")
+      add
+      pushstring          "\n"
+      add
+      pushstring          "Load Interval: "
+      add
+      getlex              QName(PackageNamespace(""), "loadInterval")
+      add
+      pushstring          "\n"
+      add
+      pushstring          "Load Count: "
+      add
+      getlex              QName(PackageNamespace(""), "loadCount")
+      add
+      coerce_s
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "load_image")
+   method
+    refid "Game:Problem/instance/load_image"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "loadInterval")
+      pushbyte            0
+      ifeq                L11
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "clearInterval")
+      getlex              QName(PackageNamespace(""), "loadInterval")
+      callpropvoid        QName(PackageNamespace("flash.utils"), "clearInterval"), 1
+
+      findproperty        QName(PackageNamespace(""), "loadInterval")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "loadInterval")
+
+L11:
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      getlex              QName(PackageNamespace(""), "filename")
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
+      setlocal1
+
+      findproperty        QName(PackageNamespace(""), "image")
+      findpropstrict      QName(PackageNamespace("flash.display"), "Loader")
+      constructprop       QName(PackageNamespace("flash.display"), "Loader"), 0
+      initproperty        QName(PackageNamespace(""), "image")
+
+      getlex              QName(PackageNamespace(""), "image")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "load"), 1
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "setloaded")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
+      getproperty         QName(PackageNamespace(""), "IO_ERROR")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "seterror")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "debug")
+      convert_b
+      dup
+      iffalse             L46
+
+      pop
+      pushbyte            1
+      pushbyte            0
+      equals
+L46:
+      iffalse             L82
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "HTTPStatusEvent")
+      getproperty         QName(PackageNamespace(""), "HTTP_STATUS")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "http_status_handler")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "INIT")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "init_handler")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "OPEN")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "open_handler")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "UNLOAD")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "unload_handler")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+      getproperty         QName(PackageNamespace(""), "PROGRESS")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "progress_handler")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+L82:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_plugin_message")
+   method
+    refid "Game:Problem/instance/on_plugin_message"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L206
+
+L10:
+      label
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("number", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "number")
+      ifeq                L18
+
+      returnvoid
+
+L18:
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            10
+      ifngt               L183
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "pluginMessage"
+      pushstring          "on_plugin_message"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "s3")
+      iftrue              L104
+
+      pushbyte            0
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "filename")
+      pushstring          "/"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "lastIndexOf"), 1
+      convert_i
+      setlocal2
+
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushstring          "http://www.artofproblemsolving.com/Forum/latexrender/pictures/"
+      setproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "filename")
+      getlocal2
+      pushbyte            1
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          "/"
+      add
+      add
+      setproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "filename")
+      getlocal2
+      pushbyte            2
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          "/"
+      add
+      add
+      setproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "filename")
+      getlocal2
+      pushbyte            3
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      pushstring          "/"
+      add
+      add
+      setproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "filename")
+      getlocal2
+      pushbyte            1
+      add
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 1
+      add
+      setproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L104:
+      getlocal0
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("id", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "id")
+
+      getlocal0
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("book", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "book")
+
+      getlocal0
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("answer", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "clean_answer"), 1
+      setproperty         QName(PackageNamespace(""), "answer")
+
+      getlocal0
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("answer", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "real_answer")
+
+      getlocal0
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("file", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "filename")
+
+      findpropstrict      QName(PackageNamespace(""), "load_image")
+      callpropvoid        QName(PackageNamespace(""), "load_image"), 0
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      setproperty         QName(PackageNamespace(""), "answers")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "answers")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "answer")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("alt_answers", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            0
+      ifngt               L182
+
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("alt_answers", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L182
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      convert_i
+      setlocal            4
+
+      jump                L179
+
+L167:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "answers")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "clean_answer"), 1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal            4
+      decrement_i
+      setlocal            4
+
+L179:
+      getlocal            4
+      pushbyte            0
+      ifge                L167
+
+L182:
+      jump                L199
+
+L183:
+      getlex              QName(PackageNamespace(""), "loadInterval")
+      pushbyte            0
+      ifngt               L189
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "clearInterval")
+      getlex              QName(PackageNamespace(""), "loadInterval")
+      callpropvoid        QName(PackageNamespace("flash.utils"), "clearInterval"), 1
+
+L189:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      pushstring          "on-plugin_message: Setting interval"
+      callpropvoid        QName(PackageNamespace(""), "debug"), 1
+
+      findproperty        QName(PackageNamespace(""), "loadInterval")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "setInterval")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "poll")
+      pushshort           1000
+      callproperty        QName(PackageNamespace("flash.utils"), "setInterval"), 2
+      initproperty        QName(PackageNamespace(""), "loadInterval")
+
+L199:
+      jump                L225
+
+L200:
+      label
+      jump                L225
+
+      ; 0x10
+      ; 0x30
+      ; 0x00
+      ; 0x00
+L206:
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("Action", [PrivateNamespace(null, "Game:Problem/instance"), PackageNamespace(""), PackageNamespace("flash.utils"), PrivateNamespace(null, "Game:Problem/instance/on_plugin_message"), PackageNamespace("Game"), PackageInternalNs("Game"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("com.electrotank.electroserver4.esobject"), ProtectedNamespace("Game:Problem"), StaticProtectedNs("Game:Problem"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setlocal            5
+
+      pushstring          "Problem"
+      getlocal            5
+      ifstrictne          L215
+
+      pushbyte            0
+      jump                L223
+
+L215:
+      jump                L222
+
+      ; 0x24
+      ; 0x01
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L222:
+      pushbyte            1
+L223:
+      kill                5
+      lookupswitch        L200, [L10, L200]
+
+L225:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:Problem/instance"), "poll")
+   method
+    refid "Game:Problem/instance/Game:Problem/instance/poll"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "loadInterval")
+      pushbyte            0
+      ifngt               L14
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "clearInterval")
+      getlex              QName(PackageNamespace(""), "loadInterval")
+      callpropvoid        QName(PackageNamespace("flash.utils"), "clearInterval"), 1
+
+      findproperty        QName(PackageNamespace(""), "loadInterval")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "loadInterval")
+
+L14:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      getproperty         QName(PackageNamespace(""), "isConnected")
+      iffalse             L39
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal1
+
+      getlocal1
+      pushstring          "n"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "number")
+      callpropvoid        QName(PackageNamespace(""), "setInteger"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "Game"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "zone_name")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "room_name")
+      pushstring          "Problem"
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "esRoomPlugin"), 5
+
+L39:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:Problem/instance"), "setloaded")
+   method
+    refid "Game:Problem/instance/Game:Problem/instance/setloaded"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:Problem/instance"), "remove_load_event_listeners")
+      callpropvoid        QName(PrivateNamespace(null, "Game:Problem/instance"), "remove_load_event_listeners"), 0
+
+      getlocal0
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "loaded")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:Problem/instance"), "seterror")
+   method
+    refid "Game:Problem/instance/Game:Problem/instance/seterror"
+    param QName(PackageNamespace("flash.events"), "IOErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject"), 0
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.esobject"), "EsObject")
+      setlocal2
+
+      getlocal2
+      pushstring          "message"
+      pushstring          "I/O Error loading "
+      getlex              QName(PackageNamespace(""), "number")
+      add
+      pushstring          " "
+      add
+      getlex              QName(PackageNamespace(""), "filename")
+      add
+      pushstring          " "
+      add
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "text")
+      add
+      callpropvoid        QName(PackageNamespace(""), "setString"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "Game"
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "zone_name")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "game")
+      getproperty         QName(PackageNamespace(""), "room_name")
+      pushstring          "log"
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "esRoomPlugin"), 5
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:Problem/instance"), "remove_load_event_listeners")
+      callpropvoid        QName(PrivateNamespace(null, "Game:Problem/instance"), "remove_load_event_listeners"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "loadCount")
+      dup
+      setlocal3
+
+      getproperty         QName(PackageNamespace(""), "loadCount")
+      increment
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "loadCount")
+
+      kill                4
+      kill                3
+      getlex              QName(PackageNamespace(""), "loadCount")
+      pushbyte            3
+      ifnge               L54
+
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "text")
+      setproperty         QName(PackageNamespace(""), "error")
+
+      jump                L71
+
+L54:
+      findproperty        QName(PackageNamespace(""), "loadInterval")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "setInterval")
+      getlex              QName(PackageNamespace(""), "load_image")
+      pushshort           3000
+      callproperty        QName(PackageNamespace("flash.utils"), "setInterval"), 2
+      initproperty        QName(PackageNamespace(""), "loadInterval")
+
+      findpropstrict      QName(PackageNamespace(""), "loadCount")
+      dup
+      setlocal3
+
+      getproperty         QName(PackageNamespace(""), "loadCount")
+      increment
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "loadCount")
+
+      kill                4
+      kill                3
+L71:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:Problem/instance"), "remove_load_event_listeners")
+   method
+    refid "Game:Problem/instance/Game:Problem/instance/remove_load_event_listeners"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "image")
+      iffalse             L63
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "setloaded")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
+      getproperty         QName(PackageNamespace(""), "IO_ERROR")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "seterror")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "debug")
+      convert_b
+      dup
+      iffalse             L27
+
+      pop
+      pushbyte            1
+      pushbyte            0
+      equals
+L27:
+      iffalse             L63
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "HTTPStatusEvent")
+      getproperty         QName(PackageNamespace(""), "HTTP_STATUS")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "http_status_handler")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "INIT")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "init_handler")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "OPEN")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "open_handler")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "UNLOAD")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "unload_handler")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+      getproperty         QName(PackageNamespace(""), "PROGRESS")
+      getlex              QName(PrivateNamespace(null, "Game:Problem/instance"), "progress_handler")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+L63:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "cleanup")
+   method
+    refid "Game:Problem/instance/cleanup"
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "pluginMessage"
+      pushstring          "on_plugin_message"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      findpropstrict      QName(PrivateNamespace(null, "Game:Problem/instance"), "remove_load_event_listeners")
+      callpropvoid        QName(PrivateNamespace(null, "Game:Problem/instance"), "remove_load_event_listeners"), 0
+
+      getlex              QName(PackageNamespace(""), "loadInterval")
+      pushbyte            0
+      ifngt               L19
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "clearInterval")
+      getlex              QName(PackageNamespace(""), "loadInterval")
+      callpropvoid        QName(PackageNamespace("flash.utils"), "clearInterval"), 1
+
+      findproperty        QName(PackageNamespace(""), "loadInterval")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "loadInterval")
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:Problem/instance"), "http_status_handler")
+   method
+    refid "Game:Problem/instance/Game:Problem/instance/http_status_handler"
+    param QName(PackageNamespace("flash.events"), "HTTPStatusEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      pushstring          "HTTPStatusEvent.HTTP_Status: "
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "status")
+      add
+      callpropvoid        QName(PackageNamespace(""), "debuglog"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:Problem/instance"), "init_handler")
+   method
+    refid "Game:Problem/instance/Game:Problem/instance/init_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      pushstring          "Event.INIT: "
+      getlocal1
+      add
+      callpropvoid        QName(PackageNamespace(""), "debuglog"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:Problem/instance"), "open_handler")
+   method
+    refid "Game:Problem/instance/Game:Problem/instance/open_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      pushstring          "Event.OPEN: "
+      getlocal1
+      add
+      callpropvoid        QName(PackageNamespace(""), "debuglog"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:Problem/instance"), "unload_handler")
+   method
+    refid "Game:Problem/instance/Game:Problem/instance/unload_handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      pushstring          "Event.UNLOAD: "
+      getlocal1
+      add
+      callpropvoid        QName(PackageNamespace(""), "debuglog"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game:Problem/instance"), "progress_handler")
+   method
+    refid "Game:Problem/instance/Game:Problem/instance/progress_handler"
+    param QName(PackageNamespace("flash.events"), "ProgressEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      pushstring          "ProgressEvent.PROGRESS: "
+      getlocal1
+      add
+      callpropvoid        QName(PackageNamespace(""), "debuglog"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Game:Problem/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

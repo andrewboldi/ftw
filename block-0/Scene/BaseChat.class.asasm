@@ -1,0 +1,1462 @@
+class
+ refid "Scene:BaseChat"
+ instance QName(PackageNamespace("Scene"), "BaseChat")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Scene:BaseChat")
+  iinit
+   refid "Scene:BaseChat/instance/init"
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "instance_number_counter")
+     dup
+     setlocal2
+
+     getproperty         QName(PackageNamespace(""), "instance_number_counter")
+     increment_i
+     setlocal3
+
+     getlocal2
+     getlocal3
+     setproperty         QName(PackageNamespace(""), "instance_number_counter")
+
+     kill                3
+     kill                2
+     findproperty        QName(PrivateNamespace(null, "Scene:BaseChat/instance#0"), "instance_number")
+     getlex              QName(PackageNamespace(""), "instance_number_counter")
+     initproperty        QName(PrivateNamespace(null, "Scene:BaseChat/instance#0"), "instance_number")
+
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+     constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+     coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+     setlocal1
+
+     getlocal1
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "user")
+     getproperty         QName(PackageNamespace(""), "font_size")
+     setproperty         QName(PackageNamespace(""), "size")
+
+     getlocal1
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "user")
+     getproperty         QName(PackageNamespace(""), "font")
+     setproperty         QName(PackageNamespace(""), "font")
+
+     getlocal1
+     getlex              QName(PackageNamespace("Misc"), "g")
+     getproperty         QName(PackageNamespace(""), "user")
+     getproperty         QName(PackageNamespace(""), "leading")
+     setproperty         QName(PackageNamespace(""), "leading")
+
+     findproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "TextArea")
+     constructprop       QName(PackageNamespace("fl.controls"), "TextArea"), 0
+     initproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+     pushshort           501
+     pushshort           129
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+     pushshort           379
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "editable")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+     pushstring          "textFormat"
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "setStyle"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PackageNamespace(""), "_tInput")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "TextInput")
+     constructprop       QName(PackageNamespace("fl.controls"), "TextInput"), 0
+     initproperty        QName(PackageNamespace(""), "_tInput")
+
+     getlex              QName(PackageNamespace(""), "_tInput")
+     pushshort           501
+     pushbyte            22
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(PackageNamespace(""), "_tInput")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PackageNamespace(""), "_tInput")
+     pushdouble          507.9
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PackageNamespace(""), "_tInput")
+     pushshort           256
+     setproperty         QName(PackageNamespace(""), "maxChars")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlex              QName(PackageNamespace(""), "_tInput")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "ComboBox")
+     constructprop       QName(PackageNamespace("fl.controls"), "ComboBox"), 0
+     initproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushbyte            10
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushdouble          507.9
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushshort           451
+     pushbyte            22
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          ""
+     setproperty         QName(PackageNamespace(""), "restrict")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          ""
+     pushstring          "data"
+     pushbyte            0
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "Hello"
+     pushstring          "data"
+     pushbyte            1
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "Game anyone?"
+     pushstring          "data"
+     pushbyte            2
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "Countdown anyone?"
+     pushstring          "data"
+     pushbyte            3
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "Yes"
+     pushstring          "data"
+     pushbyte            4
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "No"
+     pushstring          "data"
+     pushbyte            5
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "I'll play"
+     pushstring          "data"
+     pushbyte            6
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "Bye"
+     pushstring          "data"
+     pushbyte            7
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "Good game"
+     pushstring          "data"
+     pushbyte            8
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "Sorry, I'm muted"
+     pushstring          "data"
+     pushbyte            9
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "/version"
+     pushstring          "data"
+     pushbyte            10
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "/history"
+     pushstring          "data"
+     pushbyte            11
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushstring          "label"
+     pushstring          "/clearchat"
+     pushstring          "data"
+     pushbyte            12
+     newobject           2
+     callpropvoid        QName(PackageNamespace(""), "addItem"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "visible")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "enabled")
+
+     findproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "Button")
+     constructprop       QName(PackageNamespace("fl.controls"), "Button"), 0
+     initproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "emphasized")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+     pushstring          "Send"
+     setproperty         QName(PackageNamespace(""), "label")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "visible")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "enabled")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+     pushbyte            50
+     pushbyte            20
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+     pushshort           461
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+     pushdouble          508.9
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(PackageNamespace("Misc"), "EventManager")
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlex              QName(PrivateNamespace(null, "Scene:BaseChat/instance#0"), "sendText")
+     pushstring          "BaseChat._btnPhrases"
+     callpropvoid        QName(PackageNamespace(""), "add"), 4
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+     findpropstrict      QName(PackageNamespace("fl.controls"), "TextArea")
+     constructprop       QName(PackageNamespace("fl.controls"), "TextArea"), 0
+     initproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+     pushshort           190
+     pushshort           132
+     callpropvoid        QName(PackageNamespace(""), "setSize"), 2
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+     pushshort           520
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+     pushshort           398
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "editable")
+
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+     pushstring          "textFormat"
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "setStyle"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "Scene:BaseChat/instance#0"), "instance_number") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput") type QName(PackageNamespace("fl.controls"), "TextArea") end
+  trait slot QName(PackageNamespace(""), "_tInput") type QName(PackageNamespace("fl.controls"), "TextInput") end
+  trait slot QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert") type QName(PackageNamespace("fl.controls"), "TextArea") end
+  trait slot QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases") type QName(PackageNamespace("fl.controls"), "ComboBox") end
+  trait slot QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases") type QName(PackageNamespace("fl.controls"), "Button") end
+  trait slot QName(ProtectedNamespace("Scene:BaseChat"), "_muted") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(ProtectedNamespace("Scene:BaseChat"), "_lastMessage") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "refresh_userlist")
+   method
+    refid "Scene:BaseChat/instance/refresh_userlist"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Scene:BaseChat"), "do_private_message")
+   method
+    refid "Scene:BaseChat/instance/Scene:BaseChat:do_private_message"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:BaseChat/instance#0"), "sendText")
+   method
+    refid "Scene:BaseChat/instance/Scene:BaseChat/instance/sendText"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_muted")
+      iffalse             L32
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_lastMessage")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      pushshort           20000
+      subtract
+      ifnlt               L20
+
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+      getproperty         QName(PackageNamespace(""), "text")
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      coerce_s
+      setlocal2
+
+      jump                L21
+
+L20:
+      returnvoid
+
+L21:
+      findproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_lastMessage")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_lastMessage")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "selectedIndex")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L41
+
+L32:
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      coerce_s
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+L41:
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      ifngt               L49
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "forceSend"), 1
+
+L49:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Scene:BaseChat/instance#0"), "on_chat_key")
+   method
+    refid "Scene:BaseChat/instance/Scene:BaseChat/instance/on_chat_key"
+    param QName(PackageNamespace("flash.events"), "KeyboardEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_muted")
+      pushfalse
+      ifne                L246
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "ctrlKey")
+      iffalse             L223
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "charCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      ifne                L44
+
+      getlex              QName(PackageNamespace("net.theyak.util"), "StringEx")
+      getlex              QName(PackageNamespace("net.theyak.util"), "StringEx")
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      callproperty        QName(PackageNamespace(""), "toAscii"), 1
+      pushbyte            5
+      callproperty        QName(PackageNamespace(""), "remove_duplicates"), 2
+      coerce_s
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L40
+
+      findpropstrict      QName(ProtectedNamespace("Scene:BaseChat"), "do_private_message")
+      getlocal2
+      callpropvoid        QName(ProtectedNamespace("Scene:BaseChat"), "do_private_message"), 1
+
+L40:
+      getlex              QName(PackageNamespace(""), "_tInput")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L222
+
+L44:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "HOME")
+      ifne                L55
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "verticalScrollPosition")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 0
+
+      jump                L222
+
+L55:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "END")
+      ifne                L67
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+      getproperty         QName(PackageNamespace(""), "maxVerticalScrollPosition")
+      setproperty         QName(PackageNamespace(""), "verticalScrollPosition")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+      callpropvoid        QName(PackageNamespace(""), "invalidate"), 0
+
+      jump                L222
+
+L67:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "UP")
+      ifne                L86
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      callproperty        QName(PackageNamespace(""), "getPrevious"), 0
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PackageNamespace(""), "setSelection"), 2
+
+      jump                L222
+
+L86:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "DOWN")
+      ifne                L105
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      callproperty        QName(PackageNamespace(""), "getNext"), 0
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PackageNamespace(""), "setSelection"), 2
+
+      jump                L222
+
+L105:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "PAGE_DOWN")
+      ifne                L114
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L222
+
+L114:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "RIGHT")
+      ifne                L139
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "activeZoneName")
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "activeRoomName")
+      callproperty        QName(PackageNamespace(""), "completeName"), 3
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(PackageNamespace(""), "setSelection"), 2
+
+      jump                L222
+
+L139:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "keyCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "LEFT")
+      equals
+      dup
+      iffalse             L152
+
+      pop
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "access")
+      pushshort           255
+      greaterequals
+L152:
+      dup
+      iffalse             L157
+
+      pop
+      pushbyte            0
+      convert_b
+L157:
+      iffalse             L222
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      callproperty        QName(PackageNamespace(""), "getRoomList"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      jump                L191
+
+L167:
+      label
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("zonename", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "activeZoneName")
+      equals
+      dup
+      iffalse             L185
+
+      pop
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("roomname", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "activeRoomName")
+      equals
+L185:
+      iffalse             L187
+
+      jump                L195
+
+L187:
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+L191:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L167
+
+L195:
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      ifnlt               L205
+
+      getlocal            4
+      increment
+      convert_u
+      setlocal            4
+
+      jump                L208
+
+L205:
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+L208:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("zonename", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "activeZoneName")
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getlocal3
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("roomname", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "activeRoomName")
+
+      findpropstrict      QName(PackageNamespace(""), "refresh_userlist")
+      callpropvoid        QName(PackageNamespace(""), "refresh_userlist"), 0
+
+L222:
+      jump                L246
+
+L223:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "charCode")
+      getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
+      getproperty         QName(PackageNamespace(""), "ENTER")
+      ifne                L246
+
+      getlex              QName(PackageNamespace("net.theyak.util"), "StringEx")
+      getlex              QName(PackageNamespace("net.theyak.util"), "StringEx")
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      callproperty        QName(PackageNamespace(""), "toAscii"), 1
+      pushbyte            5
+      callproperty        QName(PackageNamespace(""), "remove_duplicates"), 2
+      coerce_s
+      setlocal2
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+L246:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_private_message_event")
+   method
+    refid "Scene:BaseChat/instance/on_private_message_event"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlocal1
+      getproperty         Multiname("from", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("message", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "privateMessageEvent"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_public_message_event")
+   method
+    refid "Scene:BaseChat/instance/on_public_message_event"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlocal1
+      getproperty         Multiname("name", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("message", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("zonename", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("roomname", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "publicMessageEvent"), 4
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onZoneList")
+   method
+    refid "Scene:BaseChat/instance/onZoneList"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlocal1
+      getproperty         Multiname("zones", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onMute")
+   method
+    refid "Scene:BaseChat/instance/onMute"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional True()
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_muted")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_muted")
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getlocal1
+      not
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getlocal1
+      not
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      findproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_lastMessage")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      pushint             60000
+      subtract
+      initproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_lastMessage")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onUnmute")
+   method
+    refid "Scene:BaseChat/instance/onUnmute"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_muted")
+      pushfalse
+      initproperty        QName(ProtectedNamespace("Scene:BaseChat"), "_muted")
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      callpropvoid        QName(PackageNamespace(""), "setFocus"), 0
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_cbPhrases")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onRoomsInZone")
+   method
+    refid "Scene:BaseChat/instance/onRoomsInZone"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      pushstring          "Rooms in zone "
+      getlocal1
+      getproperty         Multiname("zonename", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      add
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlocal1
+      getproperty         Multiname("rooms", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "on_plugin_message")
+   method
+    refid "Scene:BaseChat/instance/on_plugin_message"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      jump                L86
+
+L3:
+      label
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("n", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("m", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "privateMessageEvent"), 2
+
+      jump                L125
+
+L14:
+      label
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("message", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      jump                L125
+
+L22:
+      label
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+      getproperty         QName(PackageNamespace(""), "text")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            2
+      ifngt               L39
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+      getproperty         QName(PackageNamespace(""), "text")
+      pushstring          "\n"
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("m", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      add
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L44
+
+L39:
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("m", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "text")
+
+L44:
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+      callpropvoid        QName(PackageNamespace(""), "validateNow"), 0
+
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tAlert")
+      getproperty         QName(PackageNamespace(""), "maxVerticalScrollPosition")
+      setproperty         QName(PackageNamespace(""), "verticalScrollPosition")
+
+      jump                L125
+
+L51:
+      label
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      getproperty         QName(PackageNamespace(""), "activeScene")
+      pushstring          "FTW"
+      equals
+      dup
+      iftrue              L65
+
+      pop
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      getproperty         QName(PackageNamespace(""), "activeScene")
+      pushstring          "Countdown"
+      equals
+L65:
+      iffalse             L83
+
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("number", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            1
+      ifne                L76
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      pushstring          "Sorry, an error occured creating the game. Please try again in a few minutes."
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+      jump                L80
+
+L76:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      pushstring          "Sorry, an error occured"
+      callpropvoid        QName(PackageNamespace(""), "noticeEvent"), 1
+
+L80:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "scene")
+      callpropvoid        QName(PackageNamespace(""), "lobby"), 0
+
+L83:
+      jump                L125
+
+L84:
+      label
+      jump                L125
+
+L86:
+      getlocal1
+      getproperty         Multiname("response", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getproperty         Multiname("Action", [PrivateNamespace(null, "Scene:BaseChat/instance#0"), PackageNamespace(""), ProtectedNamespace("Scene:BaseChat"), PackageNamespace("flash.events"), PackageNamespace("net.theyak.util"), PrivateNamespace(null, "Scene:BaseChat/instance#1"), PackageNamespace("Scene"), PackageInternalNs("Scene"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Scene:BaseChat"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setlocal2
+
+      pushstring          "pm"
+      getlocal2
+      ifstrictne          L95
+
+      pushbyte            0
+      jump                L123
+
+L95:
+      pushstring          "Notice"
+      getlocal2
+      ifstrictne          L100
+
+      pushbyte            1
+      jump                L123
+
+L100:
+      pushstring          "Alert"
+      getlocal2
+      ifstrictne          L105
+
+      pushbyte            2
+      jump                L123
+
+L105:
+      pushstring          "Broadcast"
+      getlocal2
+      ifstrictne          L110
+
+      pushbyte            3
+      jump                L123
+
+L110:
+      pushstring          "error"
+      getlocal2
+      ifstrictne          L115
+
+      pushbyte            4
+      jump                L123
+
+L115:
+      jump                L122
+
+      ; 0x24
+      ; 0x05
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L122:
+      pushbyte            5
+L123:
+      kill                2
+      lookupswitch        L84, [L3, L14, L22, L22, L51, L84]
+
+L125:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Scene:BaseChat"), "on_enter")
+   method
+    refid "Scene:BaseChat/instance/Scene:BaseChat:on_enter"
+    param QName(PackageNamespace("fl.events"), "ComponentEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlex              QName(PackageNamespace("com.adobe.utils"), "StringUtil")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getproperty         QName(PackageNamespace(""), "text")
+      callproperty        QName(PackageNamespace(""), "trim"), 1
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Scene:BaseChat"), "on_added")
+   method
+    refid "Scene:BaseChat/instance/Scene:BaseChat:on_added"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Scene:BaseChat"), "on_added_to_stage")
+   method
+    refid "Scene:BaseChat/instance/Scene:BaseChat:on_added_to_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "privateMessage"
+      pushstring          "on_private_message_event"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "publicMessage"
+      pushstring          "on_public_message_event"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "zoneList"
+      pushstring          "onZoneList"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "roomsInZone"
+      pushstring          "onRoomsInZone"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "access")
+      pushbyte            0
+      ifngt               L39
+
+      getlex              QName(PackageNamespace(""), "_tInput")
+      callpropvoid        QName(PackageNamespace(""), "setFocus"), 0
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlex              QName(PrivateNamespace(null, "Scene:BaseChat/instance#0"), "on_chat_key")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+L39:
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "chat")
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_tOutput")
+      callpropvoid        QName(PackageNamespace(""), "setOutput"), 1
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "user")
+      getproperty         QName(PackageNamespace(""), "muted")
+      iffalse             L49
+
+      findpropstrict      QName(PackageNamespace(""), "onMute")
+      callpropvoid        QName(PackageNamespace(""), "onMute"), 0
+
+L49:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Scene:BaseChat"), "on_removed")
+   method
+    refid "Scene:BaseChat/instance/Scene:BaseChat:on_removed"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Scene:BaseChat"), "on_removed_from_stage")
+   method
+    refid "Scene:BaseChat/instance/Scene:BaseChat:on_removed_from_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(ProtectedNamespace("Scene:BaseChat"), "_btnPhrases")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlex              QName(PrivateNamespace(null, "Scene:BaseChat/instance#0"), "sendText")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlex              QName(PackageNamespace(""), "_tInput")
+      getlex              QName(PackageNamespace("flash.events"), "KeyboardEvent")
+      getproperty         QName(PackageNamespace(""), "KEY_DOWN")
+      getlex              QName(PrivateNamespace(null, "Scene:BaseChat/instance#0"), "on_chat_key")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "privateMessage"
+      pushstring          "on_private_message_event"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "publicMessage"
+      pushstring          "on_public_message_event"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "zoneList"
+      pushstring          "onZoneList"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "g")
+      getproperty         QName(PackageNamespace(""), "server")
+      pushstring          "roomsInZone"
+      pushstring          "onRoomsInZone"
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Scene:BaseChat/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "class_name")
+    pushstring          "Scene.BaseChat"
+    setproperty         QName(PackageNamespace(""), "class_name")
+
+    findproperty        QName(PackageNamespace(""), "instance_number_counter")
+    pushbyte            0
+    setproperty         QName(PackageNamespace(""), "instance_number_counter")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "class_name") slotid 1 value Utf8("Scene.BaseChat") end
+ trait slot QName(PackageNamespace(""), "instance_number_counter") slotid 2 type QName(PackageNamespace(""), "int") value Integer(0) end
+end ; class

@@ -1,0 +1,42 @@
+class
+ refid "FTWButton"
+ instance QName(PackageNamespace(""), "FTWButton")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("FTWButton")
+  iinit
+   refid "FTWButton/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "text") type QName(PackageNamespace("flash.text"), "TextField") end
+ end ; instance
+ cinit
+  refid "FTWButton/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,889 @@
+class
+ refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.binary"), "BinaryMessageReader")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("MessageReader", [PackageNamespace("com.electrotank.electroserver4.protocol")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "charset")
+     pushstring          "utf-8"
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "charset")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "charset") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "setBuffer")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/setBuffer"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextBoolean")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextBoolean"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      callproperty        QName(PackageNamespace(""), "readBoolean"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextInteger")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextInteger"
+    returns QName(PackageNamespace(""), "int")
+    flag NEED_REST
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/_nextInteger"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextLong")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextLong"
+    returns QName(PackageNamespace(""), "String")
+    flag NEED_REST
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      pushstring          ""
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      jump                L32
+
+L10:
+      label
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      callproperty        QName(PackageNamespace(""), "readByte"), 0
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      coerce_s
+      dup
+      setlocal            4
+
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      ifne                L26
+
+      pushstring          "0"
+      getlocal            4
+      add
+      coerce_s
+      setlocal            4
+
+L26:
+      getlocal2
+      getlocal            4
+      add
+      coerce_s
+      setlocal2
+
+      inclocal_i          3
+L32:
+      getlocal3
+      pushbyte            8
+      iflt                L10
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextLong")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/_nextLong"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      callproperty        QName(PackageNamespace(""), "readUTF"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextDouble")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextDouble"
+    returns QName(PackageNamespace(""), "Number")
+    flag NEED_REST
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextDouble")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextDouble"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextDouble")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/_nextDouble"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      callproperty        QName(PackageNamespace(""), "readDouble"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextShort")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextShort"
+    returns QName(PackageNamespace(""), "Number")
+    flag NEED_REST
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextShort")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextShort"), 0
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextShort")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/_nextShort"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      callproperty        QName(PackageNamespace(""), "readShort"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextCharacter")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextCharacter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      callpropvoid        QName(PackageNamespace(""), "readByte"), 0
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextByte")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextByte"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      callproperty        QName(PackageNamespace(""), "readByte"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextFloat")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextFloat"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      callproperty        QName(PackageNamespace(""), "readFloat"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextPrefixedString")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextPrefixedString"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "nextString")
+      callproperty        QName(PackageNamespace(""), "nextString"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextString")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextString"
+    returns QName(PackageNamespace(""), "String")
+    flag NEED_REST
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "buffer")
+      callproperty        QName(PackageNamespace(""), "readUTF"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextIntegerArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextIntegerArray"
+    returns QName(PackageNamespace(""), "Array")
+    flag NEED_REST
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      convert_i
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      getlocal2
+      constructprop       QName(PackageNamespace(""), "Array"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L21
+
+L14:
+      label
+      getlocal3
+      getlocal            4
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.binary"), PackageInternalNs("com.electrotank.electroserver4.protocol.binary"), ProtectedNamespace("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("Object")])
+
+      inclocal_i          4
+L21:
+      getlocal            4
+      getlocal2
+      iflt                L14
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextBooleanArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextBooleanArray"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      convert_i
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "Array"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L25
+
+L15:
+      label
+      getlocal2
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "nextBoolean")
+      callproperty        QName(PackageNamespace(""), "nextBoolean"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.binary"), PackageInternalNs("com.electrotank.electroserver4.protocol.binary"), ProtectedNamespace("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("Object")])
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L25:
+      getlocal3
+      getlocal1
+      iflt                L15
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextByteArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextByteArray"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      convert_i
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L24
+
+L14:
+      label
+      getlocal2
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "nextByte")
+      callproperty        QName(PackageNamespace(""), "nextByte"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.binary"), PackageInternalNs("com.electrotank.electroserver4.protocol.binary"), ProtectedNamespace("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("Object")])
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L24:
+      getlocal3
+      getlocal1
+      iflt                L14
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextCharacterArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextCharacterArray"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      convert_i
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "Array"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L25
+
+L15:
+      label
+      getlocal2
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "nextCharacter")
+      callproperty        QName(PackageNamespace(""), "nextCharacter"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.binary"), PackageInternalNs("com.electrotank.electroserver4.protocol.binary"), ProtectedNamespace("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("Object")])
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L25:
+      getlocal3
+      getlocal1
+      iflt                L15
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextDoubleArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextDoubleArray"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      convert_i
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "Array"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L25
+
+L15:
+      label
+      getlocal2
+      getlocal3
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextDouble")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextDouble"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.binary"), PackageInternalNs("com.electrotank.electroserver4.protocol.binary"), ProtectedNamespace("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("Object")])
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L25:
+      getlocal3
+      getlocal1
+      iflt                L15
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextFloatArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextFloatArray"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      convert_i
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "Array"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L25
+
+L15:
+      label
+      getlocal2
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "nextFloat")
+      callproperty        QName(PackageNamespace(""), "nextFloat"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.binary"), PackageInternalNs("com.electrotank.electroserver4.protocol.binary"), ProtectedNamespace("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("Object")])
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L25:
+      getlocal3
+      getlocal1
+      iflt                L15
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextLongArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextLongArray"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      convert_i
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "Array"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L25
+
+L15:
+      label
+      getlocal2
+      getlocal3
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextLong")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextLong"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.binary"), PackageInternalNs("com.electrotank.electroserver4.protocol.binary"), ProtectedNamespace("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("Object")])
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L25:
+      getlocal3
+      getlocal1
+      iflt                L15
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextShortArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextShortArray"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      convert_i
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "Array"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L25
+
+L15:
+      label
+      getlocal2
+      getlocal3
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextShort")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextShort"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.binary"), PackageInternalNs("com.electrotank.electroserver4.protocol.binary"), ProtectedNamespace("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("Object")])
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L25:
+      getlocal3
+      getlocal1
+      iflt                L15
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextStringArray")
+   method
+    refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance/nextStringArray"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger")
+      callproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), "_nextInteger"), 0
+      convert_i
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      getlocal1
+      constructprop       QName(PackageNamespace(""), "Array"), 1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      jump                L25
+
+L15:
+      label
+      getlocal2
+      getlocal3
+      findpropstrict      QName(PackageNamespace(""), "nextString")
+      callproperty        QName(PackageNamespace(""), "nextString"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/instance#1"), PackageNamespace("com.electrotank.electroserver4.protocol.binary"), PackageInternalNs("com.electrotank.electroserver4.protocol.binary"), ProtectedNamespace("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("com.electrotank.electroserver4.protocol.binary:BinaryMessageReader"), StaticProtectedNs("Object")])
+
+      getlocal3
+      increment
+      convert_d
+      setlocal3
+
+L25:
+      getlocal3
+      getlocal1
+      iflt                L15
+
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.binary:BinaryMessageReader/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

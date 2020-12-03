@@ -1,0 +1,85 @@
+class
+ refid "com.jumpeye.flashEff2.core.interfaces:IFlashEffSymbol"
+ instance QName(PackageNamespace("com.jumpeye.flashEff2.core.interfaces"), "IFlashEffSymbol")
+  extends QName(PackageNamespace("com.jumpeye.flashEff2.core.interfaces"), "IFlashEffSymbolText")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.flashEff2.core.interfaces:IFlashEffSymbol")
+  iinit
+   refid "com.jumpeye.flashEff2.core.interfaces:IFlashEffSymbol/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.jumpeye.flashEff2.core.interfaces:IFlashEffSymbol"), "_target") type QName(PackageNamespace("flash.display"), "DisplayObject") end
+  trait getter QName(PackageNamespace(""), "target")
+   method
+    refid "com.jumpeye.flashEff2.core.interfaces:IFlashEffSymbol/instance/target/getter"
+    returns QName(PackageNamespace("flash.display"), "DisplayObject")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("com.jumpeye.flashEff2.core.interfaces:IFlashEffSymbol"), "_target")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "target")
+   method
+    refid "com.jumpeye.flashEff2.core.interfaces:IFlashEffSymbol/instance/target/setter"
+    param QName(PackageNamespace("flash.display"), "DisplayObject")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.flashEff2.core.interfaces:IFlashEffSymbol"), "_target")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("com.jumpeye.flashEff2.core.interfaces:IFlashEffSymbol"), "_target")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.jumpeye.flashEff2.core.interfaces:IFlashEffSymbol/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

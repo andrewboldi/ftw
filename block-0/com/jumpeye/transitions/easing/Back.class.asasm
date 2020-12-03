@@ -1,0 +1,255 @@
+class
+ refid "com.jumpeye.transitions.easing:Back"
+ instance QName(PackageNamespace("com.jumpeye.transitions.easing"), "Back")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.transitions.easing:Back")
+  iinit
+   refid "com.jumpeye.transitions.easing:Back/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.jumpeye.transitions.easing:Back/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "easeOut") flag FINAL dispid 4
+  method
+   refid "com.jumpeye.transitions.easing:Back/class/easeOut"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Double(1.70158)
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal3
+     getlocal1
+     getlocal            4
+     divide
+     decrement
+     dup
+     setlocal            6
+
+     convert_d
+     setlocal1
+
+     getlocal            6
+     kill                6
+     getlocal1
+     multiply
+     getlocal            5
+     pushbyte            1
+     add
+     getlocal1
+     multiply
+     getlocal            5
+     add
+     multiply
+     pushbyte            1
+     add
+     multiply
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "easeIn") flag FINAL dispid 3
+  method
+   refid "com.jumpeye.transitions.easing:Back/class/easeIn"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Double(1.70158)
+   body
+    maxstack 3
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal3
+     getlocal1
+     getlocal            4
+     divide
+     dup
+     setlocal            6
+
+     convert_d
+     setlocal1
+
+     getlocal            6
+     kill                6
+     multiply
+     getlocal1
+     multiply
+     getlocal            5
+     pushbyte            1
+     add
+     getlocal1
+     multiply
+     getlocal            5
+     subtract
+     multiply
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "easeInOut") flag FINAL dispid 5
+  method
+   refid "com.jumpeye.transitions.easing:Back/class/easeInOut"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Double(1.70158)
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getlocal            4
+     pushbyte            2
+     divide
+     divide
+     dup
+     setlocal            6
+
+     convert_d
+     setlocal1
+
+     getlocal            6
+     kill                6
+     pushbyte            1
+     ifnlt               L41
+
+     getlocal3
+     pushbyte            2
+     divide
+     getlocal1
+     getlocal1
+     multiply
+     getlocal            5
+     pushdouble          1.525
+     multiply
+     dup
+     setlocal            6
+
+     convert_d
+     setlocal            5
+
+     getlocal            6
+     kill                6
+     pushbyte            1
+     add
+     getlocal1
+     multiply
+     getlocal            5
+     subtract
+     multiply
+     multiply
+     getlocal2
+     add
+     returnvalue
+
+L41:
+     getlocal3
+     pushbyte            2
+     divide
+     getlocal1
+     pushbyte            2
+     subtract
+     dup
+     setlocal            6
+
+     convert_d
+     setlocal1
+
+     getlocal            6
+     kill                6
+     getlocal1
+     multiply
+     getlocal            5
+     pushdouble          1.525
+     multiply
+     dup
+     setlocal            6
+
+     convert_d
+     setlocal            5
+
+     getlocal            6
+     kill                6
+     pushbyte            1
+     add
+     getlocal1
+     multiply
+     getlocal            5
+     add
+     multiply
+     pushbyte            2
+     add
+     multiply
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

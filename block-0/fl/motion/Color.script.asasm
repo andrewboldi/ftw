@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "fl.motion:Color/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Color", [PackageNamespace("fl.motion")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.geom"), "ColorTransform")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.geom"), "ColorTransform")
+    newclass            "fl.motion:Color"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("fl.motion"), "Color")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.motion"), "Color")
+  #include "Color.class.asasm"
+ end ; trait
+end ; script

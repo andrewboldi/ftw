@@ -1,0 +1,191 @@
+class
+ refid "com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"
+ instance QName(PackageNamespace("com.jumpeye.flashEff2.symbol.badTransmission"), "CustomMotion")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion")
+  iinit
+   refid "com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion/instance/init"
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushundefined
+     coerce_a
+     setlocal1
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "_points")
+     newarray            0
+     initproperty        QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "_points")
+
+     pushbyte            0
+     coerce_a
+     setlocal1
+
+     jump                L23
+
+L14:
+     label
+     getlex              QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "_points")
+     getlocal1
+     pushbyte            1
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion/instance"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), PackageInternalNs("com.jumpeye.flashEff2.symbol.badTransmission"), StaticProtectedNs("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), StaticProtectedNs("Object")])
+
+     getlocal1
+     increment
+     coerce_a
+     setlocal1
+
+L23:
+     getlocal1
+     pushbyte            30
+     iflt                L14
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "_points") type QName(PackageNamespace(""), "Array") end
+  trait getter QName(PackageNamespace(""), "points")
+   method
+    refid "com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion/instance/points/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "_points")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "pLen") type QName(PackageNamespace(""), "uint") end
+  trait setter QName(PackageNamespace(""), "points")
+   method
+    refid "com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion/instance/points/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "Array")
+      istypelate
+      iffalse             L14
+
+      getlocal0
+      getlocal1
+      setproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "_points")
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "pLen")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      initproperty        QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "pLen")
+
+L14:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getValue")
+   method
+    refid "com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion/instance/getValue"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      getlocal            4
+      pushbyte            0
+      ifnle               L13
+
+      getlex              QName(PackageNamespace(""), "NaN")
+      returnvalue
+
+L13:
+      getlocal1
+      getlocal            4
+      divide
+      coerce_a
+      setlocal            5
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "pLen")
+      getlocal            5
+      multiply
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      convert_u
+      setlocal            6
+
+      getlocal2
+      getlocal0
+      getproperty         QName(ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), "_points")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion/instance"), PackageNamespace(""), ProtectedNamespace("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), PackageInternalNs("com.jumpeye.flashEff2.symbol.badTransmission"), StaticProtectedNs("com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion"), StaticProtectedNs("Object")])
+      getlocal3
+      multiply
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.jumpeye.flashEff2.symbol.badTransmission:CustomMotion/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,53 @@
+script
+ sinit
+  refid "com.jumpeye.flashEff2.core.interfaces:IFlashEffCommand/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("IFlashEffCommand", [PackageNamespace("com.jumpeye.flashEff2.core.interfaces")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.jumpeye.flashEff2.core.interfaces"), "IFlashEffPattern")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.jumpeye.flashEff2.core.interfaces"), "IFlashEffPattern")
+    newclass            "com.jumpeye.flashEff2.core.interfaces:IFlashEffCommand"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.jumpeye.flashEff2.core.interfaces"), "IFlashEffCommand")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.jumpeye.flashEff2.core.interfaces"), "IFlashEffCommand")
+  #include "IFlashEffCommand.class.asasm"
+ end ; trait
+end ; script

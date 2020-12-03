@@ -1,0 +1,50 @@
+class
+ refid "com.jumpeye.flashEff2.buttonEffect:FEBFilterPlugins"
+ instance QName(PackageNamespace("com.jumpeye.flashEff2.buttonEffect"), "FEBFilterPlugins")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.flashEff2.buttonEffect:FEBFilterPlugins")
+  iinit
+   refid "com.jumpeye.flashEff2.buttonEffect:FEBFilterPlugins/instance/init"
+   body
+    maxstack 5
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace("com.jumpeye.transitions.plugins"), "TweenPlugin")
+     getlex              QName(PackageNamespace("com.jumpeye.transitions.plugins"), "BlurFilterPlugin")
+     getlex              QName(PackageNamespace("com.jumpeye.transitions.plugins"), "BevelFilterPlugin")
+     getlex              QName(PackageNamespace("com.jumpeye.transitions.plugins"), "GlowFilterPlugin")
+     getlex              QName(PackageNamespace("com.jumpeye.transitions.plugins"), "DropShadowFilterPlugin")
+     newarray            4
+     callpropvoid        QName(PackageNamespace(""), "activate"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.jumpeye.flashEff2.buttonEffect:FEBFilterPlugins/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

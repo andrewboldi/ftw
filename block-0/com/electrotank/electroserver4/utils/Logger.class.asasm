@@ -1,0 +1,182 @@
+class
+ refid "com.electrotank.electroserver4.utils:Logger"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.utils"), "Logger")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.utils"), "Dispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.utils:Logger")
+  iinit
+   refid "com.electrotank.electroserver4.utils:Logger/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.utils:Logger/class/init#0"
+  body
+   maxstack 6
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "LOGGED")
+    pushstring          "logged"
+    setproperty         QName(PackageNamespace(""), "LOGGED")
+
+    findproperty        QName(PackageNamespace(""), "info")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "info")
+
+    findproperty        QName(PackageNamespace(""), "debug")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "debug")
+
+    findproperty        QName(PackageNamespace(""), "severe")
+    pushbyte            1
+    setproperty         QName(PackageNamespace(""), "severe")
+
+    findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), "levelNames")
+    pushnull
+    pushstring          "[SEVERE]"
+    pushstring          "[DEBUG]"
+    pushnull
+    pushstring          "[INFO]"
+    newarray            5
+    setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), "levelNames")
+
+    findproperty        QName(PackageNamespace(""), "LogLevel")
+    getlex              QName(PackageNamespace(""), "info")
+    setproperty         QName(PackageNamespace(""), "LogLevel")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "LOGGED") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("logged") end
+ trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), "_instance") slotid 2 type QName(PackageNamespace("com.electrotank.electroserver4.utils"), "Logger") end
+ trait slot QName(PackageNamespace(""), "info") slotid 3 type QName(PackageNamespace(""), "Number") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "debug") slotid 4 type QName(PackageNamespace(""), "Number") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "severe") slotid 5 type QName(PackageNamespace(""), "Number") value Integer(1) end
+ trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), "levelNames") slotid 6 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PackageNamespace(""), "LogLevel") slotid 7 type QName(PackageNamespace(""), "Number") end
+ trait method QName(PackageNamespace(""), "log") flag FINAL dispid 3
+  method
+   refid "com.electrotank.electroserver4.utils:Logger/class/log"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 6
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal2
+     getlex              QName(PackageNamespace(""), "LogLevel")
+     ifngt               L6
+
+     returnvoid
+
+L6:
+     pushstring          "   "
+     setlocal3
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), "levelNames")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), PackageNamespace(""), PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class/log"), PackageNamespace("com.electrotank.electroserver4.utils"), PackageInternalNs("com.electrotank.electroserver4.utils"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.electrotank.electroserver4.utils:Logger"), StaticProtectedNs("com.electrotank.electroserver4.utils:Logger"), StaticProtectedNs("com.electrotank.electroserver4.utils:Dispatcher"), StaticProtectedNs("Object")])
+     pushstring          " "
+     add
+     getlocal1
+     add
+     coerce_s
+     setlocal1
+
+     pushstring          "message"
+     getlocal1
+     pushstring          "level"
+     getlocal2
+     newobject           2
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            4
+
+     pushstring          "target"
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), "_instance")
+     pushstring          "log"
+     getlocal            4
+     pushstring          "type"
+     getlex              QName(PackageNamespace(""), "LOGGED")
+     newobject           3
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            5
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), "_instance")
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "init") flag FINAL dispid 4
+  method
+   refid "com.electrotank.electroserver4.utils:Logger/class/init#1"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), "_instance")
+     getlocal0
+     construct           0
+     setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), "_instance")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getInstance") flag FINAL dispid 5
+  method
+   refid "com.electrotank.electroserver4.utils:Logger/class/getInstance"
+   returns QName(PackageNamespace("com.electrotank.electroserver4.utils"), "Logger")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.utils:Logger/class"), "_instance")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

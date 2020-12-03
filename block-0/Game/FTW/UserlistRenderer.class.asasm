@@ -1,0 +1,938 @@
+class
+ refid "Game.FTW:UserlistRenderer"
+ instance QName(PackageNamespace("Game.FTW"), "UserlistRenderer")
+  extends QName(PackageNamespace("fl.core"), "UIComponent")
+  implements Multiname("ICellRenderer", [PackageNamespace("fl.controls.listClasses")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Game.FTW:UserlistRenderer")
+  iinit
+   refid "Game.FTW:UserlistRenderer/instance/init"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "focusEnabled")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "focusEnabled")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_selected") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_listData") type QName(PackageNamespace("fl.controls.listClasses"), "ListData") end
+  trait slot QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PackageNamespace(""), "setSize") flag OVERRIDE
+   method
+    refid "Game.FTW:UserlistRenderer/instance/setSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callsupervoid       QName(PackageNamespace(""), "setSize"), 2
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "listData")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/listData/getter"
+    returns QName(PackageNamespace("fl.controls.listClasses"), "ListData")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_listData")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "listData")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/listData/setter"
+    param QName(PackageNamespace("fl.controls.listClasses"), "ListData")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_listData")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_listData")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "data")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/data/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "data")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/data/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "selected")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/selected/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_selected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "selected")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/selected/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_selected")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_selected")
+
+      findpropstrict      QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "drawLayout")
+      callpropvoid        QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "drawLayout"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "toggleSelected")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer:toggleSelected"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_selected")
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_selected")
+      not
+      initproperty        QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_selected")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setMouseState")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/setMouseState"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), "showRating")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer/instance/showRating"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      callproperty        QName(PackageNamespace("flash.text"), "TextField"), 1
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal2
+
+      getlocal2
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "data")
+      getproperty         Multiname("rating", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), "hideRating")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer/instance/hideRating"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      callproperty        QName(PackageNamespace("flash.text"), "TextField"), 1
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal2
+
+      getlocal2
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "data")
+      getproperty         Multiname("points", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "drawLayout")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer:drawLayout"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 10
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      setlocal            8
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      pushbyte            1
+      dup
+      dup
+      pushbyte            1
+      dup
+      newarray            5
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushbyte            0
+      pushbyte            1
+      pushbyte            127
+      pushshort           224
+      pushshort           255
+      newarray            5
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_selected")
+      iffalse             L101
+
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("type", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushbyte            1
+      ifne                L54
+
+      pushbyte            0
+      pushint             16772846
+      pushint             16764108
+      pushint             16772846
+      pushbyte            0
+      newarray            5
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      jump                L62
+
+L54:
+      pushbyte            0
+      pushint             15658751
+      pushint             13421823
+      pushint             15658751
+      pushbyte            0
+      newarray            5
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+L62:
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+      constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+      dup
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "height")
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      pushbyte            2
+      divide
+      pushbyte            0
+      dup
+      callpropvoid        QName(PackageNamespace(""), "createGradientBox"), 5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("flash.display"), "GradientType")
+      getproperty         QName(PackageNamespace(""), "LINEAR")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlex              QName(PackageNamespace("flash.display"), "SpreadMethod")
+      getproperty         QName(PackageNamespace(""), "PAD")
+      callpropvoid        QName(PackageNamespace(""), "beginGradientFill"), 6
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+L101:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "numChildren")
+      pushbyte            0
+      ifnle               L252
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            5
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            7
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            6
+
+      getlocal            5
+      getlocal            7
+      getlocal            6
+      pushfalse
+      dup
+      setlocal            9
+
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      getlocal            9
+      kill                9
+      dup
+      setlocal            9
+
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      getlocal            9
+      kill                9
+      setproperty         QName(PackageNamespace(""), "selectable")
+
+      getlocal            5
+      getlocal            7
+      getlocal            6
+      pushtrue
+      dup
+      setlocal            9
+
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlocal            9
+      kill                9
+      dup
+      setlocal            9
+
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlocal            9
+      kill                9
+      setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+      getlocal            5
+      getlocal            7
+      getlocal            6
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "width")
+      dup
+      setlocal            9
+
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlocal            9
+      kill                9
+      dup
+      setlocal            9
+
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlocal            9
+      kill                9
+      setproperty         QName(PackageNamespace(""), "width")
+
+      getlocal            5
+      getlocal            7
+      getlocal            6
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "height")
+      dup
+      setlocal            9
+
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlocal            9
+      kill                9
+      dup
+      setlocal            9
+
+      setproperty         QName(PackageNamespace(""), "height")
+
+      getlocal            9
+      kill                9
+      setproperty         QName(PackageNamespace(""), "height")
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      dup
+      setlocal            8
+
+      pushstring          "center"
+      setproperty         QName(PackageNamespace(""), "align")
+
+      getlocal            8
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "bold")
+
+      getlocal            8
+      pushstring          "_sans"
+      setproperty         QName(PackageNamespace(""), "font")
+
+      getlocal            7
+      getlocal            8
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      dup
+      setlocal            8
+
+      pushstring          "right"
+      setproperty         QName(PackageNamespace(""), "align")
+
+      getlocal            8
+      pushstring          "_sans"
+      setproperty         QName(PackageNamespace(""), "font")
+
+      getlocal            6
+      getlocal            8
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      dup
+      setlocal            8
+
+      pushstring          "left"
+      setproperty         QName(PackageNamespace(""), "align")
+
+      getlocal            8
+      pushstring          "_sans"
+      setproperty         QName(PackageNamespace(""), "font")
+
+      getlocal            5
+      getlocal            8
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlocal            6
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlocal            7
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addChildAt")
+      getlocal            5
+      pushbyte            2
+      callpropvoid        QName(PackageNamespace(""), "addChildAt"), 2
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+      getlex              QName(PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), "showRating")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
+      getlex              QName(PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), "hideRating")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlex              QName(PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), "on_removed_from_stage")
+      callpropvoid        QName(PackageNamespace(""), "add"), 3
+
+      jump                L273
+
+L252:
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      callproperty        QName(PackageNamespace("flash.text"), "TextField"), 1
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            6
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      callproperty        QName(PackageNamespace("flash.text"), "TextField"), 1
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            7
+
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      pushbyte            2
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      callproperty        QName(PackageNamespace("flash.text"), "TextField"), 1
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal            5
+
+L273:
+      jump                L411
+
+L274:
+      label
+      getlocal            5
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal            7
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal            6
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal            5
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("name", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("points", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L300
+
+      getlocal            6
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("points", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+L300:
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("rating", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L309
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "data")
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("rating", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         Multiname("rating", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L309:
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("points", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      ifeq                L318
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "data")
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("points", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         Multiname("points", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L318:
+      jump                L439
+
+L319:
+      label
+      getlocal            5
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal            7
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal            6
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal            5
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("name", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal            7
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal            6
+      pushstring          ""
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L439
+
+L340:
+      label
+      pushbyte            0
+      pushint             15658734
+      pushint             13421772
+      pushint             15658734
+      pushbyte            0
+      newarray            5
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+      constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+      coerce              QName(PackageNamespace("flash.geom"), "Matrix")
+      dup
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "height")
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      pushbyte            2
+      divide
+      pushbyte            0
+      dup
+      callpropvoid        QName(PackageNamespace(""), "createGradientBox"), 5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlex              QName(PackageNamespace("flash.display"), "GradientType")
+      getproperty         QName(PackageNamespace(""), "LINEAR")
+      getlocal1
+      getlocal2
+      getlocal3
+      getlocal            4
+      getlex              QName(PackageNamespace("flash.display"), "SpreadMethod")
+      getproperty         QName(PackageNamespace(""), "PAD")
+      callpropvoid        QName(PackageNamespace(""), "beginGradientFill"), 6
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "height")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlocal            5
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal            6
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal            7
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal            7
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("text", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "text")
+
+      jump                L439
+
+L402:
+      label
+      getlocal0
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      jump                L439
+
+      ; 0x10
+      ; 0x51
+      ; 0x00
+      ; 0x00
+L411:
+      getlex              QName(ProtectedNamespace("Game.FTW:UserlistRenderer"), "_data")
+      getproperty         Multiname("type", [PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), PackageNamespace(""), ProtectedNamespace("Game.FTW:UserlistRenderer"), PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer"), PackageNamespace("Game.FTW"), PackageInternalNs("Game.FTW"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), StaticProtectedNs("Game.FTW:UserlistRenderer"), StaticProtectedNs("fl.core:UIComponent"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      setlocal            9
+
+      pushbyte            0
+      getlocal            9
+      ifstrictne          L419
+
+      pushbyte            0
+      jump                L437
+
+L419:
+      pushbyte            1
+      getlocal            9
+      ifstrictne          L424
+
+      pushbyte            1
+      jump                L437
+
+L424:
+      pushbyte            2
+      getlocal            9
+      ifstrictne          L429
+
+      pushbyte            2
+      jump                L437
+
+L429:
+      jump                L436
+
+      ; 0x24
+      ; 0x03
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L436:
+      pushbyte            3
+L437:
+      kill                9
+      lookupswitch        L402, [L274, L319, L340, L402]
+
+L439:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), "on_removed_from_stage")
+   method
+    refid "Game.FTW:UserlistRenderer/instance/Game.FTW:UserlistRenderer/instance/on_removed_from_stage"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+      getlex              QName(PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), "on_removed_from_stage")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+      getlex              QName(PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), "showRating")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      getlex              QName(PackageNamespace("Misc"), "EventManager")
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
+      getlex              QName(PrivateNamespace(null, "Game.FTW:UserlistRenderer/instance"), "hideRating")
+      callpropvoid        QName(PackageNamespace(""), "remove"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Game.FTW:UserlistRenderer/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

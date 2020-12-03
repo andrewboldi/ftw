@@ -1,0 +1,81 @@
+class
+ refid "com.electrotank.electroserver4.protocol.codec:UpdateUserVariableRequestCodec"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "UpdateUserVariableRequestCodec")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "MessageCodecImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.protocol.codec:UpdateUserVariableRequestCodec")
+  iinit
+   refid "com.electrotank.electroserver4.protocol.codec:UpdateUserVariableRequestCodec/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "encode") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.protocol.codec:UpdateUserVariableRequestCodec/instance/encode"
+    param QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageWriter")
+    param QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "UpdateUserVariableRequest")
+      getlocal2
+      callproperty        QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "UpdateUserVariableRequest"), 1
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "UpdateUserVariableRequest")
+      setlocal3
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getName"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4"), "MessageConstants")
+      getproperty         QName(PackageNamespace(""), "USER_VARIABLE_NAME_PREFIX_LENGTH")
+      callpropvoid        QName(Namespace("com.electrotank.electroserver4.protocol:MessageWriter"), "writePrefixedString"), 2
+
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.protocol.codec"), "EsObjectCodec")
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getValue"), 0
+      callpropvoid        QName(PackageNamespace(""), "encode"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol.codec:UpdateUserVariableRequestCodec/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

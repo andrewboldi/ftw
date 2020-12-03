@@ -1,0 +1,1670 @@
+class
+ refid "com.electrotank.electroserver4.message.request:CreateRoomRequest"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "CreateRoomRequest")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.request"), "RequestImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.request:CreateRoomRequest")
+  iinit
+   refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "CreateRoomRequest")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setZoneId")
+     pushbyte            -1
+     callpropvoid        QName(PackageNamespace(""), "setZoneId"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setCapacity")
+     pushbyte            -1
+     callpropvoid        QName(PackageNamespace(""), "setCapacity"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsCreateOrJoinRoom")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setIsCreateOrJoinRoom"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setRoomDescription")
+     pushstring          ""
+     callpropvoid        QName(PackageNamespace(""), "setRoomDescription"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsNonOperatorUpdateAllowed")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setIsNonOperatorUpdateAllowed"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsNonOperatorVariableUpdateAllowed")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setIsNonOperatorVariableUpdateAllowed"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsPersistent")
+     pushfalse
+     callpropvoid        QName(PackageNamespace(""), "setIsPersistent"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsHidden")
+     pushfalse
+     callpropvoid        QName(PackageNamespace(""), "setIsHidden"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setPlugins")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     callpropvoid        QName(PackageNamespace(""), "setPlugins"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setRoomVariables")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     callpropvoid        QName(PackageNamespace(""), "setRoomVariables"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsReceivingRoomListUpdates")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setIsReceivingRoomListUpdates"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsReceivingRoomDetailUpdates")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setIsReceivingRoomDetailUpdates"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsReceivingUserListUpdates")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setIsReceivingUserListUpdates"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsReceivingRoomVariableUpdates")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setIsReceivingRoomVariableUpdates"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsReceivingUserVariableUpdates")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setIsReceivingUserVariableUpdates"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsReceivingVideoEvents")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "setIsReceivingVideoEvents"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsUsingFloodingFilter")
+     pushfalse
+     callpropvoid        QName(PackageNamespace(""), "setIsUsingFloodingFilter"), 1
+
+     findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "setIsFloodingFilterSpecified")
+     pushfalse
+     callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "setIsFloodingFilterSpecified"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsFloodingFilterResetAfterKick")
+     pushfalse
+     callpropvoid        QName(PackageNamespace(""), "setIsFloodingFilterResetAfterKick"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setFloodingFilterBanDuration")
+     pushbyte            -1
+     callpropvoid        QName(PackageNamespace(""), "setFloodingFilterBanDuration"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setFloodingFilterKicksBeforeBan")
+     pushbyte            3
+     callpropvoid        QName(PackageNamespace(""), "setFloodingFilterKicksBeforeBan"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setFloodingFilterFailuresBeforeKick")
+     pushbyte            1
+     callpropvoid        QName(PackageNamespace(""), "setFloodingFilterFailuresBeforeKick"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsUsingLanguageFilter")
+     pushfalse
+     callpropvoid        QName(PackageNamespace(""), "setIsUsingLanguageFilter"), 1
+
+     findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "setIsLanguageFilterSpecified")
+     pushfalse
+     callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "setIsLanguageFilterSpecified"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsDeliverMessageOnFailure")
+     pushfalse
+     callpropvoid        QName(PackageNamespace(""), "setIsDeliverMessageOnFailure"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setFailuresBeforeKick")
+     pushbyte            3
+     callpropvoid        QName(PackageNamespace(""), "setFailuresBeforeKick"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setKicksBeforeBan")
+     pushbyte            3
+     callpropvoid        QName(PackageNamespace(""), "setKicksBeforeBan"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setBanDuration")
+     pushbyte            -1
+     callpropvoid        QName(PackageNamespace(""), "setBanDuration"), 1
+
+     findpropstrict      QName(PackageNamespace(""), "setIsResetAfterKick")
+     pushfalse
+     callpropvoid        QName(PackageNamespace(""), "setIsResetAfterKick"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "zoneId") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "zoneName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "roomName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "roomDescription") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "capacity") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "password") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomListUpdates") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingUserListUpdates") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomVariableUpdates") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingUserVariableUpdates") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingVideoEvents") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomDetailUpdates") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isNonOperatorUpdateAllowed") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isNonOperatorVariableUpdateAllowed") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isPersistent") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isHidden") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isCreateOrJoinRoom") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "plugins") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "variables") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isUsingLanguageFilter") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "languageFilterName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isDeliverMessageOnFailure") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "failuresBeforeKick") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "kicksBeforeBan") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "banDuration") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isResetAfterKick") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isUsingFloodingFilter") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isFloodingFilterSpecified") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterName") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterFailuresBeforeKick") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterKicksBeforeBan") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterBanDuration") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isFloodingFilterResetAfterKick") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isLanguageFilterSpecified") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "validate") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/validate"
+    returns QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushtrue
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+      getlocal1
+      getlocal2
+      constructprop       QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse"), 2
+      coerce              QName(PackageNamespace("com.electrotank.electroserver4.message"), "ValidationResponse")
+      setlocal3
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsReceivingRoomDetailUpdates")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsReceivingRoomDetailUpdates"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomDetailUpdates")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsReceivingRoomDetailUpdates")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsReceivingRoomDetailUpdates"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomDetailUpdates")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsReceivingVideoEvents")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsReceivingVideoEvents"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingVideoEvents")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsReceivingVideoEvents")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsReceivingVideoEvents"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingVideoEvents")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "setIsLanguageFilterSpecified")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsLanguageFilterSpecified"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isLanguageFilterSpecified")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isLanguageFilterSpecified")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsLanguageFilterSpecified")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsLanguageFilterSpecified"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isLanguageFilterSpecified")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsFloodingFilterResetAfterKick")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsFloodingFilterResetAfterKick"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isFloodingFilterResetAfterKick")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isFloodingFilterResetAfterKick")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsFloodingFilterResetAfterKick")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsFloodingFilterResetAfterKick"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isFloodingFilterResetAfterKick")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFloodingFilterBanDuration")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setFloodingFilterBanDuration"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterBanDuration")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterBanDuration")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getFloodingFilterBanDuration")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getFloodingFilterBanDuration"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterBanDuration")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFloodingFilterKicksBeforeBan")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setFloodingFilterKicksBeforeBan"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterKicksBeforeBan")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterKicksBeforeBan")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getFloodingFilterKicksBeforeBan")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getFloodingFilterKicksBeforeBan"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterKicksBeforeBan")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFloodingFilterFailuresBeforeKick")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setFloodingFilterFailuresBeforeKick"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterFailuresBeforeKick")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterFailuresBeforeKick")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getFloodingFilterFailuresBeforeKick")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getFloodingFilterFailuresBeforeKick"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterFailuresBeforeKick")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFloodingFilterName")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setFloodingFilterName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "setIsFloodingFilterSpecified")
+      pushtrue
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "setIsFloodingFilterSpecified"), 1
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterName")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getFloodingFilterName")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getFloodingFilterName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "floodingFilterName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsFloodingFilterSpecified")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsFloodingFilterSpecified"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isFloodingFilterSpecified")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "setIsFloodingFilterSpecified")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsFloodingFilterSpecified"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isFloodingFilterSpecified")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isFloodingFilterSpecified")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsUsingFloodingFilter")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsUsingFloodingFilter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isUsingFloodingFilter")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isUsingFloodingFilter")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsUsingFloodingFilter")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsUsingFloodingFilter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isUsingFloodingFilter")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsResetAfterKick")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsResetAfterKick"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isResetAfterKick")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isResetAfterKick")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsResetAfterKick")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsResetAfterKick"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isResetAfterKick")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setLanguageFilterName")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setLanguageFilterName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "setIsLanguageFilterSpecified")
+      pushtrue
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "setIsLanguageFilterSpecified"), 1
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "languageFilterName")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "languageFilterName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getLanguageFilterName")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getLanguageFilterName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "languageFilterName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsDeliverMessageOnFailure")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsDeliverMessageOnFailure"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isDeliverMessageOnFailure")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isDeliverMessageOnFailure")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsDeliverMessageOnFailure")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsDeliverMessageOnFailure"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isDeliverMessageOnFailure")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setFailuresBeforeKick")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setFailuresBeforeKick"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      convert_d
+      setlocal1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getFailuresBeforeKick")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getFailuresBeforeKick"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "failuresBeforeKick")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setKicksBeforeBan")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setKicksBeforeBan"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      convert_d
+      setlocal1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getKicksBeforeBan")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getKicksBeforeBan"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "kicksBeforeBan")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setBanDuration")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setBanDuration"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "banDuration")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "banDuration")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getBanDuration")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getBanDuration"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "banDuration")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsUsingLanguageFilter")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsUsingLanguageFilter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isUsingLanguageFilter")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isUsingLanguageFilter")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsUsingLanguageFilter")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsUsingLanguageFilter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isUsingLanguageFilter")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsCreateOrJoinRoom")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsCreateOrJoinRoom"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isCreateOrJoinRoom")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isCreateOrJoinRoom")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsCreateOrJoinRoom")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsCreateOrJoinRoom"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isCreateOrJoinRoom")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRoomVariables")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setRoomVariables"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "variables")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "variables")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRoomVariables")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getRoomVariables"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "variables")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsNonOperatorUpdateAllowed")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsNonOperatorUpdateAllowed"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isNonOperatorUpdateAllowed")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isNonOperatorUpdateAllowed")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsNonOperatorUpdateAllowed")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsNonOperatorUpdateAllowed"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isNonOperatorUpdateAllowed")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsNonOperatorVariableUpdateAllowed")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsNonOperatorVariableUpdateAllowed"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isNonOperatorVariableUpdateAllowed")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isNonOperatorVariableUpdateAllowed")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsNonOperatorVariableUpdateAllowed")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsNonOperatorVariableUpdateAllowed"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isNonOperatorVariableUpdateAllowed")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setPlugins")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setPlugins"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "plugins")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getPlugins")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getPlugins"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "plugins")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsPersistent")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsPersistent"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isPersistent")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isPersistent")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsPersistent")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsPersistent"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isPersistent")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsHidden")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsHidden"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isHidden")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isHidden")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsHidden")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsHidden"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isHidden")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsReceivingRoomListUpdates")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsReceivingRoomListUpdates"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomListUpdates")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomListUpdates")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsReceivingRoomListUpdates")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsReceivingRoomListUpdates"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomListUpdates")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsReceivingUserListUpdates")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsReceivingUserListUpdates"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingUserListUpdates")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingUserListUpdates")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsReceivingUserListUpdates")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsReceivingUserListUpdates"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingUserListUpdates")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsReceivingRoomVariableUpdates")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsReceivingRoomVariableUpdates"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomVariableUpdates")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomVariableUpdates")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsReceivingRoomVariableUpdates")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsReceivingRoomVariableUpdates"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingRoomVariableUpdates")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setIsReceivingUserVariableUpdates")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setIsReceivingUserVariableUpdates"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingUserVariableUpdates")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingUserVariableUpdates")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIsReceivingUserVariableUpdates")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getIsReceivingUserVariableUpdates"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "isReceivingUserVariableUpdates")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setZoneId")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setZoneId"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "zoneId")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "zoneId")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getZoneId")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getZoneId"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "zoneId")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setZoneName")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setZoneName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "zoneName")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "zoneName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getZoneName")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getZoneName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "zoneName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRoomName")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setRoomName"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "roomName")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "roomName")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRoomName")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getRoomName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "roomName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRoomDescription")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setRoomDescription"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "roomDescription")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "roomDescription")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getRoomDescription")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getRoomDescription"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "roomDescription")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setCapacity")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setCapacity"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "capacity")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getCapacity")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getCapacity"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "capacity")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setPassword")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/setPassword"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "password")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getPassword")
+   method
+    refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance/getPassword"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.request:CreateRoomRequest/instance"), "password")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.request:CreateRoomRequest/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

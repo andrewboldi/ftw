@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "Type:GameStatus/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("GameStatus", [PackageNamespace("Type")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "Type:GameStatus"
+    popscope
+    initproperty        QName(PackageNamespace("Type"), "GameStatus")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Type"), "GameStatus")
+  #include "GameStatus.class.asasm"
+ end ; trait
+end ; script

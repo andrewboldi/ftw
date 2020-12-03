@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "net.theyak:YakMath/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("YakMath", [PackageNamespace("net.theyak")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "net.theyak:YakMath"
+    popscope
+    initproperty        QName(PackageNamespace("net.theyak"), "YakMath")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("net.theyak"), "YakMath")
+  #include "YakMath.class.asasm"
+ end ; trait
+end ; script

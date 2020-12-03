@@ -1,0 +1,63 @@
+class
+ refid "fl.events:DataGridEventReason"
+ instance QName(PackageNamespace("fl.events"), "DataGridEventReason")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag FINAL
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.events:DataGridEventReason")
+  iinit
+   refid "fl.events:DataGridEventReason/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "fl.events:DataGridEventReason/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "CANCELLED")
+    pushstring          "cancelled"
+    initproperty        QName(PackageNamespace(""), "CANCELLED")
+
+    findproperty        QName(PackageNamespace(""), "OTHER")
+    pushstring          "other"
+    initproperty        QName(PackageNamespace(""), "OTHER")
+
+    findproperty        QName(PackageNamespace(""), "NEW_COLUMN")
+    pushstring          "newColumn"
+    initproperty        QName(PackageNamespace(""), "NEW_COLUMN")
+
+    findproperty        QName(PackageNamespace(""), "NEW_ROW")
+    pushstring          "newRow"
+    initproperty        QName(PackageNamespace(""), "NEW_ROW")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "OTHER") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("other") end
+ trait const QName(PackageNamespace(""), "CANCELLED") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("cancelled") end
+ trait const QName(PackageNamespace(""), "NEW_COLUMN") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("newColumn") end
+ trait const QName(PackageNamespace(""), "NEW_ROW") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("newRow") end
+end ; class

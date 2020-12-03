@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "net.theyak.net:queryLoader/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("queryLoader", [PackageNamespace("net.theyak.net")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "net.theyak.net:queryLoader"
+    popscope
+    initproperty        QName(PackageNamespace("net.theyak.net"), "queryLoader")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("net.theyak.net"), "queryLoader")
+  #include "queryLoader.class.asasm"
+ end ; trait
+end ; script

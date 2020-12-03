@@ -1,0 +1,1944 @@
+class
+ refid "com.jumpeye.transitions:TweenLite"
+ instance QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.transitions:TweenLite")
+  iinit
+   refid "com.jumpeye.transitions:TweenLite/instance/init"
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Object")
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            4
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     pushnull
+     ifne                L10
+
+     returnvoid
+
+L10:
+     getlex              QName(PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), "_tlInitted")
+     iftrue              L46
+
+     findproperty        QName(PackageNamespace(""), "currentTime")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+     callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+     setproperty         QName(PackageNamespace(""), "currentTime")
+
+     getlex              QName(PackageNamespace(""), "timingSprite")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+     getlex              QName(PackageNamespace(""), "updateAll")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     getlex              QName(PackageNamespace(""), "overwriteManager")
+     pushnull
+     ifne                L34
+
+     findproperty        QName(PackageNamespace(""), "overwriteManager")
+     pushstring          "mode"
+     pushbyte            1
+     pushstring          "enabled"
+     pushfalse
+     newobject           2
+     setproperty         QName(PackageNamespace(""), "overwriteManager")
+
+L34:
+     getlex              QName(PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), "_timer")
+     pushstring          "timer"
+     getlex              QName(StaticProtectedNs("com.jumpeye.transitions:TweenLite"), "killGarbage")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     getlex              QName(PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), "_timer")
+     callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+     findproperty        QName(PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), "_tlInitted")
+     pushtrue
+     setproperty         QName(PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), "_tlInitted")
+
+L46:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "vars")
+
+     getlocal0
+     getlocal2
+     convert_d
+     dup
+     iftrue              L57
+
+     pop
+     pushdouble          0.001
+     convert_d
+L57:
+     initproperty        QName(PackageNamespace(""), "duration")
+
+     getlocal0
+     getlocal3
+     getproperty         Multiname("delay", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     convert_d
+     dup
+     iftrue              L67
+
+     pop
+     pushbyte            0
+     convert_d
+L67:
+     initproperty        QName(PackageNamespace(""), "delay")
+
+     getlocal0
+     getlocal3
+     getproperty         Multiname("timeScale", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     convert_d
+     dup
+     iftrue              L77
+
+     pop
+     pushbyte            1
+     convert_d
+L77:
+     initproperty        QName(PackageNamespace(""), "combinedTimeScale")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Boolean")
+     getlocal2
+     pushbyte            0
+     equals
+     coerce_a
+     dup
+     iffalse             L92
+
+     pop
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "delay")
+     pushbyte            0
+     equals
+     coerce_a
+L92:
+     callproperty        QName(PackageNamespace(""), "Boolean"), 1
+     initproperty        QName(PackageNamespace(""), "active")
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "target")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getproperty         Multiname("ease", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     typeof
+     pushstring          "function"
+     ifeq                L107
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getlex              QName(PackageNamespace(""), "defaultEase")
+     setproperty         Multiname("ease", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+L107:
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getproperty         Multiname("easeParams", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     pushnull
+     ifeq                L122
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getproperty         Multiname("ease", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     setproperty         Multiname("proxiedEase", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getlex              QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "easeProxy")
+     setproperty         Multiname("ease", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+L122:
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getproperty         Multiname("ease", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     initproperty        QName(PackageNamespace(""), "ease")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getproperty         Multiname("isTV", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     pushtrue
+     ifne                L138
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getproperty         Multiname("exposedVars", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace(""), "Object")
+     jump                L141
+
+L138:
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     coerce              QName(PackageNamespace(""), "Object")
+L141:
+     initproperty        QName(PackageNamespace(""), "exposedVars")
+
+     getlocal0
+     newarray            0
+     initproperty        QName(PackageNamespace(""), "tweens")
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "currentTime")
+     initproperty        QName(PackageNamespace(""), "initTime")
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "initTime")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "delay")
+     pushshort           1000
+     multiply
+     add
+     initproperty        QName(PackageNamespace(""), "startTime")
+
+     getlocal3
+     getproperty         Multiname("overwrite", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     getlex              QName(PackageNamespace(""), "undefined")
+     equals
+     dup
+     iftrue              L174
+
+     pop
+     getlex              QName(PackageNamespace(""), "overwriteManager")
+     getproperty         Multiname("enabled", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     not
+     dup
+     iffalse             L174
+
+     pop
+     getlocal3
+     getproperty         Multiname("overwrite", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     pushbyte            1
+     greaterthan
+L174:
+     iffalse             L179
+
+     getlex              QName(PackageNamespace(""), "overwriteManager")
+     getproperty         Multiname("mode", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     convert_i
+     jump                L184
+
+L179:
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlocal3
+     getproperty         Multiname("overwrite", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     convert_i
+L184:
+     convert_i
+     setlocal            4
+
+     getlocal1
+     getlex              QName(PackageNamespace(""), "masterList")
+     in
+     not
+     dup
+     iftrue              L196
+
+     pop
+     getlocal            4
+     pushbyte            1
+     equals
+L196:
+     iffalse             L203
+
+     getlex              QName(PackageNamespace(""), "masterList")
+     getlocal1
+     getlocal0
+     newarray            1
+     setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+     jump                L208
+
+L203:
+     getlex              QName(PackageNamespace(""), "masterList")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     getlocal0
+     callpropvoid        Multiname("push", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")]), 1
+
+L208:
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getproperty         Multiname("runBackwards", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     pushtrue
+     equals
+     dup
+     iffalse             L222
+
+     pop
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getproperty         Multiname("renderOnStart", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     pushtrue
+     equals
+     not
+L222:
+     dup
+     iftrue              L228
+
+     pop
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "active")
+     convert_b
+L228:
+     iffalse             L273
+
+     findpropstrict      QName(PackageNamespace(""), "initTweenVals")
+     callpropvoid        QName(PackageNamespace(""), "initTweenVals"), 0
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "active")
+     iffalse             L241
+
+     findpropstrict      QName(PackageNamespace(""), "render")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "startTime")
+     pushbyte            1
+     add
+     callpropvoid        QName(PackageNamespace(""), "render"), 1
+
+     jump                L245
+
+L241:
+     findpropstrict      QName(PackageNamespace(""), "render")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "startTime")
+     callpropvoid        QName(PackageNamespace(""), "render"), 1
+
+L245:
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "exposedVars")
+     getproperty         Multiname("visible", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     pushnull
+     equals
+     not
+     dup
+     iffalse             L259
+
+     pop
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vars")
+     getproperty         Multiname("runBackwards", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     pushtrue
+     equals
+L259:
+     dup
+     iffalse             L266
+
+     pop
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "target")
+     getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+     istypelate
+L266:
+     iffalse             L273
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "target")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "exposedVars")
+     getproperty         Multiname("visible", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     setproperty         Multiname("visible", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+L273:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "delay") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "_hasUpdate") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "_hasPlugins") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "started") type QName(PackageNamespace(""), "Boolean") end
+  trait setter QName(PackageNamespace(""), "enabled")
+   method
+    refid "com.jumpeye.transitions:TweenLite/instance/enabled/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      pushfalse
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal1
+      iffalse             L57
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace(""), "masterList")
+      in
+      iftrue              L23
+
+      getlex              QName(PackageNamespace(""), "masterList")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal0
+      newarray            1
+      setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+      jump                L57
+
+L23:
+      getlex              QName(PackageNamespace(""), "masterList")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      convert_i
+      setlocal            4
+
+      jump                L47
+
+L35:
+      label
+      getlocal2
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getlocal0
+      ifne                L44
+
+      pushtrue
+      setlocal3
+
+      jump                L50
+
+L44:
+      getlocal            4
+      decrement_i
+      setlocal            4
+
+L47:
+      getlocal            4
+      pushbyte            -1
+      ifgt                L35
+
+L50:
+      getlocal3
+      iftrue              L57
+
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      getlocal0
+      setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+L57:
+      getlocal0
+      getlocal1
+      iffalse             L62
+
+      pushfalse
+      jump                L63
+
+L62:
+      pushtrue
+L63:
+      setproperty         QName(PackageNamespace(""), "gc")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "gc")
+      iffalse             L71
+
+      getlocal0
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "active")
+
+      jump                L75
+
+L71:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "started")
+      setproperty         QName(PackageNamespace(""), "active")
+
+L75:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "initted") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "active") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "startTime") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "target") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PackageNamespace(""), "clear")
+   method
+    refid "com.jumpeye.transitions:TweenLite/instance/clear"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      newarray            0
+      setproperty         QName(PackageNamespace(""), "tweens")
+
+      getlocal0
+      getlocal0
+      pushstring          "ease"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("ease", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      newobject           1
+      dup
+      setlocal1
+
+      setproperty         QName(PackageNamespace(""), "exposedVars")
+
+      getlocal1
+      kill                1
+      setproperty         QName(PackageNamespace(""), "vars")
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "_hasUpdate")
+      pushfalse
+      initproperty        QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "_hasUpdate")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "duration") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "render")
+   method
+    refid "com.jumpeye.transitions:TweenLite/instance/render"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushnan
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo")
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "startTime")
+      subtract
+      pushdouble          0.001
+      multiply
+      convert_d
+      setlocal2
+
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      ifnge               L49
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      convert_d
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "ease")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("ease", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      equals
+      dup
+      iftrue              L40
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      pushdouble          0.001
+      equals
+L40:
+      iffalse             L44
+
+      pushbyte            1
+      convert_d
+      jump                L46
+
+L44:
+      pushbyte            0
+      convert_d
+L46:
+      convert_d
+      setlocal3
+
+      jump                L58
+
+L49:
+      getlocal0
+      getlocal2
+      pushbyte            0
+      pushbyte            1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      callproperty        QName(PackageNamespace(""), "ease"), 4
+      convert_d
+      setlocal3
+
+L58:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      convert_i
+      setlocal            5
+
+      jump                L87
+
+L65:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo")
+      dup
+      setlocal            4
+
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "property")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "start")
+      getlocal3
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "change")
+      multiply
+      add
+      setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+      getlocal            5
+      decrement_i
+      setlocal            5
+
+L87:
+      getlocal            5
+      pushbyte            -1
+      ifgt                L65
+
+      getlex              QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "_hasUpdate")
+      iffalse             L100
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("onUpdate", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushnull
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("onUpdateParams", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("apply", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")]), 2
+
+L100:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      ifne                L107
+
+      findpropstrict      QName(PackageNamespace(""), "complete")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "complete"), 1
+
+L107:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "activate")
+   method
+    refid "com.jumpeye.transitions:TweenLite/instance/activate"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      pushtrue
+      dup
+      setlocal1
+
+      setproperty         QName(PackageNamespace(""), "active")
+
+      getlocal1
+      kill                1
+      setproperty         QName(PackageNamespace(""), "started")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "initted")
+      iftrue              L16
+
+      findpropstrict      QName(PackageNamespace(""), "initTweenVals")
+      callpropvoid        QName(PackageNamespace(""), "initTweenVals"), 0
+
+L16:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("onStart", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushnull
+      ifeq                L29
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("onStart", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushnull
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("onStartParams", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("apply", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")]), 2
+
+L29:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      pushdouble          0.001
+      ifne                L38
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "startTime")
+      decrement
+      setproperty         QName(PackageNamespace(""), "startTime")
+
+L38:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "gc") type QName(PackageNamespace(""), "Boolean") end
+  trait getter QName(PackageNamespace(""), "enabled")
+   method
+    refid "com.jumpeye.transitions:TweenLite/instance/enabled/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "gc")
+      iffalse             L7
+
+      pushfalse
+      jump                L8
+
+L7:
+      pushtrue
+L8:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "initTweenVals")
+   method
+    refid "com.jumpeye.transitions:TweenLite/instance/initTweenVals"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      pushundefined
+      coerce_a
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo")
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      getproperty         Multiname("timeScale", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "undefined")
+      equals
+      not
+      dup
+      iffalse             L26
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+      istypelate
+L26:
+      iffalse             L50
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getproperty         QName(PackageNamespace(""), "length")
+      findpropstrict      QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      pushstring          "timeScale"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("timeScale", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      getproperty         Multiname("timeScale", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("timeScale", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      subtract
+      pushstring          "timeScale"
+      pushfalse
+      constructprop       QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo"), 6
+      setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+L50:
+      pushbyte            0
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      coerce_a
+      setlocal            6
+
+      jump                L203
+
+L57:
+      label
+      getlocal            6
+      getlocal            5
+      nextname
+      coerce_s
+      setlocal1
+
+      getlocal1
+      getlex              QName(StaticProtectedNs("com.jumpeye.transitions:TweenLite"), "_reservedProps")
+      in
+      iffalse             L68
+
+      jump                L203
+
+L68:
+      getlocal1
+      getlex              QName(PackageNamespace(""), "plugins")
+      in
+      iffalse             L161
+
+      getlex              QName(PackageNamespace(""), "plugins")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      construct           0
+      coerce_a
+      setlocal3
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getlocal0
+      callproperty        Multiname("onInitTween", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")]), 3
+      pushfalse
+      ifne                L132
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getproperty         QName(PackageNamespace(""), "length")
+      findpropstrict      QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      typeof
+      pushstring          "number"
+      ifne                L120
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      subtract
+      convert_d
+      jump                L127
+
+L120:
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+L127:
+      getlocal1
+      pushfalse
+      constructprop       QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo"), 6
+      setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+      jump                L160
+
+L132:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getproperty         QName(PackageNamespace(""), "length")
+      findpropstrict      QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo")
+      getlocal3
+      pushstring          "changeFactor"
+      pushbyte            0
+      pushbyte            1
+      getlocal3
+      getproperty         Multiname("overwriteProps", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getproperty         Multiname("length", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushbyte            1
+      ifne                L153
+
+      getlocal3
+      getproperty         Multiname("overwriteProps", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      coerce_s
+      jump                L154
+
+L153:
+      pushstring          "_MULTIPLE_"
+L154:
+      pushtrue
+      constructprop       QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo"), 6
+      setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "_hasPlugins")
+      pushtrue
+      initproperty        QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "_hasPlugins")
+
+L160:
+      jump                L203
+
+L161:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getproperty         QName(PackageNamespace(""), "length")
+      findpropstrict      QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      typeof
+      pushstring          "number"
+      ifne                L192
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      subtract
+      convert_d
+      jump                L199
+
+L192:
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+L199:
+      getlocal1
+      pushfalse
+      constructprop       QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo"), 6
+      setproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+L203:
+      hasnext2            6, 5
+      iftrue              L57
+
+      kill                6
+      kill                5
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("runBackwards", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushtrue
+      ifne                L244
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      convert_i
+      setlocal2
+
+      jump                L241
+
+L219:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("com.jumpeye.transitions.utils.tween"), "TweenInfo")
+      dup
+      dup
+      setlocal            4
+
+      getproperty         QName(PackageNamespace(""), "start")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "change")
+      add
+      setproperty         QName(PackageNamespace(""), "start")
+
+      getlocal            4
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "change")
+      negate
+      setproperty         QName(PackageNamespace(""), "change")
+
+      getlocal2
+      decrement_i
+      setlocal2
+
+L241:
+      getlocal2
+      pushbyte            -1
+      ifgt                L219
+
+L244:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("onUpdate", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushnull
+      ifeq                L252
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "_hasUpdate")
+      pushtrue
+      initproperty        QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "_hasUpdate")
+
+L252:
+      getlex              QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+      getproperty         QName(PackageNamespace(""), "overwriteManager")
+      getproperty         Multiname("enabled", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      convert_b
+      dup
+      iffalse             L263
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace(""), "masterList")
+      in
+L263:
+      iffalse             L271
+
+      getlex              QName(PackageNamespace(""), "overwriteManager")
+      getlocal0
+      getlex              QName(PackageNamespace(""), "masterList")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("manageOverwrites", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")]), 2
+
+L271:
+      getlocal0
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "initted")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "easeProxy")
+   method
+    refid "com.jumpeye.transitions:TweenLite/instance/com.jumpeye.transitions:TweenLite:easeProxy"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "Number")
+    flag NEED_ARGUMENTS
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("proxiedEase", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushnull
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("easeParams", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "concat"), 1
+      callproperty        Multiname("apply", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")]), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "killVars")
+   method
+    refid "com.jumpeye.transitions:TweenLite/instance/killVars"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "overwriteManager")
+      getproperty         Multiname("enabled", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      iffalse             L12
+
+      getlex              QName(PackageNamespace(""), "overwriteManager")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "exposedVars")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      callpropvoid        Multiname("killVars", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")]), 3
+
+L12:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "vars") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "ease") type QName(PackageNamespace(""), "Function") end
+  trait slot QName(PackageNamespace(""), "tweens") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "exposedVars") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageNamespace(""), "combinedTimeScale") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "complete")
+   method
+    refid "com.jumpeye.transitions:TweenLite/instance/complete"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      getlocal1
+      iftrue              L26
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "initted")
+      iftrue              L11
+
+      findpropstrict      QName(PackageNamespace(""), "initTweenVals")
+      callpropvoid        QName(PackageNamespace(""), "initTweenVals"), 0
+
+L11:
+      getlocal0
+      getlex              QName(PackageNamespace(""), "currentTime")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "duration")
+      pushshort           1000
+      multiply
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "combinedTimeScale")
+      divide
+      subtract
+      setproperty         QName(PackageNamespace(""), "startTime")
+
+      findpropstrict      QName(PackageNamespace(""), "render")
+      getlex              QName(PackageNamespace(""), "currentTime")
+      callpropvoid        QName(PackageNamespace(""), "render"), 1
+
+      returnvoid
+
+L26:
+      getlex              QName(ProtectedNamespace("com.jumpeye.transitions:TweenLite"), "_hasPlugins")
+      iffalse             L67
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      convert_i
+      setlocal2
+
+      jump                L64
+
+L35:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getproperty         Multiname("isPlugin", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      convert_b
+      dup
+      iffalse             L54
+
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getproperty         Multiname("target", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getproperty         Multiname("onComplete", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushnull
+      equals
+      not
+L54:
+      iffalse             L61
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tweens")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      getproperty         Multiname("target", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("onComplete", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")]), 0
+
+L61:
+      getlocal2
+      decrement_i
+      setlocal2
+
+L64:
+      getlocal2
+      pushbyte            -1
+      ifgt                L35
+
+L67:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("persist", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushtrue
+      ifeq                L75
+
+      getlocal0
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+L75:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("onComplete", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushnull
+      ifeq                L88
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("onComplete", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      pushnull
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vars")
+      getproperty         Multiname("onCompleteParams", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+      callpropvoid        Multiname("apply", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")]), 2
+
+L88:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "initTime") type QName(PackageNamespace(""), "Number") end
+ end ; instance
+ cinit
+  refid "com.jumpeye.transitions:TweenLite/class/init"
+  body
+   maxstack 47
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "version")
+    pushdouble          10.09
+    initproperty        QName(PackageNamespace(""), "version")
+
+    findproperty        QName(PackageNamespace(""), "plugins")
+    newobject           0
+    setproperty         QName(PackageNamespace(""), "plugins")
+
+    findproperty        QName(PackageNamespace(""), "killDelayedCallsTo")
+    getlocal0
+    getproperty         QName(PackageNamespace(""), "killTweensOf")
+    setproperty         QName(PackageNamespace(""), "killDelayedCallsTo")
+
+    findproperty        QName(PackageNamespace(""), "defaultEase")
+    getlex              QName(PackageNamespace(""), "easeOut")
+    setproperty         QName(PackageNamespace(""), "defaultEase")
+
+    findproperty        QName(PackageNamespace(""), "masterList")
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    pushfalse
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+    setproperty         QName(PackageNamespace(""), "masterList")
+
+    findproperty        QName(PackageNamespace(""), "timingSprite")
+    findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+    constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+    setproperty         QName(PackageNamespace(""), "timingSprite")
+
+    findproperty        QName(PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), "_timer")
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+    pushshort           2000
+    constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 1
+    setproperty         QName(PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), "_timer")
+
+    findproperty        QName(StaticProtectedNs("com.jumpeye.transitions:TweenLite"), "_reservedProps")
+    pushstring          "ease"
+    pushbyte            1
+    pushstring          "delay"
+    pushbyte            1
+    pushstring          "overwrite"
+    pushbyte            1
+    pushstring          "onComplete"
+    pushbyte            1
+    pushstring          "onCompleteParams"
+    pushbyte            1
+    pushstring          "runBackwards"
+    pushbyte            1
+    pushstring          "startAt"
+    pushbyte            1
+    pushstring          "onUpdate"
+    pushbyte            1
+    pushstring          "onUpdateParams"
+    pushbyte            1
+    pushstring          "roundProps"
+    pushbyte            1
+    pushstring          "onStart"
+    pushbyte            1
+    pushstring          "onStartParams"
+    pushbyte            1
+    pushstring          "persist"
+    pushbyte            1
+    pushstring          "renderOnStart"
+    pushbyte            1
+    pushstring          "proxiedEase"
+    pushbyte            1
+    pushstring          "easeParams"
+    pushbyte            1
+    pushstring          "yoyo"
+    pushbyte            1
+    pushstring          "loop"
+    pushbyte            1
+    pushstring          "onCompleteListener"
+    pushbyte            1
+    pushstring          "onUpdateListener"
+    pushbyte            1
+    pushstring          "onStartListener"
+    pushbyte            1
+    pushstring          "orientToBezier"
+    pushbyte            1
+    pushstring          "timeScale"
+    pushbyte            1
+    newobject           23
+    setproperty         QName(StaticProtectedNs("com.jumpeye.transitions:TweenLite"), "_reservedProps")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "updateAll") flag FINAL dispid 6
+  method
+   refid "com.jumpeye.transitions:TweenLite/class/updateAll"
+   param QName(PackageNamespace("flash.events"), "Event")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 3
+    localcount 9
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal2
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+     setlocal3
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     pushnull
+     coerce              QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+     setlocal            6
+
+     findproperty        QName(PackageNamespace(""), "currentTime")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+     callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+     dup
+     setlocal            7
+
+     setproperty         QName(PackageNamespace(""), "currentTime")
+
+     getlocal            7
+     kill                7
+     convert_u
+     setlocal2
+
+     getlex              QName(PackageNamespace(""), "masterList")
+     coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+     setlocal3
+
+     pushbyte            0
+     setlocal            7
+
+     getlocal3
+     coerce_a
+     setlocal            8
+
+     jump                L83
+
+L35:
+     label
+     getlocal            8
+     getlocal            7
+     nextvalue
+     coerce              QName(PackageNamespace(""), "Array")
+     dup
+     setlocal            4
+
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     convert_i
+     setlocal            5
+
+     jump                L80
+
+L47:
+     label
+     getlocal            4
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+     dup
+     setlocal            6
+
+     getproperty         QName(PackageNamespace(""), "active")
+     iffalse             L60
+
+     getlocal            6
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "render"), 1
+
+     jump                L77
+
+L60:
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "gc")
+     iffalse             L68
+
+     getlocal            4
+     getlocal            5
+     pushbyte            1
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+     jump                L77
+
+L68:
+     getlocal2
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "startTime")
+     ifnge               L77
+
+     getlocal            6
+     callpropvoid        QName(PackageNamespace(""), "activate"), 0
+
+     getlocal            6
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "render"), 1
+
+L77:
+     getlocal            5
+     decrement_i
+     setlocal            5
+
+L80:
+     getlocal            5
+     pushbyte            -1
+     ifgt                L47
+
+L83:
+     hasnext2            8, 7
+     iftrue              L35
+
+     kill                8
+     kill                7
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), "_timer") slotid 10 type QName(PackageNamespace("flash.utils"), "Timer") end
+ trait method QName(PackageNamespace(""), "removeTween") flag FINAL dispid 7
+  method
+   refid "com.jumpeye.transitions:TweenLite/class/removeTween"
+   param QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+   param QName(PackageNamespace(""), "Boolean")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional True()
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushnull
+     ifeq                L12
+
+     getlocal2
+     iffalse             L9
+
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+L9:
+     getlocal1
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "enabled")
+
+L12:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PackageNamespace(""), "defaultEase") slotid 4 type QName(PackageNamespace(""), "Function") end
+ trait const QName(PackageNamespace(""), "version") slotid 1 type QName(PackageNamespace(""), "Number") value Double(10.09) end
+ trait method QName(PackageNamespace(""), "killTweensOf") flag FINAL dispid 8
+  method
+   refid "com.jumpeye.transitions:TweenLite/class/killTweensOf"
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Boolean")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional False()
+   body
+    maxstack 2
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     pushbyte            0
+     setlocal            4
+
+     pushnull
+     coerce              QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+     setlocal            5
+
+     getlocal1
+     pushnull
+     equals
+     not
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     getlex              QName(PackageNamespace(""), "masterList")
+     in
+L20:
+     iffalse             L62
+
+     getlex              QName(PackageNamespace(""), "masterList")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     convert_i
+     setlocal            4
+
+     jump                L55
+
+L32:
+     label
+     getlocal3
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+     setlocal            5
+
+     getlocal2
+     convert_b
+     dup
+     iffalse             L46
+
+     pop
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "gc")
+     not
+L46:
+     iffalse             L50
+
+     getlocal            5
+     pushfalse
+     callpropvoid        QName(PackageNamespace(""), "complete"), 1
+
+L50:
+     getlocal            5
+     callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+     getlocal            4
+     decrement_i
+     setlocal            4
+
+L55:
+     getlocal            4
+     pushbyte            -1
+     ifgt                L32
+
+     getlex              QName(PackageNamespace(""), "masterList")
+     getlocal1
+     deleteproperty      MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     pop
+L62:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PackageNamespace(""), "plugins") slotid 2 type QName(PackageNamespace(""), "Object") end
+ trait slot QName(PackageNamespace(""), "currentTime") slotid 6 type QName(PackageNamespace(""), "uint") end
+ trait slot QName(PackageNamespace(""), "masterList") slotid 7 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ trait slot QName(StaticProtectedNs("com.jumpeye.transitions:TweenLite"), "_reservedProps") slotid 11 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "from") flag FINAL dispid 4
+  method
+   refid "com.jumpeye.transitions:TweenLite/class/from"
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal3
+     pushtrue
+     setproperty         Multiname("runBackwards", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     construct           3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PackageNamespace(""), "killDelayedCallsTo") slotid 3 type QName(PackageNamespace(""), "Function") end
+ trait method QName(PackageNamespace(""), "easeOut") flag FINAL dispid 10
+  method
+   refid "com.jumpeye.transitions:TweenLite/class/easeOut"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal3
+     getlocal1
+     multiply
+     getlocal            4
+     divide
+     getlocal2
+     add
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PackageNamespace(""), "timingSprite") slotid 8 type QName(PackageNamespace("flash.display"), "Sprite") end
+ trait slot QName(PackageNamespace(""), "overwriteManager") slotid 5 type QName(PackageNamespace(""), "Object") end
+ trait slot QName(PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), "_tlInitted") slotid 9 type QName(PackageNamespace(""), "Boolean") end
+ trait method QName(StaticProtectedNs("com.jumpeye.transitions:TweenLite"), "killGarbage") flag FINAL dispid 9
+  method
+   refid "com.jumpeye.transitions:TweenLite/class/com.jumpeye.transitions:TweenLite:killGarbage"
+   param QName(PackageNamespace("flash.events"), "TimerEvent")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+     setlocal2
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal3
+
+     getlex              QName(PackageNamespace(""), "masterList")
+     coerce              QName(PackageNamespace("flash.utils"), "Dictionary")
+     setlocal2
+
+     pushbyte            0
+     setlocal            4
+
+     getlocal2
+     coerce_a
+     setlocal            5
+
+     jump                L33
+
+L17:
+     label
+     getlocal            5
+     getlocal            4
+     nextname
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal3
+
+     getlocal2
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     getproperty         Multiname("length", [PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), PackageNamespace("flash.utils"), PackageNamespace("flash.display"), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageNamespace("com.jumpeye.transitions"), PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#1"), PackageInternalNs("com.jumpeye.transitions"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageNamespace("com.jumpeye.transitions.utils.tween"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     pushbyte            0
+     ifne                L33
+
+     getlocal2
+     getlocal3
+     deleteproperty      MultinameL([PrivateNamespace(null, "com.jumpeye.transitions:TweenLite#0"), PackageNamespace(""), StaticProtectedNs("com.jumpeye.transitions:TweenLite"), PackageInternalNs("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions:TweenLite"), StaticProtectedNs("Object")])
+     pop
+L33:
+     hasnext2            5, 4
+     iftrue              L17
+
+     kill                5
+     kill                4
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "delayedCall") flag FINAL dispid 5
+  method
+   refid "com.jumpeye.transitions:TweenLite/class/delayedCall"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Array")
+   returns QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 11
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal2
+     pushbyte            0
+     pushstring          "delay"
+     getlocal1
+     pushstring          "onComplete"
+     getlocal2
+     pushstring          "onCompleteParams"
+     getlocal3
+     pushstring          "overwrite"
+     pushbyte            0
+     newobject           4
+     construct           3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "to") flag FINAL dispid 3
+  method
+   refid "com.jumpeye.transitions:TweenLite/class/to"
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     construct           3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,1123 @@
+class
+ refid "Type:User"
+ instance QName(PackageNamespace("Type"), "User")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Type:User")
+  iinit
+   refid "Type:User/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_id") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_token") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_login_rating") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_current_rating") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_ip") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_name") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_access") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_gamesToday") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_muted") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_showTime") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_lobbyChat") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_gameChat") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_gameNumber") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_font_size") type QName(PackageNamespace(""), "uint") value Integer(11) end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_font") type QName(PackageNamespace(""), "String") value Utf8("_sans") end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_leading") type QName(PackageNamespace(""), "uint") value Integer(2) end
+  trait slot QName(PrivateNamespace(null, "Type:User/instance"), "_s3") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait slot QName(PackageNamespace(""), "flood_mute") type QName(PackageNamespace(""), "Number") end
+  trait setter QName(PackageNamespace(""), "id")
+   method
+    refid "Type:User/instance/id/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_id")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "id")
+   method
+    refid "Type:User/instance/id/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_id")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "token")
+   method
+    refid "Type:User/instance/token/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_token")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "token")
+   method
+    refid "Type:User/instance/token/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_token")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "rating")
+   method
+    refid "Type:User/instance/rating/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            0
+      ifngt               L9
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_current_rating")
+
+      jump                L12
+
+L9:
+      getlocal0
+      pushbyte            0
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_current_rating")
+
+L12:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "rating")
+   method
+    refid "Type:User/instance/rating/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_current_rating")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "current_rating")
+   method
+    refid "Type:User/instance/current_rating/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            0
+      ifngt               L9
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_current_rating")
+
+      jump                L12
+
+L9:
+      getlocal0
+      pushbyte            0
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_current_rating")
+
+L12:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "current_rating")
+   method
+    refid "Type:User/instance/current_rating/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_current_rating")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "login_rating")
+   method
+    refid "Type:User/instance/login_rating/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            0
+      ifngt               L9
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_login_rating")
+
+      jump                L12
+
+L9:
+      getlocal0
+      pushbyte            0
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_login_rating")
+
+L12:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "login_rating")
+   method
+    refid "Type:User/instance/login_rating/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_current_rating")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "login_rating_display")
+   method
+    refid "Type:User/instance/login_rating_display/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_login_rating")
+      pushbyte            0
+      ifnle               L8
+
+      pushstring          "None"
+      returnvalue
+
+L8:
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_login_rating")
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "current_rating_display")
+   method
+    refid "Type:User/instance/current_rating_display/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_current_rating")
+      pushbyte            0
+      ifnle               L8
+
+      pushstring          "None"
+      returnvalue
+
+L8:
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_current_rating")
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "rating_display")
+   method
+    refid "Type:User/instance/rating_display/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "current_rating_display")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "ip")
+   method
+    refid "Type:User/instance/ip/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_ip")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "ip")
+   method
+    refid "Type:User/instance/ip/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_ip")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "name")
+   method
+    refid "Type:User/instance/name/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_name")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "name")
+   method
+    refid "Type:User/instance/name/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_name")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "access")
+   method
+    refid "Type:User/instance/access/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_access")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "access")
+   method
+    refid "Type:User/instance/access/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_access")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "gamesToday")
+   method
+    refid "Type:User/instance/gamesToday/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            0
+      ifngt               L9
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_gamesToday")
+
+      jump                L12
+
+L9:
+      getlocal0
+      pushbyte            0
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_gamesToday")
+
+L12:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "gamesToday")
+   method
+    refid "Type:User/instance/gamesToday/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_gamesToday")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "muted")
+   method
+    refid "Type:User/instance/muted/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_muted")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "muted")
+   method
+    refid "Type:User/instance/muted/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_muted")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "showTime")
+   method
+    refid "Type:User/instance/showTime/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_showTime")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "showTime")
+   method
+    refid "Type:User/instance/showTime/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_showTime")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "lobbyChat")
+   method
+    refid "Type:User/instance/lobbyChat/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_lobbyChat")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "lobbyChat")
+   method
+    refid "Type:User/instance/lobbyChat/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_lobbyChat")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "gameChat")
+   method
+    refid "Type:User/instance/gameChat/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_gameChat")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "gameChat")
+   method
+    refid "Type:User/instance/gameChat/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_gameChat")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "gameNumber")
+   method
+    refid "Type:User/instance/gameNumber/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PrivateNamespace(null, "Type:User/instance"), "_gameNumber")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "gameNumber")
+   method
+    refid "Type:User/instance/gameNumber/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Type:User/instance"), "_gameNumber")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "font_size")
+   method
+    refid "Type:User/instance/font_size/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            10
+      ifnlt               L8
+
+      pushbyte            10
+      convert_u
+      setlocal1
+
+L8:
+      getlocal1
+      pushbyte            16
+      ifngt               L14
+
+      pushbyte            16
+      convert_u
+      setlocal1
+
+L14:
+      findproperty        QName(PrivateNamespace(null, "Type:User/instance"), "_font_size")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "Type:User/instance"), "_font_size")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "font_size")
+   method
+    refid "Type:User/instance/font_size/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Type:User/instance"), "_font_size")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "font")
+   method
+    refid "Type:User/instance/font/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+      coerce_s
+      setlocal1
+
+      getlocal1
+      pushstring          "mono"
+      equals
+      dup
+      iftrue              L15
+
+      pop
+      getlocal1
+      pushstring          "monospace"
+      equals
+L15:
+      dup
+      iftrue              L21
+
+      pop
+      getlocal1
+      pushstring          "courier"
+      equals
+L21:
+      dup
+      iftrue              L27
+
+      pop
+      getlocal1
+      pushstring          "consolas"
+      equals
+L27:
+      iffalse             L30
+
+      pushstring          "_typewriter"
+      setlocal1
+
+L30:
+      getlocal1
+      pushstring          "times"
+      equals
+      dup
+      iftrue              L39
+
+      pop
+      getlocal1
+      pushstring          "times new roman"
+      equals
+L39:
+      dup
+      iftrue              L45
+
+      pop
+      getlocal1
+      pushstring          "serif"
+      equals
+L45:
+      iffalse             L48
+
+      pushstring          "_serif"
+      setlocal1
+
+L48:
+      getlocal1
+      pushstring          "arial"
+      equals
+      dup
+      iftrue              L57
+
+      pop
+      getlocal1
+      pushstring          "helvetica"
+      equals
+L57:
+      dup
+      iftrue              L63
+
+      pop
+      getlocal1
+      pushstring          "tahoma"
+      equals
+L63:
+      dup
+      iftrue              L69
+
+      pop
+      getlocal1
+      pushstring          "sans"
+      equals
+L69:
+      iffalse             L72
+
+      pushstring          "_sans"
+      setlocal1
+
+L72:
+      getlocal1
+      pushstring          "_sans"
+      equals
+      not
+      dup
+      iffalse             L83
+
+      pop
+      getlocal1
+      pushstring          "_typewriter"
+      equals
+      not
+L83:
+      dup
+      iffalse             L90
+
+      pop
+      getlocal1
+      pushstring          "_serif"
+      equals
+      not
+L90:
+      iffalse             L93
+
+      pushstring          "_sans"
+      setlocal1
+
+L93:
+      findproperty        QName(PrivateNamespace(null, "Type:User/instance"), "_font")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "Type:User/instance"), "_font")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "font")
+   method
+    refid "Type:User/instance/font/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Type:User/instance"), "_font")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "leading")
+   method
+    refid "Type:User/instance/leading/setter"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushbyte            6
+      ifngt               L8
+
+      pushbyte            6
+      convert_u
+      setlocal1
+
+L8:
+      getlocal1
+      pushbyte            0
+      ifnlt               L14
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+L14:
+      findproperty        QName(PrivateNamespace(null, "Type:User/instance"), "_leading")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "Type:User/instance"), "_leading")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "leading")
+   method
+    refid "Type:User/instance/leading/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Type:User/instance"), "_leading")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "s3")
+   method
+    refid "Type:User/instance/s3/setter"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "Type:User/instance"), "_s3")
+      getlocal1
+      initproperty        QName(PrivateNamespace(null, "Type:User/instance"), "_s3")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "s3")
+   method
+    refid "Type:User/instance/s3/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Type:User/instance"), "_s3")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Type:User/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

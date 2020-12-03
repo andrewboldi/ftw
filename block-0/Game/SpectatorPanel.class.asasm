@@ -1,0 +1,341 @@
+class
+ refid "Game:SpectatorPanel"
+ instance QName(PackageNamespace("Game"), "SpectatorPanel")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Game:SpectatorPanel")
+  iinit
+   refid "Game:SpectatorPanel/instance/init"
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional False()
+   body
+    maxstack 1
+    localcount 2
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageInternalNs("Game"), "__setProp__sp_problem_SpectatorPanel_Layer1_0")
+     callpropvoid        QName(PackageInternalNs("Game"), "__setProp__sp_problem_SpectatorPanel_Layer1_0"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_sp_problem") type QName(PackageNamespace("fl.containers"), "ScrollPane") end
+  trait slot QName(PrivateNamespace(null, "Game:SpectatorPanel/instance"), "problem_number") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageNamespace(""), "attach")
+   method
+    refid "Game:SpectatorPanel/instance/attach"
+    param QName(PackageNamespace("Game"), "Problem")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "Game:SpectatorPanel/instance"), "problem_number")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "number")
+      initproperty        QName(PrivateNamespace(null, "Game:SpectatorPanel/instance"), "problem_number")
+
+      findpropstrict      QName(PackageNamespace(""), "clear")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      constructprop       QName(PackageNamespace("flash.display"), "Sprite"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushint             16777215
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            10
+      add
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "image")
+      getproperty         QName(PackageNamespace(""), "height")
+      pushbyte            10
+      add
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlocal2
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "image")
+      pushbyte            5
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "image")
+      pushbyte            5
+      setproperty         QName(PackageNamespace(""), "y")
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      getproperty         QName(PackageNamespace(""), "content")
+      callproperty        QName(PackageNamespace("flash.display"), "Sprite"), 1
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      setlocal3
+
+      getlocal3
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal3
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "image")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      callpropvoid        QName(PackageNamespace(""), "update"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clear")
+   method
+    refid "Game:SpectatorPanel/instance/clear"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      jump                L10
+
+L3:
+      label
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      getproperty         QName(PackageNamespace(""), "content")
+      callproperty        QName(PackageNamespace("flash.display"), "Sprite"), 1
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "removeChildAt"), 1
+
+L10:
+      findpropstrict      QName(PackageNamespace("flash.display"), "Sprite")
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      getproperty         QName(PackageNamespace(""), "content")
+      callproperty        QName(PackageNamespace("flash.display"), "Sprite"), 1
+      getproperty         QName(PackageNamespace(""), "numChildren")
+      iftrue              L3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "show")
+   method
+    refid "Game:SpectatorPanel/instance/show"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "hide")
+   method
+    refid "Game:SpectatorPanel/instance/hide"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs("Game"), "__setProp__sp_problem_SpectatorPanel_Layer1_0")
+   method
+    refid "Game:SpectatorPanel/instance/Game:__setProp__sp_problem_SpectatorPanel_Layer1_0"
+    flag NEED_ACTIVATION
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 17
+     code
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal1
+
+      pushscope
+
+L6:
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushstring          "componentInspectorSetting"
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "Game:SpectatorPanel/instance"), PackageInternalNs("Game"), PackageNamespace(""), PackageNamespace("Game"), PrivateNamespace(null, "Game:SpectatorPanel/instance/Game:__setProp__sp_problem_SpectatorPanel_Layer1_0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Game:SpectatorPanel"), StaticProtectedNs("Game:SpectatorPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L10:
+      jump                L24
+
+L11:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L24:
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "enabled")
+
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushbyte            4
+      setproperty         QName(PackageNamespace(""), "horizontalLineScrollSize")
+
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "horizontalPageScrollSize")
+
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushstring          "auto"
+      setproperty         QName(PackageNamespace(""), "horizontalScrollPolicy")
+
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "scrollDrag")
+
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushstring          "EmptyClip"
+      setproperty         QName(PackageNamespace(""), "source")
+
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushbyte            4
+      setproperty         QName(PackageNamespace(""), "verticalLineScrollSize")
+
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "verticalPageScrollSize")
+
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushstring          "auto"
+      setproperty         QName(PackageNamespace(""), "verticalScrollPolicy")
+
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+L54:
+      getlex              QName(PackageNamespace(""), "_sp_problem")
+      pushstring          "componentInspectorSetting"
+      pushfalse
+      setproperty         MultinameL([PrivateNamespace(null, "Game:SpectatorPanel/instance"), PackageInternalNs("Game"), PackageNamespace(""), PackageNamespace("Game"), PrivateNamespace(null, "Game:SpectatorPanel/instance/Game:__setProp__sp_problem_SpectatorPanel_Layer1_0"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("net.theyak.util"), ProtectedNamespace("Game:SpectatorPanel"), StaticProtectedNs("Game:SpectatorPanel"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+L58:
+      jump                L72
+
+L59:
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushscope
+
+      newcatch            1
+      dup
+      setlocal2
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                2
+L72:
+      returnvoid
+     end ; code
+     try from L6 to L10 target L11 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+     try from L54 to L58 target L59 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "e") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Game:SpectatorPanel/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

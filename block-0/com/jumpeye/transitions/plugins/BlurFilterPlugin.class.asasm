@@ -1,0 +1,108 @@
+class
+ refid "com.jumpeye.transitions.plugins:BlurFilterPlugin"
+ instance QName(PackageNamespace("com.jumpeye.transitions.plugins"), "BlurFilterPlugin")
+  extends QName(PackageNamespace("com.jumpeye.transitions.plugins"), "FilterPlugin")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.jumpeye.transitions.plugins:BlurFilterPlugin")
+  iinit
+   refid "com.jumpeye.transitions.plugins:BlurFilterPlugin/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     pushstring          "blurFilter"
+     initproperty        QName(PackageNamespace(""), "propName")
+
+     getlocal0
+     pushstring          "blurFilter"
+     newarray            1
+     initproperty        QName(PackageNamespace(""), "overwriteProps")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "onInitTween") flag OVERRIDE
+   method
+    refid "com.jumpeye.transitions.plugins:BlurFilterPlugin/instance/onInitTween"
+    param QName(PackageNamespace(""), "Object")
+    param null
+    param QName(PackageNamespace("com.jumpeye.transitions"), "TweenLite")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "_target")
+      getlocal1
+      initproperty        QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "_target")
+
+      findproperty        QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "_type")
+      getlex              QName(PackageNamespace("flash.filters"), "BlurFilter")
+      initproperty        QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "_type")
+
+      findpropstrict      QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "initFilter")
+      getlocal2
+      findpropstrict      QName(PackageNamespace("flash.filters"), "BlurFilter")
+      pushbyte            0
+      dup
+      getlocal2
+      getproperty         Multiname("quality", [PrivateNamespace(null, "com.jumpeye.transitions.plugins:BlurFilterPlugin/instance/onInitTween#0"), PackageNamespace(""), PackageNamespace("flash.filters"), PrivateNamespace(null, "com.jumpeye.transitions.plugins:BlurFilterPlugin/instance/onInitTween#1"), PackageNamespace("com.jumpeye.transitions.plugins"), PackageInternalNs("com.jumpeye.transitions.plugins"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.display"), PackageNamespace("com.jumpeye.transitions"), ProtectedNamespace("com.jumpeye.transitions.plugins:BlurFilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:BlurFilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:FilterPlugin"), StaticProtectedNs("com.jumpeye.transitions.plugins:TweenPlugin"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      iftrue              L20
+
+      pop
+      pushbyte            2
+L20:
+      constructprop       QName(PackageNamespace("flash.filters"), "BlurFilter"), 3
+      callpropvoid        QName(ProtectedNamespace("com.jumpeye.transitions.plugins:FilterPlugin"), "initFilter"), 2
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.jumpeye.transitions.plugins:BlurFilterPlugin/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "VERSION")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "VERSION")
+
+    findproperty        QName(PackageNamespace(""), "API")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "API")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "VERSION") slotid 1 type QName(PackageNamespace(""), "Number") value Double(1) end
+ trait const QName(PackageNamespace(""), "API") slotid 2 type QName(PackageNamespace(""), "Number") value Double(1) end
+end ; class

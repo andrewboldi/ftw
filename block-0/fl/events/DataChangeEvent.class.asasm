@@ -1,0 +1,221 @@
+class
+ refid "fl.events:DataChangeEvent"
+ instance QName(PackageNamespace("fl.events"), "DataChangeEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.events:DataChangeEvent")
+  iinit
+   refid "fl.events:DataChangeEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Integer(-1)
+   optional Integer(-1)
+   body
+    maxstack 3
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     findproperty        QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_changeType")
+     getlocal2
+     initproperty        QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_changeType")
+
+     findproperty        QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_startIndex")
+     getlocal            4
+     initproperty        QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_startIndex")
+
+     findproperty        QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_items")
+     getlocal3
+     initproperty        QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_items")
+
+     findproperty        QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_endIndex")
+     getlocal            5
+     pushbyte            -1
+     ifne                L21
+
+     getlex              QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_startIndex")
+     convert_u
+     jump                L23
+
+L21:
+     getlocal            5
+     convert_u
+L23:
+     initproperty        QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_endIndex")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait getter QName(PackageNamespace(""), "changeType")
+   method
+    refid "fl.events:DataChangeEvent/instance/changeType/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_changeType")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_items") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_endIndex") type QName(PackageNamespace(""), "uint") end
+  trait getter QName(PackageNamespace(""), "startIndex")
+   method
+    refid "fl.events:DataChangeEvent/instance/startIndex/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_startIndex")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "items")
+   method
+    refid "fl.events:DataChangeEvent/instance/items/getter"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_items")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    refid "fl.events:DataChangeEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("fl.events"), "DataChangeEvent")
+      getlex              QName(PackageNamespace(""), "type")
+      getlex              QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_changeType")
+      getlex              QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_items")
+      getlex              QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_startIndex")
+      getlex              QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_endIndex")
+      constructprop       QName(PackageNamespace("fl.events"), "DataChangeEvent"), 5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_changeType") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "fl.events:DataChangeEvent/instance/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 8
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "formatToString")
+      pushstring          "DataChangeEvent"
+      pushstring          "type"
+      pushstring          "changeType"
+      pushstring          "startIndex"
+      pushstring          "endIndex"
+      pushstring          "bubbles"
+      pushstring          "cancelable"
+      callproperty        QName(PackageNamespace(""), "formatToString"), 7
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_startIndex") type QName(PackageNamespace(""), "uint") end
+  trait getter QName(PackageNamespace(""), "endIndex")
+   method
+    refid "fl.events:DataChangeEvent/instance/endIndex/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(ProtectedNamespace("fl.events:DataChangeEvent"), "_endIndex")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.events:DataChangeEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "DATA_CHANGE")
+    pushstring          "dataChange"
+    initproperty        QName(PackageNamespace(""), "DATA_CHANGE")
+
+    findproperty        QName(PackageNamespace(""), "PRE_DATA_CHANGE")
+    pushstring          "preDataChange"
+    initproperty        QName(PackageNamespace(""), "PRE_DATA_CHANGE")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "PRE_DATA_CHANGE") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("preDataChange") end
+ trait const QName(PackageNamespace(""), "DATA_CHANGE") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("dataChange") end
+end ; class

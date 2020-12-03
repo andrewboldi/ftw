@@ -1,0 +1,96 @@
+class
+ refid "com.electrotank.electroserver4.message.response:GetZonesResponse"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "GetZonesResponse")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.message.response"), "ResponseImpl")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.message.response:GetZonesResponse")
+  iinit
+   refid "com.electrotank.electroserver4.message.response:GetZonesResponse/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "setMessageType")
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.message"), "MessageType")
+     getproperty         QName(PackageNamespace(""), "GetZonesResponse")
+     callpropvoid        QName(PackageNamespace(""), "setMessageType"), 1
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GetZonesResponse/instance"), "zones")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GetZonesResponse/instance"), "zones")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GetZonesResponse/instance"), "zones") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "addZone")
+   method
+    refid "com.electrotank.electroserver4.message.response:GetZonesResponse/instance/addZone"
+    param QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getZones")
+      callproperty        QName(PackageNamespace(""), "getZones"), 0
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getZones")
+   method
+    refid "com.electrotank.electroserver4.message.response:GetZonesResponse/instance/getZones"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.message.response:GetZonesResponse/instance"), "zones")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.message.response:GetZonesResponse/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

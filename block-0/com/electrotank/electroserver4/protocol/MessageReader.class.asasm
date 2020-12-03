@@ -1,0 +1,143 @@
+class
+ refid "com.electrotank.electroserver4.protocol:MessageReader"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.protocol"), "MessageReader")
+  flag SEALED
+  flag INTERFACE
+  iinit
+   refid "com.electrotank.electroserver4.protocol:MessageReader/instance/init"
+  end ; method
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextPrefixedString")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextPrefixedString"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextCharacter")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextCharacter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBoolean")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextBoolean"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextString")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextString"
+    returns QName(PackageNamespace(""), "String")
+    flag NEED_REST
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextShort")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextShort"
+    returns QName(PackageNamespace(""), "Number")
+    flag NEED_REST
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextInteger")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextInteger"
+    returns QName(PackageNamespace(""), "int")
+    flag NEED_REST
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextLong")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextLong"
+    returns QName(PackageNamespace(""), "String")
+    flag NEED_REST
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextDouble")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextDouble"
+    returns QName(PackageNamespace(""), "Number")
+    flag NEED_REST
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextFloat")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextFloat"
+    returns QName(PackageNamespace(""), "Number")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextByte")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextByte"
+    returns QName(PackageNamespace(""), "int")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextIntegerArray")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextIntegerArray"
+    returns QName(PackageNamespace(""), "Array")
+    flag NEED_REST
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextStringArray")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextStringArray"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextCharacterArray")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextCharacterArray"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextBooleanArray")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextBooleanArray"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextShortArray")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextShortArray"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextLongArray")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextLongArray"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextDoubleArray")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextDoubleArray"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextFloatArray")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextFloatArray"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("com.electrotank.electroserver4.protocol:MessageReader"), "nextByteArray")
+   method
+    refid "com.electrotank.electroserver4.protocol:MessageReader/instance/com.electrotank.electroserver4.protocol:MessageReader:nextByteArray"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.protocol:MessageReader/class/init"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 3
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

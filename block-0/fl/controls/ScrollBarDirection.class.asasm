@@ -1,0 +1,52 @@
+class
+ refid "fl.controls:ScrollBarDirection"
+ instance QName(PackageNamespace("fl.controls"), "ScrollBarDirection")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.controls:ScrollBarDirection")
+  iinit
+   refid "fl.controls:ScrollBarDirection/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "fl.controls:ScrollBarDirection/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "VERTICAL")
+    pushstring          "vertical"
+    initproperty        QName(PackageNamespace(""), "VERTICAL")
+
+    findproperty        QName(PackageNamespace(""), "HORIZONTAL")
+    pushstring          "horizontal"
+    initproperty        QName(PackageNamespace(""), "HORIZONTAL")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "HORIZONTAL") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("horizontal") end
+ trait const QName(PackageNamespace(""), "VERTICAL") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("vertical") end
+end ; class

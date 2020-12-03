@@ -1,0 +1,26 @@
+method
+ refid "com.jumpeye.flashEff2.presets:JFETP3D7/class/fep/inline_method"
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ returns QName(PackageNamespace(""), "Number")
+ flag HAS_OPTIONAL
+ optional Integer(0)
+ optional Integer(0)
+ optional Integer(0)
+ body
+  maxstack 2
+  localcount 6
+  initscopedepth 9
+  maxscopedepth 9
+  code
+   getlocal1
+   getlex              QName(PackageInternalNs("com.jumpeye.flashEff2.presets"), "propOwner")
+   getproperty         Multiname("teorecticSpace", [PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP3D7/class/fep#0"), PackageInternalNs("com.jumpeye.flashEff2.presets"), PrivateNamespace(null, "com.jumpeye.flashEff2.presets:JFETP3D7/class/fep#1"), PackageNamespace(""), PackageNamespace("com.jumpeye.flashEff2.presets"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("com.jumpeye.flashEff2.presets:JFETP3D7"), StaticProtectedNs("com.jumpeye.flashEff2.presets:JFETP3D7"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+   subtract
+   returnvalue
+  end ; code
+ end ; body
+end ; method

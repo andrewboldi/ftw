@@ -1,0 +1,675 @@
+class
+ refid "com.electrotank.electroserver4.connection:Connection"
+ instance QName(PackageNamespace("com.electrotank.electroserver4.connection"), "Connection")
+  extends QName(PackageNamespace("com.electrotank.electroserver4.connection"), "AbstractConnection")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("com.electrotank.electroserver4.connection:Connection")
+  iinit
+   refid "com.electrotank.electroserver4.connection:Connection/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     constructsuper      3
+
+     findpropstrict      QName(PackageNamespace(""), "trace")
+     pushstring          "Connection:init()"
+     callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+     getlocal3
+     getlex              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "Protocol")
+     getproperty         QName(PackageNamespace(""), "BINARY")
+     ifne                L44
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "waitingForHeader")
+     pushtrue
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "waitingForHeader")
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "handledPolicyFile")
+     pushfalse
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "handledPolicyFile")
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+     findpropstrict      QName(PackageNamespace("flash.net"), "Socket")
+     constructprop       QName(PackageNamespace("flash.net"), "Socket"), 0
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "CONNECT")
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "onBinaryConnect")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "CLOSE")
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "onBinaryClose")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+     getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+     getproperty         QName(PackageNamespace(""), "SOCKET_DATA")
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "onBinarySocketData")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+     getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
+     getproperty         QName(PackageNamespace(""), "IO_ERROR")
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "onBinaryIOErrorEvent")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L44:
+     getlex              QName(PackageNamespace("flash.system"), "Security")
+     pushstring          "xmlsocket://"
+     findpropstrict      QName(PackageNamespace(""), "getIp")
+     callproperty        QName(PackageNamespace(""), "getIp"), 0
+     add
+     pushstring          ":"
+     add
+     findpropstrict      QName(PackageNamespace(""), "getPort")
+     callproperty        QName(PackageNamespace(""), "getPort"), 0
+     add
+     callpropvoid        QName(PackageNamespace(""), "loadPolicyFile"), 1
+
+     findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "socket")
+     findpropstrict      QName(PackageNamespace("flash.net"), "XMLSocket")
+     constructprop       QName(PackageNamespace("flash.net"), "XMLSocket"), 0
+     initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "socket")
+
+     findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "configureListeners")
+     getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "socket")
+     callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "configureListeners"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "socket") type QName(PackageNamespace("flash.net"), "XMLSocket") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket") type QName(PackageNamespace("flash.net"), "Socket") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "handledPolicyFile") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "waitingForHeader") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "bytesNeeded") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "onData") type QName(PackageNamespace(""), "Function") end
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "onBinaryIOErrorEvent")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/onBinaryIOErrorEvent"
+    param QName(PackageNamespace("flash.events"), "IOErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "onPreConnect")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "onPreConnect"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "onBinaryClose")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/onBinaryClose"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "onPreClose")
+      callpropvoid        QName(PackageNamespace(""), "onPreClose"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "onBinaryConnect")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/onBinaryConnect"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "onPreConnect")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "onPreConnect"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "onBinarySocketData")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/onBinarySocketData"
+    param QName(PackageNamespace("flash.events"), "ProgressEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "handledPolicyFile")
+      iftrue              L18
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "readUTFBytes"), 1
+      pushstring          "<"
+      ifne                L18
+
+      jump                L11
+
+L10:
+      label
+L11:
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      callproperty        QName(PackageNamespace(""), "readByte"), 0
+      pushbyte            0
+      ifne                L10
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "handledPolicyFile")
+      pushtrue
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "handledPolicyFile")
+
+L18:
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "processBinarySocketData")
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "processBinarySocketData"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "processBinarySocketData")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/processBinarySocketData"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      getproperty         QName(PackageNamespace(""), "connected")
+      iftrue              L9
+
+      returnvoid
+
+L9:
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "waitingForHeader")
+      iffalse             L22
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      getproperty         QName(PackageNamespace(""), "bytesAvailable")
+      pushbyte            4
+      ifnge               L22
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "bytesNeeded")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      callproperty        QName(PackageNamespace(""), "readInt"), 0
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "bytesNeeded")
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "waitingForHeader")
+      pushfalse
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "waitingForHeader")
+
+L22:
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "waitingForHeader")
+      iftrue              L50
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      getproperty         QName(PackageNamespace(""), "bytesAvailable")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "bytesNeeded")
+      ifnge               L50
+
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+      coerce              QName(PackageNamespace("flash.utils"), "ByteArray")
+      setlocal1
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      getlocal1
+      pushbyte            0
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "bytesNeeded")
+      callpropvoid        QName(PackageNamespace(""), "readBytes"), 3
+
+      findpropstrict      QName(PackageNamespace(""), "notifyListeners")
+      pushstring          "onBinaryData"
+      pushstring          "target"
+      getlocal0
+      pushstring          "data"
+      getlocal1
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "notifyListeners"), 2
+
+      findproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "waitingForHeader")
+      pushtrue
+      initproperty        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "waitingForHeader")
+
+      findpropstrict      QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "processBinarySocketData")
+      callpropvoid        QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "processBinarySocketData"), 0
+
+L50:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "sendBinary") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/sendBinary"
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeBytes"), 1
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      callpropvoid        QName(PackageNamespace(""), "flush"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "configureListeners")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/configureListeners"
+    param QName(PackageNamespace("flash.events"), "IEventDispatcher")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CLOSE")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "closeHandler")
+      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CONNECT")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "connectHandler")
+      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "DataEvent")
+      getproperty         QName(PackageNamespace(""), "DATA")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "dataHandler")
+      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "IOErrorEvent")
+      getproperty         QName(PackageNamespace(""), "IO_ERROR")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "ioErrorHandler")
+      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "ProgressEvent")
+      getproperty         QName(PackageNamespace(""), "PROGRESS")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "progressHandler")
+      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+      getproperty         QName(PackageNamespace(""), "SECURITY_ERROR")
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "securityErrorHandler")
+      callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "closeHandler")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/closeHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "onPreClose")
+      callpropvoid        QName(PackageNamespace(""), "onPreClose"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "connectHandler")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/connectHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "onPreConnect")
+      pushtrue
+      callpropvoid        QName(PackageNamespace(""), "onPreConnect"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "dataHandler")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/dataHandler"
+    param QName(PackageNamespace("flash.events"), "DataEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "onPreData")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "data")
+      callpropvoid        QName(PackageNamespace(""), "onPreData"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "ioErrorHandler")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/ioErrorHandler"
+    param QName(PackageNamespace("flash.events"), "IOErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "onPreConnect")
+      pushfalse
+      callpropvoid        QName(PackageNamespace(""), "onPreConnect"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "progressHandler")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/progressHandler"
+    param QName(PackageNamespace("flash.events"), "ProgressEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "securityErrorHandler")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection/instance/securityErrorHandler"
+    param QName(PackageNamespace("flash.events"), "SecurityErrorEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "securityErrorHandler: "
+      getlocal1
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "send") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/send"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "socket")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "send"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("com.electrotank.electroserver4.connection:Connection"), "doClose") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/com.electrotank.electroserver4.connection:Connection:doClose"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getProtocol")
+      callproperty        QName(PackageNamespace(""), "getProtocol"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "Protocol")
+      getproperty         QName(PackageNamespace(""), "TEXT")
+      ifne                L10
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "socket")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+      jump                L17
+
+L10:
+      findpropstrict      QName(PackageNamespace(""), "getProtocol")
+      callproperty        QName(PackageNamespace(""), "getProtocol"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "Protocol")
+      getproperty         QName(PackageNamespace(""), "BINARY")
+      ifne                L17
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      callpropvoid        QName(PackageNamespace(""), "close"), 0
+
+L17:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "connect") flag OVERRIDE
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/connect"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "getProtocol")
+      callproperty        QName(PackageNamespace(""), "getProtocol"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "Protocol")
+      getproperty         QName(PackageNamespace(""), "TEXT")
+      ifne                L14
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "socket")
+      findpropstrict      QName(PackageNamespace(""), "getIp")
+      callproperty        QName(PackageNamespace(""), "getIp"), 0
+      findpropstrict      QName(PackageNamespace(""), "getPort")
+      callproperty        QName(PackageNamespace(""), "getPort"), 0
+      callpropvoid        QName(PackageNamespace(""), "connect"), 2
+
+      jump                L25
+
+L14:
+      findpropstrict      QName(PackageNamespace(""), "getProtocol")
+      callproperty        QName(PackageNamespace(""), "getProtocol"), 0
+      getlex              QName(PackageNamespace("com.electrotank.electroserver4.entities"), "Protocol")
+      getproperty         QName(PackageNamespace(""), "BINARY")
+      ifne                L25
+
+      getlex              QName(PrivateNamespace(null, "com.electrotank.electroserver4.connection:Connection/instance"), "binarySocket")
+      findpropstrict      QName(PackageNamespace(""), "getIp")
+      callproperty        QName(PackageNamespace(""), "getIp"), 0
+      findpropstrict      QName(PackageNamespace(""), "getPort")
+      callproperty        QName(PackageNamespace(""), "getPort"), 0
+      callpropvoid        QName(PackageNamespace(""), "connect"), 2
+
+L25:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "onPreData")
+   method
+    refid "com.electrotank.electroserver4.connection:Connection/instance/onPreData"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "notifyListeners")
+      pushstring          "onStringData"
+      pushstring          "target"
+      getlocal0
+      pushstring          "data"
+      getlocal1
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "notifyListeners"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.electrotank.electroserver4.connection:Connection/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

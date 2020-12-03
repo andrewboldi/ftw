@@ -1,0 +1,37 @@
+script
+ sinit
+  refid "fl.events:DataGridEvent/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("DataGridEvent", [PackageNamespace("fl.events")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("fl.events"), "ListEvent")
+    pushscope
+
+    getlex              QName(PackageNamespace("fl.events"), "ListEvent")
+    newclass            "fl.events:DataGridEvent"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("fl.events"), "DataGridEvent")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.events"), "DataGridEvent")
+  #include "DataGridEvent.class.asasm"
+ end ; trait
+end ; script

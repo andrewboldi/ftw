@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.connection:HttpWorker/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("HttpWorker", [PackageInternalNs("com.electrotank.electroserver4.connection")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.electrotank.electroserver4.connection:HttpWorker"
+    popscope
+    initproperty        QName(PackageInternalNs("com.electrotank.electroserver4.connection"), "HttpWorker")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageInternalNs("com.electrotank.electroserver4.connection"), "HttpWorker")
+  #include "HttpWorker.class.asasm"
+ end ; trait
+end ; script

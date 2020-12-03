@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.zone:Zone/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Zone", [PackageNamespace("com.electrotank.electroserver4.zone")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.electrotank.electroserver4.zone:Zone"
+    popscope
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.zone"), "Zone")
+  #include "Zone.class.asasm"
+ end ; trait
+end ; script

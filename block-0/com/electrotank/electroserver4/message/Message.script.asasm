@@ -1,0 +1,25 @@
+script
+ sinit
+  refid "com.electrotank.electroserver4.message:Message/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Message", [PackageNamespace("com.electrotank.electroserver4.message")])
+    pushnull
+    newclass            "com.electrotank.electroserver4.message:Message"
+    initproperty        QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.electrotank.electroserver4.message"), "Message")
+  #include "Message.class.asasm"
+ end ; trait
+end ; script
